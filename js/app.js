@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
-    // 4. MODEL PROFILE CREATION MODAL & FORM
+    // 4. MODEL PROFILE CREATION MODAL & FORM (CON SUBIDA DE FOTOS DESDE DISPOSITIVO)
     // ============================================
     const modelModal = document.getElementById('model-modal');
     const btnOpenModel = document.getElementById('btn-open-model-modal');
@@ -201,6 +201,144 @@ document.addEventListener('DOMContentLoaded', () => {
     const formCreateProfile = document.getElementById('form-create-profile');
     const formSuccessBox = document.getElementById('model-form-success');
     const btnCloseSuccess = document.getElementById('btn-close-success');
+
+    // Elementos para subida de fotos desde dispositivo
+    const photoDropzone = document.getElementById('photo-dropzone');
+    const photoInput = document.getElementById('model-photo-input');
+    const photoPreviewGrid = document.getElementById('photo-preview-grid');
+    const photoUploadHint = document.getElementById('photo-upload-hint');
+
+    let modelUploadedPhotos = []; // Almacena las imágenes comprimidas en Base64
+
+    // Función de compresión en Canvas para optimizar imágenes y garantizar persistencia
+    const compressImage = (file, maxDimension = 900, quality = 0.8) => {
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = (event) => {
+                const img = new Image();
+                img.src = event.target.result;
+                img.onload = () => {
+                    let width = img.width;
+                    let height = img.height;
+                    if (width > height) {
+                        if (width > maxDimension) {
+                            height = Math.round((height * maxDimension) / width);
+                            width = maxDimension;
+                        }
+                    } else {
+                        if (height > maxDimension) {
+                            width = Math.round((width * maxDimension) / height);
+                            height = maxDimension;
+                        }
+                    }
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    resolve(canvas.toDataURL('image/jpeg', quality));
+                };
+                img.onerror = () => resolve(event.target.result);
+            };
+        });
+    };
+
+    const renderPhotoPreviews = () => {
+        if (!photoPreviewGrid) return;
+        photoPreviewGrid.innerHTML = '';
+
+        if (modelUploadedPhotos.length === 0) {
+            photoPreviewGrid.style.display = 'none';
+            return;
+        }
+
+        photoPreviewGrid.style.display = 'flex';
+        modelUploadedPhotos.forEach((photoData, index) => {
+            const item = document.createElement('div');
+            item.className = 'photo-preview-item';
+            item.innerHTML = `
+                <img src="${photoData}" alt="Foto ${index + 1}">
+                ${index === 0 ? '<span class="photo-badge-main">⭐ Principal</span>' : ''}
+                <button type="button" class="btn-remove-preview-photo" data-index="${index}" title="Eliminar foto">✕</button>
+            `;
+            photoPreviewGrid.appendChild(item);
+        });
+
+        // Eventos para eliminar fotos individuales
+        photoPreviewGrid.querySelectorAll('.btn-remove-preview-photo').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const idx = parseInt(btn.dataset.index, 10);
+                modelUploadedPhotos.splice(idx, 1);
+                renderPhotoPreviews();
+            });
+        });
+    };
+
+    const handlePhotoFiles = async (files) => {
+        if (!files || files.length === 0) return;
+        const validFiles = Array.from(files).filter(f => f.type.startsWith('image/'));
+        if (validFiles.length === 0) {
+            alert('Por favor selecciona archivos de imagen válidos (JPG, PNG, WEBP).');
+            return;
+        }
+
+        for (const file of validFiles) {
+            if (modelUploadedPhotos.length >= 6) {
+                alert('Has alcanzado el límite máximo de 6 fotografías por postulación.');
+                break;
+            }
+            try {
+                const compressed = await compressImage(file);
+                modelUploadedPhotos.push(compressed);
+            } catch (err) {
+                console.error('Error al procesar fotografía:', err);
+            }
+        }
+        renderPhotoPreviews();
+    };
+
+    // Listeners del Dropzone
+    if (photoDropzone && photoInput) {
+        photoDropzone.addEventListener('click', () => photoInput.click());
+
+        photoInput.addEventListener('change', (e) => {
+            handlePhotoFiles(e.target.files);
+            photoInput.value = ''; // Permite volver a seleccionar el mismo archivo si se desea
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            photoDropzone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                photoDropzone.classList.add('dragover');
+            });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            photoDropzone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                photoDropzone.classList.remove('dragover');
+            });
+        });
+
+        photoDropzone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            if (dt && dt.files) {
+                handlePhotoFiles(dt.files);
+            }
+        });
+    }
+
+    const resetModelForm = () => {
+        if (formCreateProfile) formCreateProfile.reset();
+        modelUploadedPhotos = [];
+        renderPhotoPreviews();
+        if (formCreateProfile) formCreateProfile.style.display = 'flex';
+        if (formSuccessBox) formSuccessBox.style.display = 'none';
+    };
 
     // Trigger buttons for model modal
     if (btnOpenModel) btnOpenModel.addEventListener('click', () => openModal('model-modal'));
@@ -216,13 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnCloseSuccess) {
         btnCloseSuccess.addEventListener('click', () => {
             closeModal('model-modal');
-            setTimeout(() => {
-                if (formCreateProfile) {
-                    formCreateProfile.reset();
-                    formCreateProfile.style.display = 'flex';
-                }
-                if (formSuccessBox) formSuccessBox.style.display = 'none';
-            }, 400);
+            setTimeout(resetModelForm, 400);
         });
     }
 
@@ -242,9 +374,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const rate = document.getElementById('model-rate').value;
             const whatsapp = document.getElementById('model-whatsapp').value.trim();
             const nationality = document.getElementById('model-nationality').value.trim();
-            const photos = document.getElementById('model-photos-link').value.trim();
+            const photosLink = document.getElementById('model-photos-link').value.trim();
             const about = document.getElementById('model-about').value.trim();
 
+            // Validación: Debe haber subido foto desde dispositivo O ingresado un link
+            if (modelUploadedPhotos.length === 0 && !photosLink) {
+                alert('Por favor sube al menos una fotografía desde tu dispositivo o ingresa un enlace a tu portafolio.');
+                if (photoDropzone) {
+                    photoDropzone.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    photoDropzone.classList.add('dragover');
+                    setTimeout(() => photoDropzone.classList.remove('dragover'), 1500);
+                }
+                return;
+            }
+
+            const mainPhoto = modelUploadedPhotos.length > 0 ? modelUploadedPhotos[0] : photosLink;
             const folio = 'RV-' + Math.floor(100000 + Math.random() * 900000);
 
             // Persist into localStorage for Admin Suite
@@ -258,13 +402,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     rate: rate,
                     whatsapp: whatsapp,
                     nationality: nationality,
-                    photos: photos,
+                    photos: mainPhoto,
+                    allPhotos: modelUploadedPhotos,
+                    photosLink: photosLink,
                     about: about,
                     status: 'Pendiente',
                     date: 'Recién postulado'
                 });
                 localStorage.setItem('redVelvetApplications', JSON.stringify(existing));
-            } catch (err) {}
+            } catch (err) {
+                console.error('Error al guardar postulación:', err);
+            }
 
             // Hide form and show luxury confirmation
             formCreateProfile.style.display = 'none';
@@ -275,6 +423,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p style="color:#ddd; margin-bottom: 1rem;">
                         Estimada <strong>${alias}</strong>, tu ficha con Folio <strong>#${folio}</strong> ha sido recibida por la Dirección de RED VELVET bajo estricto protocolo de encriptación y confidencialidad.
                     </p>
+
+                    ${mainPhoto ? `
+                    <div style="display:flex; align-items:center; gap:14px; background:rgba(212,175,55,0.08); border:1px solid rgba(212,175,55,0.3); border-radius:8px; padding:10px 14px; margin-bottom:1.2rem; text-align:left;">
+                        <img src="${mainPhoto}" alt="Foto subida" style="width:65px; height:65px; object-fit:cover; border-radius:6px; border:1px solid #D4AF37;">
+                        <div>
+                            <span style="color:#FFD700; font-size:0.8rem; font-weight:600; display:block;">📸 Fotografía cargada desde tu dispositivo</span>
+                            <span style="color:#aaa; font-size:0.75rem;">${modelUploadedPhotos.length > 1 ? `+${modelUploadedPhotos.length - 1} fotos adicionales adjuntas` : 'Foto de perfil lista para validación biométrica'}</span>
+                        </div>
+                    </div>
+                    ` : ''}
+
                     <div style="background:rgba(20,20,20,0.8); border:1px solid rgba(212,175,55,0.3); border-radius:6px; padding:1.2rem; text-align:left; font-size:0.88rem; color:#bbb; margin-bottom:1.5rem;">
                         <p style="margin:0 0 6px 0;"><strong style="color:#D4AF37;">Alias:</strong> ${alias} (${age} años · ${nationality})</p>
                         <p style="margin:0 0 6px 0;"><strong style="color:#D4AF37;">Ciudad:</strong> ${city}</p>
@@ -297,11 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (btnDone) {
                     btnDone.addEventListener('click', () => {
                         closeModal('model-modal');
-                        setTimeout(() => {
-                            formCreateProfile.reset();
-                            formCreateProfile.style.display = 'flex';
-                            formSuccessBox.style.display = 'none';
-                        }, 400);
+                        setTimeout(resetModelForm, 400);
                     });
                 }
             }
@@ -435,5 +590,94 @@ document.addEventListener('DOMContentLoaded', () => {
     if (backToTopBtn) {
         window.addEventListener('scroll', () => backToTopBtn.classList.toggle('visible', window.scrollY > 500));
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // ============================================
+    // 11. MOTOR I18N & LANGUAGE SELECTOR
+    // ============================================
+    if (window.redVelvetI18n) {
+        window.redVelvetI18n.init();
+    }
+
+    const langWrap = document.getElementById('lang-dropdown-wrap');
+    const langBtn = document.getElementById('lang-btn');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const currentFlag = document.getElementById('current-lang-flag');
+    const currentLabel = document.getElementById('current-lang-label');
+
+    const LANG_METADATA = {
+        es: { flag: '🇲🇽', label: 'ES' },
+        en: { flag: '🇺🇸', label: 'EN' },
+        ko: { flag: '🇰🇷', label: 'KO' }
+    };
+
+    const updateLangUI = (lang) => {
+        if (LANG_METADATA[lang]) {
+            if (currentFlag) currentFlag.textContent = LANG_METADATA[lang].flag;
+            if (currentLabel) currentLabel.textContent = LANG_METADATA[lang].label;
+        }
+        document.querySelectorAll('.lang-option-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+    };
+
+    // Set initial UI based on stored language
+    const currentLang = localStorage.getItem('redVelvetLang') || 'es';
+    updateLangUI(currentLang);
+
+    if (langBtn && langWrap) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langWrap.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langWrap.contains(e.target)) {
+                langWrap.classList.remove('open');
+            }
+        });
+    }
+
+    document.querySelectorAll('.lang-option-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const targetLang = btn.dataset.lang;
+            if (targetLang && window.redVelvetI18n) {
+                window.redVelvetI18n.setLanguage(targetLang);
+                updateLangUI(targetLang);
+            }
+            if (langWrap) langWrap.classList.remove('open');
+        });
+    });
+
+    // ============================================
+    // 12. LUXURY THEME MANAGER (DARK / CHAMPAGNE SILK LIGHT)
+    // ============================================
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if (themeIcon) themeIcon.textContent = '☀️';
+            themeToggleBtn?.setAttribute('title', 'Modo Oscuro / Dark Mode');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if (themeIcon) themeIcon.textContent = '🌙';
+            themeToggleBtn?.setAttribute('title', 'Modo Claro / Light Mode');
+        }
+        localStorage.setItem('redVelvetTheme', theme);
+    };
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('redVelvetTheme') || 'dark';
+    applyTheme(savedTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const newTheme = isLight ? 'dark' : 'light';
+            applyTheme(newTheme);
+        });
     }
 });

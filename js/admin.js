@@ -198,11 +198,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (app.status === 'Aprobada') badgeClass = 'badge-approved';
             if (app.status === 'Rechazada') badgeClass = 'badge-rejected';
 
+            const isDataImage = app.photos && app.photos.startsWith('data:image');
+            const isWebImage = app.photos && app.photos.startsWith('http') && app.photos.match(/\.(jpeg|jpg|png|webp|gif)/i);
+            const photoSrc = isDataImage || isWebImage ? app.photos : null;
+
             tr.innerHTML = `
                 <td><strong style="color:#D4AF37;">${app.id}</strong></td>
                 <td>
-                    <strong>${app.alias}</strong> (${app.age} años)
-                    <div style="font-size:0.75rem; color:#888;">${app.nationality || 'No especificada'}</div>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        ${photoSrc ? `
+                            <img src="${photoSrc}" alt="${app.alias}" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:1.5px solid #D4AF37; box-shadow:0 0 8px rgba(212,175,55,0.3); cursor:pointer;" onclick="window.adminActions.viewPhoto('${photoSrc}')" title="Click para ver foto ampliada">
+                        ` : `
+                            <div style="width:40px; height:40px; border-radius:50%; background:#1c1c1c; border:1px solid rgba(212,175,55,0.3); display:flex; align-items:center; justify-content:center; color:#D4AF37; font-size:1.1rem;">👤</div>
+                        `}
+                        <div>
+                            <strong>${app.alias}</strong> (${app.age} años)
+                            <div style="font-size:0.75rem; color:#888;">${app.nationality || 'No especificada'} ${isDataImage ? '· <span style="color:#FFD700;">📸 Foto de Dispositivo</span>' : ''}</div>
+                        </div>
+                    </div>
                 </td>
                 <td>${app.city}</td>
                 <td><span style="color:#D4AF37; font-weight:600;">${app.rate}</span></td>
@@ -218,7 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${app.status !== 'Rechazada' ? `
                             <button class="btn-action-sm reject" onclick="window.adminActions.rejectApp(${index})" title="Rechazar">✕</button>
                         ` : ''}
-                        <a href="${app.photos}" target="_blank" class="btn-action-sm gold" title="Ver Book">📷 Book</a>
+                        ${photoSrc ? `
+                            <button class="btn-action-sm gold" onclick="window.adminActions.viewPhoto('${photoSrc}')" title="Ver Fotografía">📷 Foto</button>
+                        ` : (app.photos ? `
+                            <a href="${app.photos}" target="_blank" class="btn-action-sm gold" title="Ver Enlace Externo">🔗 Book</a>
+                        ` : '')}
                         <a href="https://wa.me/${(app.whatsapp || '').replace(/[^0-9]/g, '')}?text=Hola%20${encodeURIComponent(app.alias)},%20te%20escribimos%20de%20la%20Dirección%20RED%20VELVET%20sobre%20tu%20postulación%20(Folio:%20${app.id})" target="_blank" class="btn-action-sm" style="background:#25D366; color:#000; font-weight:600;" title="Abrir WhatsApp">📱 WA</a>
                     </div>
                 </td>
@@ -417,6 +434,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 activeModels[index].active = !activeModels[index].active;
                 renderCatalog();
             }
+        },
+        viewPhoto: (src) => {
+            if (!src) return;
+            // Crear modal visor de foto flotante de super lujo
+            const modalId = 'admin-photo-viewer-modal';
+            let viewer = document.getElementById(modalId);
+            if (!viewer) {
+                viewer = document.createElement('div');
+                viewer.id = modalId;
+                viewer.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.92); z-index:99999; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(15px); padding:20px;';
+                viewer.innerHTML = `
+                    <div style="position:relative; max-width:90vw; max-height:90vh; border:2px solid #D4AF37; border-radius:10px; overflow:hidden; box-shadow:0 0 40px rgba(212,175,55,0.4); background:#000;">
+                        <button id="close-viewer-btn" style="position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.7); border:1px solid #D4AF37; color:#FFD700; width:36px; height:36px; border-radius:50%; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:0.2s;">✕</button>
+                        <img id="viewer-img" src="" alt="Fotografía Original de Postulación" style="max-width:85vw; max-height:85vh; object-fit:contain; display:block;">
+                        <div style="padding:10px 16px; background:rgba(10,10,10,0.95); text-align:center; color:#FFD700; font-size:0.85rem; border-top:1px solid rgba(212,175,55,0.3);">
+                            📸 Fotografía HD cargada directamente desde el dispositivo de la modelo
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(viewer);
+
+                viewer.addEventListener('click', (e) => {
+                    if (e.target === viewer || e.target.id === 'close-viewer-btn') {
+                        viewer.style.display = 'none';
+                    }
+                });
+            }
+            const imgEl = viewer.querySelector('#viewer-img');
+            if (imgEl) imgEl.src = src;
+            viewer.style.display = 'flex';
         }
     };
 

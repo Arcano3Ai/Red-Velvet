@@ -61,20 +61,42 @@
             
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#explorar">Explorar</a></li>
-                    <li><a href="#experiencias">Experiencias</a></li>
-                    <li><a href="#como-funciona">Cómo funciona</a></li>
-                    <li><a href="#unete-modelos" style="color: #D4AF37; font-weight: 500;">👠 Únete</a></li>
-                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="#explorar" data-i18n="nav.explore">Explorar</a></li>
+                    <li><a href="#experiencias" data-i18n="nav.experiences">Experiencias</a></li>
+                    <li><a href="#como-funciona" data-i18n="nav.howItWorks">Cómo funciona</a></li>
+                    <li><a href="#unete-modelos" style="color: #D4AF37; font-weight: 500;" data-i18n="nav.join">👠 Únete</a></li>
+                    <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <div class="lang-selector">
-                    <span>MX / ES</span>
+                <!-- Language Selector Dropdown -->
+                <div class="lang-dropdown-wrap" id="lang-dropdown-wrap">
+                    <button class="lang-btn" id="lang-btn" aria-label="Cambiar idioma">
+                        <span id="current-lang-flag">🇲🇽</span>
+                        <span id="current-lang-label">ES</span>
+                        <span class="arrow-icon">▼</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option-btn active" data-lang="es">
+                            <span>🇲🇽</span> <span>Español</span>
+                        </button>
+                        <button class="lang-option-btn" data-lang="en">
+                            <span>🇺🇸</span> <span>English</span>
+                        </button>
+                        <button class="lang-option-btn" data-lang="ko">
+                            <span>🇰🇷</span> <span>한국어</span>
+                        </button>
+                    </div>
                 </div>
-                <button id="btn-acceso-privado" class="btn btn-primary btn-sm">🔑 Acceso Privado</button>
+
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Cambiar tema" title="Modo Claro / Oscuro">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
+                <button id="btn-acceso-privado" class="btn btn-primary btn-sm" data-i18n="header.privateAccess">🔑 Acceso Privado</button>
                 <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menú">
                     <span></span>
                     <span></span>
@@ -92,12 +114,12 @@
             </video>
             <div class="hero-bg"></div>
             <div class="container hero-content">
-                <span class="age-indicator">18+ | Plataforma exclusiva para adultos</span>
-                <h1 class="hero-headline reveal">Descubre una experiencia<br>fuera de lo común.</h1>
-                <p class="hero-subheadline reveal delay-1">Conecta con acompañantes verificadas en un espacio privado, elegante y diseñado para adultos.</p>
+                <span class="age-indicator" data-i18n="hero.ageBadge">18+ | Plataforma exclusiva para adultos</span>
+                <h1 class="hero-headline reveal" data-i18n="hero.title">Descubre una experiencia<br>fuera de lo común.</h1>
+                <p class="hero-subheadline reveal delay-1" data-i18n="hero.subtitle">Conecta con acompañantes verificadas en un espacio privado, elegante y diseñado para adultos.</p>
                 <div class="hero-buttons reveal delay-2">
-                    <a href="#explorar" class="btn btn-primary btn-lg">Explorar perfiles</a>
-                    <a href="#experiencias" class="btn btn-outline btn-lg">Conocer RED VELVET</a>
+                    <a href="#explorar" class="btn btn-primary btn-lg" data-i18n="hero.btnExplore">Explorar perfiles</a>
+                    <a href="#experiencias" class="btn btn-outline btn-lg" data-i18n="hero.btnLearn">Conocer RED VELVET</a>
                 </div>
             </div>
         </section>
@@ -105,22 +127,22 @@
         <!-- Experiences -->
         <section id="experiencias" class="section experiences">
             <div class="container">
-                <h2 class="section-title text-center">Una nueva forma de conectar.</h2>
+                <h2 class="section-title text-center" data-i18n="exp.title">Una nueva forma de conectar.</h2>
                 <div class="grid-3">
                     <div class="card experience-card">
                         <div class="card-number">01</div>
-                        <h3>Privacidad</h3>
-                        <p>Diseñamos cada detalle pensando en una experiencia discreta y segura.</p>
+                        <h3 data-i18n="exp.privacy.title">Privacidad</h3>
+                        <p data-i18n="exp.privacy.desc">Diseñamos cada detalle pensando en una experiencia discreta y segura.</p>
                     </div>
                     <div class="card experience-card">
                         <div class="card-number">02</div>
-                        <h3>Exclusividad</h3>
-                        <p>Descubre perfiles cuidadosamente presentados en un entorno premium.</p>
+                        <h3 data-i18n="exp.exclusivity.title">Exclusividad</h3>
+                        <p data-i18n="exp.exclusivity.desc">Descubre perfiles cuidadosamente presentados en un entorno premium.</p>
                     </div>
                     <div class="card experience-card">
                         <div class="card-number">03</div>
-                        <h3>Libertad</h3>
-                        <p>Tú decides cuándo, dónde y con quién conectar.</p>
+                        <h3 data-i18n="exp.freedom.title">Libertad</h3>
+                        <p data-i18n="exp.freedom.desc">Tú decides cuándo, dónde y con quién conectar.</p>
                     </div>
                 </div>
             </div>
@@ -129,12 +151,12 @@
         <!-- Search / Filter -->
         <section class="section search-section">
             <div class="container">
-                <h2 class="search-title text-center">Encuentra tu experiencia ideal.</h2>
+                <h2 class="search-title text-center" data-i18n="search.title">Encuentra tu experiencia ideal.</h2>
                 <div class="search-bar glass">
                     <div class="search-field">
-                        <label>Ciudad</label>
+                        <label data-i18n="search.city">Ciudad</label>
                         <select>
-                            <option>Todas las ciudades</option>
+                            <option data-i18n="search.city.all">Todas las ciudades</option>
                             <option>CDMX</option>
                             <option>Monterrey</option>
                             <option>Guadalajara</option>
@@ -142,18 +164,18 @@
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-field">
-                        <label>Disponibilidad</label>
+                        <label data-i18n="search.availability">Disponibilidad</label>
                         <select>
-                            <option>Cualquier momento</option>
+                            <option data-i18n="search.availability.all">Cualquier momento</option>
                             <option>Hoy</option>
                             <option>Esta semana</option>
                         </select>
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-field">
-                        <label>Categoría</label>
+                        <label data-i18n="search.category">Categoría</label>
                         <select>
-                            <option>Todas</option>
+                            <option data-i18n="search.category.all">Todas</option>
                             <option>VIP</option>
                             <option>Elite</option>
                             <option>Premium</option>
@@ -161,15 +183,15 @@
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-field">
-                        <label>Rango de edad</label>
+                        <label data-i18n="search.age">Rango de edad</label>
                         <select>
-                            <option>Todos</option>
+                            <option data-i18n="search.age.all">Todos</option>
                             <option>18-25</option>
                             <option>26-30</option>
                             <option>31+</option>
                         </select>
                     </div>
-                    <button class="btn btn-primary search-btn">Buscar</button>
+                    <button class="btn btn-primary search-btn" data-i18n="search.btn">Buscar</button>
                 </div>
             </div>
         </section>
@@ -178,7 +200,7 @@
         <section id="explorar" class="section profiles">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Perfiles Destacados</h2>
+                    <h2 class="section-title" data-i18n="profiles.title">Perfiles Destacados</h2>
                 </div>
                 <div class="grid-3 profiles-grid">
                     <!-- Profile 1 -->
@@ -519,33 +541,33 @@
             <div class="container">
                 <div class="join-models-card glass">
                     <div class="join-models-content">
-                        <span class="badge badge-gold">Exclusivo para Acompañantes Independientes</span>
-                        <h2 class="join-models-title">¿Deseas Crear tu Perfil en RED VELVET?</h2>
-                        <p class="join-models-desc">
+                        <span class="badge badge-gold" data-i18n="join.badge">Exclusivo para Acompañantes Independientes</span>
+                        <h2 class="join-models-title" data-i18n="join.title">¿Deseas Crear tu Perfil en RED VELVET?</h2>
+                        <p class="join-models-desc" data-i18n="join.desc">
                             Forma parte del catálogo más exclusivo y privado de México. Brindamos una plataforma de prestigio internacional, máxima protección de tu privacidad, clientes de alto poder adquisitivo rigurosamente filtrados y honorarios exclusivos desde <strong>$9,000 MXN</strong> por hora.
                         </p>
                         <div class="join-perks-grid">
                             <div class="perk-item">
                                 <div class="perk-icon">🔒</div>
-                                <h4>Privacidad Total</h4>
-                                <p>Tus datos privados jamás son compartidos. Tú decides qué fotos mostrar y puedes resguardar tu identidad con antifaces o retoque.</p>
+                                <h4 data-i18n="join.perk1.title">Privacidad Total</h4>
+                                <p data-i18n="join.perk1.desc">Tus datos privados jamás son compartidos. Tú decides qué fotos mostrar y puedes resguardar tu identidad con antifaces o retoque.</p>
                             </div>
                             <div class="perk-item">
                                 <div class="perk-icon">💎</div>
-                                <h4>Tarifas $9,000+ MXN</h4>
-                                <p>Acceso directo a clientes que valoran la exclusividad, elegancia y trato de primer nivel sin regateos.</p>
+                                <h4 data-i18n="join.perk2.title">Tarifas $9,000+ MXN</h4>
+                                <p data-i18n="join.perk2.desc">Acceso directo a clientes que valoran la exclusividad, elegancia y trato de primer nivel sin regateos.</p>
                             </div>
                             <div class="perk-item">
                                 <div class="perk-icon">🛡️</div>
-                                <h4>Club con Acceso Exclusivo</h4>
-                                <p>Solo ingresan clientes con membresía activa o invitación previa validada por nuestra dirección.</p>
+                                <h4 data-i18n="join.perk3.title">Club con Acceso Exclusivo</h4>
+                                <p data-i18n="join.perk3.desc">Solo ingresan clientes con membresía activa o invitación previa validada por nuestra dirección.</p>
                             </div>
                         </div>
                         <div class="join-actions">
-                            <button id="btn-open-model-modal" class="btn btn-primary btn-lg pulse-gold">
+                            <button id="btn-open-model-modal" class="btn btn-primary btn-lg pulse-gold" data-i18n="join.btnCta">
                                 👠 Crear Mi Perfil / Postularme Ahora
                             </button>
-                            <span class="join-note">Verificación confidencial vía canal encriptado en menos de 2 horas.</span>
+                            <span class="join-note" data-i18n="join.note">Verificación confidencial vía canal encriptado en menos de 2 horas.</span>
                         </div>
                     </div>
                 </div>
@@ -556,43 +578,43 @@
         <section id="faq" class="section faq-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">CENTRO DE INFORMACIÓN & DUDAS</span>
-                    <h2 class="section-title">Preguntas Frecuentes</h2>
-                    <p class="section-subtitle">Todo lo que necesitas conocer sobre membresías exclusivas, protocolos de máxima privacidad, tarifas estándar y postulación de acompañantes independientes.</p>
+                    <span class="badge badge-gold" data-i18n="faq.badge">CENTRO DE INFORMACIÓN & DUDAS</span>
+                    <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+                    <p class="section-subtitle" data-i18n="faq.subtitle">Todo lo que necesitas conocer sobre membresías exclusivas, protocolos de máxima privacidad, tarifas estándar y postulación de acompañantes independientes.</p>
                 </div>
 
                 <div class="faq-grid-container">
                     <!-- Columna 1: Membresía & Experiencia -->
                     <div class="faq-column">
-                        <h3 class="faq-category-title"><span class="faq-cat-dot"></span> Experiencia & Acceso Exclusivo</h3>
+                        <h3 class="faq-category-title"><span class="faq-cat-dot"></span> <span data-i18n="faq.cat1">Experiencia & Acceso Exclusivo</span></h3>
                         <div class="faq-accordion">
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Qué es RED VELVET y cómo opera?</span>
+                                    <span data-i18n="faq.q1">¿Qué es RED VELVET y cómo opera?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>RED VELVET es el club privado y directorio de ultra-lujo más distinguido de México. Operamos bajo un modelo exclusivo de difusión publicitaria y contacto directo entre acompañantes independientes de alto nivel y caballeros selectos, en un ambiente estrictamente seguro, privado y refinado.</p>
+                                    <p data-i18n="faq.a1">RED VELVET es el club privado y directorio de ultra-lujo más distinguido de México. Operamos bajo un modelo exclusivo de difusión publicitaria y contacto directo entre acompañantes independientes de alto nivel y caballeros selectos, en un ambiente estrictamente seguro, privado y refinado.</p>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Quién puede acceder a la plataforma?</span>
+                                    <span data-i18n="faq.q2">¿Quién puede acceder a la plataforma?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Nuestra plataforma está reservada única y estrictamente para personas mayores de 18 años. Para acceder al área privada y consultar datos de contacto directo de acompañantes Elite, se requiere contar con un código de invitación verificado o membresía activa del club.</p>
+                                    <p data-i18n="faq.a2">Nuestra plataforma está reservada única y estrictamente para personas mayores de 18 años. Para acceder al área privada y consultar datos de contacto directo de acompañantes Elite, se requiere contar con un código de invitación verificado o membresía activa del club.</p>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Cómo se garantiza mi privacidad y anonimato?</span>
+                                    <span data-i18n="faq.q3">¿Cómo se garantiza mi privacidad y anonimato?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>La discreción es nuestro pilar innegociable. No utilizamos rastreadores invasivos, no comercializamos datos con terceros y toda la comunicación se gestiona por canales encriptados punto a punto. Tu identidad permanece siempre protegida.</p>
+                                    <p data-i18n="faq.a3">La discreción es nuestro pilar innegociable. No utilizamos rastreadores invasivos, no comercializamos datos con terceros y toda la comunicación se gestiona por canales encriptados punto a punto. Tu identidad permanece siempre protegida.</p>
                                 </div>
                             </div>
                         </div>
@@ -600,36 +622,36 @@
 
                     <!-- Columna 2: Modelos, Tarifas & Seguridad -->
                     <div class="faq-column">
-                        <h3 class="faq-category-title"><span class="faq-cat-dot"></span> Perfiles, Tarifas & Postulación</h3>
+                        <h3 class="faq-category-title"><span class="faq-cat-dot"></span> <span data-i18n="faq.cat2">Perfiles, Tarifas & Postulación</span></h3>
                         <div class="faq-accordion">
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Los perfiles son 100% reales y verificados?</span>
+                                    <span data-i18n="faq.q4">¿Los perfiles son 100% reales y verificados?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Sí, absolutamente. Cada perfil publicado cuenta con insignia dorada de verificación tras superar una estricta validación de identidad y autenticidad fotográfica, eliminando por completo perfiles falsos o intermediarios no autorizados.</p>
+                                    <p data-i18n="faq.a4">Sí, absolutamente. Cada perfil publicado cuenta con insignia dorada de verificación tras superar una estricta validación de identidad y autenticidad fotográfica, eliminando por completo perfiles falsos o intermediarios no autorizados.</p>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Cuáles son las tarifas y políticas de exclusividad?</span>
+                                    <span data-i18n="faq.q5">¿Cuáles son las tarifas y políticas de exclusividad?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Para garantizar el estándar de alta gama y el prestigio de nuestra comunidad, las tarifas sugeridas de los perfiles comienzan a partir de <strong>$9,000 MXN por hora</strong>, asegurando un trato recíproco de máximo respeto, puntualidad y excelencia.</p>
+                                    <p data-i18n="faq.a5">Para garantizar el estándar de alta gama y el prestigio de nuestra comunidad, las tarifas sugeridas de los perfiles comienzan a partir de <strong>$9,000 MXN por hora</strong>, asegurando un trato recíproco de máximo respeto, puntualidad y excelencia.</p>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Deseas postularte y crear tu perfil de modelo?</span>
+                                    <span data-i18n="faq.q6">¿Deseas postularte y crear tu perfil de modelo?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Si eres mujer mayor de 18 años, independiente y cuentas con la distinción, elegancia y clase que caracteriza a RED VELVET, puedes enviar tu solicitud ahora mismo de forma confidencial:</p>
-                                    <button type="button" class="btn btn-sm btn-primary btn-open-model-trigger" style="margin-top:14px; display:inline-block;" data-open-modal="model-modal">👠 Abrir Formulario de Creación de Perfil</button>
+                                    <p data-i18n="faq.a6">Si eres mujer mayor de 18 años, independiente y cuentas con la distinción, elegancia y clase que caracteriza a RED VELVET, puedes enviar tu solicitud ahora mismo de forma confidencial:</p>
+                                    <button type="button" class="btn btn-sm btn-primary btn-open-model-trigger" style="margin-top:14px; display:inline-block;" data-open-modal="model-modal" data-i18n="faq.btnOpenModelForm">👠 Abrir Formulario de Creación de Perfil</button>
                                 </div>
                             </div>
                         </div>
@@ -648,19 +670,19 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="footer-logo">
-                    <p class="footer-notice">RED VELVET — Solo para adultos +18</p>
+                    <p class="footer-notice" data-i18n="footer.adultNotice">RED VELVET — Solo para adultos +18</p>
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#unete-modelos" class="footer-highlight-link" data-open-modal="model-modal">👠 Crear Mi Perfil</a></li>
-                        <li><a href="#terminos" id="link-open-terms" data-open-modal="terms-modal">Términos y Condiciones</a></li>
-                        <li><a href="#privacidad" id="link-open-privacy" data-open-modal="privacy-modal">Política de Privacidad</a></li>
+                        <li><a href="#unete-modelos" class="footer-highlight-link" data-open-modal="model-modal" data-i18n="footer.createProfile">👠 Crear Mi Perfil</a></li>
+                        <li><a href="#terminos" id="link-open-terms" data-open-modal="terms-modal" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                        <li><a href="#privacidad" id="link-open-privacy" data-open-modal="privacy-modal" data-i18n="footer.privacy">Política de Privacidad</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#seguridad" id="link-open-security" data-open-modal="security-modal">Protocolo de Seguridad</a></li>
-                        <li><a href="https://wa.me/5215500000000?text=Hola%20RED%20VELVET,%20deseo%20solicitar%20información%20o%20soporte" target="_blank">Contacto VIP</a></li>
-                        <li><a href="#faq">Preguntas Frecuentes</a></li>
-                        <li><a href="admin.html" style="color:rgba(212,175,55,0.7); font-size:0.8rem;" title="Acceso Exclusivo Dirección General">⚙️ Suite Dirección</a></li>
+                        <li><a href="#seguridad" id="link-open-security" data-open-modal="security-modal" data-i18n="footer.security">Protocolo de Seguridad</a></li>
+                        <li><a href="https://wa.me/5215500000000?text=Hola%20RED%20VELVET,%20deseo%20solicitar%20información%20o%20soporte" target="_blank" data-i18n="footer.vipContact">Contacto VIP</a></li>
+                        <li><a href="#faq" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li><a href="admin.html" style="color:rgba(212,175,55,0.7); font-size:0.8rem;" title="Acceso Exclusivo Dirección General" data-i18n="footer.adminSuite">⚙️ Suite Dirección</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -738,9 +760,32 @@
                         <input type="text" id="model-measurements" placeholder="Ej. 90-60-90 · 1.70m">
                     </div>
                     <div class="form-group">
-                        <label for="model-photos-link">Enlace a Fotografías / Instagram / Cloud *</label>
-                        <input type="url" id="model-photos-link" required placeholder="https://instagram.com/tu_perfil o link de Drive/iCloud">
+                        <label for="model-photos-link">Enlace a Portafolio / Instagram / Cloud (Opcional)</label>
+                        <input type="url" id="model-photos-link" placeholder="https://instagram.com/tu_perfil o Drive/iCloud">
                     </div>
+                </div>
+
+                <!-- Carga de fotos directa desde dispositivo -->
+                <div class="form-group full-width-group">
+                    <label>📸 Fotografías del Perfil (Subir desde tu Dispositivo o Galería) *</label>
+                    <div class="photo-dropzone" id="photo-dropzone">
+                        <input type="file" id="model-photo-input" accept="image/png, image/jpeg, image/webp, image/jpg" multiple style="display: none;">
+                        <div class="dropzone-content">
+                            <div class="dropzone-icon">📷</div>
+                            <div class="dropzone-text">
+                                <strong>Toca o arrastra tus fotos aquí desde tu dispositivo</strong>
+                                <span>Admite fotos de tu galería o cámara (JPG, PNG, WEBP). Se optimizarán automáticamente en HD.</span>
+                            </div>
+                            <button type="button" class="btn btn-outline btn-sm btn-select-photos" id="btn-select-photos">
+                                📁 Elegir Fotos del Dispositivo
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Previsualizador de miniaturas de fotos cargadas -->
+                    <div class="photo-preview-grid" id="photo-preview-grid" style="display: none;"></div>
+                    <span id="photo-upload-hint" style="font-size: 0.78rem; color: #888; display: block; margin-top: 0.4rem;">
+                        * Sube al menos 1 fotografía de presentación o introduce un enlace válido a tu portafolio.
+                    </span>
                 </div>
 
                 <div class="form-group">
@@ -888,6 +933,7 @@
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
 
     <!-- Scripts -->
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
