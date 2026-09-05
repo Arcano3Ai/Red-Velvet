@@ -343,8 +343,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.faq-item').forEach(item => {
         const questionBtn = item.querySelector('.faq-question');
         if (questionBtn) {
-            questionBtn.addEventListener('click', () => {
-                document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('active'); });
+            questionBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const container = item.closest('.faq-accordion') || document;
+                container.querySelectorAll('.faq-item').forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
                 item.classList.toggle('active');
             });
         }
