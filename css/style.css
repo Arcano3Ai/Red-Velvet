@@ -1087,3 +1087,138 @@ img {
         max-width: 180px;
     }
 }
+
+/* --- Elite Section Overhaul --- */
+.elite-section {
+    position: relative;
+    background: #020202;
+    overflow: hidden;
+    padding: 6rem 0;
+}
+
+.elite-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(0,0,0,0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.elite-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.elite-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #D4AF37;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #D4AF37;
+    z-index: 2;
+    border-radius: 2px;
+    backdrop-filter: blur(5px);
+}
+
+.elite-card {
+    height: 550px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+}
+
+.elite-card:hover {
+    border: 1px solid rgba(212, 175, 55, 0.8);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.elite-card-overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 30%, transparent 100%);
+    transform: translateY(0);
+    opacity: 1; /* Keep it always visible but transition details */
+    padding: 0;
+}
+
+.elite-info-top {
+    padding: 2rem 2rem 1rem 2rem;
+    transform: translateY(100px);
+    transition: var(--transition);
+}
+
+.elite-card:hover .elite-info-top {
+    transform: translateY(0);
+}
+
+.elite-info-top h3 {
+    font-size: 2.2rem;
+    color: #F5F5F0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.elite-loc {
+    color: #D4AF37;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.elite-details-premium {
+    padding: 0 2rem 2rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+    max-height: 0;
+}
+
+.elite-card:hover .elite-details-premium {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 300px;
+}
+
+.elite-details-premium ul {
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+
+.elite-details-premium li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.elite-details-premium li span:first-child {
+    color: var(--text-muted);
+}
+
+.elite-price {
+    color: #D4AF37 !important;
+    font-weight: 600;
+}
+
+.btn-gold {
+    background: transparent;
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+}
+
+.btn-gold:hover {
+    background: #D4AF37;
+    color: #000;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
