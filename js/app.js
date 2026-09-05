@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    const bgMusic = document.getElementById('bg-music');
+    let hasStartedMusic = false;
+
+    // Function to try playing music
+    const playMusic = () => {
+        if (bgMusic && !hasStartedMusic) {
+            bgMusic.play().then(() => {
+                hasStartedMusic = true;
+            }).catch(e => console.log('Audio autoplay prevented by browser:', e));
+        }
+    };
+
     // 1. Age Gate Modal Logic
     const ageGate = document.getElementById('age-gate');
     const btnAdult = document.getElementById('btn-adult');
@@ -11,17 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         ageGate.classList.remove('active');
         document.body.style.overflow = 'auto';
+        // Try playing music immediately if verified (may be blocked by browser)
+        playMusic();
     }
 
     btnAdult.addEventListener('click', () => {
         localStorage.setItem('redVelvetAgeVerified', 'true');
         ageGate.classList.remove('active');
         document.body.style.overflow = 'auto';
-        const bgMusic = document.getElementById('bg-music');
-        if (bgMusic) {
-            bgMusic.play().catch(e => console.log('Audio autoplay prevented:', e));
-        }
+        playMusic();
     });
+
+    // Start music on first interaction if they are already verified but browser blocked autoplay
+    document.body.addEventListener('click', () => {
+        if (localStorage.getItem('redVelvetAgeVerified') && !hasStartedMusic) {
+            playMusic();
+        }
+    }, { once: false });
 
     // 2. Sticky Header
     const header = document.querySelector('.header');
@@ -37,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
@@ -47,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+            if(navMenu) navMenu.classList.remove('active');
         });
     });
 
@@ -100,36 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Back to Top Button
     const backToTopBtn = document.getElementById('back-to-top');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    });
-    
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
         });
-    });
-});
-
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuBtn && navMenu) {
-        menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     }
