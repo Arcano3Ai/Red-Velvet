@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED VELVET | Premium Adult Experiences</title>
+    <!-- Open Graph (WhatsApp) -->
+    <meta property="og:title" content="RED VELVET | Premium Adult Experiences">
+    <meta property="og:description" content="Descubre una experiencia premium, privada y exclusiva.">
+    <meta property="og:image" content="https://arcano3ai.github.io/Red-Velvet/assets/logo/logooficial.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arcano3ai.github.io/Red-Velvet/">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Age Gate Modal -->
+    <div id="age-gate" class="age-gate active">
+        <div class="age-gate-content glass">
+            <img src="assets/logo/logooficial.jpeg" alt="RED VELVET Logo" class="modal-logo">
+            <p>Esta plataforma está destinada exclusivamente a personas mayores de 18 años.</p>
+            <div class="age-gate-buttons">
+                <button id="btn-adult" class="btn btn-primary">Soy mayor de 18</button>
+                <a href="https://google.com" class="btn btn-outline">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header sticky">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="header-logo"></a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#explorar">Explorar</a></li>
+                    <li><a href="#experiencias">Experiencias</a></li>
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-selector">
+                    <span>MX / ES</span>
+                </div>
+                <a href="#publicar" class="btn btn-primary btn-sm">Publicar perfil</a>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <video autoplay loop muted playsinline class="hero-bg-video">
+                <source src="assets/video/videointro.mp4" type="video/mp4">
+            </video>
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="age-indicator">18+ | Plataforma exclusiva para adultos</span>
+                <h1 class="hero-headline reveal">Descubre una experiencia<br>fuera de lo común.</h1>
+                <p class="hero-subheadline reveal delay-1">Conecta con acompañantes verificadas en un espacio privado, elegante y diseñado para adultos.</p>
+                <div class="hero-buttons reveal delay-2">
+                    <a href="#explorar" class="btn btn-primary btn-lg">Explorar perfiles</a>
+                    <a href="#experiencias" class="btn btn-outline btn-lg">Conocer RED VELVET</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences -->
+        <section id="experiencias" class="section experiences">
+            <div class="container">
+                <h2 class="section-title text-center">Una nueva forma de conectar.</h2>
+                <div class="grid-3">
+                    <div class="card experience-card">
+                        <div class="card-number">01</div>
+                        <h3>Privacidad</h3>
+                        <p>Diseñamos cada detalle pensando en una experiencia discreta y segura.</p>
+                    </div>
+                    <div class="card experience-card">
+                        <div class="card-number">02</div>
+                        <h3>Exclusividad</h3>
+                        <p>Descubre perfiles cuidadosamente presentados en un entorno premium.</p>
+                    </div>
+                    <div class="card experience-card">
+                        <div class="card-number">03</div>
+                        <h3>Libertad</h3>
+                        <p>Tú decides cuándo, dónde y con quién conectar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search / Filter -->
+        <section class="section search-section">
+            <div class="container">
+                <h2 class="search-title text-center">Encuentra tu experiencia ideal.</h2>
+                <div class="search-bar glass">
+                    <div class="search-field">
+                        <label>Ciudad</label>
+                        <select>
+                            <option>Todas las ciudades</option>
+                            <option>CDMX</option>
+                            <option>Monterrey</option>
+                            <option>Guadalajara</option>
+                        </select>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-field">
+                        <label>Disponibilidad</label>
+                        <select>
+                            <option>Cualquier momento</option>
+                            <option>Hoy</option>
+                            <option>Esta semana</option>
+                        </select>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-field">
+                        <label>Categoría</label>
+                        <select>
+                            <option>Todas</option>
+                            <option>VIP</option>
+                            <option>Elite</option>
+                            <option>Premium</option>
+                        </select>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-field">
+                        <label>Rango de edad</label>
+                        <select>
+                            <option>Todos</option>
+                            <option>18-25</option>
+                            <option>26-30</option>
+                            <option>31+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary search-btn">Buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Profiles -->
+        <section id="explorar" class="section profiles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Perfiles Destacados</h2>
+                </div>
+                <div class="grid-3 profiles-grid">
+                    <!-- Profile 1 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Valentina">
+                            <div class="profile-category category-premium">Premium</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Valentina, 28 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">Monterrey</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                    <!-- Profile 2 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800" alt="Sofía">
+                            <div class="profile-category category-elite">Elite</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Sofía, 26 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">CDMX</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                    <!-- Profile 3 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800" alt="Camila">
+                            <div class="profile-category category-vip">VIP</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Camila, 30 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">Guadalajara</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                    <!-- Profile 4 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" alt="Renata">
+                            <div class="profile-category category-premium">Premium</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Renata, 27 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">Cancún</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                    <!-- Profile 5 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=800" alt="Isabella">
+                            <div class="profile-category category-elite">Elite</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Isabella, 29 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">Monterrey</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                    <!-- Profile 6 -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1505033575518-a36ea2ef75ae?auto=format&fit=crop&q=80&w=800" alt="Victoria">
+                            <div class="profile-category category-vip">VIP</div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Victoria, 31 <span class="verified-badge" title="Perfil verificado">✓</span></h3>
+                            </div>
+                            <p class="profile-location">CDMX</p>
+                            <div class="profile-details">
+                                <p><strong>Tarifa:</strong> $2,500 MXN / hr</p>
+                                <p><strong>Servicios:</strong> GFE, Masaje, Cenas, Eventos</p>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-full">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RED VELVET ELITE -->
+        <section class="section elite-section">
+            <div class="container">
+                <div class="elite-header text-center">
+                    <h2 class="elite-title">RED VELVET ELITE</h2>
+                    <p class="elite-subtitle">Una selección especial para quienes buscan una experiencia aún más exclusiva.</p>
+                </div>
+                <div class="grid-3 elite-grid">
+                    <div class="elite-card">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800" alt="Elite 1">
+                        <div class="elite-card-overlay">
+                            <h3>Amelia</h3>
+                            <p>CDMX</p>
+                        </div>
+                    </div>
+                    <div class="elite-card">
+                        <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&q=80&w=800" alt="Elite 2">
+                        <div class="elite-card-overlay">
+                            <h3>Julieta</h3>
+                            <p>Monterrey</p>
+                        </div>
+                    </div>
+                    <div class="elite-card">
+                        <img src="https://images.unsplash.com/photo-1513207565459-d7f36bfa1222?auto=format&fit=crop&q=80&w=800" alt="Elite 3">
+                        <div class="elite-card-overlay">
+                            <h3>Valeria</h3>
+                            <p>Guadalajara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center elite-action">
+                    <a href="#" class="btn btn-primary btn-lg">Explorar Elite</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="como-funciona" class="section timeline-section">
+            <div class="container">
+                <h2 class="section-title text-center">Cómo funciona</h2>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">01</div>
+                        <h3>Explora</h3>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-step">
+                        <div class="step-number">02</div>
+                        <h3>Descubre</h3>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-step">
+                        <div class="step-number">03</div>
+                        <h3>Conecta</h3>
+                    </div>
+                    <div class="timeline-line"></div>
+                    <div class="timeline-step">
+                        <div class="step-number">04</div>
+                        <h3>Disfruta</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Companions -->
+        <section class="section companions-section">
+            <div class="container">
+                <div class="companions-content glass">
+                    <div class="companions-text">
+                        <h2>Tu presencia merece un lugar diferente.</h2>
+                        <p>Construye tu perfil, presenta tu estilo y conecta con personas que valoran una experiencia premium.</p>
+                        <a href="#publicar" class="btn btn-primary btn-lg">Crear mi perfil</a>
+                    </div>
+                    <div class="companions-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">+2,500</span>
+                            <span class="stat-label">perfiles</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+80</span>
+                            <span class="stat-label">ciudades</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+15,000</span>
+                            <span class="stat-label">conexiones</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">plataforma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"RED VELVET tiene una estética completamente diferente. Se siente privada, elegante y profesional."</p>
+                        <p class="testimonial-author">— Usuario verificado</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"El nivel de los perfiles y el diseño de la plataforma transmiten mucha confianza. Es justo lo que buscaba."</p>
+                        <p class="testimonial-author">— Usuario verificado</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Una experiencia de usuario impecable. Es discreto, rápido y el soporte es excelente."</p>
+                        <p class="testimonial-author">— Usuario verificado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <h2 class="section-title text-center">Preguntas frecuentes</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">¿Qué es RED VELVET? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>RED VELVET es una plataforma premium y exclusiva diseñada para conectar a adultos en un entorno privado, seguro y con altos estándares de calidad.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Quién puede utilizar la plataforma? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Nuestra plataforma está estrictamente reservada para usuarios mayores de 18 años que buscan experiencias premium y discretas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Los perfiles son verificados? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Sí, contamos con un proceso de verificación para asegurar que los perfiles cuenten con el distintivo correspondiente, garantizando así la calidad de la plataforma.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cómo funciona la privacidad? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>La privacidad es nuestro pilar fundamental. Utilizamos tecnologías seguras y diseño discreto para proteger tu identidad y tus datos en todo momento.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Puedo publicar mi perfil? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Por supuesto. Si cumples con los requisitos de calidad y estética de la marca, puedes crear tu perfil y unirte a nuestra comunidad exclusiva.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿RED VELVET es para mayores de edad? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Sí, absolutamente. El uso de esta plataforma está restringido única y exclusivamente a mayores de 18 años.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <audio id="bg-music" loop>
+            <source src="assets/musica/Red Velvet.mp3" type="audio/mpeg">
+        </audio>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="footer-logo">
+                    <p class="footer-notice">RED VELVET — Solo para adultos +18</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
