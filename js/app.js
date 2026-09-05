@@ -258,13 +258,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     // 5. LEGAL MODALS (TÉRMINOS, PRIVACIDAD, SEGURIDAD)
     // ============================================
+    // Global delegation for data-open-modal
+    // ============================================
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-open-modal]');
+        if (trigger) {
+            e.preventDefault();
+            const targetId = trigger.getAttribute('data-open-modal');
+            if (targetId) openModal(targetId);
+        }
+    });
+
     // Terms Modal
     const linkTerms = document.getElementById('link-open-terms');
     const termsClose = document.getElementById('terms-modal-close');
     const termsOverlay = document.getElementById('terms-modal-overlay');
     const btnAcceptTerms = document.getElementById('btn-accept-terms');
 
-    if (linkTerms) linkTerms.addEventListener('click', () => openModal('terms-modal'));
+    if (linkTerms) linkTerms.addEventListener('click', (e) => { e.preventDefault(); openModal('terms-modal'); });
     if (termsClose) termsClose.addEventListener('click', () => closeModal('terms-modal'));
     if (termsOverlay) termsOverlay.addEventListener('click', () => closeModal('terms-modal'));
     if (btnAcceptTerms) btnAcceptTerms.addEventListener('click', () => closeModal('terms-modal'));
@@ -275,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const privacyOverlay = document.getElementById('privacy-modal-overlay');
     const btnAcceptPrivacy = document.getElementById('btn-accept-privacy');
 
-    if (linkPrivacy) linkPrivacy.addEventListener('click', () => openModal('privacy-modal'));
+    if (linkPrivacy) linkPrivacy.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); });
     if (privacyClose) privacyClose.addEventListener('click', () => closeModal('privacy-modal'));
     if (privacyOverlay) privacyOverlay.addEventListener('click', () => closeModal('privacy-modal'));
     if (btnAcceptPrivacy) btnAcceptPrivacy.addEventListener('click', () => closeModal('privacy-modal'));
@@ -286,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const securityOverlay = document.getElementById('security-modal-overlay');
     const btnAcceptSecurity = document.getElementById('btn-accept-security');
 
-    if (linkSecurity) linkSecurity.addEventListener('click', () => openModal('security-modal'));
+    if (linkSecurity) linkSecurity.addEventListener('click', (e) => { e.preventDefault(); openModal('security-modal'); });
     if (securityClose) securityClose.addEventListener('click', () => closeModal('security-modal'));
     if (securityOverlay) securityOverlay.addEventListener('click', () => closeModal('security-modal'));
     if (btnAcceptSecurity) btnAcceptSecurity.addEventListener('click', () => closeModal('security-modal'));

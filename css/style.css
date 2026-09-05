@@ -1761,3 +1761,107 @@ img {
     max-width: 500px;
     margin: 0 auto;
 }
+
+/* ==========================================================================
+   FAQ ACCORDION & ACCENTS
+   ========================================================================== */
+.faq-section {
+    padding: 5rem 0;
+    background: rgba(10, 10, 10, 0.5);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.faq-item.active {
+    border-color: rgba(212, 175, 55, 0.5);
+    background: rgba(25, 20, 22, 0.85);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    outline: none;
+    transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+    color: #D4AF37;
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    color: #D4AF37;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-weight: 300;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.faq-answer .btn-open-model-trigger {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #800020, #4A0E17);
+    border: 1px solid #D4AF37;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.faq-answer .btn-open-model-trigger:hover {
+    background: #D4AF37;
+    color: #000;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
