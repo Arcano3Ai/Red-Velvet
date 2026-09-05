@@ -279,8 +279,8 @@
                                 <h3 class="panel-title"><span>💎</span> Catálogo de Acompañantes en Línea</h3>
                                 <p style="color:#888; font-size:0.85rem; margin-top:0.3rem;">Control en tiempo real de visibilidad, tarifas sugeridas y perfiles activos.</p>
                             </div>
-                            <button class="btn-action-sm gold" onclick="alert('Para agregar una nueva modelo al catálogo, aprueba una postulación pendiente o crea un perfil directo.')">
-                                + Nuevo Perfil
+                            <button id="btn-open-create-model" class="btn-action-sm gold" style="padding: 0.6rem 1.2rem; font-size: 0.88rem;">
+                                ➕ Crear Nueva Modelo
                             </button>
                         </div>
 
@@ -379,6 +379,110 @@
                 </div>
 
             </main>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL: CREAR / EDITAR MODELO EN CATÁLOGO
+         ============================================ -->
+    <div id="admin-model-modal" class="modal-backdrop" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:20px;">
+        <div class="modal-overlay" id="admin-model-modal-overlay"></div>
+        <div style="position:relative; width:100%; max-width:680px; max-height:90vh; overflow-y:auto; background:#121212; border:1px solid #D4AF37; border-radius:10px; padding:2rem; box-shadow:0 0 35px rgba(212,175,55,0.25); color:#F5F5F0;">
+            <button id="admin-model-modal-close" style="position:absolute; top:14px; right:14px; background:none; border:none; color:#D4AF37; font-size:1.6rem; cursor:pointer;">&times;</button>
+            
+            <div style="text-align:center; margin-bottom:1.5rem;">
+                <span class="badge badge-gold" style="font-size:0.75rem;">Administración de Catálogo</span>
+                <h3 style="color:#FFD700; font-family:var(--font-serif); font-size:1.6rem; margin-top:0.4rem;" id="admin-model-modal-title">Publicar Nueva Modelo</h3>
+                <p style="color:#aaa; font-size:0.85rem;">Registra un nuevo perfil de alta gama que se publicará inmediatamente en la plataforma.</p>
+            </div>
+
+            <form id="admin-create-model-form" style="display:flex; flex-direction:column; gap:1.1rem;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Alias / Nombre Artístico *</label>
+                        <input type="text" id="adm-alias" required placeholder="Ej. Valentina, Scarlett" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Edad (+18) *</label>
+                        <input type="number" id="adm-age" min="18" max="55" required placeholder="Ej. 24" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Ciudad *</label>
+                        <select id="adm-city" required style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                            <option value="CDMX - Polanco">CDMX (Polanco / Roma / Santa Fe)</option>
+                            <option value="Monterrey - San Pedro">Monterrey (San Pedro / Valle)</option>
+                            <option value="Guadalajara - Providencia">Guadalajara (Providencia / Andares)</option>
+                            <option value="Cancún - Zona Hotelera">Cancún & Riviera Maya</option>
+                            <option value="Querétaro - Juriquilla">Querétaro</option>
+                            <option value="Puebla - Angelópolis">Puebla</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Tarifa Sugerida (Mín. $9,000 MXN) *</label>
+                        <input type="text" id="adm-rate" required placeholder="Ej. $9,000 MXN / hr" value="$9,000 MXN / hr" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Categoría *</label>
+                        <select id="adm-category" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                            <option value="VIP">VIP</option>
+                            <option value="Elite">Elite</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Nacionalidad *</label>
+                        <input type="text" id="adm-nationality" required placeholder="Ej. Mexicana, Brasileña, Colombiana" value="Mexicana" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Medidas (Busto-Cintura-Cadera)</label>
+                        <input type="text" id="adm-measurements" placeholder="Ej. 90-60-90 · 1.70m" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                    <div>
+                        <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Idiomas</label>
+                        <input type="text" id="adm-languages" placeholder="Ej. Español, Inglés" value="Español, Inglés" style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;">
+                    </div>
+                </div>
+
+                <!-- Subida de Imagen desde Dispositivo -->
+                <div style="background:rgba(20,20,20,0.8); border:1.5px dashed rgba(212,175,55,0.45); border-radius:8px; padding:1.2rem; text-align:center; cursor:pointer;" id="adm-photo-dropzone">
+                    <input type="file" id="adm-photo-file" accept="image/*" style="display:none;">
+                    <div style="font-size:1.8rem; margin-bottom:0.4rem;">📷</div>
+                    <strong style="color:#FFD700; display:block; font-size:0.9rem;">Subir Fotografía de Portada desde tu Dispositivo</strong>
+                    <span style="color:#888; font-size:0.78rem;">Haz clic para elegir foto de tu computadora o celular (JPG, PNG, WEBP)</span>
+                    <div id="adm-photo-preview" style="display:none; margin-top:0.8rem;">
+                        <img src="" alt="Preview" style="width:90px; height:90px; object-fit:cover; border-radius:6px; border:2px solid #D4AF37; box-shadow:0 0 15px rgba(212,175,55,0.4);">
+                    </div>
+                </div>
+
+                <div>
+                    <label style="display:block; font-size:0.8rem; color:#888; margin-bottom:0.3rem;">O URL de Imagen Web (Opcional si subiste archivo arriba):</label>
+                    <input type="url" id="adm-photo-url" placeholder="https://images.unsplash.com/..." style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.2); border-radius:4px; padding:0.6rem; color:#bbb; font-size:0.85rem;">
+                </div>
+
+                <div>
+                    <label style="display:block; font-size:0.8rem; color:#D4AF37; margin-bottom:0.3rem;">Descripción / Bio de Presentación *</label>
+                    <textarea id="adm-bio" rows="2" required placeholder="Descripción de elegancia, estilo y distinción..." style="width:100%; background:#1a1a1a; border:1px solid rgba(212,175,55,0.3); border-radius:4px; padding:0.75rem; color:#fff;"></textarea>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <input type="checkbox" id="adm-is-elite" style="accent-color:#D4AF37; width:18px; height:18px;">
+                    <label for="adm-is-elite" style="color:#FFD700; font-size:0.88rem; cursor:pointer;">💎 Destacar en Sección RED VELVET ELITE</label>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:1rem;">
+                    <button type="button" id="adm-modal-cancel" class="btn-action-sm" style="padding:0.7rem 1.4rem;">Cancelar</button>
+                    <button type="submit" class="btn-admin-gold" style="padding:0.7rem 1.8rem;">✨ Guardar y Publicar</button>
+                </div>
+            </form>
         </div>
     </div>
 

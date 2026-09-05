@@ -1,0 +1,14 @@
+services:
+  redvelvet:
+    build: .
+    container_name: redvelvet-suite
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - NODE_ENV=production
+      - JWT_SECRET=red-velvet-executive-secret-key-2026
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads

@@ -97,36 +97,69 @@ document.addEventListener('DOMContentLoaded', () => {
     if (inviteOverlay) inviteOverlay.addEventListener('click', closeInviteModal);
     if (inviteClose) inviteClose.addEventListener('click', closeInviteModal);
 
-    const verifyCode = () => {
+    const verifyCode = async () => {
         if (!codeInput) return;
         const code = codeInput.value.trim().toUpperCase();
         if (errMsg) errMsg.style.display = 'none';
         if (successMsg) successMsg.style.display = 'none';
         codeInput.classList.remove('error', 'success');
 
-        const activeCodes = getDynamicValidCodes();
+        try {
+            const resp = await fetch('/api/codes/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code })
+            });
+            const data = await resp.json();
 
-        if (activeCodes[code]) {
-            const session = activeCodes[code];
-            localStorage.setItem('redVelvetSession', JSON.stringify({ code, ...session }));
-            codeInput.classList.add('success');
-            if (successMsg) successMsg.style.display = 'block';
+            if (data.valid) {
+                const session = { code, role: data.role, label: data.label };
+                localStorage.setItem('redVelvetSession', JSON.stringify(session));
+                codeInput.classList.add('success');
+                if (successMsg) successMsg.style.display = 'block';
 
-            if (code === 'ADMIN-999' || session.role === 'Administrador') {
-                sessionStorage.setItem('redVelvetAdminAuth', 'true');
-            }
-
-            setTimeout(() => {
-                closeInviteModal();
-                if (code === 'ADMIN-999' || session.role === 'Administrador') {
-                    window.location.href = 'admin.html';
-                } else {
-                    updateHeaderForSession(session);
+                if (data.isAdmin) {
+                    sessionStorage.setItem('redVelvetAdminAuth', 'true');
                 }
-            }, 1000);
-        } else {
-            codeInput.classList.add('error');
-            if (errMsg) errMsg.style.display = 'block';
+
+                setTimeout(() => {
+                    closeInviteModal();
+                    if (data.isAdmin) {
+                        window.location.href = 'admin.html';
+                    } else {
+                        updateHeaderForSession(session);
+                    }
+                }, 1000);
+            } else {
+                codeInput.classList.add('error');
+                if (errMsg) {
+                    errMsg.textContent = data.error || 'Código de invitación no válido o revocado.';
+                    errMsg.style.display = 'block';
+                }
+            }
+        } catch (e) {
+            // Fallback en caso de desconexión momentánea
+            const activeCodes = getDynamicValidCodes();
+            if (activeCodes[code]) {
+                const session = activeCodes[code];
+                localStorage.setItem('redVelvetSession', JSON.stringify({ code, ...session }));
+                codeInput.classList.add('success');
+                if (successMsg) successMsg.style.display = 'block';
+                if (code === 'ADMIN-999' || session.role === 'Administrador') {
+                    sessionStorage.setItem('redVelvetAdminAuth', 'true');
+                }
+                setTimeout(() => {
+                    closeInviteModal();
+                    if (code === 'ADMIN-999' || session.role === 'Administrador') {
+                        window.location.href = 'admin.html';
+                    } else {
+                        updateHeaderForSession(session);
+                    }
+                }, 1000);
+            } else {
+                codeInput.classList.add('error');
+                if (errMsg) errMsg.style.display = 'block';
+            }
         }
     };
 
@@ -389,30 +422,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const mainPhoto = modelUploadedPhotos.length > 0 ? modelUploadedPhotos[0] : photosLink;
-            const folio = 'RV-' + Math.floor(100000 + Math.random() * 900000);
+            let folio = 'RV-' + Math.floor(100000 + Math.random() * 900000);
 
-            // Persist into localStorage for Admin Suite
-            try {
-                const existing = JSON.parse(localStorage.getItem('redVelvetApplications')) || [];
-                existing.unshift({
-                    id: folio,
-                    alias: alias,
-                    age: age,
-                    city: city,
-                    rate: rate,
-                    whatsapp: whatsapp,
-                    nationality: nationality,
-                    photos: mainPhoto,
-                    allPhotos: modelUploadedPhotos,
-                    photosLink: photosLink,
-                    about: about,
-                    status: 'Pendiente',
-                    date: 'Recién postulado'
-                });
-                localStorage.setItem('redVelvetApplications', JSON.stringify(existing));
-            } catch (err) {
-                console.error('Error al guardar postulación:', err);
-            }
+            // Persistir en Servidor Backend & Base de Datos SQLite
+            (async () => {
+                try {
+                    const resp = await fetch('/api/applications', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            alias,
+                            age,
+                            city,
+                            rate,
+                            whatsapp,
+                            nationality,
+                            photos: mainPhoto,
+                            gallery: modelUploadedPhotos,
+                            about
+                        })
+                    });
+                    const resData = await resp.json();
+                    if (resData.folio) folio = resData.folio;
+                } catch (apiErr) {
+                    console.warn('Fallback a almacenamiento local por red:', apiErr);
+                }
+
+                // Guardar también en localStorage como réplica de contingencia
+                try {
+                    const existing = JSON.parse(localStorage.getItem('redVelvetApplications')) || [];
+                    existing.unshift({
+                        id: folio,
+                        alias: alias,
+                        age: age,
+                        city: city,
+                        rate: rate,
+                        whatsapp: whatsapp,
+                        nationality: nationality,
+                        photos: mainPhoto,
+                        allPhotos: modelUploadedPhotos,
+                        photosLink: photosLink,
+                        about: about,
+                        status: 'Pendiente',
+                        date: 'Recién postulado'
+                    });
+                    localStorage.setItem('redVelvetApplications', JSON.stringify(existing));
+                } catch (err) {}
+            })();
 
             // Hide form and show luxury confirmation
             formCreateProfile.style.display = 'none';
@@ -678,6 +734,79 @@ document.addEventListener('DOMContentLoaded', () => {
             const isLight = document.documentElement.getAttribute('data-theme') === 'light';
             const newTheme = isLight ? 'dark' : 'light';
             applyTheme(newTheme);
+        });
+    }
+
+    // ============================================
+    // 13. CARGA DINÁMICA DE MODELOS DESDE API REST
+    // ============================================
+    const profilesGrid = document.querySelector('.profiles-grid');
+    const searchBtn = document.querySelector('.search-btn');
+    const searchCitySelect = document.querySelector('.search-field:nth-child(1) select');
+    const searchCatSelect = document.querySelector('.search-field:nth-child(5) select');
+
+    const renderModelCard = (model) => {
+        let categoryClass = 'category-vip';
+        if (model.category === 'Elite') categoryClass = 'category-elite';
+        if (model.category === 'Premium') categoryClass = 'category-premium';
+
+        return `
+            <div class="profile-card reveal active">
+                <div class="profile-img">
+                    <img src="${model.photo_main}" alt="${model.alias}" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800'">
+                    <div class="profile-category ${categoryClass}">${model.category || 'VIP'}</div>
+                    ${model.is_elite ? '<div class="badge-elite-corner" style="position:absolute; top:12px; left:12px; background:linear-gradient(135deg,#D4AF37,#800020); color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:3px;">💎 ELITE</div>' : ''}
+                </div>
+                <div class="profile-info">
+                    <div class="profile-header">
+                        <h3 class="profile-name">${model.alias}, ${model.age} <span class="verified-badge" title="Perfil verificado con distintivo de oro">✓</span></h3>
+                    </div>
+                    <p class="profile-location">${model.city}</p>
+                    <div class="profile-details">
+                        <div class="detail-item"><span class="label">Tarifa:</span> <span class="val">${model.rate}</span></div>
+                        <div class="detail-item"><span class="label">Nac:</span> <span class="val">${model.nationality || 'Mexicana'}</span> | <span class="label">Medidas:</span> <span class="val">${model.measurements || '90-60-90'}</span></div>
+                        <div class="detail-item"><span class="label">Idiomas:</span> <span class="val">${model.languages || 'Español, Inglés'}</span></div>
+                        <div class="detail-item"><span class="label">Servicios:</span> <span class="val">${model.services || 'GFE, Cenas, Eventos VIP'}</span></div>
+                    </div>
+                    <a href="https://wa.me/5215500000000?text=Hola%20RED%20VELVET,%20deseo%20solicitar%20reserva%20o%20información%20sobre%20${encodeURIComponent(model.alias)}" target="_blank" class="btn btn-outline btn-full">Solicitar Experiencia</a>
+                </div>
+            </div>
+        `;
+    };
+
+    const loadDynamicCatalog = async (city = '', category = '') => {
+        if (!profilesGrid) return;
+
+        try {
+            let url = '/api/models';
+            const params = new URLSearchParams();
+            if (city && city !== 'Todas las ciudades' && city !== 'all') params.append('city', city);
+            if (category && category !== 'Todas' && category !== 'all') params.append('category', category);
+            if (params.toString()) url += `?${params.toString()}`;
+
+            const res = await fetch(url);
+            if (!res.ok) return;
+            const models = await res.json();
+
+            if (Array.isArray(models) && models.length > 0) {
+                profilesGrid.innerHTML = models.map(m => renderModelCard(m)).join('');
+            }
+        } catch (err) {
+            console.warn('Usando catálogo en caché:', err);
+        }
+    };
+
+    // Cargar catálogo en vivo desde el servidor
+    loadDynamicCatalog();
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const city = searchCitySelect ? searchCitySelect.value : '';
+            const cat = searchCatSelect ? searchCatSelect.value : '';
+            loadDynamicCatalog(city, cat);
+            const explorarSec = document.getElementById('explorar');
+            if (explorarSec) explorarSec.scrollIntoView({ behavior: 'smooth' });
         });
     }
 });
