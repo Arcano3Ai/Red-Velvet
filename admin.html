@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED VELVET — Suite Ejecutiva & Dashboard de Dirección</title>
+    <!-- Favicon / Meta -->
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         1. PANTALLA DE LOGIN DE SUPER LUJO (ACCESO BLINDADO)
+         ========================================================================== -->
+    <div id="admin-login-screen" class="admin-login-wrapper">
+        <div class="login-glass-card">
+            <div class="login-brand">
+                <img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="admin-logo-img">
+                <span class="admin-badge">Suite Ejecutiva VIP</span>
+                <h1 class="login-title">RED VELVET</h1>
+                <p class="login-subtitle">Dirección General & Control Maestro · Cifrado AES-256</p>
+            </div>
+
+            <form id="admin-login-form" class="admin-form">
+                <div class="input-field-group">
+                    <label for="admin-token-input">Token de Dirección / Clave de Acceso</label>
+                    <input type="text" id="admin-token-input" required placeholder="ADMIN-999" autocomplete="off" spellcheck="false">
+                </div>
+
+                <div class="input-field-group">
+                    <label for="admin-pin-input">PIN de Seguridad Cifrado</label>
+                    <input type="password" id="admin-pin-input" required placeholder="••••" maxlength="8">
+                </div>
+
+                <div id="login-feedback" class="login-feedback"></div>
+
+                <button type="submit" class="btn-admin-gold">
+                    ✨ Ingresar a la Suite Ejecutiva
+                </button>
+            </form>
+
+            <div class="quick-demo-access">
+                <button type="button" id="btn-quick-demo" class="quick-demo-btn">
+                    🔑 Clic Rápido: Acceso Administrador Demo (Token: ADMIN-999)
+                </button>
+                <a href="index.html" class="back-to-site">← Volver al Portal Público de RED VELVET</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         2. DASHBOARD DE SUPER LUJO (SUITE PRINCIPAL)
+         ========================================================================== -->
+    <div id="admin-dashboard-suite" class="admin-dashboard-layout" style="display:none;">
+        
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="sidebar-logo">
+                <div class="sidebar-title-wrap">
+                    <h3>RED VELVET</h3>
+                    <span>Dirección General</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-tab-btn active" data-view="view-overview">
+                    <div class="nav-tab-btn-content">
+                        <span>📊</span>
+                        <span class="tab-title-text">Resumen Ejecutivo</span>
+                    </div>
+                </button>
+
+                <button class="nav-tab-btn" data-view="view-applications">
+                    <div class="nav-tab-btn-content">
+                        <span>👠</span>
+                        <span class="tab-title-text">Postulaciones</span>
+                    </div>
+                    <span id="sidebar-pending-badge" class="nav-pill-badge">0</span>
+                </button>
+
+                <button class="nav-tab-btn" data-view="view-catalog">
+                    <div class="nav-tab-btn-content">
+                        <span>💎</span>
+                        <span class="tab-title-text">Modelos Activas</span>
+                    </div>
+                </button>
+
+                <button class="nav-tab-btn" data-view="view-codes">
+                    <div class="nav-tab-btn-content">
+                        <span>🔑</span>
+                        <span class="tab-title-text">Códigos VIP</span>
+                    </div>
+                </button>
+
+                <button class="nav-tab-btn" data-view="view-security">
+                    <div class="nav-tab-btn-content">
+                        <span>🛡️</span>
+                        <span class="tab-title-text">Seguridad & Logs</span>
+                    </div>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html" target="_blank" class="sidebar-action-btn">
+                    <span>🌐</span> Ver Sitio Público
+                </a>
+                <button id="btn-admin-logout" class="sidebar-action-btn logout">
+                    <span>🔒</span> Cerrar Sesión Segura
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="admin-main-content">
+            
+            <!-- Topbar -->
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <h2 id="current-view-title" class="topbar-title">Resumen Ejecutivo</h2>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>SISTEMA ENCRIPTADO SSL 256-BIT</span>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <div id="system-clock" class="system-clock">CARGANDO...</div>
+                    <a href="index.html" target="_blank" class="btn-topbar-link">
+                        <span>👁️</span> Ir al Portal
+                    </a>
+                </div>
+            </header>
+
+            <!-- Tab Views Container -->
+            <main class="admin-views-container">
+
+                <!-- ============================================
+                     VISTA 1: RESUMEN EJECUTIVO
+                     ============================================ -->
+                <div id="view-overview" class="admin-tab-view active">
+                    
+                    <!-- 4 Tarjetas de Métricas -->
+                    <div class="metrics-grid-4">
+                        <div class="metric-card">
+                            <div class="metric-card-header">
+                                <span class="metric-label">Honorarios Estimados</span>
+                                <div class="metric-icon-wrap">💰</div>
+                            </div>
+                            <div class="metric-value">$485,000 <small style="font-size:1rem; color:#D4AF37;">MXN</small></div>
+                            <div class="metric-trend">↑ +18.4% vs mes anterior (Tarifas $9K+)</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-card-header">
+                                <span class="metric-label">Modelos Activas</span>
+                                <div class="metric-icon-wrap">👠</div>
+                            </div>
+                            <div class="metric-value">18 <small style="font-size:1rem; color:#aaa;">perfiles</small></div>
+                            <div class="metric-trend">8 Elite · 6 VIP · 4 Diamante</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-card-header">
+                                <span class="metric-label">Postulaciones Chicas</span>
+                                <div class="metric-icon-wrap">📬</div>
+                            </div>
+                            <div class="metric-value"><span id="metric-pending-count">0</span> <small style="font-size:1rem; color:#ffc107;">pendientes</small></div>
+                            <div class="metric-trend">Tiempo prom. respuesta: 45 min</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-card-header">
+                                <span class="metric-label">Clientes & Invitados</span>
+                                <div class="metric-icon-wrap">🎟️</div>
+                            </div>
+                            <div class="metric-value">142 <small style="font-size:1rem; color:#5cd87a;">activos</small></div>
+                            <div class="metric-trend">Acceso por invitación verificado</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Acciones Rápidas & Distribución -->
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <h3 class="panel-title"><span>⚡</span> Acciones Rápidas de Dirección</h3>
+                            <span style="font-size:0.8rem; color:#888;">Operaciones Inmediatas</span>
+                        </div>
+                        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+                            <button class="btn-action-sm gold" onclick="document.querySelector('[data-view=view-applications]').click()" style="padding:0.8rem 1.4rem; font-size:0.9rem;">
+                                👠 Revisar Solicitudes Pendientes
+                            </button>
+                            <button class="btn-action-sm gold" onclick="document.querySelector('[data-view=view-codes]').click()" style="padding:0.8rem 1.4rem; font-size:0.9rem;">
+                                🔑 Emitir Nuevo Código de Invitación
+                            </button>
+                            <button class="btn-action-sm" onclick="alert('Sistema de seguridad operando al 100%. Todos los canales encriptados.')" style="padding:0.8rem 1.4rem; font-size:0.9rem;">
+                                🛡️ Test de Cifrado & Canales
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Distribución por Ciudades -->
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <h3 class="panel-title"><span>📍</span> Presencia por Ciudades Exclusivas</h3>
+                            <span style="font-size:0.8rem; color:#D4AF37;">Tarifas desde $9,000 MXN / hr</span>
+                        </div>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; text-align:center;">
+                            <div style="background:rgba(255,255,255,0.03); padding:1.2rem; border-radius:6px; border:1px solid var(--border-subtle);">
+                                <h4 style="color:#D4AF37; font-size:1.1rem; margin-bottom:0.3rem;">CDMX</h4>
+                                <p style="font-size:0.85rem; color:#bbb;">Polanco, Santa Fe, Roma</p>
+                                <strong style="font-size:1.4rem; color:#fff; display:block; margin-top:0.4rem;">45%</strong>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03); padding:1.2rem; border-radius:6px; border:1px solid var(--border-subtle);">
+                                <h4 style="color:#D4AF37; font-size:1.1rem; margin-bottom:0.3rem;">Monterrey</h4>
+                                <p style="font-size:0.85rem; color:#bbb;">San Pedro Garza García</p>
+                                <strong style="font-size:1.4rem; color:#fff; display:block; margin-top:0.4rem;">25%</strong>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03); padding:1.2rem; border-radius:6px; border:1px solid var(--border-subtle);">
+                                <h4 style="color:#D4AF37; font-size:1.1rem; margin-bottom:0.3rem;">Guadalajara</h4>
+                                <p style="font-size:0.85rem; color:#bbb;">Providencia & Andares</p>
+                                <strong style="font-size:1.4rem; color:#fff; display:block; margin-top:0.4rem;">20%</strong>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03); padding:1.2rem; border-radius:6px; border:1px solid var(--border-subtle);">
+                                <h4 style="color:#D4AF37; font-size:1.1rem; margin-bottom:0.3rem;">Cancún / Riviera</h4>
+                                <p style="font-size:0.85rem; color:#bbb;">Zona Hotelera & Marina</p>
+                                <strong style="font-size:1.4rem; color:#fff; display:block; margin-top:0.4rem;">10%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     VISTA 2: POSTULACIONES DE MODELOS
+                     ============================================ -->
+                <div id="view-applications" class="admin-tab-view">
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <div>
+                                <h3 class="panel-title"><span>👠</span> Postulaciones Recibidas (Creación de Perfiles)</h3>
+                                <p style="color:#888; font-size:0.85rem; margin-top:0.3rem;">Solicitudes enviadas por acompañantes interesadas a través del formulario web oficial.</p>
+                            </div>
+                            <button class="btn-action-sm gold" onclick="location.reload()">🔄 Actualizar Lista</button>
+                        </div>
+
+                        <div class="luxury-table-wrap">
+                            <table class="luxury-table">
+                                <thead>
+                                    <tr>
+                                        <th>Folio</th>
+                                        <th>Alias / Edad</th>
+                                        <th>Ubicación</th>
+                                        <th>Tarifa</th>
+                                        <th>Estado</th>
+                                        <th>Recibido</th>
+                                        <th>Acciones de Dirección</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="applications-table-body">
+                                    <!-- Generado dinámicamente por js/admin.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     VISTA 3: CATÁLOGO DE MODELOS ACTIVAS
+                     ============================================ -->
+                <div id="view-catalog" class="admin-tab-view">
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <div>
+                                <h3 class="panel-title"><span>💎</span> Catálogo de Acompañantes en Línea</h3>
+                                <p style="color:#888; font-size:0.85rem; margin-top:0.3rem;">Control en tiempo real de visibilidad, tarifas sugeridas y perfiles activos.</p>
+                            </div>
+                            <button class="btn-action-sm gold" onclick="alert('Para agregar una nueva modelo al catálogo, aprueba una postulación pendiente o crea un perfil directo.')">
+                                + Nuevo Perfil
+                            </button>
+                        </div>
+
+                        <div id="models-catalog-grid" class="models-catalog-grid">
+                            <!-- Generado dinámicamente por js/admin.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     VISTA 4: CÓDIGOS DE INVITACIÓN VIP
+                     ============================================ -->
+                <div id="view-codes" class="admin-tab-view">
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <div>
+                                <h3 class="panel-title"><span>🔑</span> Generador y Emisor de Códigos VIP</h3>
+                                <p style="color:#888; font-size:0.85rem; margin-top:0.3rem;">Emite códigos únicos de acceso privado para clientes selectos y administradores.</p>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de Emisión -->
+                        <div class="code-generator-box">
+                            <div class="input-field-group">
+                                <label for="gen-role-select">Nivel de Acceso / Rol</label>
+                                <select id="gen-role-select" style="background:#111; color:#fff; border:1px solid rgba(255,255,255,0.15); padding:0.85rem; border-radius:4px;">
+                                    <option value="Cliente VIP">Cliente VIP (💎 Mi Perfil)</option>
+                                    <option value="Usuario">Usuario Registrado (👤 Mi Cuenta)</option>
+                                    <option value="Administrador">Administrador Suite (⚙️ Dashboard)</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field-group">
+                                <label for="gen-prefix-input">Prefijo Personalizado (Opcional)</label>
+                                <input type="text" id="gen-prefix-input" placeholder="Ej. VIP, SOCIO, ELITE" maxlength="8">
+                            </div>
+
+                            <div class="input-field-group">
+                                <label>Vigencia y Límite</label>
+                                <select style="background:#111; color:#fff; border:1px solid rgba(255,255,255,0.15); padding:0.85rem; border-radius:4px;">
+                                    <option>Uso personal (1 usuario)</option>
+                                    <option>Membresía temporal (30 días)</option>
+                                    <option>Ilimitado / Socio Fundador</option>
+                                </select>
+                            </div>
+
+                            <button id="btn-generate-code" class="btn-admin-gold" style="margin-top:0; height:48px;">
+                                ✨ Generar Código
+                            </button>
+                        </div>
+
+                        <!-- Tabla de Códigos -->
+                        <div class="luxury-table-wrap">
+                            <table class="luxury-table">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Rol Otorgado</th>
+                                        <th>Límite</th>
+                                        <th>Estado</th>
+                                        <th>Nota / Emisión</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="codes-table-body">
+                                    <!-- Generado dinámicamente por js/admin.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     VISTA 5: SEGURIDAD & LOGS
+                     ============================================ -->
+                <div id="view-security" class="admin-tab-view">
+                    <div class="panel-card">
+                        <div class="panel-header-flex">
+                            <div>
+                                <h3 class="panel-title"><span>🛡️</span> Registro de Seguridad y Auditoría</h3>
+                                <p style="color:#888; font-size:0.85rem; margin-top:0.3rem;">Monitoreo en tiempo real de accesos, intentos de fuerza bruta y verificaciones.</p>
+                            </div>
+                            <button class="btn-action-sm reject" onclick="if(confirm('¿Activar protocolo de bloqueo de emergencia? El sitio solo mostrará pantalla de mantenimiento.')) alert('Protocolo de seguridad activado.')">
+                                🚨 Bloqueo de Emergencia
+                            </button>
+                        </div>
+
+                        <div style="background:rgba(0,0,0,0.4); border:1px solid var(--border-subtle); border-radius:6px; padding:1.5rem; font-family:monospace; font-size:0.85rem; color:#aaa; line-height:1.8;">
+                            <p><span style="color:#5cd87a;">[OK]</span> Cifrado SSL / TLS 1.3 activo y verificado en todos los endpoints.</p>
+                            <p><span style="color:#5cd87a;">[OK]</span> Protocolo de Protección de Datos Personales (LFPDPPP) en vigor.</p>
+                            <p><span style="color:#5cd87a;">[OK]</span> Filtro de edad +18 operando en el gateway frontal con tasa de verificación del 100%.</p>
+                            <p><span style="color:#D4AF37;">[AUTH]</span> Sesión de Dirección General iniciada exitosamente desde dirección IP administrativa.</p>
+                            <p><span style="color:#ffc107;">[LOG]</span> 14 nuevos caballeros consultaron perfiles en las últimas 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

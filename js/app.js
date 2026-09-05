@@ -42,12 +42,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
+    // ============================================
     // 2. INVITE CODE MODAL
     // ============================================
-    const VALID_CODES = {
+    const DEFAULT_VALID_CODES = {
         'USER-777':  { role: 'Usuario',        label: '👤 Mi Cuenta' },
-        'ELITE-888': { role: 'Cliente',         label: '💎 Mi Perfil' },
-        'ADMIN-999': { role: 'Administrador',   label: '⚙️ Dashboard' }
+        'ELITE-888': { role: 'Cliente VIP',    label: '💎 Mi Perfil' },
+        'ADMIN-999': { role: 'Administrador',   label: '⚙️ Suite Admin' }
+    };
+
+    const getDynamicValidCodes = () => {
+        let codes = { ...DEFAULT_VALID_CODES };
+        try {
+            const custom = JSON.parse(localStorage.getItem('redVelvetCustomCodes'));
+            if (Array.isArray(custom)) {
+                custom.forEach(item => {
+                    if (item.status === 'Activo' && item.code) {
+                        let label = '👤 Mi Cuenta';
+                        if (item.role === 'Cliente VIP') label = '💎 Mi Perfil';
+                        if (item.role === 'Administrador') label = '⚙️ Suite Admin';
+                        codes[item.code.toUpperCase()] = { role: item.role, label: label };
+                    }
+                });
+            }
+        } catch (e) {}
+        return codes;
     };
 
     const inviteModal   = document.getElementById('invite-modal');
@@ -85,15 +104,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (successMsg) successMsg.style.display = 'none';
         codeInput.classList.remove('error', 'success');
 
-        if (VALID_CODES[code]) {
-            const session = VALID_CODES[code];
+        const activeCodes = getDynamicValidCodes();
+
+        if (activeCodes[code]) {
+            const session = activeCodes[code];
             localStorage.setItem('redVelvetSession', JSON.stringify({ code, ...session }));
             codeInput.classList.add('success');
             if (successMsg) successMsg.style.display = 'block';
+
+            if (code === 'ADMIN-999' || session.role === 'Administrador') {
+                sessionStorage.setItem('redVelvetAdminAuth', 'true');
+            }
+
             setTimeout(() => {
                 closeInviteModal();
-                updateHeaderForSession(session);
-            }, 1200);
+                if (code === 'ADMIN-999' || session.role === 'Administrador') {
+                    window.location.href = 'admin.html';
+                } else {
+                    updateHeaderForSession(session);
+                }
+            }, 1000);
         } else {
             codeInput.classList.add('error');
             if (errMsg) errMsg.style.display = 'block';
@@ -122,6 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
         btnAcceso.classList.remove('btn-primary', 'btn-sm');
         btnAcceso.removeEventListener('click', openInviteModal);
         btnAcceso.addEventListener('click', () => {
+            if (session.role === 'Administrador') {
+                window.location.href = 'admin.html';
+                return;
+            }
             alert(`Sesión activa en RED VELVET\nRol: ${session.role}\nPresiona OK para cerrar sesión.`);
             localStorage.removeItem('redVelvetSession');
             location.reload();
@@ -212,6 +246,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const about = document.getElementById('model-about').value.trim();
 
             const folio = 'RV-' + Math.floor(100000 + Math.random() * 900000);
+
+            // Persist into localStorage for Admin Suite
+            try {
+                const existing = JSON.parse(localStorage.getItem('redVelvetApplications')) || [];
+                existing.unshift({
+                    id: folio,
+                    alias: alias,
+                    age: age,
+                    city: city,
+                    rate: rate,
+                    whatsapp: whatsapp,
+                    nationality: nationality,
+                    photos: photos,
+                    about: about,
+                    status: 'Pendiente',
+                    date: 'Recién postulado'
+                });
+                localStorage.setItem('redVelvetApplications', JSON.stringify(existing));
+            } catch (err) {}
 
             // Hide form and show luxury confirmation
             formCreateProfile.style.display = 'none';
