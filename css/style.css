@@ -137,18 +137,50 @@ img {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.95);
-    z-index: 9999;
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .age-gate.active {
     opacity: 1;
-    pointer-events: all;
+    pointer-events: auto !important;
+}
+
+.age-gate-content {
+    position: relative;
+    z-index: 1000000;
+    pointer-events: auto !important;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#btn-adult {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    min-height: 48px;
+    padding: 0.85rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000002;
+    pointer-events: auto !important;
 }
 
 .age-gate-content {

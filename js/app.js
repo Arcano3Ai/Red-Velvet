@@ -1,3 +1,26 @@
+
+// Función global de descarte de Age Gate a prueba de fallos táctiles en móvil
+window.dismissAgeGate = function(e) {
+    if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+    }
+    try {
+        localStorage.setItem('redVelvetAgeVerified', 'true');
+    } catch(err) {}
+
+    const gate = document.getElementById('age-gate');
+    if (gate) {
+        gate.classList.remove('active');
+        gate.style.setProperty('display', 'none', 'important');
+        gate.style.setProperty('pointer-events', 'none', 'important');
+        gate.style.setProperty('opacity', '0', 'important');
+    }
+    document.body.style.overflow = 'auto';
+    if (typeof playMusic === 'function') {
+        try { playMusic(); } catch(m) {}
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // ==========================================================================
@@ -156,14 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
             photo_main: 'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?auto=format&fit=crop&q=80&w=900',
             badge: 'Favorito en Pareja'
         },
-            specs: {
-                incluye: '1 Antifaz blackout de seda acolchada, 2 Esposas forradas con mosquetón metálico dorado, 1 Fusta de plumas suaves de 28cm',
-                materiales: 'Piel vegana estructurada, terciopelo ultrasuave, herrajes de aleación de zinc dorado pulido',
-                ajuste: 'Universal y regulable mediante hebillas seguras de apertura rápida'
-            },
-            photo_main: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&q=80&w=900',
-            badge: 'Favorito en Pareja'
-        },
         {
             id: 'PROD-008',
             name: 'Baraja de Intimidad & Retos Sensoriales "Eros"',
@@ -231,11 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (btnAdult) {
-        btnAdult.addEventListener('click', () => {
-            localStorage.setItem('redVelvetAgeVerified', 'true');
-            if (ageGate) ageGate.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            playMusic();
+        ['click', 'touchend', 'pointerup'].forEach(evt => {
+            btnAdult.addEventListener(evt, (e) => {
+                if (evt === 'touchend') e.preventDefault();
+                window.dismissAgeGate(e);
+            }, { passive: false });
         });
     }
 
