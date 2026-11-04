@@ -1729,3 +1729,41 @@ window.subscribeVelvetCircle = function(event) {
         window.showToast('✨ Membresía activada: Código VELVET15 desbloqueado');
     }
 };
+
+
+// ==========================================================================
+// BACKGROUND VIDEOS (HERO & FOOTER) AUTOPLAY ENFORCER
+// ==========================================================================
+(function initBackgroundVideos() {
+    function ensureVideoPlayback() {
+        const videos = document.querySelectorAll('.hero-bg-video, .footer-bg-video');
+        videos.forEach(video => {
+            video.muted = true;
+            video.setAttribute('muted', '');
+            video.setAttribute('playsinline', '');
+            video.setAttribute('autoplay', '');
+            if (video.paused) {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        const playOnInteraction = () => {
+                            video.play().catch(() => {});
+                            ['click', 'touchstart', 'scroll'].forEach(evt => {
+                                window.removeEventListener(evt, playOnInteraction);
+                            });
+                        };
+                        ['click', 'touchstart', 'scroll'].forEach(evt => {
+                            window.addEventListener(evt, playOnInteraction, { passive: true });
+                        });
+                    });
+                }
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', ensureVideoPlayback);
+    } else {
+        ensureVideoPlayback();
+    }
+})();
