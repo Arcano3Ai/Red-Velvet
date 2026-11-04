@@ -74,8 +74,8 @@
             chips: ['Ver lencería fina', 'Ver catálogo']
         },
         {
-            keywords: ['whatsapp', 'humano', 'persona', 'hablar', 'asesora', 'contacto', 'telefono'],
-            reply: '💬 Con mucho gusto. Si deseas atención humana 1 a 1 de forma completamente privada, puedes chatear directamente con nuestro equipo de Concierge en WhatsApp:\n\n👉 [**Abrir WhatsApp de Concierge (+52 81 1234 5678)**](https://wa.me/528112345678?text=Hola%20RED%20VELVET,%20deseo%20asesor%C3%ADa%20personalizada%20con%20Yessi)',
+            keywords: ['whatsapp', 'humano', 'persona', 'hablar', 'asesora', 'contacto', 'telefono', 'call', 'human'],
+            reply: '💬 Con mucho gusto. Si deseas atención humana 1 a 1 de forma completamente privada, puedes chatear directamente con nuestro equipo de Concierge en WhatsApp:\n\n👉 [**Abrir WhatsApp de Concierge (+52 1 273 112 3888)**](https://wa.me/5212731123888?text=Hola%20RED%20VELVET,%20deseo%20asesor%C3%ADa%20personalizada%20con%20Yessi)',
             chips: ['Seguir aquí con Yessi', '📦 Preguntar por empaque']
         }
     ];
@@ -119,7 +119,9 @@
                 <!-- Botón Disparador Flotante -->
                 <button type="button" id="yessi-launcher-btn" class="yessi-launcher" aria-label="Abrir asistente Yessi Concierge">
                     <span class="yessi-launcher-pulse"></span>
-                    <span class="yessi-launcher-avatar">👩‍💼</span>
+                    <span class="yessi-launcher-avatar">
+                        <img src="assets/avatars/yessi-avatar.jpg" alt="Yessi" class="yessi-launcher-avatar-img">
+                    </span>
                     <span class="yessi-launcher-text">
                         <strong>Yessi Concierge</strong>
                         <small>${isEn ? '● Online · Confidential' : '● En línea · Confidencial'}</small>
@@ -133,7 +135,9 @@
                     <div class="yessi-chat-header">
                         <div class="yessi-header-info">
                             <div class="yessi-avatar-ring">
-                                <span class="yessi-header-avatar">👩‍💼</span>
+                                <span class="yessi-header-avatar">
+                                    <img src="assets/avatars/yessi-avatar.jpg" alt="Yessi Concierge" class="yessi-header-avatar-img" title="Yessi Concierge — Pasa el cursor para ver de cerca">
+                                </span>
                                 <span class="yessi-status-dot"></span>
                             </div>
                             <div class="yessi-header-titles">

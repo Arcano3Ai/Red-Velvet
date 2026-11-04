@@ -1364,15 +1364,22 @@ document.addEventListener('DOMContentLoaded', () => {
                                 ¡Pedido #${data.orderId} Confirmado!
                             </h3>
                             <p style="color: #FFF; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                                Tu orden ha sido registrada con discreción absoluta. Empacaremos tus piezas en caja neutra con sello de seguridad.
+                                Tu orden ha sido registrada con discreción absoluta. Se ha preparado tu mensaje directo con el desglose de tus piezas.
                             </p>
                             <a href="${data.whatsappUrl}" target="_blank" class="btn btn-primary btn-block pulse-gold" style="display:inline-block; margin-bottom:1rem;">
-                                💬 Abrir WhatsApp Concierge para Confirmar Envío
+                                💬 Abrir WhatsApp Concierge (+52 1 273 112 3888)
                             </a>
                             <button type="button" class="btn btn-outline btn-block" onclick="location.reload()">
                                 Volver a la Tienda
                             </button>
                         `;
+                    }
+
+                    // Intentar abrir WhatsApp en pestaña nueva de forma diferida
+                    if (data.whatsappUrl) {
+                        setTimeout(() => {
+                            try { window.open(data.whatsappUrl, '_blank'); } catch (e) {}
+                        }, 500);
                     }
                 } else {
                     alert(data.error || 'Error al procesar el pedido.');
@@ -1385,9 +1392,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error en checkout:', err);
                 alert('No se pudo conectar con el servidor. Redirigiendo a Concierge WhatsApp...');
                 // Fallback manual de WhatsApp
-                const itemsSummary = cart.map(i => `• ${i.quantity}x ${i.name} ($${i.price})`).join('\n');
-                const fallbackMsg = `Hola RED VELVET, deseo confirmar mi pedido:\n${itemsSummary}\nCliente: ${customerName}\nCiudad: ${customerCity}`;
-                window.open(`https://wa.me/528112345678?text=${encodeURIComponent(fallbackMsg)}`, '_blank');
+                const itemsSummary = cart.map(i => `• ${i.quantity}x ${i.name} ($${Number(i.price).toLocaleString()} MXN)`).join('\n');
+                const fallbackMsg = `💎 *RED VELVET — PEDIDO MANUAL*\n━━━━━━━━━━━━━━━━━━━\n👤 *Cliente:* ${customerName}\n📱 *Teléfono:* ${customerPhone}\n📍 *Destino:* ${customerAddress}, ${customerCity}, ${customerState}\n${customerNotes ? `📝 *Instrucciones:* ${customerNotes}\n` : ''}🛍️ *Artículos:*\n${itemsSummary}\n━━━━━━━━━━━━━━━━━━━\n_Hola RED VELVET, deseo confirmar mi pedido y envío confidencial._`;
+                window.open(`https://wa.me/5212731123888?text=${encodeURIComponent(fallbackMsg)}`, '_blank');
                 if (submitBtn) submitBtn.disabled = false;
             }
         });

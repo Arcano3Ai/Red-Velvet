@@ -176,19 +176,19 @@ router.post('/', async (req, res) => {
 ━━━━━━━━━━━━━━━━━━━
 👤 *Cliente:* ${customer_name}
 📱 *Teléfono:* ${phone}
-📍 *Destino:* ${city}, ${state || ''}
-📦 *Empaque:* Discreto Blindado 100%
+📍 *Destino:* ${shipping_address}, ${city}, ${state || ''}
+${notes ? `📝 *Instrucciones:* ${notes}\n` : ''}📦 *Empaque:* Discreto Blindado 100% Neutro
 
-🛍️ *Artículos:*
+🛍️ *Artículos del Pedido:*
 ${itemsListText}
 
 💰 *Subtotal:* $${subtotal.toLocaleString()} MXN
-${discount > 0 ? `🏷️ *Descuento (${appliedCoupon}):* -$${discount.toLocaleString()} MXN\n` : ''}🚚 *Envío:* ${shipping_cost === 0 ? 'GRATIS' : `$${shipping_cost} MXN`}
-💳 *TOTAL:* $${total.toLocaleString()} MXN
+${discount > 0 ? `🏷️ *Descuento (${appliedCoupon}):* -$${discount.toLocaleString()} MXN\n` : ''}🚚 *Envío:* ${shipping_cost === 0 ? 'GRATIS (Discreto)' : `$${shipping_cost} MXN`}
+💳 *TOTAL A PAGAR:* $${total.toLocaleString()} MXN
 ━━━━━━━━━━━━━━━━━━━
-_Deseo confirmar el pago y los detalles de entrega confidencial._`;
+_Hola RED VELVET, deseo confirmar mi pedido y coordinar el pago/entrega confidencial._`;
 
-        const conciergePhone = '528112345678'; // Número de concierge RED VELVET
+        const conciergePhone = process.env.WHATSAPP_PHONE || '5212731123888'; // WhatsApp Concierge VIP RED VELVET
         const whatsappUrl = `https://wa.me/${conciergePhone}?text=${encodeURIComponent(waMessage)}`;
 
         res.status(201).json({
