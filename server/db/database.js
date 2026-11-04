@@ -44,50 +44,73 @@ const initDatabase = async () => {
     await query.run('PRAGMA journal_mode = WAL;');
     await query.run('PRAGMA foreign_keys = ON;');
 
-    // 1. Modelos activas en catálogo
+    // 1. Catálogo de Productos (Sex Shop & Boutique de Lujo)
     await query.run(`
-        CREATE TABLE IF NOT EXISTS models (
+        CREATE TABLE IF NOT EXISTS products (
             id TEXT PRIMARY KEY,
-            alias TEXT NOT NULL,
-            age INTEGER NOT NULL,
-            city TEXT NOT NULL,
-            rate TEXT NOT NULL,
-            nationality TEXT,
-            measurements TEXT,
-            languages TEXT,
-            services TEXT,
-            category TEXT DEFAULT 'VIP',
+            name TEXT NOT NULL,
+            slug TEXT UNIQUE NOT NULL,
+            category TEXT NOT NULL,
+            subtitle TEXT,
+            price REAL NOT NULL,
+            compare_price REAL,
+            stock INTEGER DEFAULT 15,
+            description TEXT,
+            sensory_notes TEXT,
+            specs_json TEXT,       -- JSON: materiales, decibeles, resistencia al agua, modos, batería, carga
+            images_json TEXT,      -- JSON array de URLs de fotos
             photo_main TEXT NOT NULL,
-            gallery TEXT, -- JSON array de URLs de fotos
-            bio TEXT,
+            badge TEXT,            -- Best Seller, Nuevo, Edición Limitada, Discreto <40dB
+            is_featured INTEGER DEFAULT 0,
             is_active INTEGER DEFAULT 1,
-            is_elite INTEGER DEFAULT 0,
             sort_order INTEGER DEFAULT 0,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
     `);
 
-    // 2. Postulaciones entrantes
+    // 2. Pedidos y Órdenes de Compra
     await query.run(`
-        CREATE TABLE IF NOT EXISTS applications (
+        CREATE TABLE IF NOT EXISTS orders (
             id TEXT PRIMARY KEY,
-            alias TEXT NOT NULL,
-            age INTEGER NOT NULL,
+            customer_name TEXT NOT NULL,
+            email TEXT,
+            phone TEXT NOT NULL,
+            shipping_address TEXT NOT NULL,
             city TEXT NOT NULL,
-            rate TEXT NOT NULL,
-            whatsapp TEXT NOT NULL,
-            nationality TEXT,
-            measurements TEXT,
-            photos TEXT, -- Foto principal (URL o Base64/Archivo)
-            gallery TEXT, -- JSON array de fotos adicionales
-            about TEXT,
-            status TEXT DEFAULT 'Pendiente', -- Pendiente, Aprobada, Rechazada
+            state TEXT,
+            postal_code TEXT,
+            notes TEXT,
+            shipping_type TEXT DEFAULT 'Discreto Express',
+            payment_method TEXT DEFAULT 'WhatsApp Concierge / Transferencia',
+            items_json TEXT NOT NULL, -- JSON con array de items comprados
+            subtotal REAL NOT NULL,
+            discount REAL DEFAULT 0,
+            shipping_cost REAL DEFAULT 0,
+            total REAL NOT NULL,
+            coupon_code TEXT,
+            status TEXT DEFAULT 'Pendiente', -- Pendiente, Empacado Discreto, En Camino, Entregado, Cancelado
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+    `);
+
+    // 3. Cupones de descuento y códigos VIP
+    await query.run(`
+        CREATE TABLE IF NOT EXISTS coupons (
+            code TEXT PRIMARY KEY,
+            discount_percent INTEGER DEFAULT 10,
+            discount_amount REAL DEFAULT 0,
+            min_purchase REAL DEFAULT 0,
+            max_uses INTEGER DEFAULT 100,
+            used_count INTEGER DEFAULT 0,
+            is_active INTEGER DEFAULT 1,
+            note TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
     `);
 
-    // 3. Códigos de invitación VIP
+    // 4. Códigos de invitación (retrocompatibilidad)
     await query.run(`
         CREATE TABLE IF NOT EXISTS invitation_codes (
             code TEXT PRIMARY KEY,
@@ -100,7 +123,7 @@ const initDatabase = async () => {
         );
     `);
 
-    // 4. Usuarios administradores
+    // 5. Usuarios administradores
     await query.run(`
         CREATE TABLE IF NOT EXISTS admin_users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -111,7 +134,7 @@ const initDatabase = async () => {
         );
     `);
 
-    // 5. Logs de auditoría y seguridad
+    // 6. Logs de auditoría y seguridad
     await query.run(`
         CREATE TABLE IF NOT EXISTS activity_logs (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -122,7 +145,7 @@ const initDatabase = async () => {
         );
     `);
 
-    console.log('✔ Base de datos SQLite inicializada exitosamente en:', DB_PATH);
+    console.log('✔ Base de datos SQLite (E-Commerce Luxury Sex Shop) inicializada exitosamente en:', DB_PATH);
 };
 
 module.exports = {

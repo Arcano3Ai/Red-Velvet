@@ -8,8 +8,8 @@ const { initDatabase, query } = require('./db/database');
 const { seedData } = require('./seeds/seed');
 
 const authRoutes = require('./routes/auth');
-const modelsRoutes = require('./routes/models');
-const applicationsRoutes = require('./routes/applications');
+const productsRoutes = require('./routes/products');
+const ordersRoutes = require('./routes/orders');
 const codesRoutes = require('./routes/codes');
 const uploadRoutes = require('./routes/upload');
 
@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8000;
 
 // Configuración de Helmet con Content-Security-Policy flexible para imágenes y fuentes externas
 app.use(helmet({
-    contentSecurityPolicy: false, // Permitir fuentes de Google Fonts, Unsplash y videos locales
+    contentSecurityPolicy: false,
     crossOriginEmbedderPolicy: false
 }));
 
@@ -41,16 +41,19 @@ app.use('/assets', express.static(path.join(ROOT_DIR, 'assets')));
 
 // Rutas de API RESTful
 app.use('/api/auth', authRoutes);
-app.use('/api/models', modelsRoutes);
-app.use('/api/applications', applicationsRoutes);
+app.use('/api/products', productsRoutes);
+app.use('/api/orders', ordersRoutes);
 app.use('/api/codes', codesRoutes);
 app.use('/api/upload', uploadRoutes);
+
+// Retrocompatibilidad temporal para endpoints anteriores
+app.use('/api/models', productsRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
     res.json({
         status: 'OK',
-        platform: 'RED VELVET Executive Platform',
+        platform: 'RED VELVET — Luxury Sex Shop & Erotic Boutique',
         timestamp: new Date().toISOString()
     });
 });
@@ -77,26 +80,32 @@ const startServer = async () => {
     try {
         await initDatabase();
 
-        // Verificar si la base de datos está vacía; si es así, sembrar datos de inicio
-        const existingCount = await query.get('SELECT COUNT(*) as count FROM models');
-        if (!existingCount || existingCount.count === 0) {
-            console.log('🌱 Inicializando catálogo maestro de RED VELVET...');
+        // Verificar si la base de datos de productos está vacía; si es así, sembrar datos de inicio
+        const existingProducts = await query.get('SELECT COUNT(*) as count FROM products');
+        if (!existingProducts || existingProducts.count === 0) {
+            console.log('🌱 Inicializando catálogo maestro de RED VELVET Sex Shop...');
             await seedData();
         }
 
-        app.listen(PORT, '0.0.0.0', () => {
+        const server = app.listen(PORT, '0.0.0.0', () => {
             console.log(`\n======================================================`);
-            console.log(`💎 RED VELVET — SERVIDOR AUTÓNOMO EN EJECUCIÓN`);
-            console.log(`🌐 Acceso Público:    http://localhost:${PORT}`);
-            console.log(`⚙️ Suite de Dirección: http://localhost:${PORT}/admin.html`);
+            console.log(`💎 RED VELVET — LUXURY SEX SHOP & INTIMATE WELLNESS`);
+            console.log(`🌐 Tienda Pública:    http://localhost:${PORT}`);
+            console.log(`⚙️ Suite de Control:  http://localhost:${PORT}/admin.html`);
             console.log(`🛡️ Base de Datos:     data/redvelvet.db`);
-            console.log(`📸 Almacenamiento:    uploads/`);
+            console.log(`📸 Almacenamiento:    uploads/products/`);
             console.log(`======================================================\n`);
         });
+
+        return server;
     } catch (err) {
         console.error('❌ Error crítico al iniciar servidor RED VELVET:', err);
         process.exit(1);
     }
 };
 
-startServer();
+if (require.main === module) {
+    startServer();
+}
+
+module.exports = { app, startServer };

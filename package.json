@@ -1,15 +1,16 @@
 {
   "name": "red-velvet-platform",
   "version": "1.0.0",
-  "description": "RED VELVET — Suite Ejecutiva & Plataforma Autónoma de Experiencias Exclusivas",
+  "description": "RED VELVET — Luxury Sex Shop, Intimate Wellness & Erotic Boutique E-Commerce",
   "main": "server/server.js",
   "type": "commonjs",
   "scripts": {
     "start": "node server/server.js",
     "dev": "node --watch server/server.js",
-    "seed": "node server/seeds/seed.js"
+    "seed": "node server/seeds/seed.js",
+    "test": "node server/test_ecommerce.js && node server/test_admin_suite.js"
   },
-  "keywords": ["red-velvet", "luxury", "vip", "concierge", "platform"],
+  "keywords": ["red-velvet", "luxury", "sex-shop", "ecommerce", "wellness", "lingerie", "boutique"],
   "author": "Arcano Solutions",
   "license": "ISC",
   "dependencies": {

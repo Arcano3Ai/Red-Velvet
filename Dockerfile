@@ -12,7 +12,7 @@ RUN npm ci --only=production
 COPY . .
 
 # Crear directorios para persistencia de datos y fotos
-RUN mkdir -p data uploads/models uploads/applications
+RUN mkdir -p data uploads/products
 
 EXPOSE 8000
 

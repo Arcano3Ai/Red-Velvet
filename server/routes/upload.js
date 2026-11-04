@@ -6,10 +6,11 @@ const path = require('path');
 const fs = require('fs');
 
 const UPLOADS_DIR = path.join(__dirname, '../../uploads');
+const PRODUCTS_UPLOADS_DIR = path.join(UPLOADS_DIR, 'products');
 const MODELS_UPLOADS_DIR = path.join(UPLOADS_DIR, 'models');
 const APPS_UPLOADS_DIR = path.join(UPLOADS_DIR, 'applications');
 
-[UPLOADS_DIR, MODELS_UPLOADS_DIR, APPS_UPLOADS_DIR].forEach(dir => {
+[UPLOADS_DIR, PRODUCTS_UPLOADS_DIR, MODELS_UPLOADS_DIR, APPS_UPLOADS_DIR].forEach(dir => {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
@@ -36,8 +37,10 @@ router.post('/', upload.array('photos', 6), async (req, res) => {
             return res.status(400).json({ error: 'No se recibieron archivos de imagen válidos.' });
         }
 
-        const folderType = req.body.targetFolder === 'models' ? 'models' : 'applications';
-        const targetDir = folderType === 'models' ? MODELS_UPLOADS_DIR : APPS_UPLOADS_DIR;
+        const folderType = req.body.targetFolder === 'models' ? 'models' : (req.body.targetFolder === 'applications' ? 'applications' : 'products');
+        let targetDir = PRODUCTS_UPLOADS_DIR;
+        if (folderType === 'models') targetDir = MODELS_UPLOADS_DIR;
+        if (folderType === 'applications') targetDir = APPS_UPLOADS_DIR;
 
         const uploadedUrls = [];
 
@@ -60,12 +63,13 @@ router.post('/', upload.array('photos', 6), async (req, res) => {
 
         res.json({
             success: true,
+            count: uploadedUrls.length,
             urls: uploadedUrls,
-            mainUrl: uploadedUrls[0]
+            url: uploadedUrls[0]
         });
     } catch (err) {
-        console.error('Error en upload:', err);
-        res.status(500).json({ error: 'Error al procesar y optimizar la imagen subida.' });
+        console.error('Error al procesar imágenes con Sharp:', err);
+        res.status(500).json({ error: 'Error interno al optimizar y almacenar las imágenes.' });
     }
 });
 

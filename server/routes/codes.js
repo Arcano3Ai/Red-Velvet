@@ -3,120 +3,128 @@ const router = express.Router();
 const { query } = require('../db/database');
 const { requireAdminAuth } = require('../middleware/auth');
 
-// POST /api/codes/verify — Verificación pública de código de invitación
+// POST /api/codes/verify (Verificación pública de cupones y códigos VIP)
 router.post('/verify', async (req, res) => {
     try {
-        const { code } = req.body;
+        const { code, subtotal } = req.body;
         if (!code) {
-            return res.status(400).json({ valid: false, error: 'Código no proporcionado.' });
+            return res.status(400).json({ success: false, error: 'Código no proporcionado.' });
         }
 
         const cleanCode = code.trim().toUpperCase();
-        const codeRecord = await query.get(
+
+        // 1. Buscar en cupones de descuento
+        const coupon = await query.get(
+            'SELECT * FROM coupons WHERE code = ? AND is_active = 1',
+            [cleanCode]
+        );
+
+        if (coupon) {
+            const currentSubtotal = Number(subtotal) || 0;
+            if (coupon.min_purchase && currentSubtotal < coupon.min_purchase) {
+                return res.status(400).json({
+                    success: false,
+                    error: `Este cupón requiere una compra mínima de $${coupon.min_purchase.toLocaleString()} MXN.`
+                });
+            }
+
+            if (coupon.max_uses && coupon.used_count >= coupon.max_uses) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Este cupón ha alcanzado el límite máximo de usos.'
+                });
+            }
+
+            return res.json({
+                success: true,
+                type: 'coupon',
+                code: coupon.code,
+                discount_percent: coupon.discount_percent,
+                discount_amount: coupon.discount_amount,
+                note: coupon.note
+            });
+        }
+
+        // 2. Buscar en códigos de invitación VIP
+        const vipCode = await query.get(
             'SELECT * FROM invitation_codes WHERE code = ? AND is_active = 1',
             [cleanCode]
         );
 
-        if (!codeRecord) {
+        if (vipCode) {
             return res.json({
-                valid: false,
-                error: 'El código ingresado no existe, está inactivo o ha sido revocado.'
+                success: true,
+                type: 'vip',
+                code: vipCode.code,
+                role: vipCode.role,
+                note: vipCode.note
             });
         }
 
-        // Verificar límite de usos si no es Ilimitado
-        if (codeRecord.max_uses !== 'Ilimitado') {
-            const max = parseInt(codeRecord.max_uses, 10);
-            if (!isNaN(max) && codeRecord.used_count >= max) {
-                return res.json({
-                    valid: false,
-                    error: 'Este código de invitación ha alcanzado su límite de usos autorizados.'
-                });
-            }
-        }
-
-        // Incrementar contador de usos
-        await query.run(
-            'UPDATE invitation_codes SET used_count = used_count + 1 WHERE code = ?',
-            [cleanCode]
-        );
-
-        let label = '👤 Mi Cuenta';
-        if (codeRecord.role === 'Cliente VIP') label = '💎 Mi Perfil';
-        if (codeRecord.role === 'Administrador') label = '⚙️ Suite Admin';
-
-        res.json({
-            valid: true,
-            code: cleanCode,
-            role: codeRecord.role,
-            label,
-            isAdmin: codeRecord.role === 'Administrador'
+        return res.status(404).json({
+            success: false,
+            error: 'El código ingresado no existe o no se encuentra activo.'
         });
     } catch (err) {
         console.error('Error al verificar código:', err);
-        res.status(500).json({ valid: false, error: 'Error al verificar código de invitación.' });
+        res.status(500).json({ success: false, error: 'Error al procesar la verificación del código.' });
     }
 });
 
-// GET /api/codes — Listar todos los códigos (Admin)
+// GET /api/codes (Listar cupones y códigos - Admin)
 router.get('/', requireAdminAuth, async (req, res) => {
     try {
-        const rows = await query.all('SELECT * FROM invitation_codes ORDER BY created_at DESC');
-        res.json(rows.map(r => ({
-            ...r,
-            is_active: Boolean(r.is_active)
-        })));
+        const coupons = await query.all('SELECT * FROM coupons ORDER BY created_at DESC');
+        const vipCodes = await query.all('SELECT * FROM invitation_codes ORDER BY created_at DESC');
+        res.json({
+            success: true,
+            coupons,
+            vipCodes
+        });
     } catch (err) {
-        res.status(500).json({ error: 'Error al consultar códigos VIP.' });
+        console.error('Error al obtener lista de códigos:', err);
+        res.status(500).json({ success: false, error: 'Error al consultar códigos.' });
     }
 });
 
-// POST /api/codes — Generar nuevo código VIP (Admin)
-router.post('/', requireAdminAuth, async (req, res) => {
+// POST /api/codes/coupon (Crear cupón - Admin)
+router.post('/coupon', requireAdminAuth, async (req, res) => {
     try {
-        const { code, role = 'Usuario', max_uses = 'Ilimitado', note = '' } = req.body;
+        const { code, discount_percent, discount_amount, min_purchase, max_uses, note } = req.body;
         if (!code) {
-            return res.status(400).json({ error: 'El código es requerido.' });
+            return res.status(400).json({ success: false, error: 'El código de cupón es obligatorio.' });
         }
 
         const cleanCode = code.trim().toUpperCase();
-        const existing = await query.get('SELECT code FROM invitation_codes WHERE code = ?', [cleanCode]);
-        if (existing) {
-            return res.status(400).json({ error: 'Este código ya existe en el sistema.' });
-        }
 
         await query.run(`
-            INSERT INTO invitation_codes (code, role, max_uses, used_count, is_active, note)
-            VALUES (?, ?, ?, 0, 1, ?)
-        `, [cleanCode, role, max_uses, note]);
+            INSERT INTO coupons (code, discount_percent, discount_amount, min_purchase, max_uses, used_count, is_active, note)
+            VALUES (?, ?, ?, ?, ?, 0, 1, ?)
+        `, [
+            cleanCode,
+            Number(discount_percent) || 0,
+            Number(discount_amount) || 0,
+            Number(min_purchase) || 0,
+            Number(max_uses) || 100,
+            note || ''
+        ]);
 
-        res.status(201).json({
-            success: true,
-            code: cleanCode,
-            message: `Código ${cleanCode} generado exitosamente.`
-        });
+        res.status(201).json({ success: true, message: `Cupón ${cleanCode} creado exitosamente.` });
     } catch (err) {
-        res.status(500).json({ error: 'Error al generar código VIP.' });
+        console.error('Error al crear cupón:', err);
+        res.status(500).json({ success: false, error: 'Error al crear cupón (verifique si ya existe).' });
     }
 });
 
-// PATCH /api/codes/:code/toggle — Activar o Revocar código (Admin)
-router.patch('/:code/toggle', requireAdminAuth, async (req, res) => {
+// DELETE /api/codes/coupon/:code (Eliminar cupón - Admin)
+router.delete('/coupon/:code', requireAdminAuth, async (req, res) => {
     try {
-        const { code } = req.params;
-        const record = await query.get('SELECT * FROM invitation_codes WHERE code = ?', [code]);
-        if (!record) return res.status(404).json({ error: 'Código no encontrado.' });
-
-        const newStatus = record.is_active ? 0 : 1;
-        await query.run('UPDATE invitation_codes SET is_active = ? WHERE code = ?', [newStatus, code]);
-
-        res.json({
-            success: true,
-            is_active: Boolean(newStatus),
-            message: `Código ${code} ahora está ${newStatus ? 'ACTIVO' : 'REVOCADO'}.`
-        });
+        const cleanCode = req.params.code.trim().toUpperCase();
+        await query.run('DELETE FROM coupons WHERE code = ?', [cleanCode]);
+        res.json({ success: true, message: `Cupón ${cleanCode} eliminado.` });
     } catch (err) {
-        res.status(500).json({ error: 'Error al actualizar código.' });
+        console.error('Error al eliminar cupón:', err);
+        res.status(500).json({ success: false, error: 'Error al eliminar cupón.' });
     }
 });
 
