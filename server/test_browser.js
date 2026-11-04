@@ -58,13 +58,33 @@ const runBrowserTest = async () => {
         await page.screenshot({ path: path.join(SCREENSHOTS_DIR, '02b_ritual_velvet.png') });
 
         // 3️⃣ Scroll a Catálogo y verificar productos cargados
-        console.log('3️⃣ Verificando carga dinámica del catálogo de 36 productos...');
+        console.log('3️⃣ Verificando carga dinámica del catálogo de 44 productos...');
         await page.evaluate(() => document.getElementById('catalogo').scrollIntoView());
         await page.waitForSelector('.product-shop-card', { timeout: 5000 });
 
         const productCardsCount = await page.evaluate(() => document.querySelectorAll('.product-shop-card').length);
         console.log(`✔ Tarjetas de producto renderizadas en DOM: ${productCardsCount}`);
-        console.assert(productCardsCount >= 36, `Esperadas >= 36 tarjetas, encontradas: ${productCardsCount}`);
+        console.assert(productCardsCount >= 44, `Esperadas >= 44 tarjetas, encontradas: ${productCardsCount}`);
+
+        // Verificación de Idioma Inglés (i18n switch)
+        console.log('🌐 Verificando conmutador de idioma a Inglés (EN)...');
+        await page.evaluate(() => {
+            if (window.redVelvetI18n) {
+                window.redVelvetI18n.setLanguage('en');
+            }
+        });
+        await new Promise(r => setTimeout(r, 600));
+        const heroTitleEn = await page.$eval('.hero-headline', el => el.textContent.trim());
+        console.log(`✔ Título Hero en Inglés: "${heroTitleEn}"`);
+        await page.screenshot({ path: path.join(SCREENSHOTS_DIR, '02c_english_storefront.png') });
+
+        // Regresar a Español para el flujo subsiguiente
+        await page.evaluate(() => {
+            if (window.redVelvetI18n) {
+                window.redVelvetI18n.setLanguage('es');
+            }
+        });
+        await new Promise(r => setTimeout(r, 400));
 
         // Screenshot 3: Catálogo General
         console.log('📸 Captura 3: Catálogo Maestro...');

@@ -72,7 +72,7 @@ const runMobileTest = async () => {
 
         const productCardsCount = await page.evaluate(() => document.querySelectorAll('.product-shop-card').length);
         console.log(`✔ Tarjetas de producto en iPhone: ${productCardsCount}`);
-        console.assert(productCardsCount >= 36, `Esperadas >= 36 tarjetas en iPhone, encontradas: ${productCardsCount}`);
+        console.assert(productCardsCount >= 44, `Esperadas >= 44 tarjetas en iPhone, encontradas: ${productCardsCount}`);
 
         // Verificar columnas
         const gridCols = await page.evaluate(() => {

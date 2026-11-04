@@ -779,6 +779,190 @@ document.addEventListener('DOMContentLoaded', () => {
                 "photo_main": "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=80&w=900",
                 "badge": "Tacto Pluma",
                 "sort_order": 36
+        },
+        {
+                "id": "PROD-038",
+                "name": "Masajeador Ergonómico Punto G con Control Remoto \"Velvet Pulse Supreme\"",
+                "slug": "masajeador-ergonomico-punto-g-control-remoto-velvet-pulse-supreme",
+                "category": "Pleasure Tech",
+                "subtitle": "Silueta curvada con motor de microvibración profunda y mando inalámbrico a distancia",
+                "price": 3250,
+                "compare_price": 3890,
+                "stock": 18,
+                "description": "Diseñado para alcanzar los ángulos más selectos de la anatomía íntima con precisión. Su vástago ergonómico ligeramente curvado transmite frecuencias de vibración subgraves profundas que estimulan sin adormecer los tejidos. Incluye un discreto control remoto inalámbrico de tacto suave para juego en solitario o entrega del control en pareja.",
+                "sensory_notes": "Tacto de terciopelo líquido sobre la piel, ondas subgraves de resonancia envolvente, absoluta discreción acústica.",
+                "specs": {
+                        "material": "Silicona médica ultrasuave curada al platino y ABS bañado en oro champán",
+                        "impermeabilidad": "IPX7 (100% sumergible hasta 1 metro)",
+                        "ruido": "< 36 dB (Tecnología Whisper-Quiet inaudible a puerta cerrada)",
+                        "modos": "10 programas de vibración profunda y 5 intensidades regulables",
+                        "alcance_remoto": "Control inalámbrico de radiofrecuencia con alcance de hasta 15 metros",
+                        "bateria": "Batería recargable de iones de litio con pin magnético USB",
+                        "autonomia": "Hasta 120 minutos continuos con carga rápida de 75 min",
+                        "garantia": "2 años de sustitución directa"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1616763355603-9755a640a287?auto=format&fit=crop&q=80&w=900",
+                "badge": "Control Remoto",
+                "sort_order": 37
+        },
+        {
+                "id": "PROD-039",
+                "name": "Mini Estimulador Clitoriano de Bolsillo \"Aura Pocket Luxe\"",
+                "slug": "mini-estimulador-clitoriano-bolsillo-aura-pocket-luxe",
+                "category": "Pleasure Tech",
+                "subtitle": "Diseño ultra-compacto para bolso con punta de precisión en silicona sedosa y acentos oro rosa",
+                "price": 1950,
+                "compare_price": 2400,
+                "stock": 25,
+                "description": "La armonía entre discreción, elegancia estética y potencia concentrada. Con un formato concebido para acompañarte en el bolso de mano más selecto, su punta suave de silicona médica canaliza pulsaciones rítmicas directamente en las zonas más sensibles con delicadeza absoluta.",
+                "sensory_notes": "Silueta pulida ultraligera, estimulación rítmica focalizada, tacto cálido e hipoalergénico.",
+                "specs": {
+                        "material": "Silicona médica biocompatible y aleación de zinc pulida en oro rosa",
+                        "impermeabilidad": "IPX7 (100% sumergible y de fácil higienización)",
+                        "ruido": "< 34 dB (Completamente discreto en cualquier entorno)",
+                        "modos": "8 frecuencias rítmicas de estimulación focal",
+                        "bateria": "Carga magnética USB hermética con indicador LED suave",
+                        "autonomia": "Hasta 90 minutos de uso continuo",
+                        "garantia": "2 años de garantía boutique"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80&w=900",
+                "badge": "Ultra Compacto",
+                "sort_order": 38
+        },
+        {
+                "id": "PROD-040",
+                "name": "Aceite Corporal Sensorial de Masaje \"Élixir Botanique Jasmin & Vanille\"",
+                "slug": "aceite-corporal-sensorial-elixir-botanique-jasmin-vanille",
+                "category": "Sensory Care",
+                "subtitle": "Fórmula botánica seca con jojoba dorada, flor de jazmín nocturno y vainilla negra de Madagascar",
+                "price": 1450,
+                "compare_price": 1750,
+                "stock": 30,
+                "description": "Una fórmula maestra de tacto sedoso y rápida absorción formulada para deslizarse sobre la piel sin dejar residuo graso. Su fragancia hipnótica combina pétalos de jazmín recolectados de noche con notas cálidas de vainilla bourbon y almendras dulces, liberando un aroma envolvente al contacto corporal.",
+                "sensory_notes": "Aroma embriagador de flores blancas y vainilla dulce, textura oleosa ingrávida de acabado satinado.",
+                "specs": {
+                        "contenido": "100 ml / 3.4 fl oz en frasco de vidrio violeta protector Miron",
+                        "ingredientes_clave": "Aceite de jojoba orgánico prensado en frío, aceite de almendras dulces, esencia pura de jazmín y vainilla bourbon",
+                        "biocompatibilidad": "100% Vegano, sin parabenos, sin siliconas y libre de aceites minerales",
+                        "aplicacion": "Masaje corporal sensual, hidratación de escote y zonas erógenas",
+                        "origen": "Formulado en Grasse, Francia",
+                        "garantia": "Sellado hermético de frescura con gotero dosificador"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80&w=900",
+                "badge": "Aromaterapia",
+                "sort_order": 39
+        },
+        {
+                "id": "PROD-041",
+                "name": "Elixir Íntimo Biocompatible con Ácido Hialurónico \"Sérum Hydratant Velouté\"",
+                "slug": "elixir-intimo-biocompatible-acido-hialuronico-serum-hydratant-veloute",
+                "category": "Sensory Care",
+                "subtitle": "Lubricante e hidratante íntimo a base de agua enriquecido con ácido hialurónico vegetal",
+                "price": 1250,
+                "compare_price": 1550,
+                "stock": 35,
+                "description": "El estándar definitivo en hidratación íntima y confort prolongado. Formulado para replicar fielmente la lubricación fisiológica natural. Su concentración de ácido hialurónico vegetal retiene humedad continua, ofreciendo un deslizamiento ultrasuave totalmente compatible con silicona médica y preservativos.",
+                "sensory_notes": "Deslizamiento aterciopelado sin sensación pegajosa, frescura inmediata, pH fisiológico 4.2 equilibrado.",
+                "specs": {
+                        "volumen": "75 ml / 2.5 fl oz con dispensador hermético de precisión",
+                        "compatibilidad": "100% Compatible con juguetes de silicona médica y preservativos de látex/poliuretano",
+                        "formula": "Libre de glicerina, propilenglicol, parabenos y fragancias sintéticas",
+                        "ph_fisiologico": "pH 4.2 idéntico a la flora íntima saludable",
+                        "certificacion": "Dermatológica y ginecológicamente testado",
+                        "garantia": "Formula limpia e hipoalergénica de alta tolerancia"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=900",
+                "badge": "Ácido Hialurónico",
+                "sort_order": 40
+        },
+        {
+                "id": "PROD-042",
+                "name": "Harness Corporal de Satén Negro & Herrajes Oro \"Midnight Silhouette\"",
+                "slug": "harness-corporal-saten-negro-herrajes-oro-midnight-silhouette",
+                "category": "Fine Lingerie",
+                "subtitle": "Arnés arquitectónico de cintas de satén elástico de doble faz con anillas bañadas en oro pulido",
+                "price": 1850,
+                "compare_price": 2200,
+                "stock": 20,
+                "description": "Una joya de corsetería moderna que enmarca el torso con líneas geométricas de alta seducción. Confeccionado con cintas de satén suave elastizado que no marcan ni presionan la piel y herrajes metálicos pulidos con baño de oro hipoalergénico. Totalmente graduable para ceñirse a cada silueta.",
+                "sensory_notes": "Tacto sedoso del satén de doble faz, frío sutil de las anillas doradas, ajuste ceñido tipo segunda piel.",
+                "specs": {
+                        "material": "85% Satén elástico de alta densidad y 15% elastano de compresión suave",
+                        "herrajes": "Zamak de grado joyero pulido con baño dorado resistente e hipoalergénico",
+                        "ajustabilidad": "6 puntos de regulación deslizante (pecho, bajo busto y cintura)",
+                        "tallas": "Unitalla adaptable (S a XL / copas A a E)",
+                        "cuidados": "Lavado a mano con jabón neutro para preservar el brillo de los herrajes"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=900",
+                "badge": "Satén & Oro",
+                "sort_order": 41
+        },
+        {
+                "id": "PROD-043",
+                "name": "Conjunto Bralette & Tanga de Encaje Floral Noir \"Dentelle Royale\"",
+                "slug": "conjunto-bralette-tanga-encaje-floral-noir-dentelle-royale",
+                "category": "Fine Lingerie",
+                "subtitle": "Encaje suave francés sin varillas con detalles en satén elastizado y corte brasileño",
+                "price": 2150,
+                "compare_price": 2650,
+                "stock": 15,
+                "description": "Elegancia desprovista de artificios. Este bralette triangular confeccionado en encaje floral abraza el busto con naturalidad absoluta sin necesidad de varillas rígidas. La tanga a juego incorpora una cintura de satén elástico ultra-confortable y refuerzo íntimo en algodón orgánico.",
+                "sensory_notes": "Encaje suave sin asperezas, satén elástico acariciando las caderas, ingravidez sobre la piel.",
+                "specs": {
+                        "composicion": "90% Poliamida fina de encaje francés y 10% elastano sedoso",
+                        "forro_intimo": "100% Algodón orgánico certificado hipoalergénico",
+                        "tallas": "S, M, L con tirantes regulables y cierre trasero de 3 posiciones",
+                        "cuidados": "Lavado a mano en agua fría o ciclo delicado con bolsa protectora"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&q=80&w=900",
+                "badge": "Encaje Francés",
+                "sort_order": 42
+        },
+        {
+                "id": "PROD-044",
+                "name": "Antifaz Blackout de Seda de Morera Pura 22 Momme \"Nuit Étoilée\"",
+                "slug": "antifaz-blackout-seda-morera-pura-nuit-etoilee",
+                "category": "Soft Fetish",
+                "subtitle": "Antifaz sensorial acolchado con bloqueo lumínico total y cinta suave que protege el cabello",
+                "price": 1100,
+                "compare_price": 1350,
+                "stock": 26,
+                "description": "Al pausar la mirada, cada caricia, susurro y estímulo se intensifica profundamente. Confeccionado íntegramente en seda natural de morera grado 6A de 22 momme, este antifaz proporciona una oscuridad absoluta gracias a su acolchado interior, cuidando con ternura la delicada piel del contorno de ojos.",
+                "sensory_notes": "Frío sedoso inicial que se atempera de inmediato, ingravidez sobre los párpados, privación sensorial relajante.",
+                "specs": {
+                        "material": "100% Seda de morera natural Grado 6A (22 Momme) de alta densidad",
+                        "relleno": "Capas internas acolchadas de microfibra de seda para bloqueo 100% blackout",
+                        "ajuste": "Banda elástica ancha forrada en seda pura que no enreda ni marca el cabello",
+                        "dimensiones": "21 cm x 10 cm con puente nasal ergonómico",
+                        "incluye": "Bolsa de satén para viaje y resguardo higiénico"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&q=80&w=900",
+                "badge": "Seda 22 Momme",
+                "sort_order": 43
+        },
+        {
+                "id": "PROD-045",
+                "name": "Anillo Vibrador Doble para Parejas \"Velvet Eclipse Duo Ring\"",
+                "slug": "anillo-vibrador-doble-parejas-velvet-eclipse-duo-ring",
+                "category": "Couples",
+                "subtitle": "Anillo elástico ergonómico con motor de pulso para estimulación simultánea del clítoris y soporte mutuo",
+                "price": 2190,
+                "compare_price": 2600,
+                "stock": 22,
+                "description": "Creado para amplificar la conexión compartida en cada encuentro. Su aro elástico de silicona médica de alta flexibilidad prolonga la firmeza y resistencia, mientras su cabezal anatómico texturizado se sitúa sobre el clítoris transmitiendo pulsaciones rítmicas profundas y simultáneas para ambos amantes.",
+                "sensory_notes": "Sujeción elástica confortable, microvibraciones intensas transmitidas al unísono, silicona ultrasuave.",
+                "specs": {
+                        "material": "Silicona líquida médica biocompatible hipoalergénica de gran elasticidad",
+                        "impermeabilidad": "IPX7 (100% sumergible en tina o ducha)",
+                        "ruido": "< 38 dB (Discreción total durante el juego compartido)",
+                        "modos": "9 patrones de vibración sincrónica con botón de toque rápido",
+                        "bateria": "Batería de polímero de litio recargable por pin magnético USB",
+                        "autonomia": "Hasta 70 minutos de uso continuo con carga rápida",
+                        "garantia": "2 años de reposición directa"
+                },
+                "photo_main": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&q=80&w=900",
+                "badge": "Juego en Pareja",
+                "sort_order": 44
         }
 ];
 
@@ -904,15 +1088,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
 
         if (cart.length === 0) {
+            const emptyTitle = window.t ? window.t('cart.emptyTitle', 'Tu bolsa está vacía') : 'Tu bolsa está vacía';
+            const emptyDesc = window.t ? window.t('cart.emptyDesc', 'Explora nuestra selección exclusiva y añade tus piezas favoritas.') : 'Explora nuestra selección exclusiva y añade tus piezas favoritas.';
+            const calcTxt = window.t ? window.t('cart.shippingCalculating', 'Calculando...') : 'Calculando...';
             container.innerHTML = `
                 <div class="cart-empty-message">
                     <div class="empty-icon">🛍️</div>
-                    <p style="font-size: 1.1rem; color: #FFF; margin-bottom: 0.5rem;">Tu bolsa está vacía</p>
-                    <p style="font-size: 0.85rem;">Explora nuestra selección exclusiva y añade tus piezas favoritas.</p>
+                    <p style="font-size: 1.1rem; color: #FFF; margin-bottom: 0.5rem;">${emptyTitle}</p>
+                    <p style="font-size: 0.85rem;">${emptyDesc}</p>
                 </div>
             `;
             document.getElementById('cart-subtotal').textContent = '$0 MXN';
-            document.getElementById('cart-shipping-val').textContent = 'Calculando...';
+            document.getElementById('cart-shipping-val').textContent = calcTxt;
             document.getElementById('cart-grand-total').textContent = '$0 MXN';
             const discRow = document.getElementById('cart-discount-row');
             if (discRow) discRow.style.display = 'none';
@@ -920,6 +1107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let subtotal = 0;
+        const removeTxt = window.t ? window.t('cart.itemRemove', 'Eliminar') : 'Eliminar';
         container.innerHTML = cart.map(item => {
             const itemTotal = item.price * item.quantity;
             subtotal += itemTotal;
@@ -935,7 +1123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="qty-val">${item.quantity}</span>
                                 <button type="button" class="qty-btn" onclick="window.updateCartQty('${item.id}', 1)">+</button>
                             </div>
-                            <button type="button" class="cart-item-remove" onclick="window.removeCartItem('${item.id}')">Eliminar</button>
+                            <button type="button" class="cart-item-remove" onclick="window.removeCartItem('${item.id}')">${removeTxt}</button>
                         </div>
                     </div>
                 </div>
@@ -966,7 +1154,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        document.getElementById('cart-shipping-val').textContent = shipping === 0 ? 'GRATIS (Discreto)' : `$${shipping} MXN`;
+        const freeShippingLabel = window.t ? window.t('cart.shippingFree', 'GRATIS (Discreto)') : 'GRATIS (Discreto)';
+        document.getElementById('cart-shipping-val').textContent = shipping === 0 ? freeShippingLabel : `$${shipping} MXN`;
         document.getElementById('cart-grand-total').textContent = `$${grandTotal.toLocaleString()} MXN`;
 
         // Barra de progreso de envío gratis interactiva
@@ -976,10 +1165,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const percent = Math.min(100, Math.round((subtotal / 1500) * 100));
             freeShippingFill.style.width = `${percent}%`;
             if (subtotal >= 1500) {
-                freeShippingText.innerHTML = `✨ <strong>¡Envío Blindado GRATIS!</strong> Calificas para entrega confidencial sin costo.`;
+                freeShippingText.innerHTML = window.t ? window.t('cart.freeShippingQualified', '✨ <strong>¡Envío Blindado GRATIS!</strong> Calificas para entrega confidencial sin costo.') : `✨ <strong>¡Envío Blindado GRATIS!</strong> Calificas para entrega confidencial sin costo.`;
             } else {
                 const missing = 1500 - subtotal;
-                freeShippingText.innerHTML = `Agrega <strong>$${missing.toLocaleString()} MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>`;
+                const progressTemplate = window.t ? window.t('cart.freeShippingProgress', 'Agrega <strong>${missing} MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>') : 'Agrega <strong>${missing} MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>';
+                freeShippingText.innerHTML = progressTemplate.replace('${missing}', missing.toLocaleString());
             }
         }
     };
@@ -1211,14 +1401,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!grid) return;
 
         if (!products || products.length === 0) {
+            const emptyTitle = window.t ? window.t('catalog.empty.title', 'No encontramos piezas que coincidan con tu búsqueda.') : 'No encontramos piezas que coincidan con tu búsqueda.';
+            const emptyDesc = window.t ? window.t('catalog.empty.desc', 'Intenta con otra categoría o término.') : 'Intenta con otra categoría o término.';
             grid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
-                    <p style="font-size: 1.2rem; color: #FFF;">No encontramos piezas que coincidan con tu búsqueda.</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Intenta con otra categoría o término.</p>
+                    <p style="font-size: 1.2rem; color: #FFF;">${emptyTitle}</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">${emptyDesc}</p>
                 </div>
             `;
             return;
         }
+
+        const quickViewTxt = window.t ? window.t('catalog.card.quickView', '🔍 Vista Rápida & Specs') : '🔍 Vista Rápida & Specs';
+        const addToBagTxt = window.t ? window.t('catalog.card.addToBag', '🛍️ Añadir a la Bolsa') : '🛍️ Añadir a la Bolsa';
 
         grid.innerHTML = products.map(product => {
             const hasDiscount = product.compare_price && product.compare_price > product.price;
@@ -1228,7 +1423,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${product.photo_main}" alt="${product.name}" loading="lazy">
                         ${product.badge ? `<span class="product-badge-corner">${product.badge}</span>` : ''}
                         <button type="button" class="product-quick-view-btn" onclick="event.stopPropagation(); window.openProductDetailModal('${product.id}')">
-                            🔍 Vista Rápida & Specs
+                            ${quickViewTxt}
                         </button>
                     </div>
                     <div class="product-info-box">
@@ -1241,7 +1436,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="product-card-actions">
                             <button type="button" class="btn-add-to-bag" onclick="window.addToCartDirect('${product.id}', event)">
-                                🛍️ Añadir a la Bolsa
+                                ${addToBagTxt}
                             </button>
                         </div>
                     </div>
@@ -1276,7 +1471,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const countPill = document.getElementById('catalog-count-pill');
         if (countPill) {
-            countPill.textContent = `Mostrando ${filtered.length} piezas exclusivas`;
+            const countTemplate = window.t ? window.t('catalog.status.count', 'Mostrando {count} piezas exclusivas') : 'Mostrando {count} piezas exclusivas';
+            countPill.textContent = countTemplate.replace('{count}', filtered.length);
         }
 
         renderProductsGrid(filtered);
@@ -1485,6 +1681,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar productos
     loadProducts();
+
+    // Listener de cambio de idioma reactivo
+    window.addEventListener('redVelvetLangChanged', () => {
+        filterAndRenderCatalog();
+        renderCartDrawer();
+    });
 });
 
 // ==========================================================================

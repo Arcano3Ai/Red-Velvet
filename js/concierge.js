@@ -110,6 +110,9 @@
         injectHTML() {
             if (document.getElementById('yessi-widget-container')) return;
 
+            const lang = (window.redVelvetI18n && window.redVelvetI18n.getLanguage()) || localStorage.getItem('redVelvetLang') || 'es';
+            const isEn = lang === 'en';
+
             const wrap = document.createElement('div');
             wrap.id = 'yessi-widget-container';
             wrap.innerHTML = `
@@ -119,7 +122,7 @@
                     <span class="yessi-launcher-avatar">👩‍💼</span>
                     <span class="yessi-launcher-text">
                         <strong>Yessi Concierge</strong>
-                        <small>● En línea · Confidencial</small>
+                        <small>${isEn ? '● Online · Confidential' : '● En línea · Confidencial'}</small>
                     </span>
                     <span class="yessi-unread-badge" id="yessi-unread-badge" style="display:none;">1</span>
                 </button>
@@ -135,7 +138,7 @@
                             </div>
                             <div class="yessi-header-titles">
                                 <h4 class="yessi-header-name">Yessi Concierge</h4>
-                                <span class="yessi-header-role">Asesora Privada · RED VELVET</span>
+                                <span class="yessi-header-role">${isEn ? 'Private Advisor · RED VELVET' : 'Asesora Privada · RED VELVET'}</span>
                             </div>
                         </div>
                         <div class="yessi-header-actions">
@@ -145,7 +148,7 @@
 
                     <!-- Aviso de Confidencialidad -->
                     <div class="yessi-privacy-banner">
-                        🔒 Conversación cifrada de 256 bits · 100% privada y anónima
+                        ${isEn ? '🔒 256-bit encrypted conversation · 100% private & anonymous' : '🔒 Conversación cifrada de 256 bits · 100% privada y anónima'}
                     </div>
 
                     <!-- Mensajes -->
@@ -158,7 +161,7 @@
 
                     <!-- Input / Footer -->
                     <form id="yessi-chat-form" class="yessi-chat-form" onsubmit="event.preventDefault(); window.yessiSendUserMessage();">
-                        <input type="text" id="yessi-user-input" class="yessi-user-input" placeholder="Pregúntame sobre envíos, piezas o cupones..." autocomplete="off">
+                        <input type="text" id="yessi-user-input" class="yessi-user-input" placeholder="${isEn ? 'Ask me about shipping, pieces, or courtesy codes...' : 'Pregúntame sobre envíos, piezas o cupones...'}" autocomplete="off">
                         <button type="submit" id="yessi-btn-send" class="yessi-btn-send" aria-label="Enviar mensaje">
                             ➤
                         </button>
@@ -180,6 +183,12 @@
 
             window.yessiSendUserMessage = () => this.handleSendMessage();
             window.yessiClickChip = (text) => this.handleChipClick(text);
+
+            window.addEventListener('redVelvetLangChanged', () => {
+                if (this.history.length === 0) {
+                    this.renderWelcome();
+                }
+            });
         }
 
         toggleChat(forceState) {
@@ -208,23 +217,46 @@
             const body = document.getElementById('yessi-messages-body');
             if (!body) return;
 
-            body.innerHTML = `
-                <div class="yessi-msg-row yessi-bot-row">
-                    <div class="yessi-msg-bubble">
-                        <p>¡Hola! Te doy la bienvenida a <strong>RED VELVET</strong>. Soy <strong>Yessi</strong>, tu concierge personal y asesora de bienestar íntimo.</p>
-                        <p style="margin-top:0.4rem;">Estoy aquí para ayudarte a elegir la pieza perfecta, resolver dudas de discreción de tu empaque o brindarte códigos de cortesía exclusivos.</p>
-                        <span class="yessi-msg-time">Ahora</span>
-                    </div>
-                </div>
-            `;
+            const lang = (window.redVelvetI18n && window.redVelvetI18n.getLanguage()) || localStorage.getItem('redVelvetLang') || 'es';
+            const isEn = lang === 'en';
 
-            this.renderChips([
-                '📦 ¿Cómo garantizan la discreción?',
-                '🌹 Recomendación para parejas',
-                '💎 Succionadores más vendidos',
-                '🏷️ Cupones de descuento vigentes',
-                '💬 Hablar por WhatsApp'
-            ]);
+            if (isEn) {
+                body.innerHTML = `
+                    <div class="yessi-msg-row yessi-bot-row">
+                        <div class="yessi-msg-bubble">
+                            <p>Hello! Welcome to <strong>RED VELVET</strong>. I am <strong>Yessi</strong>, your personal concierge and intimate wellness advisor.</p>
+                            <p style="margin-top:0.4rem;">I am here to guide you with complete confidentiality on our luxury pieces, blind discreet packaging, or exclusive courtesy codes.</p>
+                            <span class="yessi-msg-time">Now</span>
+                        </div>
+                    </div>
+                `;
+
+                this.renderChips([
+                    '📦 How do you ensure discretion?',
+                    '🌹 Couples recommendations',
+                    '💎 Bestselling pleasure tech',
+                    '🏷️ Active discount codes',
+                    '💬 Chat via WhatsApp'
+                ]);
+            } else {
+                body.innerHTML = `
+                    <div class="yessi-msg-row yessi-bot-row">
+                        <div class="yessi-msg-bubble">
+                            <p>¡Hola! Te doy la bienvenida a <strong>RED VELVET</strong>. Soy <strong>Yessi</strong>, tu concierge personal y asesora de bienestar íntimo.</p>
+                            <p style="margin-top:0.4rem;">Estoy aquí para ayudarte a elegir la pieza perfecta, resolver dudas de discreción de tu empaque o brindarte códigos de cortesía exclusivos.</p>
+                            <span class="yessi-msg-time">Ahora</span>
+                        </div>
+                    </div>
+                `;
+
+                this.renderChips([
+                    '📦 ¿Cómo garantizan la discreción?',
+                    '🌹 Recomendación para parejas',
+                    '💎 Succionadores más vendidos',
+                    '🏷️ Cupones de descuento vigentes',
+                    '💬 Hablar por WhatsApp'
+                ]);
+            }
         }
 
         renderChips(chips) {

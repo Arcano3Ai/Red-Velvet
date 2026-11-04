@@ -39,11 +39,11 @@
     <div id="age-gate" class="age-gate active">
         <div class="age-gate-content glass">
             <img src="assets/logo/logooficial.jpeg" alt="RED VELVET Logo" class="modal-logo">
-            <h2 style="font-family: var(--font-serif); font-size: 1.5rem; color: #D4AF37; margin-bottom: 0.8rem;">RED VELVET BOUTIQUE</h2>
-            <p>Esta boutique erótica y plataforma de bienestar íntimo está destinada exclusivamente a mayores de 18 años.</p>
+            <h2 style="font-family: var(--font-serif); font-size: 1.5rem; color: #D4AF37; margin-bottom: 0.8rem;" data-i18n="ageGate.title">RED VELVET BOUTIQUE</h2>
+            <p data-i18n="ageGate.desc">Esta boutique erótica y plataforma de bienestar íntimo está destinada exclusivamente a mayores de 18 años.</p>
             <div class="age-gate-buttons">
-                <button id="btn-adult" type="button" class="btn btn-primary" onclick="window.dismissAgeGate(event)" style="touch-action: manipulation; cursor: pointer;">Soy mayor de 18 años</button>
-                <a href="https://google.com" class="btn btn-outline">Salir</a>
+                <button id="btn-adult" type="button" class="btn btn-primary" onclick="window.dismissAgeGate(event)" style="touch-action: manipulation; cursor: pointer;" data-i18n="ageGate.btnYes">Soy mayor de 18 años</button>
+                <a href="https://google.com" class="btn btn-outline" data-i18n="ageGate.btnNo">Salir</a>
             </div>
         </div>
     </div>
@@ -57,11 +57,11 @@
             
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
-                    <li><a href="#colecciones">Colecciones</a></li>
-                    <li><a href="#discrecion">Discreción & Envíos</a></li>
-                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="#catalogo" data-i18n="nav.catalog">Catálogo</a></li>
+                    <li><a href="#colecciones" data-i18n="nav.collections">Colecciones</a></li>
+                    <li><a href="#discrecion" data-i18n="nav.discretion">Discreción & Envíos</a></li>
+                    <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
                 </ul>
             </nav>
 
@@ -91,7 +91,7 @@
                 <!-- Botón de Carrito de Compras -->
                 <button class="cart-btn-header" id="btn-cart-toggle" aria-label="Ver bolsa de compras">
                     <span class="cart-icon">🛍️</span>
-                    <span class="cart-label">Bolsa</span>
+                    <span class="cart-label" data-i18n="header.bag">Bolsa</span>
                     <span class="cart-badge" id="header-cart-badge">0</span>
                 </button>
 
@@ -113,30 +113,30 @@
             </video>
             <div class="hero-bg"></div>
             <div class="container hero-content">
-                <span class="age-indicator">18+ | Boutique de Lujo & Bienestar Íntimo</span>
-                <h1 class="hero-headline reveal">El Arte del Placer Elevado<br>a la Máxima Sofisticación.</h1>
-                <p class="hero-subheadline reveal delay-1">Dispositivos de autor con tecnología silenciosa, lencería de alta costura y cosmética sensorial premium. Empaque 100% ciego y confidencialidad absoluta.</p>
+                <span class="age-indicator" data-i18n="hero.ageBadge">18+ | Boutique de Lujo & Bienestar Íntimo</span>
+                <h1 class="hero-headline reveal" data-i18n="hero.headline">El Arte del Placer Elevado<br>a la Máxima Sofisticación.</h1>
+                <p class="hero-subheadline reveal delay-1" data-i18n="hero.subheadline">Dispositivos de autor con tecnología silenciosa, lencería de alta costura y cosmética sensorial premium. Empaque 100% ciego y confidencialidad absoluta.</p>
                 <div class="hero-buttons reveal delay-2">
-                    <a href="#catalogo" class="btn btn-primary btn-lg">Explorar Catálogo</a>
-                    <a href="#discrecion" class="btn btn-outline btn-lg">Garantía de Discreción</a>
+                    <a href="#catalogo" class="btn btn-primary btn-lg" data-i18n="hero.btnExplore">Explorar Catálogo</a>
+                    <a href="#discrecion" class="btn btn-outline btn-lg" data-i18n="hero.btnDiscretion">Garantía de Discreción</a>
                 </div>
 
                 <div class="hero-trust-badges reveal delay-3">
                     <div class="hero-trust-badge">
                         <span class="badge-dot"></span>
-                        <span>Empaque Ciego 100% Neutro</span>
+                        <span data-i18n="hero.badgeBlind">Empaque Ciego 100% Neutro</span>
                     </div>
                     <div class="hero-trust-badge">
                         <span class="badge-dot"></span>
-                        <span>Whisper-Quiet &lt; 38 dB</span>
+                        <span data-i18n="hero.badgeWhisper">Whisper-Quiet &lt; 38 dB</span>
                     </div>
                     <div class="hero-trust-badge">
                         <span class="badge-dot"></span>
-                        <span>Silicona Quirúrgica Pura</span>
+                        <span data-i18n="hero.badgeSilicone">Silicona Quirúrgica Pura</span>
                     </div>
                     <div class="hero-trust-badge">
                         <span class="badge-dot"></span>
-                        <span>2 Años de Garantía Directa</span>
+                        <span data-i18n="hero.badgeWarranty">2 Años de Garantía Directa</span>
                     </div>
                 </div>
             </div>
@@ -149,29 +149,29 @@
                     <div class="trust-item">
                         <div class="trust-icon">📦</div>
                         <div class="trust-text">
-                            <h4>Empaque 100% Ciego</h4>
-                            <p>Caja neutra, sin logotipos ni leyendas comprometedoras. Discreción total en tu puerta.</p>
+                            <h4 data-i18n="trust.p1.title">Empaque 100% Ciego</h4>
+                            <p data-i18n="trust.p1.desc">Caja neutra, sin logotipos ni leyendas comprometedoras. Discreción total en tu puerta.</p>
                         </div>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon">🛡️</div>
                         <div class="trust-text">
-                            <h4>Silicona Médica Biocompatible</h4>
-                            <p>Materiales puros de tacto aterciopelado, libres de ftalatos y certificados para el cuerpo.</p>
+                            <h4 data-i18n="trust.p2.title">Silicona Médica Biocompatible</h4>
+                            <p data-i18n="trust.p2.desc">Materiales puros de tacto aterciopelado, libres de ftalatos y certificados para el cuerpo.</p>
                         </div>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon">🔇</div>
                         <div class="trust-text">
-                            <h4>Silencio Whisper-Quiet</h4>
-                            <p>Motores ultra silenciosos calibrados por debajo de 38 dB para tu completa privacidad.</p>
+                            <h4 data-i18n="trust.p3.title">Silencio Whisper-Quiet</h4>
+                            <p data-i18n="trust.p3.desc">Motores ultra silenciosos calibrados por debajo de 38 dB para tu completa privacidad.</p>
                         </div>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon">💬</div>
                         <div class="trust-text">
-                            <h4>Concierge Privado 24/7</h4>
-                            <p>Asesoría personalizada y seguimiento confidencial directo por WhatsApp.</p>
+                            <h4 data-i18n="trust.p4.title">Concierge Privado 24/7</h4>
+                            <p data-i18n="trust.p4.desc">Asesoría personalizada y seguimiento confidencial directo por WhatsApp.</p>
                         </div>
                     </div>
                 </div>
@@ -182,45 +182,45 @@
         <section id="colecciones" class="collections-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">CURATORÍA EXCLUSIVA</span>
-                    <h2 class="section-title">Colecciones de Alta Gama</h2>
-                    <p class="section-subtitle">Diseños creados para despertar las sensaciones más exquisitas y elevar el juego en solitario o en pareja.</p>
+                    <span class="badge badge-gold" data-i18n="collections.badge">CURATORÍA EXCLUSIVA</span>
+                    <h2 class="section-title" data-i18n="collections.title">Colecciones de Alta Gama</h2>
+                    <p class="section-subtitle" data-i18n="collections.subtitle">Diseños creados para despertar las sensaciones más exquisitas y elevar el juego en solitario o en pareja.</p>
                 </div>
                 <div class="collections-grid">
                     <!-- Colección 1 -->
                     <div class="collection-card" onclick="window.filterCatalogByCategory('Pleasure Tech')">
                         <img src="https://images.unsplash.com/photo-1593527538338-86235520a070?auto=format&fit=crop&q=80&w=900" alt="Pleasure Tech" class="collection-img">
                         <div class="collection-overlay">
-                            <h3>Pleasure Tech</h3>
-                            <p>Succionadores de clítoris por aire pulsado, vibradores clásicos y varitas de masaje.</p>
-                            <span class="collection-link">Ver Dispositivos →</span>
+                            <h3 data-i18n="collections.c1.title">Pleasure Tech</h3>
+                            <p data-i18n="collections.c1.desc">Succionadores de clítoris por aire pulsado, vibradores clásicos y varitas de masaje.</p>
+                            <span class="collection-link" data-i18n="collections.c1.link">Ver Dispositivos →</span>
                         </div>
                     </div>
                     <!-- Colección 2 -->
                     <div class="collection-card" onclick="window.filterCatalogByCategory('Sensory Care')">
                         <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=900" alt="Sensory Care" class="collection-img">
                         <div class="collection-overlay">
-                            <h3>Sensory Care</h3>
-                            <p>Velas de masaje térmicas botánicas, elixires y lubricantes con ácido hialurónico.</p>
-                            <span class="collection-link">Ver Cosmética →</span>
+                            <h3 data-i18n="collections.c2.title">Sensory Care</h3>
+                            <p data-i18n="collections.c2.desc">Velas de masaje térmicas botánicas, elixires y lubricantes con ácido hialurónico.</p>
+                            <span class="collection-link" data-i18n="collections.c2.link">Ver Cosmética →</span>
                         </div>
                     </div>
                     <!-- Colección 3 -->
                     <div class="collection-card" onclick="window.filterCatalogByCategory('Fine Lingerie')">
                         <img src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?auto=format&fit=crop&q=80&w=900" alt="Fine Lingerie" class="collection-img">
                         <div class="collection-overlay">
-                            <h3>Fine Lingerie</h3>
-                            <p>Bodysuits de encaje francés, satén de seda pesado y batas Red Velvet.</p>
-                            <span class="collection-link">Ver Lencería →</span>
+                            <h3 data-i18n="collections.c3.title">Fine Lingerie</h3>
+                            <p data-i18n="collections.c3.desc">Bodysuits de encaje francés, satén de seda pesado y batas Red Velvet.</p>
+                            <span class="collection-link" data-i18n="collections.c3.link">Ver Lencería →</span>
                         </div>
                     </div>
                     <!-- Colección 4 -->
                     <div class="collection-card" onclick="window.filterCatalogByCategory('Soft Fetish')">
                         <img src="https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?auto=format&fit=crop&q=80&w=900" alt="Soft Fetish & Play" class="collection-img">
                         <div class="collection-overlay">
-                            <h3>Soft Fetish & Play</h3>
-                            <p>Antifaces blackout de seda, esposas forradas en terciopelo y juegos tántricos.</p>
-                            <span class="collection-link">Ver Accesorios →</span>
+                            <h3 data-i18n="collections.c4.title">Soft Fetish & Play</h3>
+                            <p data-i18n="collections.c4.desc">Antifaces blackout de seda, esposas forradas en terciopelo y juegos tántricos.</p>
+                            <span class="collection-link" data-i18n="collections.c4.link">Ver Accesorios →</span>
                         </div>
                     </div>
                 </div>
@@ -231,31 +231,31 @@
         <section id="ritual" class="section ritual-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">FILOSOFÍA VELVET</span>
-                    <h2 class="section-title">El Ritual de los Tres Tiempos</h2>
-                    <p class="section-subtitle">Una guía sensorial curada para transformar el placer cotidiano en una ceremonia de alta sofisticación.</p>
+                    <span class="badge badge-gold" data-i18n="ritual.badge">FILOSOFÍA VELVET</span>
+                    <h2 class="section-title" data-i18n="ritual.title">El Ritual de los Tres Tiempos</h2>
+                    <p class="section-subtitle" data-i18n="ritual.subtitle">Una guía sensorial curada para transformar el placer cotidiano en una ceremonia de alta sofisticación.</p>
                 </div>
                 <div class="ritual-grid">
                     <div class="ritual-card reveal">
-                        <div class="ritual-step">FASE 01</div>
+                        <div class="ritual-step" data-i18n="ritual.step1.step">FASE 01</div>
                         <div class="ritual-icon">🕯️</div>
-                        <h3 class="ritual-title">La Preparación & Atmósfera</h3>
-                        <p class="ritual-desc">Atenúa la luz, enciende una vela botánica de vertido tibio y permite que los aceites de orquídea negra y vainilla bourbon despierten cada poro con calor reconfortante.</p>
-                        <span class="ritual-tag">Sensory Care & Aromaterapia</span>
+                        <h3 class="ritual-title" data-i18n="ritual.step1.title">La Preparación & Atmósfera</h3>
+                        <p class="ritual-desc" data-i18n="ritual.step1.desc">Atenúa la luz, enciende una vela botánica de vertido tibio y permite que los aceites de orquídea negra y vainilla bourbon despierten cada poro con calor reconfortante.</p>
+                        <span class="ritual-tag" data-i18n="ritual.step1.tag">Sensory Care & Aromaterapia</span>
                     </div>
                     <div class="ritual-card reveal delay-1">
-                        <div class="ritual-step">FASE 02</div>
+                        <div class="ritual-step" data-i18n="ritual.step2.step">FASE 02</div>
                         <div class="ritual-icon">💎</div>
-                        <h3 class="ritual-title">La Estimulación Sensorial</h3>
-                        <p class="ritual-desc">Experimenta succionadores de pulsación suave y vibradores en silicona médica biocompatible. Su motor silencioso (&lt;38 dB) ofrece estimulación gradual y placentera con total discreción.</p>
-                        <span class="ritual-tag">Vibración & Succión Suave</span>
+                        <h3 class="ritual-title" data-i18n="ritual.step2.title">La Estimulación Sensorial</h3>
+                        <p class="ritual-desc" data-i18n="ritual.step2.desc">Experimenta succionadores de pulsación suave y vibradores en silicona médica biocompatible. Su motor silencioso (&lt;38 dB) ofrece estimulación gradual y placentera con total discreción.</p>
+                        <span class="ritual-tag" data-i18n="ritual.step2.tag">Vibración & Succión Suave</span>
                     </div>
                     <div class="ritual-card reveal delay-2">
-                        <div class="ritual-step">FASE 03</div>
+                        <div class="ritual-step" data-i18n="ritual.step3.step">FASE 03</div>
                         <div class="ritual-icon">👑</div>
-                        <h3 class="ritual-title">El Clímax & Conexión</h3>
-                        <p class="ritual-desc">Explora el tacto de satén pesado, la complicidad en pareja y la liberación de endorfinas. Un espacio privado donde la discreción y el placer soberano son la única regla.</p>
-                        <span class="ritual-tag">Fine Lingerie & Vínculo</span>
+                        <h3 class="ritual-title" data-i18n="ritual.step3.title">El Clímax & Conexión</h3>
+                        <p class="ritual-desc" data-i18n="ritual.step3.desc">Explora el tacto de satén pesado, la complicidad en pareja y la liberación de endorfinas. Un espacio privado donde la discreción y el placer soberano son la única regla.</p>
+                        <span class="ritual-tag" data-i18n="ritual.step3.tag">Fine Lingerie & Vínculo</span>
                     </div>
                 </div>
             </div>
@@ -265,40 +265,40 @@
         <section id="catalogo" class="section products-catalog-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">TIENDA ONLINE</span>
-                    <h2 class="section-title">Catálogo Maestro</h2>
-                    <p class="section-subtitle">Selecciona tus piezas de bienestar íntimo. Envío express confidencial a todo México.</p>
+                    <span class="badge badge-gold" data-i18n="catalog.badge">TIENDA ONLINE</span>
+                    <h2 class="section-title" data-i18n="catalog.title">Catálogo Maestro</h2>
+                    <p class="section-subtitle" data-i18n="catalog.subtitle">Selecciona tus piezas de bienestar íntimo. Envío express confidencial a todo México.</p>
                 </div>
 
                 <!-- Barra de Filtros y Búsqueda -->
                 <div class="catalog-filter-bar">
                     <div class="category-pills">
-                        <button class="cat-pill active" data-category="all">✨ Todos</button>
-                        <button class="cat-pill" data-category="Pleasure Tech">💎 Pleasure Tech</button>
-                        <button class="cat-pill" data-category="Sensory Care">🌿 Cosmética Sensorial</button>
-                        <button class="cat-pill" data-category="Fine Lingerie">👑 Lencería Fina</button>
-                        <button class="cat-pill" data-category="Soft Fetish">🖤 Soft Fetish</button>
-                        <button class="cat-pill" data-category="Couples">🌹 Juegos en Pareja</button>
+                        <button class="cat-pill active" data-category="all" data-i18n="catalog.filter.all">✨ Todos</button>
+                        <button class="cat-pill" data-category="Pleasure Tech" data-i18n="catalog.filter.pleasure">💎 Pleasure Tech</button>
+                        <button class="cat-pill" data-category="Sensory Care" data-i18n="catalog.filter.sensory">🌿 Cosmética Sensorial</button>
+                        <button class="cat-pill" data-category="Fine Lingerie" data-i18n="catalog.filter.lingerie">👑 Lencería Fina</button>
+                        <button class="cat-pill" data-category="Soft Fetish" data-i18n="catalog.filter.fetish">🖤 Soft Fetish</button>
+                        <button class="cat-pill" data-category="Couples" data-i18n="catalog.filter.couples">🌹 Juegos en Pareja</button>
                     </div>
 
                     <div class="filter-controls">
                         <div class="filter-search-box">
                             <span class="search-icon">🔍</span>
-                            <input type="text" id="catalog-search" class="filter-search-input" placeholder="Buscar por pieza, material o sensación...">
+                            <input type="text" id="catalog-search" class="filter-search-input" placeholder="Buscar por pieza, material o sensación..." data-i18n-placeholder="catalog.search.placeholder">
                         </div>
                         <select id="catalog-sort" class="filter-sort-select">
-                            <option value="featured">✨ Destacados de Autor</option>
-                            <option value="price_asc">Menor Precio</option>
-                            <option value="price_desc">Mayor Exclusividad</option>
-                            <option value="newest">Lanzamientos Recientes</option>
+                            <option value="featured" data-i18n="catalog.sort.featured">✨ Destacados de Autor</option>
+                            <option value="price_asc" data-i18n="catalog.sort.priceAsc">Menor Precio</option>
+                            <option value="price_desc" data-i18n="catalog.sort.priceDesc">Mayor Exclusividad</option>
+                            <option value="newest" data-i18n="catalog.sort.newest">Lanzamientos Recientes</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Barra de Estado Dinámica -->
                 <div class="catalog-status-bar">
-                    <span class="catalog-count-pill" id="catalog-count-pill">Mostrando 36 piezas exclusivas</span>
-                    <span class="catalog-shipping-hint">🔒 Empaque Ciego &amp; Envíos 100% Confidenciales</span>
+                    <span class="catalog-count-pill" id="catalog-count-pill" data-i18n="catalog.status.count">Mostrando 36 piezas exclusivas</span>
+                    <span class="catalog-shipping-hint" data-i18n="catalog.status.shipping">🔒 Empaque Ciego &amp; Envíos 100% Confidenciales</span>
                 </div>
 
                 <!-- Rejilla Dinámica de Productos -->
@@ -314,22 +314,22 @@
                 <div class="card glass" style="padding: 3rem; border: 1px solid rgba(212, 175, 55, 0.3);">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
                         <div>
-                            <span class="badge badge-gold">CONFIDENCIALIDAD TOTAL</span>
-                            <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFF; margin: 0.8rem 0 1.2rem;">Tu Privacidad es Nuestro Mayor Compromiso</h2>
-                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            <span class="badge badge-gold" data-i18n="discretion.badge">CONFIDENCIALIDAD TOTAL</span>
+                            <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: #FFF; margin: 0.8rem 0 1.2rem;" data-i18n="discretion.title">Tu Privacidad es Nuestro Mayor Compromiso</h2>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;" data-i18n="discretion.desc">
                                 Entendemos que el placer es un territorio íntimo. Por eso, cada orden enviada por <strong>RED VELVET</strong> cuenta con el protocolo de blindaje más riguroso de la industria:
                             </p>
                             <ul style="display: flex; flex-direction: column; gap: 1rem; color: #E0E0E0; font-size: 0.95rem;">
-                                <li>📦 <strong>Caja de cartón kraft neutro sin logotipos</strong>, imágenes ni leyendas sobre juguetes o bienestar íntimo.</li>
-                                <li>📄 <strong>Remitente privado y neutral</strong> registrado como "Logística & Servicios RV".</li>
-                                <li>💳 <strong>Cargo bancario discreto</strong> sin menciones sugerentes en tus estados de cuenta.</li>
-                                <li>🚚 <strong>Entregas en mano o en sucursal ocurre</strong> con seguimiento privado por WhatsApp.</li>
+                                <li data-i18n="discretion.point1">📦 <strong>Caja de cartón kraft neutro sin logotipos</strong>, imágenes ni leyendas sobre juguetes o bienestar íntimo.</li>
+                                <li data-i18n="discretion.point2">📄 <strong>Remitente privado y neutral</strong> registrado como "Logística & Servicios RV".</li>
+                                <li data-i18n="discretion.point3">💳 <strong>Cargo bancario discreto</strong> sin menciones sugerentes en tus estados de cuenta.</li>
+                                <li data-i18n="discretion.point4">🚚 <strong>Entregas en mano o en sucursal ocurre</strong> con seguimiento privado por WhatsApp.</li>
                             </ul>
                         </div>
                         <div style="background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 2rem; text-align: center;">
                             <div style="font-size: 4rem; margin-bottom: 1rem;">🔒</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #D4AF37; margin-bottom: 0.5rem;">Sello de Seguridad Ciego</h3>
-                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #D4AF37; margin-bottom: 0.5rem;" data-i18n="discretion.seal.title">Sello de Seguridad Ciego</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;" data-i18n="discretion.seal.desc">
                                 Cinta de seguridad inviolable. Sabrás que tu paquete nunca ha sido abierto o manipulado desde que sale de nuestro almacén climatizado hasta que llega a tus manos.
                             </p>
                         </div>
@@ -342,9 +342,9 @@
         <section id="faq" class="section faq-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">CENTRO DE AYUDA</span>
-                    <h2 class="section-title">Preguntas Frecuentes</h2>
-                    <p class="section-subtitle">Respuestas claras sobre envíos discretos, materiales hipoalergénicos, garantías y compras seguras.</p>
+                    <span class="badge badge-gold" data-i18n="faq.badge">CENTRO DE AYUDA</span>
+                    <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+                    <p class="section-subtitle" data-i18n="faq.subtitle">Respuestas claras sobre envíos discretos, materiales hipoalergénicos, garantías y compras seguras.</p>
                 </div>
 
                 <div class="faq-grid-container">
@@ -352,20 +352,20 @@
                         <div class="faq-accordion">
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Cómo viene empaquetado mi pedido?</span>
+                                    <span data-i18n="faq.q1.question">¿Cómo viene empaquetado mi pedido?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Todos los pedidos se despachan en empaque de cartón 100% liso y sellado, sin marcas, logotipos ni menciones de sex shop o bienestar íntimo. El mensajero no sabrá en ningún momento qué contiene el paquete.</p>
+                                    <p data-i18n="faq.q1.answer">Todos los pedidos se despachan en empaque de cartón 100% liso y sellado, sin marcas, logotipos ni menciones de sex shop o bienestar íntimo. El mensajero no sabrá en ningún momento qué contiene el paquete.</p>
                                 </div>
                             </div>
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Qué materiales utilizan en los dispositivos?</span>
+                                    <span data-i18n="faq.q2.question">¿Qué materiales utilizan en los dispositivos?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Únicamente trabajamos con silicona médica líquida biocompatible de grado quirúrgico, ABS libre de ftalatos y metales hipoalergénicos no porosos, garantizando total seguridad para la piel y mucosas delicadas.</p>
+                                    <p data-i18n="faq.q2.answer">Únicamente trabajamos con silicona médica líquida biocompatible de grado quirúrgico, ABS libre de ftalatos y metales hipoalergénicos no porosos, garantizando total seguridad para la piel y mucosas delicadas.</p>
                                 </div>
                             </div>
                         </div>
@@ -375,20 +375,20 @@
                         <div class="faq-accordion">
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Cuánto tarda el envío y cuánto cuesta?</span>
+                                    <span data-i18n="faq.q3.question">¿Cuánto tarda el envío y cuánto cuesta?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>El envío es <strong>GRATUITO</strong> en compras mayores a $1,500 MXN. Para órdenes menores, el costo de envío express discreto es de $180 MXN. El tiempo de entrega habitual es de 24 a 48 horas hábiles en ciudades principales.</p>
+                                    <p data-i18n="faq.q3.answer">El envío es <strong>GRATUITO</strong> en compras mayores a $1,500 MXN. Para órdenes menores, el costo de envío express discreto es de $180 MXN. El tiempo de entrega habitual es de 24 a 48 horas hábiles en ciudades principales.</p>
                                 </div>
                             </div>
                             <div class="faq-item">
                                 <button class="faq-question" type="button">
-                                    <span>¿Tienen garantía los productos?</span>
+                                    <span data-i18n="faq.q4.question">¿Tienen garantía los productos?</span>
                                     <span class="faq-icon">+</span>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Todos nuestros dispositivos de la colección Pleasure Tech cuentan con 2 años de garantía directa contra cualquier defecto de fábrica o motor, además de soporte concierge 24/7.</p>
+                                    <p data-i18n="faq.q4.answer">Todos nuestros dispositivos de la colección Pleasure Tech cuentan con 2 años de garantía directa contra cualquier defecto de fábrica o motor, además de soporte concierge 24/7.</p>
                                 </div>
                             </div>
                         </div>
@@ -401,36 +401,36 @@
         <section class="section testimonials-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="badge badge-gold">TESTIMONIOS VERIFICADOS</span>
-                    <h2 class="section-title">Voces Confidenciales</h2>
-                    <p class="section-subtitle">Lo que nuestros clientes más exigentes opinan de la experiencia Red Velvet.</p>
+                    <span class="badge badge-gold" data-i18n="testimonials.badge">TESTIMONIOS VERIFICADOS</span>
+                    <h2 class="section-title" data-i18n="testimonials.title">Voces Confidenciales</h2>
+                    <p class="section-subtitle" data-i18n="testimonials.subtitle">Lo que nuestros clientes más exigentes opinan de la experiencia Red Velvet.</p>
                 </div>
 
                 <div class="testimonials-grid">
                     <div class="testimonial-card reveal">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-quote">«Pedí el estimulador Élysée y la vela de vertido tibio. La caja llegó completamente lisa y sin remitente comercial, perfecta para recibirla en el corporativo. La calidad de la silicona líquida no tiene comparación con nada del mercado convencional.»</p>
+                        <p class="testimonial-quote" data-i18n="testimonials.t1.quote">«Pedí el estimulador Élysée y la vela de vertido tibio. La caja llegó completamente lisa y sin remitente comercial, perfecta para recibirla en el corporativo. La calidad de la silicona líquida no tiene comparación con nada del mercado convencional.»</p>
                         <div class="testimonial-author">
-                            <span class="author-name">Camila R.</span>
-                            <span class="author-verified">✓ Miembro Verificado · CDMX</span>
+                            <span class="author-name" data-i18n="testimonials.t1.author">Camila R.</span>
+                            <span class="author-verified" data-i18n="testimonials.t1.meta">✓ Miembro Verificado · CDMX</span>
                         </div>
                     </div>
 
                     <div class="testimonial-card reveal delay-1">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-quote">«El nivel de silencio del motor en el Nexus Sync es absurdo; literalmente inaudible desde la habitación contigua. El concierge de WhatsApp respondió todas nuestras dudas antes de pagar con una delicadeza y elegancia total.»</p>
+                        <p class="testimonial-quote" data-i18n="testimonials.t2.quote">«El nivel de silencio del motor en el Nexus Sync es absurdo; literalmente inaudible desde la habitación contigua. El concierge de WhatsApp respondió todas nuestras dudas antes de pagar con una delicadeza y elegancia total.»</p>
                         <div class="testimonial-author">
-                            <span class="author-name">Mauricio & Sofía</span>
-                            <span class="author-verified">✓ Pareja VIP · San Pedro Garza García</span>
+                            <span class="author-name" data-i18n="testimonials.t2.author">Mauricio & Sofía</span>
+                            <span class="author-verified" data-i18n="testimonials.t2.meta">✓ Pareja VIP · San Pedro Garza García</span>
                         </div>
                     </div>
 
                     <div class="testimonial-card reveal delay-2">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-quote">«La lencería Noir Midnight tiene un drapeado y un encaje francés digno de alta costura parisina. El empaque negro mate con listón de terciopelo hace que el unboxing sea una verdadera fantasía sensorial.»</p>
+                        <p class="testimonial-quote" data-i18n="testimonials.t3.quote">«La lencería Noir Midnight tiene un drapeado y un encaje francés digno de alta costura parisina. El empaque negro mate con listón de terciopelo hace que el unboxing sea una verdadera fantasía sensorial.»</p>
                         <div class="testimonial-author">
-                            <span class="author-name">Valentina D.</span>
-                            <span class="author-verified">✓ Miembro Verificado · Guadalajara</span>
+                            <span class="author-name" data-i18n="testimonials.t3.author">Valentina D.</span>
+                            <span class="author-verified" data-i18n="testimonials.t3.meta">✓ Miembro Verificado · Guadalajara</span>
                         </div>
                     </div>
                 </div>
@@ -441,16 +441,16 @@
         <section class="section velvet-circle-section">
             <div class="container">
                 <div class="velvet-circle-box reveal">
-                    <div class="circle-badge">CLUB PRIVADO DE BIENESTAR</div>
-                    <h2 class="circle-title">The Velvet Circle</h2>
-                    <p class="circle-subtitle">Acceso preferencial a lanzamientos de autor, masterclasses íntimas y un código de <strong>15% de cortesía</strong> para tu primera orden confidencial.</p>
+                    <div class="circle-badge" data-i18n="circle.badge">CLUB PRIVADO DE BIENESTAR</div>
+                    <h2 class="circle-title" data-i18n="circle.title">The Velvet Circle</h2>
+                    <p class="circle-subtitle" data-i18n="circle.subtitle">Acceso preferencial a lanzamientos de autor, masterclasses íntimas y un código de <strong>15% de cortesía</strong> para tu primera orden confidencial.</p>
                     
                     <form class="circle-form" id="velvet-circle-form" onsubmit="window.subscribeVelvetCircle(event)">
-                        <input type="email" id="circle-email-input" class="circle-input" placeholder="Tu correo electrónico privado..." required>
-                        <button type="submit" class="btn btn-gold circle-btn">Unirme al Círculo</button>
+                        <input type="email" id="circle-email-input" class="circle-input" placeholder="Tu correo electrónico privado..." data-i18n-placeholder="circle.inputPlaceholder" required>
+                        <button type="submit" class="btn btn-gold circle-btn" data-i18n="circle.btnJoin">Unirme al Círculo</button>
                     </form>
                     <div id="circle-feedback" class="circle-feedback" style="display:none;"></div>
-                    <span class="circle-privacy">🔒 Cero spam. Respeto estricto a tu privacidad con cifrado de 256 bits.</span>
+                    <span class="circle-privacy" data-i18n="circle.privacyNotice">🔒 Cero spam. Respeto estricto a tu privacidad con cifrado de 256 bits.</span>
                 </div>
             </div>
         </section>
@@ -465,18 +465,18 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/logo/logooficial.jpeg" alt="RED VELVET" class="footer-logo">
-                    <p class="footer-notice">RED VELVET — Luxury Sex Shop & Intimate Wellness (+18)</p>
+                    <p class="footer-notice" data-i18n="footer.notice">RED VELVET — Luxury Sex Shop & Intimate Wellness (+18)</p>
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#catalogo">Catálogo Completo</a></li>
-                        <li><a href="#colecciones">Colecciones</a></li>
-                        <li><a href="#discrecion">Garantía de Discreción</a></li>
+                        <li><a href="#catalogo" data-i18n="footer.catalog">Catálogo Completo</a></li>
+                        <li><a href="#colecciones" data-i18n="footer.collections">Colecciones</a></li>
+                        <li><a href="#discrecion" data-i18n="footer.discretion">Garantía de Discreción</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#faq">Preguntas Frecuentes</a></li>
-                        <li><a href="https://wa.me/528112345678?text=Hola%20RED%20VELVET,%20deseo%20asesoría%20sobre%20un%20producto" target="_blank">Concierge WhatsApp VIP</a></li>
-                        <li><a href="admin.html" style="color:rgba(212,175,55,0.7); font-size:0.8rem;">⚙️ Suite de Dirección</a></li>
+                        <li><a href="#faq" data-i18n="footer.faq">Preguntas Frecuentes</a></li>
+                        <li><a href="https://wa.me/528112345678?text=Hola%20RED%20VELVET,%20deseo%20asesoría%20sobre%20un%20producto" target="_blank" data-i18n="footer.concierge">Concierge WhatsApp VIP</a></li>
+                        <li><a href="admin.html" style="color:rgba(212,175,55,0.7); font-size:0.8rem;" data-i18n="footer.suite">⚙️ Suite de Dirección</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -493,12 +493,12 @@
     <div id="cart-drawer-overlay" class="cart-drawer-overlay"></div>
     <aside id="cart-drawer" class="cart-drawer">
         <div class="cart-drawer-header">
-            <h3><span>🛍️</span> Tu Bolsa de Compras</h3>
+            <h3 data-i18n="cart.headerTitle"><span>🛍️</span> Tu Bolsa de Compras</h3>
             <button id="cart-drawer-close" class="cart-close-btn" aria-label="Cerrar bolsa">&times;</button>
         </div>
 
         <div class="cart-free-shipping-wrap" id="cart-free-shipping-wrap">
-            <div class="cart-free-shipping-text" id="cart-free-shipping-text">
+            <div class="cart-free-shipping-text" id="cart-free-shipping-text" data-i18n="cart.freeShippingInitial">
                 Agrega <strong>$1,500 MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>
             </div>
             <div class="cart-progress-bar-bg">
@@ -513,33 +513,33 @@
         <div class="cart-drawer-footer">
             <!-- Input para Cupón de Descuento -->
             <div class="coupon-input-wrap">
-                <input type="text" id="cart-coupon-input" class="coupon-input" placeholder="CUPÓN (Ej. VELVET10)">
-                <button type="button" id="btn-apply-coupon" class="coupon-btn">Aplicar</button>
+                <input type="text" id="cart-coupon-input" class="coupon-input" placeholder="CUPÓN (Ej. VELVET10)" data-i18n-placeholder="cart.couponPlaceholder">
+                <button type="button" id="btn-apply-coupon" class="coupon-btn" data-i18n="cart.btnApplyCoupon">Aplicar</button>
             </div>
             <div id="coupon-feedback" style="font-size: 0.78rem; margin-bottom: 0.6rem; display: none;"></div>
 
             <!-- Resumen de Costos -->
             <div class="cart-totals">
                 <div class="cart-total-row">
-                    <span>Subtotal</span>
+                    <span data-i18n="cart.subtotalLabel">Subtotal</span>
                     <span id="cart-subtotal">$0 MXN</span>
                 </div>
                 <div class="cart-total-row discount-row" id="cart-discount-row" style="display:none;">
-                    <span id="cart-discount-label">Descuento</span>
+                    <span id="cart-discount-label" data-i18n="cart.discountLabel">Descuento</span>
                     <span id="cart-discount-val">-$0 MXN</span>
                 </div>
                 <div class="cart-total-row">
-                    <span>Envío Discreto</span>
+                    <span data-i18n="cart.shippingLabel">Envío Discreto</span>
                     <span id="cart-shipping-val">Calculando...</span>
                 </div>
                 <div class="cart-total-row grand-total">
-                    <span>Total Estimado</span>
+                    <span data-i18n="cart.totalLabel">Total Estimado</span>
                     <span id="cart-grand-total">$0 MXN</span>
                 </div>
             </div>
 
             <!-- Botón de Proceder al Checkout -->
-            <button type="button" id="btn-open-checkout" class="btn-proceed-checkout">
+            <button type="button" id="btn-open-checkout" class="btn-proceed-checkout" data-i18n="cart.btnProceed">
                 Continuar al Checkout Discreto →
             </button>
         </div>
@@ -566,50 +566,50 @@
         <div class="modal-container glass" style="max-width: 650px;">
             <button class="modal-close-btn" id="checkout-modal-close" aria-label="Cerrar">&times;</button>
             <div class="modal-header text-center">
-                <span class="badge badge-gold">CHECKOUT CONFIDENCIAL</span>
-                <h3 class="modal-title">Finalizar Pedido Discreto</h3>
-                <p class="modal-subtitle">Tus datos están protegidos bajo estricto secreto comercial y cifrado de seguridad.</p>
+                <span class="badge badge-gold" data-i18n="checkout.badge">CHECKOUT CONFIDENCIAL</span>
+                <h3 class="modal-title" data-i18n="checkout.title">Finalizar Pedido Discreto</h3>
+                <p class="modal-subtitle" data-i18n="checkout.subtitle">Tus datos están protegidos bajo estricto secreto comercial y cifrado de seguridad.</p>
             </div>
 
             <form id="checkout-form" class="modal-form">
                 <div class="form-row-2">
                     <div class="form-group">
-                        <label for="checkout-name">Nombre Completo o Alias *</label>
-                        <input type="text" id="checkout-name" required placeholder="Ej. Roberto o Sofía">
+                        <label for="checkout-name" data-i18n="checkout.labelName">Nombre Completo o Alias *</label>
+                        <input type="text" id="checkout-name" required placeholder="Ej. Roberto o Sofía" data-i18n-placeholder="checkout.placeholderName">
                     </div>
                     <div class="form-group">
-                        <label for="checkout-phone">WhatsApp / Teléfono *</label>
-                        <input type="tel" id="checkout-phone" required placeholder="+52 81 1234 5678">
+                        <label for="checkout-phone" data-i18n="checkout.labelPhone">WhatsApp / Teléfono *</label>
+                        <input type="tel" id="checkout-phone" required placeholder="+52 81 1234 5678" data-i18n-placeholder="checkout.placeholderPhone">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="checkout-address">Dirección de Entrega (Calle, Número, Depto) *</label>
-                    <input type="text" id="checkout-address" required placeholder="Ej. Av. Vasconcelos 1400, Depto 4B">
+                    <label for="checkout-address" data-i18n="checkout.labelAddress">Dirección de Entrega (Calle, Número, Depto) *</label>
+                    <input type="text" id="checkout-address" required placeholder="Ej. Av. Vasconcelos 1400, Depto 4B" data-i18n-placeholder="checkout.placeholderAddress">
                 </div>
 
                 <div class="form-row-2">
                     <div class="form-group">
-                        <label for="checkout-city">Ciudad *</label>
-                        <input type="text" id="checkout-city" required placeholder="Ej. Monterrey, CDMX, Guadalajara">
+                        <label for="checkout-city" data-i18n="checkout.labelCity">Ciudad *</label>
+                        <input type="text" id="checkout-city" required placeholder="Ej. Monterrey, CDMX, Guadalajara" data-i18n-placeholder="checkout.placeholderCity">
                     </div>
                     <div class="form-group">
-                        <label for="checkout-state">Estado *</label>
-                        <input type="text" id="checkout-state" required placeholder="Ej. Nuevo León, CDMX, Jalisco">
+                        <label for="checkout-state" data-i18n="checkout.labelState">Estado *</label>
+                        <input type="text" id="checkout-state" required placeholder="Ej. Nuevo León, CDMX, Jalisco" data-i18n-placeholder="checkout.placeholderState">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="checkout-notes">Instrucciones Especiales de Entrega Discreta (Opcional)</label>
-                    <input type="text" id="checkout-notes" placeholder="Ej. Dejar en caseta, no timbrar, entregar después de las 6pm">
+                    <label for="checkout-notes" data-i18n="checkout.labelNotes">Instrucciones Especiales de Entrega Discreta (Opcional)</label>
+                    <input type="text" id="checkout-notes" placeholder="Ej. Dejar en caseta, no timbrar, entregar después de las 6pm" data-i18n-placeholder="checkout.placeholderNotes">
                 </div>
 
-                <div style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.2); padding: 0.8rem 1rem; border-radius: 4px; margin-bottom: 1.2rem; font-size: 0.82rem; color: #E0E0E0;">
+                <div style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.2); padding: 0.8rem 1rem; border-radius: 4px; margin-bottom: 1.2rem; font-size: 0.82rem; color: #E0E0E0;" data-i18n="checkout.guarantee">
                     🔒 <strong>Garantía de Entrega Ciega:</strong> La paquetería entregará una caja neutra con sello de seguridad. No se mencionará el nombre de ningún producto ni la palabra "sex shop".
                 </div>
 
                 <div class="modal-form-actions">
-                    <button type="submit" id="btn-submit-order" class="btn btn-primary btn-block pulse-gold">
+                    <button type="submit" id="btn-submit-order" class="btn btn-primary btn-block pulse-gold" data-i18n="checkout.btnSubmit">
                         ✨ Confirmar Pedido & Abrir Concierge de WhatsApp
                     </button>
                 </div>
@@ -621,7 +621,7 @@
     <!-- Toast Flotante de Notificación -->
     <div id="cart-toast" class="cart-toast">
         <span class="toast-icon">✨</span>
-        <span id="toast-message">Pieza añadida a tu bolsa de compras</span>
+        <span id="toast-message" data-i18n="cart.toastAdded">Pieza añadida a tu bolsa de compras</span>
     </div>
 
     <!-- Back to top -->

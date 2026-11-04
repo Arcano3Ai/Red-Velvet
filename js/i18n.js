@@ -1,411 +1,691 @@
 /**
- * RED VELVET — Motor de Internacionalización (i18n)
- * Idiomas soportados: Español (ES), English (EN), 한국어 (KO)
- * Estándar de traducción de ultra-lujo y cortesía ejecutiva
+ * RED VELVET — Motor de Internacionalización (i18n) de Ultra-Lujo
+ * Idiomas: Español (ES) / English (EN)
+ * Diseñado con estándares de alta distinción, cortesía confidencial y precisión bilingüe.
  */
 
-const I18N_TRANSLATIONS = {
-    es: {
-        // Nav & Header
-        'nav.home': 'Inicio',
-        'nav.explore': 'Explorar',
-        'nav.experiences': 'Experiencias',
-        'nav.howItWorks': 'Cómo funciona',
-        'nav.join': '👠 Únete',
-        'nav.faq': 'Preguntas',
-        'header.privateAccess': '🔑 Acceso Privado',
-        'header.myAccount': '👤 Mi Cuenta',
-        'header.myProfile': '💎 Mi Perfil',
-        'header.adminSuite': '⚙️ Suite Admin',
+(function () {
+    'use strict';
 
-        // Hero
-        'hero.ageBadge': '18+ | Plataforma exclusiva para adultos',
-        'hero.title': 'Descubre una experiencia<br>fuera de lo común.',
-        'hero.subtitle': 'Conecta con acompañantes verificadas en un espacio privado, elegante y diseñado para adultos.',
-        'hero.btnExplore': 'Explorar perfiles',
-        'hero.btnLearn': 'Conocer RED VELVET',
+    const I18N_TRANSLATIONS = {
+        es: {
+            // Nav & Header
+            'nav.home': 'Inicio',
+            'nav.catalog': 'Catálogo',
+            'nav.collections': 'Colecciones',
+            'nav.discretion': 'Discreción & Envíos',
+            'nav.faq': 'Preguntas',
+            'header.bag': 'Bolsa',
+            'header.langAria': 'Cambiar idioma',
+            'header.bagAria': 'Ver bolsa de compras',
 
-        // Experiences
-        'exp.title': 'Una nueva forma de conectar.',
-        'exp.privacy.title': 'Privacidad',
-        'exp.privacy.desc': 'Diseñamos cada detalle pensando en una experiencia discreta y segura.',
-        'exp.exclusivity.title': 'Exclusividad',
-        'exp.exclusivity.desc': 'Descubre perfiles cuidadosamente presentados en un entorno premium.',
-        'exp.freedom.title': 'Libertad',
-        'exp.freedom.desc': 'Tú decides cuándo, dónde y con quién conectar.',
+            // Age Gate
+            'ageGate.title': 'RED VELVET BOUTIQUE',
+            'ageGate.desc': 'Esta boutique erótica y plataforma de bienestar íntimo está destinada exclusivamente a mayores de 18 años.',
+            'ageGate.btnYes': 'Soy mayor de 18 años',
+            'ageGate.btnNo': 'Salir',
 
-        // Search
-        'search.title': 'Encuentra tu experiencia ideal.',
-        'search.city': 'Ciudad',
-        'search.city.all': 'Todas las ciudades',
-        'search.availability': 'Disponibilidad',
-        'search.availability.all': 'Cualquier momento',
-        'search.category': 'Categoría',
-        'search.category.all': 'Todas',
-        'search.age': 'Rango de edad',
-        'search.age.all': 'Todos',
-        'search.btn': 'Buscar',
+            // Hero Section
+            'hero.ageBadge': '18+ | Boutique de Lujo & Bienestar Íntimo',
+            'hero.headline': 'El Arte del Placer Elevado<br>a la Máxima Sofisticación.',
+            'hero.subheadline': 'Dispositivos de autor con tecnología silenciosa, lencería de alta costura y cosmética sensorial premium. Empaque 100% ciego y confidencialidad absoluta.',
+            'hero.btnExplore': 'Explorar Catálogo',
+            'hero.btnDiscretion': 'Garantía de Discreción',
+            'hero.badgeBlind': 'Empaque Ciego 100% Neutro',
+            'hero.badgeWhisper': 'Whisper-Quiet < 38 dB',
+            'hero.badgeSilicone': 'Silicona Quirúrgica Pura',
+            'hero.badgeWarranty': '2 Años de Garantía Directa',
 
-        // Profiles
-        'profiles.title': 'Perfiles Destacados',
-        'profiles.tariff': 'Tarifa',
-        'profiles.origin': 'Nac',
-        'profiles.measurements': 'Medidas',
-        'profiles.languages': 'Idiomas',
-        'profiles.services': 'Servicios',
-        'profiles.viewProfile': 'Ver perfil',
+            // Pilares de Confidencialidad
+            'trust.p1.title': 'Empaque 100% Ciego',
+            'trust.p1.desc': 'Caja neutra, sin logotipos ni leyendas comprometedoras. Discreción total en tu puerta.',
+            'trust.p2.title': 'Silicona Médica Biocompatible',
+            'trust.p2.desc': 'Materiales puros de tacto aterciopelado, libres de ftalatos y certificados para el cuerpo.',
+            'trust.p3.title': 'Silencio Whisper-Quiet',
+            'trust.p3.desc': 'Motores ultra silenciosos calibrados por debajo de 38 dB para tu completa privacidad.',
+            'trust.p4.title': 'Concierge Privado 24/7',
+            'trust.p4.desc': 'Asesoría personalizada y seguimiento confidencial directo por WhatsApp.',
 
-        // Elite Section
-        'elite.badge': 'Membresía Exclusiva',
-        'elite.title': 'RED VELVET ELITE',
-        'elite.desc': 'Una dimensión reservada a experiencias de máxima distinción y viajes internacionales.',
+            // Colecciones
+            'collections.badge': 'CURATORÍA EXCLUSIVA',
+            'collections.title': 'Colecciones de Alta Gama',
+            'collections.subtitle': 'Diseños creados para despertar las sensaciones más exquisitas y elevar el juego en solitario o en pareja.',
+            'collections.c1.title': 'Pleasure Tech',
+            'collections.c1.desc': 'Succionadores de clítoris por aire pulsado, vibradores clásicos y varitas de masaje.',
+            'collections.c1.link': 'Ver Dispositivos →',
+            'collections.c2.title': 'Sensory Care',
+            'collections.c2.desc': 'Velas de masaje térmicas botánicas, elixires y lubricantes con ácido hialurónico.',
+            'collections.c2.link': 'Ver Cosmética →',
+            'collections.c3.title': 'Fine Lingerie',
+            'collections.c3.desc': 'Bodysuits de encaje francés, satén de seda pesado y batas Red Velvet.',
+            'collections.c3.link': 'Ver Lencería →',
+            'collections.c4.title': 'Soft Fetish & Play',
+            'collections.c4.desc': 'Antifaces blackout de seda, esposas forradas en terciopelo y juegos tántricos.',
+            'collections.c4.link': 'Ver Accesorios →',
 
-        // How it works
-        'how.title': 'Cómo funciona',
-        'how.step1.title': 'Explora',
-        'how.step1.desc': 'Descubre perfiles con verificación e información completa.',
-        'how.step2.title': 'Conecta',
-        'how.step2.desc': 'Comunícate por canales privados y seguros.',
-        'how.step3.title': 'Disfruta',
-        'how.step3.desc': 'Vive una experiencia diseñada a tu medida.',
+            // El Ritual de los Tres Tiempos
+            'ritual.badge': 'FILOSOFÍA VELVET',
+            'ritual.title': 'El Ritual de los Tres Tiempos',
+            'ritual.subtitle': 'Una guía sensorial curada para transformar el placer cotidiano en una ceremonia de alta sofisticación.',
+            'ritual.step1.step': 'FASE 01',
+            'ritual.step1.title': 'La Preparación & Atmósfera',
+            'ritual.step1.desc': 'Atenúa la luz, enciende una vela botánica de vertido tibio y permite que los aceites de orquídea negra y vainilla bourbon despierten cada poro con calor reconfortante.',
+            'ritual.step1.tag': 'Sensory Care & Aromaterapia',
+            'ritual.step2.step': 'FASE 02',
+            'ritual.step2.title': 'La Estimulación Sensorial',
+            'ritual.step2.desc': 'Experimenta succionadores de pulsación suave y vibradores en silicona médica biocompatible. Su motor silencioso (<38 dB) ofrece estimulación gradual y placentera con total discreción.',
+            'ritual.step2.tag': 'Vibración & Succión Suave',
+            'ritual.step3.step': 'FASE 03',
+            'ritual.step3.title': 'El Clímax & Conexión',
+            'ritual.step3.desc': 'Explora el tacto de satén pesado, la complicidad en pareja y la liberación de endorfinas. Un espacio privado donde la discreción y el placer soberano son la única regla.',
+            'ritual.step3.tag': 'Fine Lingerie & Vínculo',
 
-        // Join models section
-        'join.badge': 'Exclusivo para Acompañantes Independientes',
-        'join.title': '¿Deseas Crear tu Perfil en RED VELVET?',
-        'join.desc': 'Forma parte del catálogo más exclusivo y privado de México. Brindamos una plataforma de prestigio internacional, máxima protección de tu privacidad, clientes de alto poder adquisitivo rigurosamente filtrados y honorarios exclusivos desde $9,000 MXN por hora.',
-        'join.perk1.title': 'Privacidad Total',
-        'join.perk1.desc': 'Tus datos privados jamás son compartidos. Tú decides qué fotos mostrar y puedes resguardar tu identidad con antifaces o retoque.',
-        'join.perk2.title': 'Tarifas $9,000+ MXN',
-        'join.perk2.desc': 'Acceso directo a clientes que valoran la exclusividad, elegancia y trato de primer nivel sin regateos.',
-        'join.perk3.title': 'Club con Acceso Exclusivo',
-        'join.perk3.desc': 'Solo ingresan clientes con membresía activa o invitación previa validada por nuestra dirección.',
-        'join.btnCta': '👠 Crear Mi Perfil / Postularme Ahora',
-        'join.note': 'Verificación confidencial vía canal encriptado en menos de 2 horas.',
+            // Catálogo Maestro
+            'catalog.badge': 'TIENDA ONLINE',
+            'catalog.title': 'Catálogo Maestro',
+            'catalog.subtitle': 'Selecciona tus piezas de bienestar íntimo. Envío express confidencial a todo México.',
+            'catalog.filter.all': '✨ Todos',
+            'catalog.filter.pleasure': '💎 Pleasure Tech',
+            'catalog.filter.sensory': '🌿 Cosmética Sensorial',
+            'catalog.filter.lingerie': '👑 Lencería Fina',
+            'catalog.filter.fetish': '🖤 Soft Fetish',
+            'catalog.filter.couples': '🌹 Juegos en Pareja',
+            'catalog.search.placeholder': 'Buscar por pieza, material o sensación...',
+            'catalog.sort.featured': '✨ Destacados de Autor',
+            'catalog.sort.priceAsc': 'Menor Precio',
+            'catalog.sort.priceDesc': 'Mayor Exclusividad',
+            'catalog.sort.newest': 'Lanzamientos Recientes',
+            'catalog.status.count': 'Mostrando {count} piezas exclusivas',
+            'catalog.status.shipping': '🔒 Empaque Ciego & Envíos 100% Confidenciales',
+            'catalog.card.quickView': '🔍 Vista Rápida & Specs',
+            'catalog.card.addToBag': '🛍️ Añadir a la Bolsa',
+            'catalog.card.addedSuccess': '✓ Añadido a la Bolsa',
+            'catalog.empty.title': 'No encontramos piezas que coincidan con tu búsqueda.',
+            'catalog.empty.desc': 'Intenta con otra categoría o término.',
 
-        // FAQ
-        'faq.badge': 'CENTRO DE INFORMACIÓN & DUDAS',
-        'faq.title': 'Preguntas Frecuentes',
-        'faq.subtitle': 'Todo lo que necesitas conocer sobre membresías exclusivas, protocolos de máxima privacidad, tarifas estándar y postulación de acompañantes independientes.',
-        'faq.cat1': 'Experiencia & Acceso Exclusivo',
-        'faq.q1': '¿Qué es RED VELVET y cómo opera?',
-        'faq.a1': 'RED VELVET es el club privado y directorio de ultra-lujo más distinguido de México. Operamos bajo un modelo exclusivo de difusión publicitaria y contacto directo entre acompañantes independientes de alto nivel y caballeros selectos, en un ambiente estrictamente seguro, privado y refinado.',
-        'faq.q2': '¿Quién puede acceder a la plataforma?',
-        'faq.a2': 'Nuestra plataforma está reservada única y estrictamente para personas mayores de 18 años. Para acceder al área privada y consultar datos de contacto directo de acompañantes Elite, se requiere contar con un código de invitación verificado o membresía activa del club.',
-        'faq.q3': '¿Cómo se garantiza mi privacidad y anonimato?',
-        'faq.a3': 'La discreción es nuestro pilar innegociable. No utilizamos rastreadores invasivos, no comercializamos datos con terceros y toda la comunicación se gestiona por canales encriptados punto a punto. Tu identidad permanece siempre protegida.',
-        'faq.cat2': 'Perfiles, Tarifas & Postulación',
-        'faq.q4': '¿Los perfiles son 100% reales y verificados?',
-        'faq.a4': 'Sí, absolutamente. Cada perfil publicado cuenta con insignia dorada de verificación tras superar una estricta validación de identidad y autenticidad fotográfica, eliminando por completo perfiles falsos o intermediarios no autorizados.',
-        'faq.q5': '¿Cuáles son las tarifas y políticas de exclusividad?',
-        'faq.a5': 'Para garantizar el estándar de alta gama y el prestigio de nuestra comunidad, las tarifas sugeridas de los perfiles comienzan a partir de $9,000 MXN por hora, asegurando un trato recíproco de máximo respeto, puntualidad y excelencia.',
-        'faq.q6': '¿Deseas postularte y crear tu perfil de modelo?',
-        'faq.a6': 'Si eres mujer mayor de 18 años, independiente y cuentas con la distinción, elegancia y clase que caracteriza a RED VELVET, puedes enviar tu solicitud ahora mismo de forma confidencial:',
-        'faq.btnOpenModel': '👠 Abrir Formulario de Creación de Perfil',
+            // Garantía de Discreción
+            'discretion.badge': 'CONFIDENCIALIDAD TOTAL',
+            'discretion.title': 'Tu Privacidad es Nuestro Mayor Compromiso',
+            'discretion.desc': 'Entendemos que el placer es un territorio íntimo. Por eso, cada orden enviada por <strong>RED VELVET</strong> cuenta con el protocolo de blindaje más riguroso de la industria:',
+            'discretion.point1': '📦 <strong>Caja de cartón kraft neutro sin logotipos</strong>, imágenes ni leyendas sobre juguetes o bienestar íntimo.',
+            'discretion.point2': '📄 <strong>Remitente privado y neutral</strong> registrado como "Logística & Servicios RV".',
+            'discretion.point3': '💳 <strong>Cargo bancario discreto</strong> sin menciones sugerentes en tus estados de cuenta.',
+            'discretion.point4': '🚚 <strong>Entregas en mano o en sucursal ocurre</strong> con seguimiento privado por WhatsApp.',
+            'discretion.seal.title': 'Sello de Seguridad Ciego',
+            'discretion.seal.desc': 'Cinta de seguridad inviolable. Sabrás que tu paquete nunca ha sido abierto o manipulado desde que sale de nuestro almacén climatizado hasta que llega a tus manos.',
 
-        // Footer
-        'footer.notice': 'RED VELVET — Solo para adultos +18',
-        'footer.createProfile': '👠 Crear Mi Perfil',
-        'footer.terms': 'Términos y Condiciones',
-        'footer.privacy': 'Política de Privacidad',
-        'footer.security': 'Protocolo de Seguridad',
-        'footer.contact': 'Contacto VIP',
-        'footer.faq': 'Preguntas Frecuentes',
-        'footer.suite': '⚙️ Suite Dirección'
-    },
+            // Preguntas Frecuentes (FAQ)
+            'faq.badge': 'CENTRO DE AYUDA',
+            'faq.title': 'Preguntas Frecuentes',
+            'faq.subtitle': 'Respuestas claras sobre envíos discretos, materiales hipoalergénicos, garantías y compras seguras.',
+            'faq.q1.question': '¿Cómo viene empaquetado mi pedido?',
+            'faq.q1.answer': 'Todos los pedidos se despachan en empaque de cartón 100% liso y sellado, sin marcas, logotipos ni menciones de sex shop o bienestar íntimo. El mensajero no sabrá en ningún momento qué contiene el paquete.',
+            'faq.q2.question': '¿Qué materiales utilizan en los dispositivos?',
+            'faq.q2.answer': 'Únicamente trabajamos con silicona médica líquida biocompatible de grado quirúrgico, ABS libre de ftalatos y metales hipoalergénicos no porosos, garantizando total seguridad para la piel y mucosas delicadas.',
+            'faq.q3.question': '¿Cuánto tarda el envío y cuánto cuesta?',
+            'faq.q3.answer': 'El envío es <strong>GRATUITO</strong> en compras mayores a $1,500 MXN. Para órdenes menores, el costo de envío express discreto es de $180 MXN. El tiempo de entrega habitual es de 24 a 48 horas hábiles en ciudades principales.',
+            'faq.q4.question': '¿Tienen garantía los productos?',
+            'faq.q4.answer': 'Todos nuestros dispositivos de la colección Pleasure Tech cuentan con 2 años de garantía directa contra cualquier defecto de fábrica o motor, además de soporte concierge 24/7.',
 
-    en: {
-        // Nav & Header
-        'nav.home': 'Home',
-        'nav.explore': 'Explore',
-        'nav.experiences': 'Experiences',
-        'nav.howItWorks': 'How It Works',
-        'nav.join': '👠 Join Us',
-        'nav.faq': 'FAQ',
-        'header.privateAccess': '🔑 Private Access',
-        'header.myAccount': '👤 My Account',
-        'header.myProfile': '💎 My Profile',
-        'header.adminSuite': '⚙️ Admin Suite',
+            // Voces Confidenciales / Testimonios VIP
+            'testimonials.badge': 'TESTIMONIOS VERIFICADOS',
+            'testimonials.title': 'Voces Confidenciales',
+            'testimonials.subtitle': 'Lo que nuestros clientes más exigentes opinan de la experiencia Red Velvet.',
+            'testimonials.t1.quote': '«Pedí el estimulador Élysée y la vela de vertido tibio. La caja llegó completamente lisa y sin remitente comercial, perfecta para recibirla en el corporativo. La calidad de la silicona líquida no tiene comparación con nada del mercado convencional.»',
+            'testimonials.t1.author': 'Camila R.',
+            'testimonials.t1.meta': '✓ Miembro Verificado · CDMX',
+            'testimonials.t2.quote': '«El nivel de silencio del motor en el Nexus Sync es absurdo; literalmente inaudible desde la habitación contigua. El concierge de WhatsApp respondió todas nuestras dudas antes de pagar con una delicadeza y elegancia total.»',
+            'testimonials.t2.author': 'Mauricio & Sofía',
+            'testimonials.t2.meta': '✓ Pareja VIP · San Pedro Garza García',
+            'testimonials.t3.quote': '«La lencería Noir Midnight tiene un drapeado y un encaje francés digno de alta costura parisina. El empaque negro mate con listón de terciopelo hace que el unboxing sea una verdadera fantasía sensorial.»',
+            'testimonials.t3.author': 'Valentina D.',
+            'testimonials.t3.meta': '✓ Miembro Verificado · Guadalajara',
 
-        // Hero
-        'hero.ageBadge': '18+ | Exclusive Adults-Only Platform',
-        'hero.title': 'Discover an Extraordinary<br>Experience.',
-        'hero.subtitle': 'Connect with verified high-class companions in an ultra-private, discreet, and refined sanctuary.',
-        'hero.btnExplore': 'Explore Profiles',
-        'hero.btnLearn': 'About RED VELVET',
+            // The Velvet Circle
+            'circle.badge': 'CLUB PRIVADO DE BIENESTAR',
+            'circle.title': 'The Velvet Circle',
+            'circle.subtitle': 'Acceso preferencial a lanzamientos de autor, masterclasses íntimas y un código de <strong>15% de cortesía</strong> para tu primera orden confidencial.',
+            'circle.inputPlaceholder': 'Tu correo electrónico privado...',
+            'circle.btnJoin': 'Unirme al Círculo',
+            'circle.privacyNotice': '🔒 Cero spam. Respeto estricto a tu privacidad con cifrado de 256 bits.',
+            'circle.successMsg': '✨ ¡Bienvenido/a a The Velvet Circle! Revisa tu bandeja para activar tu 15% de cortesía.',
 
-        // Experiences
-        'exp.title': 'A New Paradigm of Connection.',
-        'exp.privacy.title': 'Absolute Privacy',
-        'exp.privacy.desc': 'Every detail is meticulously engineered for flawless discretion and confidential security.',
-        'exp.exclusivity.title': 'Exclusivity',
-        'exp.exclusivity.desc': 'Curated high-profile companions presented in an unmatched luxury environment.',
-        'exp.freedom.title': 'Total Freedom',
-        'exp.freedom.desc': 'You decide when, where, and with whom to share your memorable time.',
+            // Drawer del Carrito / Bolsa de Compras
+            'cart.headerTitle': '<span>🛍️</span> Tu Bolsa de Compras',
+            'cart.emptyTitle': 'Tu bolsa está vacía',
+            'cart.emptyDesc': 'Explora nuestra selección exclusiva y añade tus piezas favoritas.',
+            'cart.freeShippingInitial': 'Agrega <strong>$1,500 MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>',
+            'cart.freeShippingProgress': 'Agrega <strong>${missing} MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>',
+            'cart.freeShippingQualified': '✨ <strong>¡Envío Blindado GRATIS!</strong> Calificas para entrega confidencial sin costo.',
+            'cart.couponPlaceholder': 'CUPÓN (Ej. VELVET10)',
+            'cart.btnApplyCoupon': 'Aplicar',
+            'cart.subtotalLabel': 'Subtotal',
+            'cart.discountLabel': 'Descuento',
+            'cart.shippingLabel': 'Envío Discreto',
+            'cart.totalLabel': 'Total Estimado',
+            'cart.shippingCalculating': 'Calculando...',
+            'cart.shippingFree': 'GRATIS (Discreto)',
+            'cart.btnProceed': 'Continuar al Checkout Discreto →',
+            'cart.itemRemove': 'Eliminar',
+            'cart.toastAdded': 'Pieza añadida a tu bolsa de compras',
 
-        // Search
-        'search.title': 'Find Your Ideal Experience.',
-        'search.city': 'City',
-        'search.city.all': 'All Cities',
-        'search.availability': 'Availability',
-        'search.availability.all': 'Any Time',
-        'search.category': 'Category',
-        'search.category.all': 'All Tiers',
-        'search.age': 'Age Range',
-        'search.age.all': 'All',
-        'search.btn': 'Filter Profiles',
+            // Formulario de Checkout Confidencial
+            'checkout.badge': 'CHECKOUT CONFIDENCIAL',
+            'checkout.title': 'Finalizar Pedido Discreto',
+            'checkout.subtitle': 'Tus datos están protegidos bajo estricto secreto comercial y cifrado de seguridad.',
+            'checkout.labelName': 'Nombre Completo o Alias *',
+            'checkout.placeholderName': 'Ej. Roberto o Sofía',
+            'checkout.labelPhone': 'WhatsApp / Teléfono *',
+            'checkout.placeholderPhone': '+52 81 1234 5678',
+            'checkout.labelAddress': 'Dirección de Entrega (Calle, Número, Depto) *',
+            'checkout.placeholderAddress': 'Ej. Av. Vasconcelos 1400, Depto 4B',
+            'checkout.labelCity': 'Ciudad *',
+            'checkout.placeholderCity': 'Ej. Monterrey, CDMX, Guadalajara',
+            'checkout.labelState': 'Estado *',
+            'checkout.placeholderState': 'Ej. Nuevo León, CDMX, Jalisco',
+            'checkout.labelNotes': 'Instrucciones Especiales de Entrega Discreta (Opcional)',
+            'checkout.placeholderNotes': 'Ej. Dejar en caseta, no timbrar, entregar después de las 6pm',
+            'checkout.guarantee': '🔒 <strong>Garantía de Entrega Ciega:</strong> La paquetería entregará una caja neutra con sello de seguridad. No se mencionará el nombre de ningún producto ni la palabra "sex shop".',
+            'checkout.btnSubmit': '✨ Confirmar Pedido & Abrir Concierge de WhatsApp',
 
-        // Profiles
-        'profiles.title': 'Featured Companions',
-        'profiles.tariff': 'Honorarium',
-        'profiles.origin': 'Origin',
-        'profiles.measurements': 'Stats',
-        'profiles.languages': 'Languages',
-        'profiles.services': 'Specialties',
-        'profiles.viewProfile': 'View Profile',
+            // Footer
+            'footer.notice': 'RED VELVET — Luxury Sex Shop & Intimate Wellness (+18)',
+            'footer.catalog': 'Catálogo Completo',
+            'footer.collections': 'Colecciones',
+            'footer.discretion': 'Garantía de Discreción',
+            'footer.faq': 'Preguntas Frecuentes',
+            'footer.concierge': 'Concierge WhatsApp VIP',
+            'footer.suite': '⚙️ Suite de Dirección',
 
-        // Elite Section
-        'elite.badge': 'Exclusive Membership',
-        'elite.title': 'RED VELVET ELITE',
-        'elite.desc': 'A dimension reserved exclusively for distinguished experiences, VIP galas, and world travel.',
+            // Yessi Concierge
+            'concierge.launcherStatus': '● En línea · Confidencial',
+            'concierge.headerRole': 'Asesora Privada · RED VELVET',
+            'concierge.privacyBanner': '🔒 Conversación cifrada de 256 bits · 100% privada y anónima',
+            'concierge.inputPlaceholder': 'Pregúntame sobre envíos, piezas o cupones...',
+            'concierge.welcomeMsg': '<p>¡Hola! Te doy la bienvenida a <strong>RED VELVET</strong>. Soy <strong>Yessi</strong>, tu concierge personal y asesora de bienestar íntimo.</p><p style="margin-top:0.4rem;">Estoy aquí para ayudarte a elegir la pieza perfecta, resolver dudas de discreción de tu empaque o brindarte códigos de cortesía exclusivos.</p><span class="yessi-msg-time">Ahora</span>',
+            'concierge.chips': [
+                '📦 ¿Cómo garantizan la discreción?',
+                '🌹 Recomendación para parejas',
+                '💎 Succionadores más vendidos',
+                '🏷️ Cupones de descuento vigentes',
+                '💬 Hablar por WhatsApp'
+            ]
+        },
 
-        // How it works
-        'how.title': 'How It Works',
-        'how.step1.title': 'Explore',
-        'how.step1.desc': 'Browse verified profiles with complete authenticity and elegance.',
-        'how.step2.title': 'Connect',
-        'how.step2.desc': 'Communicate through encrypted and confidential channels directly.',
-        'how.step3.title': 'Indulge',
-        'how.step3.desc': 'Enjoy an unhurried, bespoke encounter tailored to your desires.',
+        en: {
+            // Nav & Header
+            'nav.home': 'Home',
+            'nav.catalog': 'Catalog',
+            'nav.collections': 'Collections',
+            'nav.discretion': 'Discretion & Shipping',
+            'nav.faq': 'FAQ',
+            'header.bag': 'Bag',
+            'header.langAria': 'Change language',
+            'header.bagAria': 'View shopping bag',
 
-        // Join models section
-        'join.badge': 'Exclusive for Independent Companions',
-        'join.title': 'Would You Like to Create Your RED VELVET Profile?',
-        'join.desc': 'Join Mexico’s premier high-end private directory. We provide an internationally prestigious platform, absolute identity confidentiality, rigorously vetted elite clientele, and exclusive starting rates from $9,000 MXN per hour.',
-        'join.perk1.title': 'Total Discretion',
-        'join.perk1.desc': 'Your private identity is never compromised. You choose what photos to showcase and can protect your anonymity.',
-        'join.perk2.title': 'Rates from $9,000+ MXN',
-        'join.perk2.desc': 'Direct connection with gentlemen who appreciate true luxury, refinement, and generous honorariums.',
-        'join.perk3.title': 'Invitation-Only Club',
-        'join.perk3.desc': 'Only gentlemen holding active verified memberships or verified invitation codes may enter.',
-        'join.btnCta': '👠 Create My Profile / Apply Now',
-        'join.note': 'Confidential review via encrypted channels in under 2 hours.',
+            // Age Gate
+            'ageGate.title': 'RED VELVET BOUTIQUE',
+            'ageGate.desc': 'This erotic boutique and intimate wellness sanctuary is strictly reserved for guests aged 18 and older.',
+            'ageGate.btnYes': 'I am 18 years or older',
+            'ageGate.btnNo': 'Exit',
 
-        // FAQ
-        'faq.badge': 'CONCIERGE & KNOWLEDGE BASE',
-        'faq.title': 'Frequently Asked Questions',
-        'faq.subtitle': 'Everything you need to know about exclusive memberships, privacy protocols, pricing standards, and companion applications.',
-        'faq.cat1': 'Experience & Private Access',
-        'faq.q1': 'What is RED VELVET and how does it operate?',
-        'faq.a1': 'RED VELVET is Mexico’s most distinguished private club and luxury companion directory. We operate as an exclusive PR platform facilitating direct communication between self-governing high-class companions and discerning gentlemen.',
-        'faq.q2': 'Who can access the platform?',
-        'faq.a2': 'Access is strictly restricted to adults aged 18 and older. To view contact information and private portfolios of Elite models, an approved invitation code or active club membership is required.',
-        'faq.q3': 'How is my privacy and anonymity safeguarded?',
-        'faq.a3': 'Discretion is our uncompromised pillar. We utilize zero invasive trackers, never sell data, and process communication through end-to-end encrypted networks.',
-        'faq.cat2': 'Profiles, Rates & Applications',
-        'faq.q4': 'Are all profiles authentic and verified?',
-        'faq.a4': 'Yes, without exception. Every published model holds a verified gold badge following biometric and photo authenticity vetting, completely eliminating fake profiles.',
-        'faq.q5': 'What are the rates and exclusivity standards?',
-        'faq.a5': 'To maintain ultra-luxury quality, companion rates start strictly at $9,000 MXN per hour, ensuring mutual respect, punctuality, and first-class treatment.',
-        'faq.q6': 'Do you wish to apply as a companion model?',
-        'faq.a6': 'If you are an independent woman aged 18+ with beauty, grace, and sophisticated elegance, you may submit your private application right now:',
-        'faq.btnOpenModel': '👠 Open Model Application Form',
+            // Hero Section
+            'hero.ageBadge': '18+ | Luxury Boutique & Intimate Wellness',
+            'hero.headline': 'The Art of Pleasure Elevated<br>to the Utmost Sophistication.',
+            'hero.subheadline': 'Designer intimate devices with whisper technology, haute couture lingerie, and sensory cosmetics. 100% blind packaging and absolute confidentiality.',
+            'hero.btnExplore': 'Explore Catalog',
+            'hero.btnDiscretion': 'Discretion Guarantee',
+            'hero.badgeBlind': '100% Neutral Blind Packaging',
+            'hero.badgeWhisper': 'Whisper-Quiet < 38 dB',
+            'hero.badgeSilicone': 'Pure Surgical Silicone',
+            'hero.badgeWarranty': '2-Year Direct Warranty',
 
-        // Footer
-        'footer.notice': 'RED VELVET — Strictly for Adults 18+',
-        'footer.createProfile': '👠 Create My Profile',
-        'footer.terms': 'Terms & Conditions',
-        'footer.privacy': 'Privacy Policy',
-        'footer.security': 'Security Protocol',
-        'footer.contact': 'VIP Concierge',
-        'footer.faq': 'FAQ',
-        'footer.suite': '⚙️ Executive Suite'
-    },
+            // Pilares de Confidencialidad
+            'trust.p1.title': '100% Blind Packaging',
+            'trust.p1.desc': 'Neutral box, without logos or revealing labels. Absolute discretion delivered to your door.',
+            'trust.p2.title': 'Biocompatible Medical Silicone',
+            'trust.p2.desc': 'Pure velvet-touch materials, phthalate-free and certified body-safe.',
+            'trust.p3.title': 'Whisper-Quiet Silence',
+            'trust.p3.desc': 'Ultra-quiet motors calibrated under 38 dB for your complete acoustic privacy.',
+            'trust.p4.title': '24/7 Private Concierge',
+            'trust.p4.desc': 'Bespoke advice and confidential order tracking directly via WhatsApp.',
 
-    ko: {
-        // Nav & Header
-        'nav.home': '홈',
-        'nav.explore': '프로필 탐색',
-        'nav.experiences': '특별한 경험',
-        'nav.howItWorks': '이용 안내',
-        'nav.join': '👠 모델 지원',
-        'nav.faq': '자주 묻는 질문',
-        'header.privateAccess': '🔑 프라이빗 입장',
-        'header.myAccount': '👤 내 계정',
-        'header.myProfile': '💎 내 프로필',
-        'header.adminSuite': '⚙️ 관리자 스위트',
+            // Colecciones
+            'collections.badge': 'EXCLUSIVE CURATION',
+            'collections.title': 'High-End Collections',
+            'collections.subtitle': 'Designs crafted to awaken the most exquisite sensations and elevate solo or couples play.',
+            'collections.c1.title': 'Pleasure Tech',
+            'collections.c1.desc': 'Pulsed-air clitoral stimulators, classic vibrators, and powerful massage wands.',
+            'collections.c1.link': 'View Devices →',
+            'collections.c2.title': 'Sensory Care',
+            'collections.c2.desc': 'Botanical warm-pour massage candles, elixirs, and hyaluronic acid lubricants.',
+            'collections.c2.link': 'View Cosmetics →',
+            'collections.c3.title': 'Fine Lingerie',
+            'collections.c3.desc': 'French embroidered lace bodysuits, heavy silk satin, and Red Velvet kimonos.',
+            'collections.c3.link': 'View Lingerie →',
+            'collections.c4.title': 'Soft Fetish & Play',
+            'collections.c4.desc': 'Blackout silk blindfolds, velvet-lined cuffs, and seductive tantric games.',
+            'collections.c4.link': 'View Accessories →',
 
-        // Hero
-        'hero.ageBadge': '18+ | 성인 전용 프라이빗 럭셔리 플랫폼',
-        'hero.title': '일상에서 벗어난<br>최고의 경험을 만나보세요.',
-        'hero.subtitle': '철저한 신원 인증을 거친 최고급 동반자와 안전하고 품격 있는 프라이빗 공간에서 만나보세요.',
-        'hero.btnExplore': '프로필 둘러보기',
-        'hero.btnLearn': '레드벨벳 소개',
+            // El Ritual de los Tres Tiempos
+            'ritual.badge': 'VELVET PHILOSOPHY',
+            'ritual.title': 'The Three-Phase Ritual',
+            'ritual.subtitle': 'A curated sensory guide to transform everyday pleasure into a ceremony of high sophistication.',
+            'ritual.step1.step': 'PHASE 01',
+            'ritual.step1.title': 'Atmosphere & Preparation',
+            'ritual.step1.desc': 'Dim the lights, light a botanical warm-pour candle, and let black orchid and bourbon vanilla oils awaken every pore with soothing warmth.',
+            'ritual.step1.tag': 'Sensory Care & Aromatherapy',
+            'ritual.step2.step': 'PHASE 02',
+            'ritual.step2.title': 'Sensory Stimulation',
+            'ritual.step2.desc': 'Experience gentle air-pulsed stimulators and biocompatible medical-grade silicone vibrators. Their whisper motor (<38 dB) delivers gradual, blissful pleasure with total discretion.',
+            'ritual.step2.tag': 'Vibration & Gentle Suction',
+            'ritual.step3.step': 'PHASE 03',
+            'ritual.step3.title': 'Climax & Intimacy',
+            'ritual.step3.desc': 'Explore heavy silk sensations, partner complicity, and the rush of endorphins. A private sanctuary where discretion and sovereign pleasure are the only rule.',
+            'ritual.step3.tag': 'Fine Lingerie & Connection',
 
-        // Experiences
-        'exp.title': '품격 있는 만남의 새로운 기준.',
-        'exp.privacy.title': '완벽한 프라이버시',
-        'exp.privacy.desc': '모든 디테일은 철저한 비밀 보장과 보안을 위해 정교하게 설계되었습니다.',
-        'exp.exclusivity.title': '최상의 품격',
-        'exp.exclusivity.desc': '엄선된 엘리트 프로필을 최고급 럭셔리 환경에서 경험하세요.',
-        'exp.freedom.title': '완벽한 자유',
-        'exp.freedom.desc': '원하는 시간, 장소, 사람과 함께 특별한 시간을 디자인하세요.',
+            // Catálogo Maestro
+            'catalog.badge': 'ONLINE BOUTIQUE',
+            'catalog.title': 'Master Catalog',
+            'catalog.subtitle': 'Select your intimate wellness pieces. Confidential express shipping across Mexico.',
+            'catalog.filter.all': '✨ All Pieces',
+            'catalog.filter.pleasure': '💎 Pleasure Tech',
+            'catalog.filter.sensory': '🌿 Sensory Care',
+            'catalog.filter.lingerie': '👑 Fine Lingerie',
+            'catalog.filter.fetish': '🖤 Soft Fetish',
+            'catalog.filter.couples': '🌹 Couples Play',
+            'catalog.search.placeholder': 'Search by piece, material, or sensation...',
+            'catalog.sort.featured': '✨ Featured Curations',
+            'catalog.sort.priceAsc': 'Lowest Price',
+            'catalog.sort.priceDesc': 'Highest Exclusivity',
+            'catalog.sort.newest': 'New Arrivals',
+            'catalog.status.count': 'Showing {count} exclusive pieces',
+            'catalog.status.shipping': '🔒 Blind Packaging & 100% Confidential Shipping',
+            'catalog.card.quickView': '🔍 Quick View & Specs',
+            'catalog.card.addToBag': '🛍️ Add to Bag',
+            'catalog.card.addedSuccess': '✓ Added to Bag',
+            'catalog.empty.title': 'No pieces match your search criteria.',
+            'catalog.empty.desc': 'Try another category or search term.',
 
-        // Search
-        'search.title': '당신에게 어울리는 경험을 찾아보세요.',
-        'search.city': '도시',
-        'search.city.all': '전체 도시',
-        'search.availability': '이용 가능 시간',
-        'search.availability.all': '언제든지',
-        'search.category': '등급',
-        'search.category.all': '전체 등급',
-        'search.age': '연령대',
-        'search.age.all': '전체',
-        'search.btn': '검색하기',
+            // Garantía de Discreción
+            'discretion.badge': 'TOTAL CONFIDENTIALITY',
+            'discretion.title': 'Your Privacy is Our Greatest Commitment',
+            'discretion.desc': 'We understand pleasure is an intimate sanctuary. That is why every order dispatched by <strong>RED VELVET</strong> features the most rigorous shielding protocol in the industry:',
+            'discretion.point1': '📦 <strong>Neutral kraft cardboard box with zero logos</strong>, images, or adult novelty mentions.',
+            'discretion.point2': '📄 <strong>Private and neutral sender</strong> registered as "RV Logistics & Services".',
+            'discretion.point3': '💳 <strong>Discreet bank billing</strong> with no suggestive descriptions on your account statements.',
+            'discretion.point4': '🚚 <strong>Direct courier hand delivery or pickup</strong> with private WhatsApp tracking.',
+            'discretion.seal.title': 'Tamper-Evident Blind Seal',
+            'discretion.seal.desc': 'Tamper-evident security tape. Guaranteed unopened and untouched from our climate-controlled vault to your hands.',
 
-        // Profiles
-        'profiles.title': '추천 엄선 프로필',
-        'profiles.tariff': '이용료',
-        'profiles.origin': '국적',
-        'profiles.measurements': '신체 사이즈',
-        'profiles.languages': '구사 언어',
-        'profiles.services': '전문 분야',
-        'profiles.viewProfile': '프로필 상세 보기',
+            // Preguntas Frecuentes (FAQ)
+            'faq.badge': 'HELP CONCIERGE',
+            'faq.title': 'Frequently Asked Questions',
+            'faq.subtitle': 'Clear answers regarding discreet shipping, hypoallergenic materials, warranties, and secure checkout.',
+            'faq.q1.question': 'How will my order be packaged?',
+            'faq.q1.answer': 'All orders are dispatched in completely smooth, sealed cardboard boxes with zero branding, logos, or adult novelty mentions. The courier will never know the contents of your parcel.',
+            'faq.q2.question': 'What materials are used in the devices?',
+            'faq.q2.answer': 'We exclusively craft with surgical biocompatible liquid silicone, phthalate-free ABS, and hypoallergenic non-porous metals, ensuring complete safety for delicate skin and body.',
+            'faq.q3.question': 'How long does shipping take and what does it cost?',
+            'faq.q3.answer': 'Shipping is <strong>FREE</strong> on orders over $1,500 MXN. For smaller orders, discreet express shipping is $180 MXN. Typical delivery time is 24 to 48 business hours to major cities.',
+            'faq.q4.question': 'Do the products come with a warranty?',
+            'faq.q4.answer': 'All our Pleasure Tech devices carry a 2-year direct warranty against factory defects or motor failure, backed by 24/7 concierge support.',
 
-        // Elite Section
-        'elite.badge': '초VIP 전용 멤버십',
-        'elite.title': 'RED VELVET ELITE',
-        'elite.desc': '최고의 품격과 글로벌 비즈니스 갈라, 럭셔리 여행을 위한 최상위 서비스.',
+            // Voces Confidenciales / Testimonios VIP
+            'testimonials.badge': 'VERIFIED TESTIMONIALS',
+            'testimonials.title': 'Confidential Voices',
+            'testimonials.subtitle': 'What our most discerning clients say about the Red Velvet experience.',
+            'testimonials.t1.quote': '«I ordered the Élysée stimulator and the warm-pour candle. The box arrived completely neutral and without commercial sender labels, discreet enough for the office. The liquid silicone quality is unmatched.»',
+            'testimonials.t1.author': 'Camila R.',
+            'testimonials.t1.meta': '✓ Verified Member · Mexico City',
+            'testimonials.t2.quote': '«The whisper-quiet motor on Nexus Sync is astonishing; virtually inaudible from the next room. The WhatsApp concierge addressed all our questions before checkout with immense delicacy and elegance.»',
+            'testimonials.t2.author': 'Mauricio & Sofía',
+            'testimonials.t2.meta': '✓ VIP Couple · San Pedro Garza García',
+            'testimonials.t3.quote': '«The Noir Midnight lingerie has French lace and tailoring worthy of Parisian haute couture. The matte black packaging with velvet ribbon turned unboxing into a true sensory fantasy.»',
+            'testimonials.t3.author': 'Valentina D.',
+            'testimonials.t3.meta': '✓ Verified Member · Guadalajara',
 
-        // How it works
-        'how.title': '이용 방법',
-        'how.step1.title': '탐색',
-        'how.step1.desc': '철저히 검증된 모델 프로필과 상세 정보를 확인하세요.',
-        'how.step2.title': '연결',
-        'how.step2.desc': '암호화된 안전한 전용 채널을 통해 바로 소통하세요.',
-        'how.step3.title': '경험',
-        'how.step3.desc': '당신만을 위해 맞춤 설계된 최상의 시간을 누려보세요.',
+            // The Velvet Circle
+            'circle.badge': 'PRIVATE WELLNESS CLUB',
+            'circle.title': 'The Velvet Circle',
+            'circle.subtitle': 'Preferential access to designer releases, private masterclasses, and an exclusive <strong>15% welcome courtesy code</strong> for your first confidential order.',
+            'circle.inputPlaceholder': 'Your private email address...',
+            'circle.btnJoin': 'Join the Circle',
+            'circle.privacyNotice': '🔒 Zero spam. Strict privacy protected by 256-bit encryption.',
+            'circle.successMsg': '✨ Welcome to The Velvet Circle! Check your inbox to claim your 15% courtesy code.',
 
-        // Join models section
-        'join.badge': '독립 프리랜서 모델 전용',
-        'join.title': 'RED VELVET의 모델로 등록하시겠습니까?',
-        'join.desc': '멕시코 최고의 하이엔드 프라이빗 클럽의 일원이 되어보세요. 철저한 신원 보호, 엄격하게 검증된 최상위 고객층, 시간당 최소 9,000 MXN부터 시작하는 최고급 대우를 보장합니다.',
-        'join.perk1.title': '완벽한 신원 보호',
-        'join.perk1.desc': '개인정보는 절대 외부에 유출되지 않으며, 마스크 착용 또는 이미지 블러 처리로 익명성을 완벽히 보호할 수 있습니다.',
-        'join.perk2.title': '시간당 9,000+ MXN 보장',
-        'join.perk2.desc': '품격과 매너를 갖추고 아낌없이 대우하는 VIP 고객들과 직접 연결됩니다.',
-        'join.perk3.title': '초대권 전용 클럽',
-        'join.perk3.desc': '본부의 승인을 받은 유효한 초대 코드 또는 멤버십을 보유한 고객만 입장할 수 있습니다.',
-        'join.btnCta': '👠 프로필 등록 / 지금 지원하기',
-        'join.note': '비밀 보장 암호화 채널을 통해 2시간 이내 비공개 심사.',
+            // Drawer del Carrito / Bolsa de Compras
+            'cart.headerTitle': '<span>🛍️</span> Your Shopping Bag',
+            'cart.emptyTitle': 'Your bag is empty',
+            'cart.emptyDesc': 'Explore our exclusive selection and add your favorite pieces.',
+            'cart.freeShippingInitial': 'Add <strong>$1,500 MXN</strong> for <strong>FREE Blind Shipping</strong>',
+            'cart.freeShippingProgress': 'Add <strong>${missing} MXN</strong> for <strong>FREE Blind Shipping</strong>',
+            'cart.freeShippingQualified': '✨ <strong>FREE Blind Shipping!</strong> You qualify for complimentary confidential delivery.',
+            'cart.couponPlaceholder': 'COUPON (e.g., VELVET10)',
+            'cart.btnApplyCoupon': 'Apply',
+            'cart.subtotalLabel': 'Subtotal',
+            'cart.discountLabel': 'Discount',
+            'cart.shippingLabel': 'Discreet Shipping',
+            'cart.totalLabel': 'Estimated Total',
+            'cart.shippingCalculating': 'Calculating...',
+            'cart.shippingFree': 'FREE (Discreet)',
+            'cart.btnProceed': 'Proceed to Discreet Checkout →',
+            'cart.itemRemove': 'Remove',
+            'cart.toastAdded': 'Piece added to your shopping bag',
 
-        // FAQ
-        'faq.badge': '안내 및 문의 센터',
-        'faq.title': '자주 묻는 질문',
-        'faq.subtitle': '프라이빗 멤버십, 개인정보 보호 규격, 표준 이용 요금 및 모델 지원에 관한 모든 정보입니다.',
-        'faq.cat1': '멤버십 및 프라이빗 입장',
-        'faq.q1': 'RED VELVET은 어떤 플랫폼인가요?',
-        'faq.a1': 'RED VELVET은 멕시코 최고의 프라이빗 럭셔리 클럽이자 전용 디렉토리입니다. 독립 하이클래스 동반자와 엄선된 신사 고객 간의 안전하고 격조 높은 직접 소통을 중개합니다.',
-        'faq.q2': '누가 플랫폼을 이용할 수 있나요?',
-        'faq.a2': '만 18세 이상의 성인만 엄격히 이용 가능합니다. 비공개 연락처와 엘리트 프로필을 열람하려면 유효한 초대 코드 또는 클럽 멤버십이 필요합니다.',
-        'faq.q3': '개인정보와 익명성은 어떻게 보호되나요?',
-        'faq.a3': '철저한 비밀 유지는 저희의 타협할 수 없는 가치입니다. 추적기를 사용하지 않으며 제3자 데이터 제공 없이 모든 데이터는 종단간 암호화됩니다.',
-        'faq.cat2': '프로필, 요금 및 모델 지원',
-        'faq.q4': '프로필은 100% 실제 인물인가요?',
-        'faq.a4': '네, 확실합니다. 모든 게시 프로필은 신분증 대조 및 실물 사진 검증을 거쳐 공식 골드 배지를 부여받으며 사칭이나 허위 프로필은 즉각 차단됩니다.',
-        'faq.q5': '이용 요금 및 규정은 어떻게 되나요?',
-        'faq.a5': '최상의 품격과 신뢰를 유지하기 위해 시간당 최소 요금은 9,000 MXN부터 시작하며, 상호 존중과 신사다운 매너를 엄격히 요구합니다.',
-        'faq.q6': '모델로 지원하려면 어떻게 해야 하나요?',
-        'faq.a6': '만 18세 이상 여성으로 세련미와 교양을 겸비하셨다면 지금 바로 비공개 신청서를 제출하실 수 있습니다:',
-        'faq.btnOpenModel': '👠 모델 등록 신청서 열기',
+            // Formulario de Checkout Confidencial
+            'checkout.badge': 'CONFIDENTIAL CHECKOUT',
+            'checkout.title': 'Complete Discreet Order',
+            'checkout.subtitle': 'Your data is strictly guarded under trade secret protocols and security encryption.',
+            'checkout.labelName': 'Full Name or Alias *',
+            'checkout.placeholderName': 'e.g., Robert or Sophia',
+            'checkout.labelPhone': 'WhatsApp / Phone *',
+            'checkout.placeholderPhone': '+52 81 1234 5678',
+            'checkout.labelAddress': 'Delivery Address (Street, Number, Apt) *',
+            'checkout.placeholderAddress': 'e.g., 1400 Luxury Blvd, Apt 4B',
+            'checkout.labelCity': 'City *',
+            'checkout.placeholderCity': 'e.g., Monterrey, Mexico City, Guadalajara',
+            'checkout.labelState': 'State / Province *',
+            'checkout.placeholderState': 'e.g., Nuevo Leon, CDMX, Jalisco',
+            'checkout.labelNotes': 'Special Discreet Delivery Instructions (Optional)',
+            'checkout.placeholderNotes': 'e.g., Leave with front desk, do not ring bell, deliver after 6pm',
+            'checkout.guarantee': '🔒 <strong>Blind Delivery Guarantee:</strong> The courier will deliver a neutral box with security seal. No product names or "sex shop" wording will ever be mentioned.',
+            'checkout.btnSubmit': '✨ Confirm Order & Open WhatsApp Concierge',
 
-        // Footer
-        'footer.notice': 'RED VELVET — 성인 18세 이상 전용',
-        'footer.createProfile': '👠 프로필 등록',
-        'footer.terms': '이용약관',
-        'footer.privacy': '개인정보 처리방침',
-        'footer.security': '보안 프로토콜',
-        'footer.contact': 'VIP 컨시어지',
-        'footer.faq': '자주 묻는 질문',
-        'footer.suite': '⚙️ 본부 관리자'
-    }
-};
+            // Footer
+            'footer.notice': 'RED VELVET — Luxury Sex Shop & Intimate Wellness (+18)',
+            'footer.catalog': 'Complete Catalog',
+            'footer.collections': 'Collections',
+            'footer.discretion': 'Discretion Guarantee',
+            'footer.faq': 'Frequently Asked Questions',
+            'footer.concierge': 'VIP WhatsApp Concierge',
+            'footer.suite': '⚙️ Executive Suite',
 
-class I18nManager {
-    constructor() {
-        this.currentLang = localStorage.getItem('redVelvetLang') || 'es';
-    }
+            // Yessi Concierge
+            'concierge.launcherStatus': '● Online · Confidential',
+            'concierge.headerRole': 'Private Advisor · RED VELVET',
+            'concierge.privacyBanner': '🔒 256-bit encrypted conversation · 100% private & anonymous',
+            'concierge.inputPlaceholder': 'Ask me about shipping, pieces, or courtesy codes...',
+            'concierge.welcomeMsg': '<p>Hello! Welcome to <strong>RED VELVET</strong>. I am <strong>Yessi</strong>, your personal concierge and intimate wellness advisor.</p><p style="margin-top:0.4rem;">I am here to guide you with complete confidentiality on our luxury pieces, blind discreet packaging, or exclusive courtesy codes.</p><span class="yessi-msg-time">Now</span>',
+            'concierge.chips': [
+                '📦 How do you ensure discretion?',
+                '🌹 Couples recommendations',
+                '💎 Bestselling pleasure tech',
+                '🏷️ Active discount codes',
+                '💬 Chat via WhatsApp'
+            ]
+        }
+    };
 
-    init() {
-        this.applyLanguage(this.currentLang);
-        this.bindEvents();
-    }
-
-    setLanguage(lang) {
-        if (!I18N_TRANSLATIONS[lang]) return;
-        this.currentLang = lang;
-        localStorage.setItem('redVelvetLang', lang);
-        this.applyLanguage(lang);
-    }
-
-    applyLanguage(lang) {
-        document.documentElement.lang = lang;
-        const translations = I18N_TRANSLATIONS[lang];
-        if (!translations) return;
-
-        // Translate all elements with data-i18n
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[key]) {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.placeholder = translations[key];
-                } else {
-                    el.innerHTML = translations[key];
+    /**
+     * Gestor central de i18n
+     */
+    class I18nManager {
+        constructor() {
+            this.currentLang = 'es';
+            this.translations = I18N_TRANSLATIONS;
+            if (typeof window !== 'undefined') {
+                try {
+                    const saved = localStorage.getItem('redVelvetLang');
+                    if (saved && (saved === 'es' || saved === 'en')) {
+                        this.currentLang = saved;
+                    }
+                } catch (e) {
+                    console.warn('[i18n] Error reading localStorage', e);
                 }
             }
-        });
+        }
 
-        // Update language selector UI
-        const flagEl = document.getElementById('current-lang-flag');
-        const codeEl = document.getElementById('current-lang-code');
-        const flags = { es: '🇲🇽', en: '🇺🇸', ko: '🇰🇷' };
+        init() {
+            this.applyLanguage(this.currentLang);
+            this.bindEvents();
+        }
 
-        if (flagEl) flagEl.textContent = flags[lang] || '🇲🇽';
-        if (codeEl) codeEl.textContent = lang.toUpperCase();
+        t(key, fallback = '') {
+            const dict = this.translations[this.currentLang] || this.translations.es;
+            return (dict && dict[key]) || (this.translations.es && this.translations.es[key]) || fallback;
+        }
 
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-        });
-    }
+        getLanguage() {
+            return this.currentLang;
+        }
 
-    bindEvents() {
-        const langMenuBtn = document.getElementById('lang-menu-btn');
-        const langDropdown = document.getElementById('lang-dropdown-menu');
+        setLanguage(lang) {
+            if (lang !== 'es' && lang !== 'en') return;
+            this.currentLang = lang;
+            if (typeof localStorage !== 'undefined') {
+                try {
+                    localStorage.setItem('redVelvetLang', lang);
+                } catch (e) {
+                    console.warn('[i18n] Error saving to localStorage', e);
+                }
+            }
+            this.applyLanguage(lang);
+        }
 
-        if (langMenuBtn && langDropdown) {
-            langMenuBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                langDropdown.classList.toggle('open');
+        applyLanguage(lang) {
+            if (typeof document === 'undefined') return;
+
+            document.documentElement.lang = lang;
+            const dict = this.translations[lang] || this.translations.es;
+
+            // 1. Elementos con [data-i18n]
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = dict[key];
+                    } else {
+                        el.innerHTML = dict[key];
+                    }
+                }
             });
 
-            document.addEventListener('click', (e) => {
-                if (!langDropdown.contains(e.target) && e.target !== langMenuBtn) {
-                    langDropdown.classList.remove('open');
+            // 2. Elementos con [data-i18n-placeholder]
+            const placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholderEls.forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.placeholder = dict[key];
+                }
+            });
+
+            // 3. Fallbacks directos por selectores del DOM
+            this.applyDomFallbackTranslations(dict);
+
+            // 4. Actualizar estado visual del selector en Header
+            this.updateHeaderSelectorUI(lang);
+
+            // 5. Actualizar Yessi Concierge
+            this.updateYessi(lang);
+
+            // 6. Notificar a otros módulos vía CustomEvent
+            if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('redVelvetLangChanged', {
+                    detail: { lang, translations: dict }
+                }));
+            }
+        }
+
+        applyDomFallbackTranslations(dict) {
+            // Header / Nav fallback
+            const navLinks = document.querySelectorAll('.nav-menu ul li a');
+            if (navLinks.length >= 5) {
+                if (dict['nav.home']) navLinks[0].textContent = dict['nav.home'];
+                if (dict['nav.catalog']) navLinks[1].textContent = dict['nav.catalog'];
+                if (dict['nav.collections']) navLinks[2].textContent = dict['nav.collections'];
+                if (dict['nav.discretion']) navLinks[3].textContent = dict['nav.discretion'];
+                if (dict['nav.faq']) navLinks[4].textContent = dict['nav.faq'];
+            }
+
+            const cartLabel = document.querySelector('.cart-btn-header .cart-label');
+            if (cartLabel && dict['header.bag']) cartLabel.textContent = dict['header.bag'];
+
+            // Botones de acción en tarjetas de productos dinámicas si ya existen
+            document.querySelectorAll('.product-quick-view-btn').forEach(btn => {
+                btn.textContent = dict['catalog.card.quickView'];
+            });
+            document.querySelectorAll('.btn-add-to-bag').forEach(btn => {
+                if (!btn.classList.contains('added-success')) {
+                    btn.textContent = dict['catalog.card.addToBag'];
+                }
+            });
+
+            // Catalog status count pill si ya está presente
+            const countPill = document.getElementById('catalog-count-pill');
+            if (countPill) {
+                const match = countPill.textContent.match(/\d+/);
+                const count = match ? match[0] : '36';
+                countPill.textContent = (dict['catalog.status.count'] || '').replace('{count}', count);
+            }
+
+            // Totales de carrito si están en pantalla
+            const subtotalLabel = document.querySelector('.cart-total-row:nth-child(1) span:first-child');
+            if (subtotalLabel && dict['cart.subtotalLabel']) subtotalLabel.textContent = dict['cart.subtotalLabel'];
+
+            const shippingLabel = document.querySelector('.cart-total-row:nth-child(3) span:first-child');
+            if (shippingLabel && dict['cart.shippingLabel']) shippingLabel.textContent = dict['cart.shippingLabel'];
+
+            const totalLabel = document.querySelector('.cart-total-row.grand-total span:first-child');
+            if (totalLabel && dict['cart.totalLabel']) totalLabel.textContent = dict['cart.totalLabel'];
+
+            const discountLabel = document.getElementById('cart-discount-label');
+            if (discountLabel && dict['cart.discountLabel']) discountLabel.textContent = dict['cart.discountLabel'];
+
+            const btnProceed = document.getElementById('btn-open-checkout');
+            if (btnProceed && dict['cart.btnProceed']) btnProceed.textContent = dict['cart.btnProceed'];
+
+            const btnApplyCoupon = document.getElementById('btn-apply-coupon');
+            if (btnApplyCoupon && dict['cart.btnApplyCoupon']) btnApplyCoupon.textContent = dict['cart.btnApplyCoupon'];
+
+            const couponInput = document.getElementById('cart-coupon-input');
+            if (couponInput && dict['cart.couponPlaceholder']) couponInput.placeholder = dict['cart.couponPlaceholder'];
+        }
+
+        updateHeaderSelectorUI(lang) {
+            const flagEl = document.getElementById('current-lang-flag');
+            const labelEl = document.getElementById('current-lang-label') || document.getElementById('current-lang-code');
+            const flags = { es: '🇲🇽', en: '🇺🇸' };
+            const labels = { es: 'ES', en: 'EN' };
+
+            if (flagEl) flagEl.textContent = flags[lang] || '🇲🇽';
+            if (labelEl) labelEl.textContent = labels[lang] || 'ES';
+
+            document.querySelectorAll('.lang-option-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
                 }
             });
         }
 
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const lang = btn.getAttribute('data-lang');
-                if (lang) {
-                    this.setLanguage(lang);
-                    if (langDropdown) langDropdown.classList.remove('open');
-                }
-            });
-        });
-    }
-}
+        updateYessi(lang) {
+            const dict = this.translations[lang] || this.translations.es;
 
-// Export singleton instance
-window.redVelvetI18n = new I18nManager();
+            // Launcher status
+            const launcherStatus = document.querySelector('.yessi-launcher-text small');
+            if (launcherStatus && dict['concierge.launcherStatus']) {
+                launcherStatus.textContent = dict['concierge.launcherStatus'];
+            }
+
+            // Role in header
+            const headerRole = document.querySelector('.yessi-header-role');
+            if (headerRole && dict['concierge.headerRole']) {
+                headerRole.textContent = dict['concierge.headerRole'];
+            }
+
+            // Privacy banner
+            const privacyBanner = document.querySelector('.yessi-privacy-banner');
+            if (privacyBanner && dict['concierge.privacyBanner']) {
+                privacyBanner.textContent = dict['concierge.privacyBanner'];
+            }
+
+            // User input placeholder
+            const userInput = document.getElementById('yessi-user-input');
+            if (userInput && dict['concierge.inputPlaceholder']) {
+                userInput.placeholder = dict['concierge.inputPlaceholder'];
+            }
+
+            // Si Yessi tiene sólo el mensaje de bienvenida y no ha iniciado conversación el usuario
+            const msgBody = document.getElementById('yessi-messages-body');
+            if (msgBody) {
+                const bubbles = msgBody.querySelectorAll('.yessi-msg-row');
+                // Si solo está la bienvenida inicial (1 mensaje del bot)
+                if (bubbles.length <= 1) {
+                    msgBody.innerHTML = `
+                        <div class="yessi-msg-row yessi-bot-row">
+                            <div class="yessi-msg-bubble">
+                                ${dict['concierge.welcomeMsg']}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            // Renderizar chips de sugerencia
+            const chipsContainer = document.getElementById('yessi-chips-container');
+            if (chipsContainer && dict['concierge.chips']) {
+                chipsContainer.innerHTML = dict['concierge.chips'].map(c => `
+                    <button type="button" class="yessi-chip" onclick="window.yessiClickChip('${c.replace(/'/g, "\\'")}')">
+                        ${c}
+                    </button>
+                `).join('');
+            }
+        }
+
+        bindEvents() {
+            if (typeof document === 'undefined') return;
+
+            const langBtn = document.getElementById('lang-btn') || document.getElementById('lang-menu-btn');
+            const dropdownWrap = document.getElementById('lang-dropdown-wrap');
+            const dropdown = document.getElementById('lang-dropdown') || document.getElementById('lang-dropdown-menu');
+
+            if (langBtn && dropdownWrap) {
+                langBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdownWrap.classList.toggle('open');
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!dropdownWrap.contains(e.target)) {
+                        dropdownWrap.classList.remove('open');
+                    }
+                });
+            }
+
+            document.querySelectorAll('.lang-option-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const lang = btn.getAttribute('data-lang');
+                    if (lang) {
+                        this.setLanguage(lang);
+                        if (dropdownWrap) dropdownWrap.classList.remove('open');
+                        if (dropdown) dropdown.classList.remove('open');
+                    }
+                });
+            });
+        }
+    }
+
+    // Instancia Singleton
+    const instance = new I18nManager();
+
+    if (typeof window !== 'undefined') {
+        window.redVelvetI18n = instance;
+        window.t = (key, fallback) => instance.t(key, fallback);
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => instance.init());
+        } else {
+            instance.init();
+        }
+    }
+
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = { I18nManager, I18N_TRANSLATIONS };
+    }
+})();
