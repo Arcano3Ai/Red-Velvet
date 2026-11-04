@@ -9,3 +9,4 @@ data/*.db-shm
 README.md
 *.md
 server/test_*.js
+

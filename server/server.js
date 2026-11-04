@@ -67,13 +67,28 @@ app.get('/admin.html', (req, res) => {
     res.sendFile(path.join(ROOT_DIR, 'admin.html'));
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(ROOT_DIR, 'index.html'));
-});
+// Handler dinámico para Open Graph (WhatsApp, redes sociales)
+const serveIndexWithDynamicOg = (req, res) => {
+    const indexPath = path.join(ROOT_DIR, 'index.html');
+    fs.readFile(indexPath, 'utf8', (err, html) => {
+        if (err) return res.status(500).send('Error loading page');
 
-app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(ROOT_DIR, 'index.html'));
-});
+        const proto = req.headers['x-forwarded-proto'] || req.protocol || 'http';
+        const host = req.get('host');
+        const baseUrl = process.env.APP_URL || `${proto}://${host}`;
+        const ogImageUrl = `${baseUrl}/assets/logo/og-preview.jpg`;
+
+        let modifiedHtml = html
+            .replace(/https:\/\/raw\.githubusercontent\.com\/Arcano3Ai\/Red-Velvet\/main\/assets\/logo\/og-preview\.jpg/g, ogImageUrl)
+            .replace(/https:\/\/raw\.githubusercontent\.com\/Arcano3Ai\/Red-Velvet\/main\//g, `${baseUrl}/`);
+
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.send(modifiedHtml);
+    });
+};
+
+app.get('/', serveIndexWithDynamicOg);
+app.get('/index.html', serveIndexWithDynamicOg);
 
 // Iniciar servidor tras verificar base de datos
 const startServer = async () => {
