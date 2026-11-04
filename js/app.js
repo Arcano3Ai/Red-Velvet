@@ -1599,6 +1599,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderProductsGrid(products);
             });
         }
+
+        if (typeof updateScrollMetrics === 'function') {
+            setTimeout(updateScrollMetrics, 50);
+        }
     };
 
     const filterAndRenderCatalog = (resetLimit = false) => {
@@ -1844,6 +1848,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('back-to-top');
     const scrollProgressBar = document.getElementById('rv-scroll-progress-bar');
     let scrollTicking = false;
+    let cachedScrollHeight = 0;
+
+    const updateScrollMetrics = () => {
+        cachedScrollHeight = Math.max(1, (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight);
+    };
+
+    window.addEventListener('resize', updateScrollMetrics, { passive: true });
+    window.addEventListener('orientationchange', updateScrollMetrics, { passive: true });
+    setTimeout(updateScrollMetrics, 400);
 
     window.addEventListener('scroll', () => {
         if (!scrollTicking) {
@@ -1852,10 +1865,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (header) header.classList.toggle('scrolled', sy > 50);
                 if (backToTopBtn) backToTopBtn.classList.toggle('visible', sy > 450);
 
-                // Actualizar barra de progreso de lectura Red Velvet con punta de corazón
+                // Actualizar barra de progreso con cálculo O(1) sin forzar reflow sincrónico
                 if (scrollProgressBar) {
-                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                    const progress = docHeight > 0 ? (sy / docHeight) * 100 : 0;
+                    if (cachedScrollHeight <= 1) updateScrollMetrics();
+                    const progress = (sy / cachedScrollHeight) * 100;
                     scrollProgressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
                 }
 
@@ -1871,9 +1884,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Estela sutil de destellos de rubí y oro en movimiento del mouse (Solo Desktop)
+    // Estela sutil de destellos de rubí y oro en movimiento del mouse (Solo Desktop con Mouse Físico)
     const setupLuxuryCursorSparkles = () => {
-        if (window.matchMedia('(hover: none) or (pointer: coarse)').matches) return;
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.matchMedia('(hover: none) or (pointer: coarse)').matches) {
+            return;
+        }
         let lastSparkleTime = 0;
         document.addEventListener('mousemove', (e) => {
             const now = Date.now();
