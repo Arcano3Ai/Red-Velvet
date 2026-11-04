@@ -5308,3 +5308,364 @@ button, a, input, select, textarea {
         -webkit-overflow-scrolling: touch;
     }
 }
+
+
+/* ==========================================================================
+   EPIC LUXURY UI UPGRADES (VIP TOAST, MOOD BAR, UNBOXING SIMULATOR, SHIMMER)
+   ========================================================================== */
+
+/* Shimmer de Oro Líquido en Botones Primarios */
+@keyframes goldShimmerSweep {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.btn-primary, .btn-gold {
+    position: relative;
+    overflow: hidden;
+    background-size: 200% 100% !important;
+    background-image: linear-gradient(120deg, #D4AF37 0%, #FFDF73 40%, #FFF5C0 50%, #FFDF73 60%, #D4AF37 100%) !important;
+    color: #0A0A0B !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.btn-primary:hover, .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.55) !important;
+    animation: goldShimmerSweep 2s infinite linear;
+}
+
+/* Curaduría por Experiencia (Mood Bar) */
+.experience-mood-bar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.mood-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.mood-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.mood-pill {
+    background: rgba(20, 18, 18, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #E6E1D8;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(8px);
+}
+
+.mood-pill:hover,
+.mood-pill.active {
+    background: #D4AF37;
+    color: #080808;
+    border-color: #FFD700;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.45);
+    transform: translateY(-1px);
+}
+
+/* Ribbons de Descuento en Tarjetas */
+.product-discount-ribbon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #A82020 0%, #E63946 100%);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 9px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+/* Simulador de Empaque Blindado VIP */
+.discretion-simulator-card {
+    background: rgba(14, 12, 12, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.simulator-header {
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.simulator-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #D4AF37;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.simulator-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: #FFF;
+    margin-bottom: 0.3rem;
+}
+
+.simulator-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.simulator-steps-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.sim-step-btn {
+    background: rgba(25, 22, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.6rem 0.4rem;
+    color: #DDD;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.25s ease;
+}
+
+.sim-step-btn .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.sim-step-btn .step-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sim-step-btn:hover,
+.sim-step-btn.active {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #D4AF37;
+    color: #FFDF73;
+}
+
+.sim-step-btn.active .step-num {
+    background: #D4AF37;
+    color: #0A0A0B;
+}
+
+.simulator-stage {
+    background: rgba(8, 8, 8, 0.8);
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.stage-card {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: opacity 0.2s ease;
+}
+
+.stage-icon-wrap {
+    font-size: 2.5rem;
+    line-height: 1;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.stage-details {
+    flex-grow: 1;
+}
+
+.stage-headline {
+    color: #D4AF37;
+    font-size: 1.15rem;
+    font-family: var(--font-serif);
+    margin-bottom: 0.4rem;
+}
+
+.stage-desc {
+    color: #DDD;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.stage-specs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.spec-pill {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #FAF5E9;
+    font-size: 0.73rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* VIP Floating Toast */
+.vip-toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+    max-width: 420px;
+    width: 90vw;
+}
+
+.vip-toast-item {
+    background: rgba(14, 12, 12, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.65);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.85), 0 0 20px rgba(212, 175, 55, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: auto;
+}
+
+.vip-toast-item.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.vip-toast-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    flex-shrink: 0;
+}
+
+.vip-toast-thumb-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.vip-toast-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.vip-toast-title {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+}
+
+.vip-toast-sub {
+    color: #FAF5E9;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+}
+
+.vip-toast-btn {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.vip-toast-btn:hover {
+    background: #FFF;
+}
+
+.vip-toast-close {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.vip-toast-close:hover {
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .vip-toast-container {
+        top: 12px;
+        right: 5vw;
+        width: 90vw;
+    }
+    .discretion-simulator-card {
+        padding: 1.25rem 1rem !important;
+    }
+    .stage-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .stage-specs-grid {
+        justify-content: center;
+    }
+}

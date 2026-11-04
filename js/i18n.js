@@ -104,7 +104,15 @@
             'catalog.empty.desc': 'Intenta con otra categoría o término.',
 
             // Garantía de Discreción
-            'discretion.badge': 'CONFIDENCIALIDAD TOTAL',
+            
+        'catalog.mood.label': 'Curaduría por Experiencia:',
+        'discretion.sim.badge': 'DEMOSTRACIÓN INTERACTIVA',
+        'discretion.sim.title': 'Protocolo de Empaque Blindado',
+        'discretion.sim.subtitle': 'Selecciona una fase para inspeccionar el nivel de confidencialidad:',
+        'discretion.sim.step1Label': 'Exterior Ciego',
+        'discretion.sim.step2Label': 'Precinto de Seguridad',
+        'discretion.sim.step3Label': 'Interior de Lujo',
+        'discretion.badge': 'CONFIDENCIALIDAD TOTAL',
             'discretion.title': 'Tu Privacidad es Nuestro Mayor Compromiso',
             'discretion.desc': 'Entendemos que el placer es un territorio íntimo. Por eso, cada orden enviada por <strong>RED VELVET</strong> cuenta con el protocolo de blindaje más riguroso de la industria:',
             'discretion.point1': '📦 <strong>Caja de cartón kraft neutro sin logotipos</strong>, imágenes ni leyendas sobre juguetes o bienestar íntimo.',

@@ -1,3 +1,4 @@
+const { additionalProducts } = require('./additional_products');
 const { query, initDatabase } = require('../db/database');
 
 const seedData = async () => {
@@ -1152,6 +1153,8 @@ const seedData = async () => {
             sort_order: 44
         }
     ];
+
+    luxuryProducts.push(...additionalProducts);
 
     // Limpiar productos residuales o temporales de pruebas pasadas
     await query.run('DELETE FROM products WHERE id NOT IN (' + luxuryProducts.map(() => '?').join(',') + ')', luxuryProducts.map(p => p.id));

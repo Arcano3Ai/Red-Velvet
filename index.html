@@ -33,7 +33,7 @@
     <!-- CSS -->
         <!-- Preload Hero Video & Frame 0 Poster for 0ms Startup -->
     <link rel="preload" href="assets/video/hero-poster.webp" as="image" type="image/webp">
-    <link rel="preload" href="assets/video/videointro.mp4" as="video" type="video/mp4">
+    
     <link rel="stylesheet" href="css/style.css?v=2.2">
 </head>
 <body>
@@ -295,6 +295,17 @@
                 </div>
 
                 <!-- Barra de Filtros y Búsqueda -->
+                <div class="experience-mood-bar">
+                    <span class="mood-label" data-i18n="catalog.mood.label">Curaduría por Experiencia:</span>
+                    <div class="mood-pills">
+                        <button class="mood-pill active" data-category="all" onclick="window.selectCategoryMood('all', this)">✨ Todo el Catálogo (64)</button>
+                        <button class="mood-pill" data-category="Pleasure Tech" onclick="window.selectCategoryMood('Pleasure Tech', this)">⚡ Vanguardia & Silencio</button>
+                        <button class="mood-pill" data-category="Fine Lingerie" onclick="window.selectCategoryMood('Fine Lingerie', this)">👑 Seda & Alta Costura</button>
+                        <button class="mood-pill" data-category="Sensory Care" onclick="window.selectCategoryMood('Sensory Care', this)">🕯️ Sensorial & Masaje</button>
+                        <button class="mood-pill" data-category="Couples" onclick="window.selectCategoryMood('Couples', this)">🌹 Conexión en Pareja</button>
+                        <button class="mood-pill" data-category="Soft Fetish" onclick="window.selectCategoryMood('Soft Fetish', this)">🖤 Fetiche de Autor</button>
+                    </div>
+                </div>
                 <div class="catalog-filter-bar">
                     <div class="category-pills">
                         <button class="cat-pill active" data-category="all" data-i18n="catalog.filter.all">✨ Todos</button>
@@ -350,12 +361,44 @@
                                 <li data-i18n="discretion.point4">🚚 <strong>Entregas en mano o en sucursal ocurre</strong> con seguimiento privado por WhatsApp.</li>
                             </ul>
                         </div>
-                        <div class="discretion-seal-box">
-                            <div class="discretion-seal-icon">🔒</div>
-                            <h3 class="discretion-seal-title" data-i18n="discretion.seal.title">Sello de Seguridad Ciego</h3>
-                            <p class="discretion-seal-desc" data-i18n="discretion.seal.desc">
-                                Cinta de seguridad inviolable. Sabrás que tu paquete nunca ha sido abierto o manipulado desde que sale de nuestro almacén climatizado hasta que llega a tus manos.
-                            </p>
+                        <div class="discretion-simulator-card">
+                            <div class="simulator-header">
+                                <span class="simulator-badge" data-i18n="discretion.sim.badge">DEMOSTRACIÓN INTERACTIVA</span>
+                                <h3 class="simulator-title" data-i18n="discretion.sim.title">Protocolo de Empaque Blindado</h3>
+                                <p class="simulator-subtitle" data-i18n="discretion.sim.subtitle">Selecciona una fase para inspeccionar el nivel de confidencialidad:</p>
+                            </div>
+                            
+                            <div class="simulator-steps-nav">
+                                <button type="button" class="sim-step-btn active" data-step="1" onclick="window.setUnboxingStep(1, this)">
+                                    <span class="step-num">1</span>
+                                    <span class="step-label" data-i18n="discretion.sim.step1Label">Exterior Ciego</span>
+                                </button>
+                                <button type="button" class="sim-step-btn" data-step="2" onclick="window.setUnboxingStep(2, this)">
+                                    <span class="step-num">2</span>
+                                    <span class="step-label" data-i18n="discretion.sim.step2Label">Precinto de Seguridad</span>
+                                </button>
+                                <button type="button" class="sim-step-btn" data-step="3" onclick="window.setUnboxingStep(3, this)">
+                                    <span class="step-num">3</span>
+                                    <span class="step-label" data-i18n="discretion.sim.step3Label">Interior de Lujo</span>
+                                </button>
+                            </div>
+
+                            <div class="simulator-stage" id="unboxing-stage">
+                                <div class="stage-card" id="stage-card-content">
+                                    <div class="stage-icon-wrap" id="stage-icon">📦</div>
+                                    <div class="stage-details">
+                                        <h4 id="stage-headline" class="stage-headline">Caja Kraft 100% Neutra</h4>
+                                        <p id="stage-description" class="stage-desc">
+                                            Cartón industrial liso sin logos, textos alusivos ni marcas. El remitente oficial se registra exclusivamente como <em>"RV Logística Integral"</em>.
+                                        </p>
+                                        <div class="stage-specs-grid" id="stage-specs">
+                                            <div class="spec-pill">🛡️ Cero Transparencia</div>
+                                            <div class="spec-pill">📄 Guía Neutral</div>
+                                            <div class="spec-pill">🚫 Sin Alusión Erótica</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -658,5 +701,7 @@
     <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
     <script src="js/concierge.js"></script>
+    <!-- VIP Luxury Toast Container -->
+    <div id="vip-toast-container" class="vip-toast-container"></div>
 </body>
 </html>

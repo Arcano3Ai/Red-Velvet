@@ -1179,7 +1179,128 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funciones en window para handlers inline seguros
     window.updateCartQty = (id, delta) => updateCartQuantity(id, delta);
     window.removeCartItem = (id) => removeCartItem(id);
+    // VIP Luxury Toast Notifications
+    window.showToast = function(title, subtitle, imgSrc, actionText, actionCallback) {
+        const container = document.getElementById('vip-toast-container');
+        if (!container) return;
+
+        const toast = document.createElement('div');
+        toast.className = 'vip-toast-item';
+        toast.innerHTML = `
+            ${imgSrc ? `<img src="${imgSrc}" class="vip-toast-thumb" alt="${title}">` : '<div class="vip-toast-thumb-icon">💎</div>'}
+            <div class="vip-toast-body">
+                <span class="vip-toast-title">${title}</span>
+                <span class="vip-toast-sub">${subtitle || ''}</span>
+            </div>
+            ${actionText ? `<button type="button" class="vip-toast-btn">${actionText}</button>` : ''}
+            <button type="button" class="vip-toast-close" aria-label="Cerrar">&times;</button>
+        `;
+
+        if (actionText && typeof actionCallback === 'function') {
+            toast.querySelector('.vip-toast-btn').addEventListener('click', () => {
+                actionCallback();
+                toast.classList.remove('visible');
+                setTimeout(() => toast.remove(), 300);
+            });
+        }
+
+        toast.querySelector('.vip-toast-close').addEventListener('click', () => {
+            toast.classList.remove('visible');
+            setTimeout(() => toast.remove(), 300);
+        });
+
+        container.appendChild(toast);
+        setTimeout(() => toast.classList.add('visible'), 20);
+
+        setTimeout(() => {
+            if (toast.parentElement) {
+                toast.classList.remove('visible');
+                setTimeout(() => toast.remove(), 400);
+            }
+        }, 4500);
+    };
+
+    // Simulador de Empaque Blindado VIP
+    window.setUnboxingStep = function(step, btn) {
+        document.querySelectorAll('.sim-step-btn').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
+        const iconEl = document.getElementById('stage-icon');
+        const headlineEl = document.getElementById('stage-headline');
+        const descEl = document.getElementById('stage-description');
+        const specsEl = document.getElementById('stage-specs');
+        const cardContent = document.getElementById('stage-card-content');
+        if (!headlineEl || !descEl || !specsEl) return;
+
+        if (cardContent) cardContent.style.opacity = '0';
+
+        setTimeout(() => {
+            if (step === 1) {
+                iconEl.textContent = '📦';
+                headlineEl.textContent = 'Fase 1: Caja Kraft 100% Neutra';
+                descEl.innerHTML = 'Cartón industrial liso sin logos, textos alusivos ni marcas. El remitente oficial se registra exclusivamente como <em>"RV Logística Integral"</em>.';
+                specsEl.innerHTML = `
+                    <div class="spec-pill">🛡️ Cero Transparencia</div>
+                    <div class="spec-pill">📄 Guía Neutral</div>
+                    <div class="spec-pill">🚫 Sin Alusión Erótica</div>
+                `;
+            } else if (step === 2) {
+                iconEl.textContent = '🔒';
+                headlineEl.textContent = 'Fase 2: Precinto Blindado Inviolable';
+                descEl.innerHTML = 'Cinta de polímero reforzado con filamentos y precinto holográfico con número de serie único. Si alguien intentara abrir la caja, la cinta deja una marca indeleble.';
+                specsEl.innerHTML = `
+                    <div class="spec-pill">🔐 Cinta Holográfica</div>
+                    <div class="spec-pill">⚡ Anti-Manipulación</div>
+                    <div class="spec-pill">🏷️ Folio de Control</div>
+                `;
+            } else if (step === 3) {
+                iconEl.textContent = '🎁';
+                headlineEl.textContent = 'Fase 3: Unboxing de Haute Boutique';
+                descEl.innerHTML = 'Al abrir la caja exterior neutra, descubres una presentación celestial: papel de seda negro carbón, lazo de terciopelo bordó, bolsa de gamuza antipolvo y certificado sellado de autenticidad y garantía de 2 años.';
+                specsEl.innerHTML = `
+                    <div class="spec-pill">🖤 Papel de Seda Negro</div>
+                    <div class="spec-pill">🎀 Lazo de Terciopelo</div>
+                    <div class="spec-pill">👑 Certificado de Garantía 2 Años</div>
+                `;
+            }
+            if (cardContent) cardContent.style.opacity = '1';
+        }, 150);
+    };
+
+    // Sincronización de Mood Bar con filtros de catálogo
+    window.selectCategoryMood = function(cat, btn) {
+        document.querySelectorAll('.mood-pill').forEach(p => p.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
+        // Sincronizar pills de categoría inferiores
+        document.querySelectorAll('.cat-pill').forEach(cp => {
+            cp.classList.toggle('active', cp.dataset.category === cat);
+        });
+
+        currentCategory = cat;
+        filterAndRenderCatalog();
+    };
+
     window.addToCartDirect = (id, evt) => {
+        addToCart(id, 1);
+        const prod = allProducts.find(p => p.id === id);
+        if (prod && typeof window.showToast === 'function') {
+            window.showToast('✓ Añadido a tu Bolsa', `${prod.name} — ${Number(prod.price).toLocaleString()} MXN`, prod.photo_main, 'Ver Bolsa', () => {
+                openCartDrawer();
+            });
+        }
+        if (evt && evt.currentTarget) {
+            const btn = evt.currentTarget;
+            const prev = btn.innerHTML;
+            btn.classList.add('added-success');
+            btn.innerHTML = '✓ Añadido a la Bolsa';
+            setTimeout(() => {
+                btn.classList.remove('added-success');
+                btn.innerHTML = prev;
+            }, 1200);
+        }
+    };
+    const _ignoredOldAdd = (id, evt) => {
         addToCart(id, 1);
         if (evt && evt.currentTarget) {
             const btn = evt.currentTarget;
@@ -1426,8 +1547,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         grid.innerHTML = products.map(product => {
             const hasDiscount = product.compare_price && product.compare_price > product.price;
+            const discountPercent = hasDiscount ? Math.round(((product.compare_price - product.price) / product.compare_price) * 100) : 0;
             return `
                 <div class="product-shop-card reveal active">
+                    ${hasDiscount ? `<span class="product-discount-ribbon">-${discountPercent}% OFF</span>` : ''}
                     <div class="product-img-box" onclick="window.openProductDetailModal('${product.id}')" style="cursor: pointer;">
                         <img src="${product.photo_main}" alt="${product.name}" loading="lazy" decoding="async">
                         ${product.badge ? `<span class="product-badge-corner">${product.badge}</span>` : ''}
@@ -1691,10 +1814,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Back to top
-    const backToTopBtn = document.getElementById('back-to-top');
+    // Back to top click listener
     if (backToTopBtn) {
-        // Back to top gestionado en rAF scroll
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
