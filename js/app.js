@@ -1427,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
                 <div class="product-shop-card reveal active">
                     <div class="product-img-box" onclick="window.openProductDetailModal('${product.id}')" style="cursor: pointer;">
-                        <img src="${product.photo_main}" alt="${product.name}" loading="lazy">
+                        <img src="${product.photo_main}" alt="${product.name}" loading="lazy" decoding="async">
                         ${product.badge ? `<span class="product-badge-corner">${product.badge}</span>` : ''}
                         <button type="button" class="product-quick-view-btn" onclick="event.stopPropagation(); window.openProductDetailModal('${product.id}')">
                             ${quickViewTxt}
@@ -1616,9 +1616,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. CONTROLES COMUNES (HEADER, THEME, MENÚ, FAQ, SCROLL)
     // ==========================================================================
     const header = document.querySelector('.header');
+    const backToTopBtn = document.getElementById('back-to-top');
+    let scrollTicking = false;
     window.addEventListener('scroll', () => {
-        if (header) header.classList.toggle('scrolled', window.scrollY > 50);
-    });
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                const sy = window.scrollY;
+                if (header) header.classList.toggle('scrolled', sy > 50);
+                if (backToTopBtn) backToTopBtn.classList.toggle('visible', sy > 500);
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    }, { passive: true });
 
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
@@ -1682,7 +1692,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Back to top
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
-        window.addEventListener('scroll', () => backToTopBtn.classList.toggle('visible', window.scrollY > 500));
+        // Back to top gestionado en rAF scroll
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
@@ -1732,38 +1742,72 @@ window.subscribeVelvetCircle = function(event) {
 
 
 // ==========================================================================
-// BACKGROUND VIDEOS (HERO & FOOTER) AUTOPLAY ENFORCER
+// INTELLIGENT VIDEO VIEWPORT & MEMORY LIFECYCLE MANAGER (MOBILE CRASH PREVENTION)
 // ==========================================================================
-(function initBackgroundVideos() {
-    function ensureVideoPlayback() {
+(function initVideoLifecycleManager() {
+    function setupVideoOptimization() {
         const videos = document.querySelectorAll('.hero-bg-video, .footer-bg-video');
+        if (!videos.length) return;
+
         videos.forEach(video => {
             video.muted = true;
             video.setAttribute('muted', '');
             video.setAttribute('playsinline', '');
-            video.setAttribute('autoplay', '');
-            if (video.paused) {
-                const playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        const playOnInteraction = () => {
+            video.setAttribute('webkit-playsinline', '');
+        });
+
+        // 1. IntersectionObserver: Play ONLY when visible, PAUSE when off-screen to free mobile VRAM
+        if ('IntersectionObserver' in window) {
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        if (video.paused && !document.hidden) {
                             video.play().catch(() => {});
-                            ['click', 'touchstart', 'scroll'].forEach(evt => {
-                                window.removeEventListener(evt, playOnInteraction);
-                            });
-                        };
-                        ['click', 'touchstart', 'scroll'].forEach(evt => {
-                            window.addEventListener(evt, playOnInteraction, { passive: true });
-                        });
-                    });
-                }
+                        }
+                    } else {
+                        if (!video.paused) {
+                            video.pause();
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.05
+            });
+
+            videos.forEach(v => videoObserver.observe(v));
+        }
+
+        // 2. VisibilityChange: Pause all videos immediately when tab or phone screen is hidden
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                videos.forEach(v => { if (!v.paused) v.pause(); });
+            } else {
+                videos.forEach(v => {
+                    const rect = v.getBoundingClientRect();
+                    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+                    if (inView && v.paused) v.play().catch(() => {});
+                });
             }
+        }, { passive: true });
+
+        // 3. Low-overhead user interaction unlock for strict mobile autoplay policies
+        const unlockAutoplay = () => {
+            videos.forEach(v => {
+                const rect = v.getBoundingClientRect();
+                const inView = rect.top < window.innerHeight && rect.bottom > 0;
+                if (inView && v.paused) v.play().catch(() => {});
+            });
+        };
+        ['touchstart', 'click', 'scroll'].forEach(evt => {
+            window.addEventListener(evt, unlockAutoplay, { passive: true, once: true });
         });
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', ensureVideoPlayback);
+        document.addEventListener('DOMContentLoaded', setupVideoOptimization);
     } else {
-        ensureVideoPlayback();
+        setupVideoOptimization();
     }
 })();

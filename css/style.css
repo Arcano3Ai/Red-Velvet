@@ -5276,3 +5276,35 @@ button, a, input, select, textarea {
     border-color: #FFD700;
     border-width: 2.5px;
 }
+
+
+/* ==========================================================================
+   OPTIMIZACIONES MÓVILES DE RENDIMIENTO & MEMORIA (ANTI-CRASH)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Desactivar capas compuestas innecesarias que saturan la VRAM en iOS */
+    .hero-bg-video,
+    .footer-bg-video {
+        transform: translate3d(-50%, -50%, 0) !important;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    /* Reducir desenfoques excesivos en móvil para ahorrar GPU */
+    .glass,
+    .age-gate-content,
+    .modal-container {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
+
+    /* Aislamiento de capas de renderizado en catálogo */
+    .product-card {
+        contain: content;
+    }
+
+    /* Scroll fluido nativo con momentum sin fugas de memoria */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
