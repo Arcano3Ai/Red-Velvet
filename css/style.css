@@ -797,9 +797,9 @@ img {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1.6fr 3.2fr 0.8fr;
+    gap: 3rem;
+    align-items: flex-start;
 }
 
 .footer-brand .footer-logo {
@@ -821,7 +821,8 @@ img {
 
 .footer-links {
     display: flex;
-    gap: 4rem;
+    gap: 2.2rem;
+    flex-wrap: wrap;
 }
 
 .footer-links li {
@@ -871,69 +872,177 @@ img {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    gap: 4rem;
-}
-
-.footer-brand .logo-text {
-    margin-bottom: 1rem;
-}
-
-.footer-logo {
-    height: 80px;
-    width: auto;
-    margin-bottom: 1rem;
-}
-
-.footer-notice {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-links {
+/* Barra Inferior del Footer & Legal */
+.footer-bottom {
     display: flex;
-    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-.footer-links li {
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-    color: var(--text-main);
-}
-
-.footer-social {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--border-color);
+.footer-bottom-copy {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 0.8rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
-.social-icon:hover {
-    border-color: var(--text-main);
-    background: var(--text-main);
-    color: var(--bg-dark);
+.footer-badge-age {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(128, 0, 32, 0.45);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: #FFD700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
+
+.footer-bottom-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.footer-legal-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(212, 175, 55, 0.5);
+}
+
+.footer-legal-btn:hover {
+    color: #FFD700;
+    text-decoration-color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.footer-sep {
+    color: rgba(212, 175, 55, 0.5);
+}
+
+/* Legal Modals Styling (Términos & Privacidad) */
+.legal-modal-container {
+    max-width: 820px !important;
+    max-height: 88vh !important;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 40px rgba(128, 0, 32, 0.35) !important;
+}
+
+.legal-modal-badges {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.legal-modal-badges .badge-gold {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: #FFD700;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+}
+
+.legal-modal-body {
+    overflow-y: auto;
+    padding-right: 0.75rem;
+    margin: 1.5rem 0;
+    max-height: 52vh;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 175, 55, 0.5) rgba(0, 0, 0, 0.3);
+}
+
+.legal-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.legal-modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.legal-modal-body::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.5);
+    border-radius: 4px;
+}
+
+.legal-section {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.legal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.legal-section h4 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.15rem;
+    color: #FFD700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legal-section p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #D8D8D8;
+    margin: 0;
+}
+
+.legal-alert-box {
+    background: rgba(128, 0, 32, 0.3);
+    border-left: 3px solid #D4AF37;
+    padding: 1rem 1.2rem;
+    margin: 0.75rem 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #F0F0F0;
+}
+
+.legal-alert-box strong {
+    color: #FFD700;
+}
+
+.legal-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    flex-wrap: wrap;
+}
+
 
 /* Back to top */
 .back-to-top {
@@ -5112,6 +5221,44 @@ button, a, input, select, textarea {
     .footer-links {
         flex-direction: column !important;
         gap: 1.2rem !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 1.2rem !important;
+        align-items: center !important;
+        margin-top: 2rem !important;
+        padding-top: 1.2rem !important;
+    }
+
+    .footer-bottom-copy {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 0.6rem !important;
+    }
+
+    .footer-bottom-legal {
+        justify-content: center !important;
+        gap: 0.6rem !important;
+    }
+
+    .legal-modal-container {
+        padding: 1.5rem 1rem !important;
+        max-height: 92vh !important;
+    }
+
+    .legal-modal-body {
+        max-height: 56vh !important;
+    }
+
+    .legal-modal-footer {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .legal-modal-footer .btn {
+        width: 100% !important;
     }
 
     /* Modals & Bottom Sheets */

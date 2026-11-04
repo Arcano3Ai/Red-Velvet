@@ -204,6 +204,16 @@
             'footer.faq': 'Preguntas Frecuentes',
             'footer.concierge': 'Concierge WhatsApp VIP',
             'footer.suite': '⚙️ Suite de Dirección',
+            'footer.terms': 'Términos y Condiciones',
+            'footer.privacy': 'Política de Privacidad',
+            'footer.sanitaryNotice': 'Normativa Sanitaria & Higiene',
+            'footer.rights': 'Todos los derechos reservados.',
+            'terms.title': 'Términos y Condiciones de Compra & Servicio',
+            'terms.subtitle': 'Boutique de Lujo y Bienestar Íntimo · Venta Exclusiva para Mayores de 18 Años',
+            'terms.close': 'Entendido y Cerrar',
+            'privacy.title': 'Política de Privacidad, Confidencialidad & Datos',
+            'privacy.subtitle': 'Garantía de Encriptación Bancaria, Envíos Ciegos y Cero Rastreo',
+            'privacy.close': 'Aceptar y Cerrar',
 
             // Yessi Concierge
             'concierge.launcherStatus': '● En línea · Confidencial',
@@ -408,6 +418,16 @@
             'footer.faq': 'Frequently Asked Questions',
             'footer.concierge': 'VIP WhatsApp Concierge',
             'footer.suite': '⚙️ Executive Suite',
+            'footer.terms': 'Terms & Conditions',
+            'footer.privacy': 'Privacy Policy',
+            'footer.sanitaryNotice': 'Sanitary & Health Standards',
+            'footer.rights': 'All rights reserved.',
+            'terms.title': 'Terms & Conditions of Purchase & Service',
+            'terms.subtitle': 'Luxury Boutique & Intimate Wellness · Strict 18+ Adult Policy',
+            'terms.close': 'Understood & Close',
+            'privacy.title': 'Privacy, Confidentiality & Data Policy',
+            'privacy.subtitle': 'Bank-Grade Encryption, Blind Packaging and Zero Tracking Guarantee',
+            'privacy.close': 'Accept & Close',
 
             // Yessi Concierge
             'concierge.launcherStatus': '● Online · Confidential',

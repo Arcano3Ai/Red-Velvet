@@ -1738,6 +1738,79 @@ document.addEventListener('DOMContentLoaded', () => {
     if (detailOverlay) detailOverlay.addEventListener('click', window.closeProductDetailModal);
 
     // ==========================================================================
+    // 6.5. MODALES LEGALES (TÉRMINOS Y CONDICIONES, POLÍTICA DE PRIVACIDAD)
+    // ==========================================================================
+    const termsModal = document.getElementById('modal-terminos');
+    const privacyModal = document.getElementById('modal-privacidad');
+
+    const openLegalModal = (modalId) => {
+        const targetModal = document.getElementById(modalId);
+        if (!targetModal) return;
+        if (termsModal) termsModal.classList.remove('active');
+        if (privacyModal) privacyModal.classList.remove('active');
+        targetModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLegalModals = () => {
+        if (termsModal) termsModal.classList.remove('active');
+        if (privacyModal) privacyModal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    // Attach to triggers in footer and bottom bar
+    document.querySelectorAll('.footer-legal-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = trigger.getAttribute('data-modal');
+            if (modalId) {
+                openLegalModal(modalId);
+                history.replaceState(null, null, modalId === 'modal-terminos' ? '#terminos' : '#privacidad');
+            }
+        });
+    });
+
+    // Close buttons and overlays
+    ['terms-modal-close', 'terms-modal-overlay', 'privacy-modal-close', 'privacy-modal-overlay'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', closeLegalModals);
+    });
+
+    document.querySelectorAll('.modal-action-close').forEach(btn => {
+        btn.addEventListener('click', closeLegalModals);
+    });
+
+    // Switch between legal modals
+    document.querySelectorAll('.legal-switch-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const switchTo = btn.getAttribute('data-switch-to');
+            if (switchTo) {
+                openLegalModal(switchTo);
+                history.replaceState(null, null, switchTo === 'modal-terminos' ? '#terminos' : '#privacidad');
+            }
+        });
+    });
+
+    // ESC key closes modals
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLegalModals();
+        }
+    });
+
+    // Handle initial hash or hash changes
+    const checkLegalHash = () => {
+        const hash = (window.location.hash || '').toLowerCase();
+        if (hash === '#terminos' || hash === '#terms') {
+            openLegalModal('modal-terminos');
+        } else if (hash === '#privacidad' || hash === '#privacy' || hash === '#normativa') {
+            openLegalModal('modal-privacidad');
+        }
+    };
+    window.addEventListener('hashchange', checkLegalHash);
+    checkLegalHash();
+
+    // ==========================================================================
     // 7. CONTROLES COMUNES (HEADER, THEME, MENÚ, FAQ, SCROLL)
     // ==========================================================================
     const header = document.querySelector('.header');

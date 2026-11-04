@@ -529,10 +529,30 @@
                         <li><a href="https://wa.me/5212731123888?text=Hola%20RED%20VELVET,%20deseo%20asesor%C3%ADa%20sobre%20un%20producto" target="_blank" data-i18n="footer.concierge">Concierge WhatsApp VIP (+52 1 273 112 3888)</a></li>
                         <li><a href="admin.html" style="color:rgba(212,175,55,0.9); font-size:0.8rem;" data-i18n="footer.suite">⚙️ Suite de Dirección</a></li>
                     </ul>
+                    <ul>
+                        <li><a href="#terminos" id="link-footer-terminos" class="footer-legal-trigger" data-modal="modal-terminos" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                        <li><a href="#privacidad" id="link-footer-privacidad" class="footer-legal-trigger" data-modal="modal-privacidad" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        <li><a href="#normativa" id="link-footer-normativa" class="footer-legal-trigger" data-modal="modal-terminos" data-i18n="footer.sanitaryNotice">Normativa Sanitaria & Higiene</a></li>
+                    </ul>
                 </div>
                 <div class="footer-social">
                     <a href="#" class="social-icon" aria-label="Instagram">IG</a>
                     <a href="#" class="social-icon" aria-label="X / Twitter">X</a>
+                </div>
+            </div>
+
+            <!-- Barra Legal Inferior del Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-copy">
+                    <p>&copy; 2026 RED VELVET Boutique. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <span class="footer-badge-age">🔞 18+ Adult Luxury & Wellness</span>
+                </div>
+                <div class="footer-bottom-legal">
+                    <button type="button" id="btn-footer-terminos" class="footer-legal-btn footer-legal-trigger" data-modal="modal-terminos" data-i18n="footer.terms">Términos y Condiciones</button>
+                    <span class="footer-sep">·</span>
+                    <button type="button" id="btn-footer-privacidad" class="footer-legal-btn footer-legal-trigger" data-modal="modal-privacidad" data-i18n="footer.privacy">Política de Privacidad</button>
+                    <span class="footer-sep">·</span>
+                    <button type="button" id="btn-footer-normativa" class="footer-legal-btn footer-legal-trigger" data-modal="modal-terminos" data-i18n="footer.sanitaryNotice">Normativa Sanitaria & Higiene</button>
                 </div>
             </div>
         </div>
@@ -666,6 +686,131 @@
                 </div>
             </form>
             <div id="checkout-feedback" style="display:none; padding:1.5rem; text-align:center;"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MODAL: TÉRMINOS Y CONDICIONES (+18 & NORMATIVA SANITARIA)
+         ========================================================================== -->
+    <div id="modal-terminos" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
+        <div class="modal-overlay" id="terms-modal-overlay"></div>
+        <div class="modal-container glass legal-modal-container">
+            <button class="modal-close-btn" id="terms-modal-close" aria-label="Cerrar Términos">&times;</button>
+            <div class="modal-header">
+                <div class="legal-modal-badges">
+                    <span class="badge-gold">🔞 VENTA EXCLUSIVA +18</span>
+                    <span class="badge-gold">⚖️ VIGENCIA OFICIAL 2026</span>
+                    <span class="badge-gold">🔒 BIENESTAR SEGURO</span>
+                </div>
+                <h3 class="modal-title" id="terms-modal-title" data-i18n="terms.title">Términos y Condiciones de Compra & Servicio</h3>
+                <p class="modal-subtitle" data-i18n="terms.subtitle">Boutique de Lujo y Bienestar Íntimo · Venta Exclusiva para Mayores de 18 Años</p>
+            </div>
+            
+            <div class="legal-modal-body">
+                <article class="legal-section">
+                    <h4>1. Requisito Estricto de Mayoría de Edad (+18 Años)</h4>
+                    <p>RED VELVET es una plataforma de bienestar íntimo, lencería de autor y tecnología del placer exclusivamente dirigida a personas mayores de 18 años (o la mayoría de edad legal correspondiente en su territorio). Al ingresar al sitio web, navegar o realizar cualquier pedido, el usuario manifiesta y garantiza bajo protesta de decir verdad contar con plena capacidad jurídica y la edad legal mínima obligatoria.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>2. Normativa Sanitaria, Higiene & Exclusión de Devoluciones</h4>
+                    <div class="legal-alert-box">
+                        <strong>⚠️ Aviso Sanitario de Bioseguridad:</strong> Por rigurosas regulaciones de salubridad y salud pública internacional, los dispositivos de estimulación íntima, cosmética sensorial y prendas de lencería de contacto dérmico <u>NO admiten cambios ni devoluciones</u> una vez que el precinto de seguridad, empaque de celofán o sello de inviolabilidad hayan sido rotos, abiertos o alterados.
+                    </div>
+                    <p>Esta medida protege de forma inviolable la salud y tranquilidad de toda nuestra clientela, garantizando que cada pieza entregada proviene directamente de fábrica en condiciones de esterilidad absoluta y jamás ha sido abierta ni manipulada previamente.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>3. Garantía Técnica de Fábrica de 12 Meses (Pleasure Tech)</h4>
+                    <p>Todos los dispositivos tecnológicos recargables de autor cuentan con una <strong>Garantía Limitada de 1 Año</strong> frente a defectos de fabricación en motores, tarjetas electrónicas internas o fallo de batería sellada. En caso de desperfecto de fábrica debidamente comprobado dentro del período de vigencia, nuestro Concierge VIP coordinará el reemplazo inmediato de la pieza sin costo adicional.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>4. Precios, Pagos & Discreción en Cargos Bancarios</h4>
+                    <p>Todos los precios se exhiben en Pesos Mexicanos (MXN) e incluyen los impuestos aplicables. Las transacciones se procesan mediante pasarelas de pago cifradas de grado bancario. Por estricto respeto a su confidencialidad, <strong>el concepto que aparecerá en su estado de cuenta bancario será un identificador comercial neutro</strong>, sin alusiones a "RED VELVET", "sex shop", "lencería" o productos para adultos.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>5. Protocolo de Envíos Ciegos y Cadena de Custodia</h4>
+                    <p>Todos los envíos se empaquetan en cajas corrugadas kraft 100% ciegas, sin logos, leyendas, formas identificables ni alusiones al contenido. El remitente exterior utiliza un código logístico neutro. Garantizamos custodia confidencial y discreción de inicio a fin.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>6. Propiedad Intelectual</h4>
+                    <p>Todos los nombres comerciales, marcas registradas, fotografías de alta costura, textos, logotipos y código fuente son propiedad exclusiva de RED VELVET y Arcano Solutions, protegidos por tratados internacionales de propiedad intelectual.</p>
+                </article>
+            </div>
+
+            <div class="legal-modal-footer">
+                <button type="button" class="btn btn-secondary legal-switch-btn" data-switch-to="modal-privacidad">
+                    🛡️ Ver Política de Privacidad
+                </button>
+                <button type="button" class="btn btn-primary modal-action-close" data-i18n="terms.close">
+                    Entendido y Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MODAL: POLÍTICA DE PRIVACIDAD & CONFIDENCIALIDAD DE DATOS
+         ========================================================================== -->
+    <div id="modal-privacidad" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+        <div class="modal-overlay" id="privacy-modal-overlay"></div>
+        <div class="modal-container glass legal-modal-container">
+            <button class="modal-close-btn" id="privacy-modal-close" aria-label="Cerrar Privacidad">&times;</button>
+            <div class="modal-header">
+                <div class="legal-modal-badges">
+                    <span class="badge-gold">🛡️ PRIVACIDAD FANTASMA</span>
+                    <span class="badge-gold">🔐 ENCRIPTACIÓN AES-256</span>
+                    <span class="badge-gold">🚫 CERO VENTA DE DATOS</span>
+                </div>
+                <h3 class="modal-title" id="privacy-modal-title" data-i18n="privacy.title">Política de Privacidad, Confidencialidad & Datos</h3>
+                <p class="modal-subtitle" data-i18n="privacy.subtitle">Garantía de Encriptación Bancaria, Envíos Ciegos y Cero Rastreo</p>
+            </div>
+            
+            <div class="legal-modal-body">
+                <article class="legal-section">
+                    <h4>1. Compromiso Supremo de Confidencialidad</h4>
+                    <p>En RED VELVET (operado por Arcano Solutions), consideramos que la privacidad en el bienestar íntimo es un derecho fundamental e inviolable. Operamos bajo el principio de <em>Discreción Absoluta</em>: su identidad, preferencias y adquisiciones jamás son expuestas ni compartidas.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>2. Datos Estrictamente Recabados & Su Única Finalidad</h4>
+                    <p>Únicamente solicitamos los datos esenciales e indispensables para materializar la entrega logística de su pedido: nombre de destinatario, dirección de entrega y número de WhatsApp para envío de guía y confirmación de recepción. Ningún dato superfluo es solicitado.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>3. Política de Cero Comercialización de Información</h4>
+                    <div class="legal-alert-box">
+                        <strong>🔒 Garantía Inquebrantable:</strong> RED VELVET <u>NUNCA</u> vende, alquila, cede ni comercializa bases de datos, historiales de compra ni perfiles de clientes con agencias publicitarias, brokers de datos ni terceras partes ajenas a la entrega física de su pedido.
+                    </div>
+                </article>
+
+                <article class="legal-section">
+                    <h4>4. Cifrado y Seguridad de Grado Militar</h4>
+                    <p>Toda comunicación e intercambio de datos entre su navegador y nuestros servidores viaja cifrada mediante protocolos seguros TLS 1.3 y encriptación de 256 bits. Los canales de atención con Yessi Concierge operan bajo protocolos protegidos de punto a punto.</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>5. Modo "Privacidad Fantasma" & Derechos ARCO</h4>
+                    <p>Usted conserva en todo momento el control absoluto de su información (Acceso, Rectificación, Cancelación y Oposición). Si desea que su historial de compras y registros de entrega sean purgados de nuestros sistemas de forma permanente e irrecuperable una vez entregado su pedido, puede solicitarlo en cualquier momento a través de nuestro Concierge VIP de WhatsApp (+52 1 273 112 3888).</p>
+                </article>
+
+                <article class="legal-section">
+                    <h4>6. Uso de Cookies & Almacenamiento Local</h4>
+                    <p>Empleamos almacenamiento local exclusivamente para fines funcionales indispensables: recordar su confirmación de mayoría de edad, conservar los artículos en su bolsa de compras y recordar su idioma o modo visual preferido. No utilizamos píxeles de seguimiento invasivos ni redes de rastreo cruzado.</p>
+                </article>
+            </div>
+
+            <div class="legal-modal-footer">
+                <button type="button" class="btn btn-secondary legal-switch-btn" data-switch-to="modal-terminos">
+                    ⚖️ Ver Términos y Condiciones
+                </button>
+                <button type="button" class="btn btn-primary modal-action-close" data-i18n="privacy.close">
+                    Aceptar y Cerrar
+                </button>
+            </div>
         </div>
     </div>
 
