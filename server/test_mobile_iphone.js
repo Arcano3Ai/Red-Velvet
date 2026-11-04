@@ -124,6 +124,19 @@ const runMobileTest = async () => {
         console.log('📸 Captura M6: Formulario de Checkout en iPhone...');
         await page.screenshot({ path: path.join(SCREENSHOTS_DIR, 'mobile_06_checkout.png') });
 
+        // 7️⃣ Abrir Yessi Concierge en iPhone
+        console.log('7️⃣ Abriendo Yessi Concierge en iPhone...');
+        await page.evaluate(() => {
+            const checkoutModal = document.getElementById('checkout-modal');
+            if (checkoutModal) checkoutModal.classList.remove('active');
+            if (window.yessiConcierge) window.yessiConcierge.toggleChat(true);
+        });
+        await page.waitForSelector('#yessi-chat-window.active', { visible: true, timeout: 5000 });
+        await new Promise(r => setTimeout(r, 600));
+
+        console.log('📸 Captura M7: Yessi Concierge en pantalla de iPhone...');
+        await page.screenshot({ path: path.join(SCREENSHOTS_DIR, 'mobile_07_yessi_iphone.png') });
+
         console.log('🏆 VERIFICACIÓN EN IPHONE COMPLETADA CON 100% DE ÉXITO.');
 
     } catch (err) {

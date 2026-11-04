@@ -12,6 +12,7 @@ const productsRoutes = require('./routes/products');
 const ordersRoutes = require('./routes/orders');
 const codesRoutes = require('./routes/codes');
 const uploadRoutes = require('./routes/upload');
+const conciergeRoutes = require('./routes/concierge');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -45,6 +46,7 @@ app.use('/api/products', productsRoutes);
 app.use('/api/orders', ordersRoutes);
 app.use('/api/codes', codesRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/concierge', conciergeRoutes);
 
 // Retrocompatibilidad temporal para endpoints anteriores
 app.use('/api/models', productsRoutes);

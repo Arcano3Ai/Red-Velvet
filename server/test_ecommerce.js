@@ -91,6 +91,18 @@ const runTests = async () => {
         console.assert(orderData.whatsappUrl.includes('Camila'), 'WhatsApp URL no contiene nombre');
         console.log(`✔ Pedido de ultra-lujo creado exitosamente: ${orderData.orderId} con total calculado y cupón`);
 
+        // 9. Asistente Yessi Concierge API (/api/concierge/chat)
+        const chatRes = await fetch(`${baseUrl}/api/concierge/chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: '¿Cómo garantizan el empaque discreto?' })
+        });
+        const chatData = await chatRes.json();
+        console.assert(chatData.success === true, 'Endpoint de Yessi Concierge falló');
+        console.assert(chatData.concierge === 'Yessi Concierge', 'Nombre de Concierge no coincide');
+        console.assert(chatData.reply.toLowerCase().includes('ciega') || chatData.reply.toLowerCase().includes('cartón'), 'Respuesta sobre empaque no esperada');
+        console.log('✔ Yessi Concierge responde adecuadamente sobre discreción de empaque y envíos');
+
         console.log('\n🏆 TODAS LAS PRUEBAS DE CATÁLOGO Y E-COMMERCE PASARON CON ÉXITO.');
     } catch (err) {
         console.error('❌ Error en pruebas:', err);
