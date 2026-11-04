@@ -738,6 +738,202 @@ const seedData = async () => {
             badge: 'Juego Térmico',
             is_featured: 0,
             sort_order: 28
+        },
+        {
+            id: 'PROD-030',
+            name: 'Bala Vibradora de Bolsillo "Mini Royale"',
+            slug: 'bala-vibradora-bolsillo-mini-royale',
+            category: 'Pleasure Tech',
+            subtitle: 'Vibrador bala ultra compacto recargable para estimulación clitoriana discreta',
+            price: 1450,
+            compare_price: 1750,
+            stock: 25,
+            description: 'La clásica bala vibradora de precisión en tamaño labial. Acabado en aleación pulida champagne con punta de silicona líquida ultrasuave, 10 patrones de vibración silenciosa y sumergibilidad total IPX7 para llevar a cualquier escapada secreta.',
+            sensory_notes: 'Punta suave de contacto preciso, vibraciones concentradas, acabado metálico frío que se atempera al contacto de la piel.',
+            specs_json: JSON.stringify({
+                material: 'Aleación pulida hipoalergénica y silicona médica grado quirúrgico',
+                impermeabilidad: 'IPX7 100% sumergible',
+                ruido: '< 35 dB (Ultra Silencioso)',
+                modos: '10 patrones de vibración',
+                bateria: 'Recargable magnética USB (hasta 90 min de autonomía)'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=900',
+            badge: 'Ultra Discreto',
+            is_featured: 1,
+            sort_order: 29
+        },
+        {
+            id: 'PROD-031',
+            name: 'Estimulador Prostático Anatómico "Apex Pulse"',
+            slug: 'estimulador-prostatico-anatomico-apex-pulse',
+            category: 'Pleasure Tech',
+            subtitle: 'Masajeador ergonómico de punto P con base de seguridad y motor silencioso',
+            price: 2790,
+            compare_price: 3250,
+            stock: 16,
+            description: 'Diseñado meticulosamente para adaptarse a la anatomía perineal y alcanzar el punto P con suave presión constante. Silicona líquida ultra flexible, motor profundo casi inaudible (<36 dB) y base ancha ergonómica para máxima tranquilidad.',
+            sensory_notes: 'Presión anatómica envolvente, silicona flexible de doble densidad, vibración grave y profunda.',
+            specs_json: JSON.stringify({
+                material: 'Silicona líquida biocompatible de tacto sedoso',
+                impermeabilidad: 'IPX7 sumergible',
+                ruido: '< 36 dB (Whisper-Quiet)',
+                modos: '8 modos de vibración progresiva',
+                garantia: '2 años de reposición directa'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=900',
+            badge: 'Ergonomía Médica',
+            is_featured: 0,
+            sort_order: 30
+        },
+        {
+            id: 'PROD-032',
+            name: 'Gel Íntimo Térmico Efecto Calor "Warm Ember"',
+            slug: 'gel-intimo-termico-efecto-calor-warm-ember',
+            category: 'Sensory Care',
+            subtitle: 'Lubricante y gel estimulante con extracto de canela de Ceilán y miel botánica',
+            price: 590,
+            compare_price: 720,
+            stock: 40,
+            description: 'Un toque tibio que despierta el flujo sanguíneo con un calor progresivo y reconfortante. Formulado a base de agua con ingredientes botánicos comestibles, compatible con preservativos y silicona médica.',
+            sensory_notes: 'Calidez instantánea al contacto y soplo, aroma sutil especiado a canela dulce y vainilla, deslizamiento prolongado.',
+            specs_json: JSON.stringify({
+                volumen: '100 ml en frasco dosificador airless',
+                base: 'Agua purificada con glicerina vegetal grado alimenticio',
+                seguridad: 'Hipoalergénico, libre de parabenos y compatible con juguetes'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=900',
+            badge: 'Efecto Térmico',
+            is_featured: 1,
+            sort_order: 31
+        },
+        {
+            id: 'PROD-033',
+            name: 'Bruma de Almohada & Alcoba "Sombra de Jazmín"',
+            slug: 'bruma-almohada-alcoba-sombra-jazmin',
+            category: 'Sensory Care',
+            subtitle: 'Spray aromático ambiental con lavanda francesa, jazmín nocturno y flor de azahar',
+            price: 680,
+            compare_price: 850,
+            stock: 35,
+            description: 'Crea la atmósfera propicia para el descanso íntimo y el relax sensorial. Rociada sobre sábanas y almohadas antes de un encuentro, calma la mente y despierta los sentidos a través de la aromaterapia de alta perfumería.',
+            sensory_notes: 'Vapor fino y envolvente, notas florales calmantes de azahar y sándalo, sensación de santuario privado.',
+            specs_json: JSON.stringify({
+                presentacion: 'Frasco de vidrio ámbar de 120 ml con atomizador fino',
+                ingredientes: 'Hidrolato puro de lavanda, aceites esenciales de jazmín real y bergamota',
+                sin_manchas: 'Fórmula que no mancha sábanas de seda ni algodón'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=900',
+            badge: 'Aromaterapia',
+            is_featured: 0,
+            sort_order: 32
+        },
+        {
+            id: 'PROD-034',
+            name: 'Baby Doll de Seda & Encaje "Petite Nuit"',
+            slug: 'baby-doll-seda-encaje-petite-nuit',
+            category: 'Fine Lingerie',
+            subtitle: 'Camisón corto fluido en satén elástico de seda con copas de encaje floral',
+            price: 1890,
+            compare_price: 2250,
+            stock: 20,
+            description: 'La prenda más seductora para el final del día. Su caída libre estiliza la silueta con ligereza etérea, mientras sus tirantes ajustables y copas suaves acarician el busto con comodidad absoluta.',
+            sensory_notes: 'Satén líquido que resbala suavemente sobre las curvas, encaje floral sin picor, tirantes dorados delicados.',
+            specs_json: JSON.stringify({
+                material: '92% Satén de seda elastizado y 8% encaje de Chantilly',
+                tallas: 'S, M, L, XL con tirantes regulables',
+                incluye: 'Baby doll y tanga de satén a juego'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=900',
+            badge: 'Seda & Encaje',
+            is_featured: 1,
+            sort_order: 33
+        },
+        {
+            id: 'PROD-035',
+            name: 'Kimono Largo de Gasa Translúcida "Velvet Mist"',
+            slug: 'kimono-largo-gasa-translucida-velvet-mist',
+            category: 'Fine Lingerie',
+            subtitle: 'Bata vaporosa de noche con ribete de satén negro y cinturón a juego',
+            price: 2650,
+            compare_price: 3100,
+            stock: 14,
+            description: 'Una pieza teatral de sensualidad sutil. La gasa translúcida negra insinúa la piel con elegancia en cada movimiento, ideal para superponer sobre cualquier conjunto de lencería.',
+            sensory_notes: 'Tejido ingrávido y translúcido que ondea con el aire, satén suave en puños y solapas, elegancia cinematográfica.',
+            specs_json: JSON.stringify({
+                material: 'Chifón de gasa sedosa con ribetes en satén de seda pesada',
+                largo: 'Largo completo hasta los tobillos',
+                ajuste: 'Cinturón desmontable de satén con lazada ancha'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?auto=format&fit=crop&q=80&w=900',
+            badge: 'Diseño Exclusivo',
+            is_featured: 0,
+            sort_order: 34
+        },
+        {
+            id: 'PROD-036',
+            name: 'Esposas de Terciopelo Suave & Cierre Rápido "Velvet Bind"',
+            slug: 'esposas-terciopelo-suave-cierre-rapido-velvet-bind',
+            category: 'Soft Fetish',
+            subtitle: 'Muñequeras acolchadas forradas en felpa burdeos con mosquetón bañado en oro',
+            price: 1280,
+            compare_price: 1550,
+            stock: 22,
+            description: 'Iniciación perfecta al juego de sumisión y entrega. Su forro de terciopelo ultra suave no marca ni raspa la piel, mientras su mosquetón dorado permite soltar las muñecas al instante con un solo movimiento de seguridad.',
+            sensory_notes: 'Almohadillado afelpado de terciopelo burdeos, hebilla metálica fría pulida, sujeción firme sin pellizcos.',
+            specs_json: JSON.stringify({
+                interior: 'Felpa acolchada de microfibra aterciopelada',
+                exterior: 'Cuero sintético texturizado vegano de alta resistencia',
+                seguridad: 'Mosquetón giratorio de liberación inmediata bañado en oro'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?auto=format&fit=crop&q=80&w=900',
+            badge: 'Cierre Rápido',
+            is_featured: 1,
+            sort_order: 35
+        },
+        {
+            id: 'PROD-037',
+            name: 'Plumero Sensorial & Cosquillero de Cuello "Caress Feather"',
+            slug: 'plumero-sensorial-cosquillero-caress-feather',
+            category: 'Couples',
+            subtitle: 'Varilla ergonómica de bambú negro con plumas naturales suaves para juegos tántricos',
+            price: 550,
+            compare_price: 690,
+            stock: 30,
+            description: 'Un instrumento tántrico sutil para despertar terminaciones nerviosas dormidas a lo largo de la espalda, cuello y muslos antes del contacto piel con piel.',
+            sensory_notes: 'Cosquilleo electrizante y sutil, tacto pluma hipersensible, mango largo de madera oscura pulida.',
+            specs_json: JSON.stringify({
+                plumas: 'Plumas naturales tratadas e hipoalergénicas de avestruz suave',
+                mango: 'Madera de bambú lacada en negro con remates dorados',
+                longitud: 'Longitud total de 32 cm'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=80&w=900',
+            badge: 'Tacto Pluma',
+            is_featured: 0,
+            sort_order: 36
         }
     ];
 

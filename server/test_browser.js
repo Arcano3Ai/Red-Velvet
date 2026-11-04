@@ -58,13 +58,13 @@ const runBrowserTest = async () => {
         await page.screenshot({ path: path.join(SCREENSHOTS_DIR, '02b_ritual_velvet.png') });
 
         // 3️⃣ Scroll a Catálogo y verificar productos cargados
-        console.log('3️⃣ Verificando carga dinámica del catálogo de 28 productos...');
+        console.log('3️⃣ Verificando carga dinámica del catálogo de 36 productos...');
         await page.evaluate(() => document.getElementById('catalogo').scrollIntoView());
         await page.waitForSelector('.product-shop-card', { timeout: 5000 });
 
         const productCardsCount = await page.evaluate(() => document.querySelectorAll('.product-shop-card').length);
         console.log(`✔ Tarjetas de producto renderizadas en DOM: ${productCardsCount}`);
-        console.assert(productCardsCount >= 28, `Esperadas >= 28 tarjetas, encontradas: ${productCardsCount}`);
+        console.assert(productCardsCount >= 36, `Esperadas >= 36 tarjetas, encontradas: ${productCardsCount}`);
 
         // Screenshot 3: Catálogo General
         console.log('📸 Captura 3: Catálogo Maestro...');

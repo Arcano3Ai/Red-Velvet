@@ -70,6 +70,10 @@ const runMobileTest = async () => {
         console.log('📸 Captura M3: Cuadrícula de 2 Columnas en iPhone...');
         await page.screenshot({ path: path.join(SCREENSHOTS_DIR, 'mobile_03_catalogo_2col.png') });
 
+        const productCardsCount = await page.evaluate(() => document.querySelectorAll('.product-shop-card').length);
+        console.log(`✔ Tarjetas de producto en iPhone: ${productCardsCount}`);
+        console.assert(productCardsCount >= 36, `Esperadas >= 36 tarjetas en iPhone, encontradas: ${productCardsCount}`);
+
         // Verificar columnas
         const gridCols = await page.evaluate(() => {
             const grid = document.getElementById('products-grid');

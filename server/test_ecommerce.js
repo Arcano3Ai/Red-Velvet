@@ -18,7 +18,7 @@ const runTests = async () => {
         const prodRes = await fetch(`${baseUrl}/api/products`);
         const prodData = await prodRes.json();
         console.assert(prodData.success === true, 'Listado de productos falló');
-        console.assert(prodData.count >= 28, `Esperados >= 28 productos, obtenidos: ${prodData.count}`);
+        console.assert(prodData.count >= 36, `Esperados >= 36 productos, obtenidos: ${prodData.count}`);
         console.log(`✔ Catálogo maestro verificado: ${prodData.count} productos de ultra-lujo cargados`);
 
         // 3. Verificación de categorías
