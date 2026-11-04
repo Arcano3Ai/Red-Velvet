@@ -51,7 +51,8 @@
             if (localStorage.getItem('redVelvetAgeVerified') === 'true') {
                 var g = document.getElementById('age-gate');
                 if (g) { g.className = 'age-gate'; g.style.display = 'none'; }
-                document.body.style.overflow = 'auto';
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             }
         } catch(e) {}
         </script>

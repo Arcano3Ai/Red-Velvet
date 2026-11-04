@@ -15,7 +15,8 @@ window.dismissAgeGate = function(e) {
         gate.style.setProperty('pointer-events', 'none', 'important');
         gate.style.setProperty('opacity', '0', 'important');
     }
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     const heroVid = document.querySelector('.hero-bg-video');
     if (heroVid && heroVid.paused) heroVid.play().catch(() => {});
     if (typeof playMusic === 'function') {
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSearchTerm = '';
     let currentSort = 'featured';
     let appliedCoupon = null;
+    let updateScrollMetrics = () => {};
 
     // Catálogo maestro de reserva (Fallback de ultra-lujo por si la API tarda o está offline)
     const fallbackProducts = [
@@ -989,7 +991,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     } else {
         if (ageGate) ageGate.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
         playMusic();
     }
 
@@ -1332,7 +1335,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!cartDrawer) return;
         cartDrawer.classList.remove('active');
         if (cartOverlay) cartOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     };
 
     if (btnCartToggle) btnCartToggle.addEventListener('click', openCartDrawer);
@@ -1428,7 +1432,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeCheckoutModal = () => {
         if (checkoutModal) checkoutModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     };
 
     if (btnOpenCheckout) btnOpenCheckout.addEventListener('click', openCheckoutModal);
@@ -1762,7 +1767,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.closeProductDetailModal = () => {
         if (detailModal) detailModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     };
 
     if (detailClose) detailClose.addEventListener('click', window.closeProductDetailModal);
@@ -1787,6 +1793,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (termsModal) termsModal.classList.remove('active');
         if (privacyModal) privacyModal.classList.remove('active');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     };
 
     // Attach to triggers in footer and bottom bar
@@ -1850,7 +1857,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollTicking = false;
     let cachedScrollHeight = 0;
 
-    const updateScrollMetrics = () => {
+    updateScrollMetrics = () => {
         cachedScrollHeight = Math.max(1, (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight);
     };
 

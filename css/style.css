@@ -155,8 +155,9 @@
 
 html {
     font-size: 16px;
-    overflow-x: clip;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 @media (min-width: 769px) {
@@ -170,12 +171,12 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
-    overflow-x: clip;
     width: 100%;
+    min-height: 100vh;
     position: relative;
-    touch-action: pan-y;
+    overflow-x: hidden;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: auto;
 }
 
 h1, h2, h3, h4, .logo-text {
@@ -281,7 +282,7 @@ img {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none !important;
     transition: opacity 0.4s ease;
     padding: 1.2rem;
     box-sizing: border-box;
@@ -289,9 +290,17 @@ img {
     -webkit-overflow-scrolling: touch;
 }
 
+.age-gate:not(.active) {
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
 .age-gate.active {
+    display: flex !important;
     opacity: 1;
     pointer-events: auto !important;
+    visibility: visible !important;
 }
 
 .age-gate-content {
@@ -463,6 +472,7 @@ img {
     z-index: 0;
     opacity: 1 !important;
     filter: none !important;
+    pointer-events: none !important;
 }
 
 .hero-bg {
@@ -4198,8 +4208,6 @@ html {
 
 body {
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: auto;
-    touch-action: pan-y;
 }
 
 button, a, input, select, textarea {
@@ -5126,17 +5134,17 @@ button, a, input, select, textarea {
     /* Root Mobile Fluid Momentum Scrolling & Anti-Horizontal-Stall */
     html {
         scroll-behavior: auto !important;
-        overflow-x: clip !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
         width: 100% !important;
     }
 
     body {
         scroll-behavior: auto !important;
-        overflow-x: clip !important;
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
         width: 100% !important;
-        touch-action: pan-y !important;
         -webkit-overflow-scrolling: touch !important;
-        overscroll-behavior-y: auto !important;
     }
 
     /* Cinta de progreso sin blur en móvil para 120fps sostenidos */
@@ -5631,6 +5639,7 @@ button, a, input, select, textarea {
         object-fit: cover !important;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        pointer-events: none !important;
     }
 
     .footer-bg-video {
@@ -5639,6 +5648,7 @@ button, a, input, select, textarea {
         transform: translate3d(-50%, -50%, 0) !important;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        pointer-events: none !important;
     }
 
     /* Reducir desenfoques excesivos en móvil para ahorrar GPU */
