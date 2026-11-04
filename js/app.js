@@ -36,20 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const fallbackProducts = [
         {
                 "id": "PROD-001",
-                "name": "Aura Sonic Touch",
-                "slug": "aura-sonic-touch",
+                "name": "Succionador de Clítoris \"Aura Touch\"",
+                "slug": "succionador-clitoris-aura-touch",
                 "category": "Pleasure Tech",
-                "subtitle": "Estimulador sónico clitoriano de ondas acústicas continuas",
+                "subtitle": "Succionador de clítoris por aire pulsado con estimulación suave sin fricción",
                 "price": 2890,
                 "compare_price": 3450,
                 "stock": 24,
-                "description": "Inspirado en la tecnología acústica de resonancia profunda. Aura Sonic Touch acaricia las terminaciones nerviosas sin contacto invasivo, creando una experiencia orgásmica gradual de plenitud absoluta. Acabado en silicona biocompatible ultrasuave y detalles en oro rosa.",
-                "sensory_notes": "Tacto sedoso hipoalergénico, vibración profunda casi imperceptible al oído (<38 dB), sensación envolvente similar a la brisa cálida.",
+                "description": "El succionador clásico con tecnología de aire pulsado y vacío suave. Estimula el clítoris mediante pulsaciones envolventes sin contacto directo ni fricción agresiva, permitiendo llegar al clímax con máxima suavidad y comodidad. Fabricado en silicona líquida médica biocompatible, sumergible y de tacto aterciopelado.",
+                "sensory_notes": "Pulsaciones de aire cálido, vibración de base profunda, silicona ultrasuave e hipoalergénica.",
                 "specs": {
                         "material": "Silicona médica ultrasuave biocompatible & ABS bañado en oro rosa",
                         "impermeabilidad": "IPX7 (100% sumergible hasta 1 metro de profundidad)",
                         "ruido": "< 38 dB (Tecnología Whisper-Quiet)",
-                        "modos": "8 intensidades progresivas y 6 frecuencias acústicas",
+                        "modos": "10 intensidades de pulsación de aire y 5 ritmos de vibración",
                         "bateria": "Batería de iones de litio recargable por pin magnético USB",
                         "autonomia": "Hasta 2 horas continuas con carga completa de 90 min",
                         "garantia": "2 años de garantía de reposición directa"
@@ -106,15 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
                 "id": "PROD-011",
-                "name": "Onyx Eclipse G-Spot & Clitoral Wave",
-                "slug": "onyx-eclipse-gspot-clitoral-wave",
+                "name": "Vibrador Conejo Rabbit Dual \"Onyx Eclipse\"",
+                "slug": "vibrador-conejo-rabbit-onyx-eclipse",
                 "category": "Pleasure Tech",
-                "subtitle": "Estimulador anatómico con tecnología térmica de 39°C y doble motor sincrónico",
+                "subtitle": "Vibrador anatómico de estimulación dual clítoris y punto G con función térmica",
                 "price": 3490,
                 "compare_price": 3950,
                 "stock": 15,
-                "description": "Diseño curvilíneo creado a partir de mapeos biométricos de precisión. Su cabezal curvado alcanza el punto G con presión sostenida mientras su brazo externo abraza el clítoris. Su sistema térmico emula la temperatura corporal para sensaciones hiperrealistas.",
-                "sensory_notes": "Calor reconfortante de 39°C, tacto de terciopelo líquido, ondas de pulso sincronizadas que resuenan en todo el cuerpo.",
+                "description": "El icónico vibrador tipo conejo de doble estimulación clitoriana y vaginal. Cuenta con función de calentamiento suave a 39°C que emula el calor corporal natural y dos motores independientes con múltiples ritmos de vibración. Silicona médica ultrasuave y 100% sumergible.",
+                "sensory_notes": "Calor reconfortante a 39°C, silicona suave de tacto sedoso y vibración dual sincronizada.",
                 "specs": {
                         "material": "Silicona médica hipoalergénica de doble densidad",
                         "impermeabilidad": "IPX7 (100% sumergible)",
@@ -192,15 +192,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
                 "id": "PROD-016",
-                "name": "Elixir Sensuel — Aceite de Masaje Botánico con Feromonas",
+                "name": "Elixir Sensuel — Aceite de Masaje Botánico Relajante",
                 "slug": "elixir-sensuel-aceite-masaje-botanico",
                 "category": "Sensory Care",
                 "subtitle": "Mezcla de aceites prensados en frío de argán, jojoba y jazmín silvestre",
                 "price": 1150,
                 "compare_price": 1350,
                 "stock": 30,
-                "description": "Un aceite seco de absorción progresiva que acaricia la piel con suavidad de terciopelo. Su alquimia aromática de sándalo blanco, jazmín sambac y notas de ámbar despierta el deseo y favorece la relajación muscular profunda en masajes íntimos o tántricos.",
-                "sensory_notes": "Acabado satinado sin rastro oleoso, tacto cálido en contacto con las manos, aroma hipnótico y seductor.",
+                "description": "Un aceite seco de absorción progresiva que acaricia la piel con suavidad de terciopelo. Su mezcla aromática de sándalo blanco, jazmín sambac y notas de ámbar despierta los sentidos y favorece la relajación muscular profunda en masajes íntimos o en pareja.",
+                "sensory_notes": "Acabado satinado sin rastro grasoso, tacto cálido en contacto con las manos, aroma envolvente y seductor.",
                 "specs": {
                         "presentacion": "Botella de vidrio ámbar de 150 ml con gotero dosificador de precisión",
                         "ingredientes": "Aceite de Argán puro de Marruecos, Aceite de Jojoba dorado, Esencia de Jazmín Real, Vitamina E",
@@ -473,14 +473,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
                 "id": "PROD-023",
-                "name": "Varita Tántrica Sónica \"Solstice\"",
-                "slug": "varita-tantrica-sonica-solstice",
+                "name": "Varita Masajeador Magic Wand \"Solstice\"",
+                "slug": "varita-masajeador-magic-wand-solstice",
                 "category": "Pleasure Tech",
-                "subtitle": "Masajeador sónico de cuerpo entero con cuello flexible y cabezal de silicona aterciopelada",
+                "subtitle": "Masajeador corporal y de zonas íntimas de alta potencia con cabezal flexible",
                 "price": 3200,
                 "compare_price": 3750,
                 "stock": 18,
-                "description": "Una pieza escultórica de bienestar sensorial. Su potente motor de resonancia baja relaja fascias musculares profundas y desata ondas orgásmicas intensas sin vibraciones molestas en la mano. 100% sumergible con 8 patrones intuitivos.",
+                "description": "El clásico masajeador tipo varita mágica (Magic Wand) reinventado con acabado en silicona líquida médica ultra suave. Diseñado para relajar la tensión muscular de cuello y espalda o brindar una potente estimulación íntima con vibración profunda y continua sin adormecer la mano.",
                 "sensory_notes": "Cabezal amortiguado ultra-suave, agarre contorneado con balance de peso perfecto, emisión sonora reducida (<39 dB).",
                 "specs": {
                         "material": "Silicona médica líquida y núcleo de aluminio cepillado",
@@ -1060,16 +1060,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasDiscount = product.compare_price && product.compare_price > product.price;
             return `
                 <div class="product-shop-card reveal active">
-                    <div class="product-img-box">
+                    <div class="product-img-box" onclick="window.openProductDetailModal('${product.id}')" style="cursor: pointer;">
                         <img src="${product.photo_main}" alt="${product.name}" loading="lazy">
                         ${product.badge ? `<span class="product-badge-corner">${product.badge}</span>` : ''}
-                        <button type="button" class="product-quick-view-btn" onclick="window.openProductDetailModal('${product.id}')">
+                        <button type="button" class="product-quick-view-btn" onclick="event.stopPropagation(); window.openProductDetailModal('${product.id}')">
                             🔍 Vista Rápida & Specs
                         </button>
                     </div>
                     <div class="product-info-box">
                         <span class="product-cat-name">${product.category}</span>
-                        <h3 class="product-title">${product.name}</h3>
+                        <h3 class="product-title" onclick="window.openProductDetailModal('${product.id}')" style="cursor: pointer;">${product.name}</h3>
                         <p class="product-subtitle-short">${product.subtitle || ''}</p>
                         <div class="product-price-row">
                             <span class="product-current-price">$${Number(product.price).toLocaleString()} MXN</span>
