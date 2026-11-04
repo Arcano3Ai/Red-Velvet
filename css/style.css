@@ -24,6 +24,133 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Red Velvet Luxury Scrollbar (Firefox) */
+    scrollbar-width: thin;
+    scrollbar-color: #800020 #0c0608;
+}
+
+/* ==========================================================================
+   RED VELVET LUXURY SCROLLBAR (WEBKIT / CHROMIUM / SAFARI / EDGE)
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080305;
+    border-left: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.85);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #9b111e 0%, #800020 50%, #4a0404 100%);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25), 0 0 8px rgba(128, 0, 32, 0.45);
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #b81427 0%, #9b111e 50%, #60020d 100%);
+    border-color: #FFD700;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.65), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #FFD700;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 16px rgba(255, 215, 0, 0.95);
+}
+
+::-webkit-scrollbar-corner {
+    background: #080305;
+}
+
+/* ==========================================================================
+   CURSOR PERSONALIZADO: CORAZÓN RED VELVET & AURA DORADA
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+    html, body {
+        cursor: url('../assets/icons/cursor-heart.png') 8 6, url('../assets/icons/cursor-heart.svg') 8 6, auto;
+    }
+
+    /* Elementos interactivos / cliqueables: Corazón resplandeciente dorado */
+    a, button, [role="button"], input[type="submit"], input[type="button"], select,
+    .product-card, .cat-pill, .footer-legal-btn, .lang-btn, .theme-toggle-btn,
+    .cart-btn-header, .social-icon, .modal-close-btn, .accordion-header, .yessi-launcher-btn,
+    .yessi-chip, .unboxing-card, .faq-question, .back-to-top, .cart-item-remove,
+    .cart-qty-btn, .mood-btn, .btn, .legal-switch-btn, .modal-action-close {
+        cursor: url('../assets/icons/cursor-heart-pointer.png') 10 5, url('../assets/icons/cursor-heart-pointer.svg') 10 5, pointer !important;
+    }
+
+    /* Campos de texto mantienen el cursor de texto accesible */
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"], textarea {
+        cursor: text !important;
+    }
+}
+
+/* ==========================================================================
+   CINTA DINÁMICA DE PROGRESO DE SCROLL CON CORAZÓN RED VELVET
+   ========================================================================== */
+.rv-scroll-progress-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5px;
+    background: rgba(12, 6, 8, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100001;
+    pointer-events: none;
+}
+
+.rv-scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #800020 0%, #b31b2c 55%, #FFD700 100%);
+    position: relative;
+    box-shadow: 0 0 10px rgba(179, 27, 44, 0.85), 0 0 5px #FFD700;
+    transition: width 0.08s ease-out;
+}
+
+.rv-scroll-heart-tip {
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    line-height: 1;
+    color: #FFD700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.95), 0 0 14px rgba(179, 27, 44, 1);
+    animation: rvHeartPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes rvHeartPulse {
+    0%, 100% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.35); }
+}
+
+/* Estela de Destellos de Rubí y Oro para Cursor en Desktop */
+.rv-cursor-sparkle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999999;
+    animation: rvSparkleFade 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes rvSparkleFade {
+    0% {
+        opacity: 0.9;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.2) translateY(12px);
+    }
 }
 
 html {
@@ -1044,32 +1171,59 @@ img {
 }
 
 
-/* Back to top */
+/* Back to top con Joya de Corazón Red Velvet */
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
+    bottom: 7.2rem;
     right: 2rem;
-    width: 45px;
-    height: 45px;
-    background: var(--bg-charcoal);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
+    width: 48px;
+    height: 48px;
+    background: radial-gradient(circle at 35% 35%, #9b111e, #800020 60%, #4a0008 100%);
+    border: 1.5px solid rgba(212, 175, 55, 0.7);
+    color: #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 99;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 12px rgba(128, 0, 32, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .back-to-top.visible {
     opacity: 1;
     pointer-events: all;
+    transform: translateY(0);
 }
 
 .back-to-top:hover {
-    background: var(--red-velvet);
-    border-color: var(--red-velvet);
+    background: radial-gradient(circle at 35% 35%, #b31b2c, #9b111e 60%, #60020d 100%);
+    border-color: #FFD700;
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.back-to-top-heart {
+    font-size: 0.92rem;
+    color: #FFD700;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.9);
+    transition: transform 0.2s ease;
+}
+
+.back-to-top:hover .back-to-top-heart {
+    transform: scale(1.25);
+}
+
+.back-to-top-arrow {
+    font-size: 0.72rem;
+    margin-top: -1px;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 /* Animations */
@@ -4371,9 +4525,16 @@ button, a, input, select, textarea {
 
 /* 1. Ajuste de posición para botón Back to Top */
 .back-to-top {
-    bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important;
-    right: 1.5rem !important;
+    bottom: 7.8rem !important;
+    right: 1.8rem !important;
     z-index: 9990 !important;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: calc(5.2rem + env(safe-area-inset-bottom)) !important;
+        right: 1rem !important;
+    }
 }
 
 /* 2. Botón Lanzador Flotante */

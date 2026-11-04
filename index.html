@@ -37,6 +37,12 @@
     <link rel="stylesheet" href="css/style.css?v=2.2">
 </head>
 <body>
+    <!-- Red Velvet Dynamic Scroll Progress Ribbon -->
+    <div id="rv-scroll-progress-wrap" class="rv-scroll-progress-wrap" aria-hidden="true">
+        <div id="rv-scroll-progress-bar" class="rv-scroll-progress-bar">
+            <span class="rv-scroll-heart-tip">♥</span>
+        </div>
+    </div>
 
         <!-- Age Gate Modal (+18 Obligatorio) -->
     <div id="age-gate" class="age-gate active">
@@ -820,8 +826,11 @@
         <span id="toast-message" data-i18n="cart.toastAdded">Pieza añadida a tu bolsa de compras</span>
     </div>
 
-    <!-- Back to top -->
-    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+    <!-- Back to top con Corazón Red Velvet -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Subir al inicio">
+        <span class="back-to-top-heart">♥</span>
+        <span class="back-to-top-arrow">↑</span>
+    </button>
 
     <!-- Scripts -->
     <script src="js/i18n.js"></script>

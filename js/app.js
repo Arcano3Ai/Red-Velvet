@@ -1811,22 +1811,68 @@ document.addEventListener('DOMContentLoaded', () => {
     checkLegalHash();
 
     // ==========================================================================
-    // 7. CONTROLES COMUNES (HEADER, THEME, MENÚ, FAQ, SCROLL)
+    // 7. CONTROLES COMUNES (HEADER, THEME, MENÚ, FAQ, SCROLL & CURSOR)
     // ==========================================================================
     const header = document.querySelector('.header');
     const backToTopBtn = document.getElementById('back-to-top');
+    const scrollProgressBar = document.getElementById('rv-scroll-progress-bar');
     let scrollTicking = false;
+
     window.addEventListener('scroll', () => {
         if (!scrollTicking) {
             window.requestAnimationFrame(() => {
                 const sy = window.scrollY;
                 if (header) header.classList.toggle('scrolled', sy > 50);
-                if (backToTopBtn) backToTopBtn.classList.toggle('visible', sy > 500);
+                if (backToTopBtn) backToTopBtn.classList.toggle('visible', sy > 450);
+
+                // Actualizar barra de progreso de lectura Red Velvet con punta de corazón
+                if (scrollProgressBar) {
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (sy / docHeight) * 100 : 0;
+                    scrollProgressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+                }
+
                 scrollTicking = false;
             });
             scrollTicking = true;
         }
     }, { passive: true });
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Estela sutil de destellos de rubí y oro en movimiento del mouse (Solo Desktop)
+    const setupLuxuryCursorSparkles = () => {
+        if (window.matchMedia('(hover: none) or (pointer: coarse)').matches) return;
+        let lastSparkleTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastSparkleTime < 50) return;
+            lastSparkleTime = now;
+
+            const spark = document.createElement('div');
+            spark.className = 'rv-cursor-sparkle';
+            spark.style.left = (e.clientX - 4) + 'px';
+            spark.style.top = (e.clientY - 4) + 'px';
+
+            const isGold = Math.random() > 0.65;
+            spark.style.background = isGold
+                ? 'radial-gradient(circle, #FFE082 0%, #D4AF37 60%, transparent 100%)'
+                : 'radial-gradient(circle, #ff2a47 0%, #800020 60%, transparent 100%)';
+            spark.style.boxShadow = isGold
+                ? '0 0 6px #FFD700'
+                : '0 0 6px #b31b2c';
+
+            document.body.appendChild(spark);
+            setTimeout(() => {
+                if (spark.parentNode) spark.parentNode.removeChild(spark);
+            }, 550);
+        }, { passive: true });
+    };
+    setupLuxuryCursorSparkles();
 
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
