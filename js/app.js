@@ -271,6 +271,18 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCartDrawer();
     };
 
+    const showToast = (message) => {
+        const toast = document.getElementById('cart-toast');
+        const msgEl = document.getElementById('toast-message');
+        if (!toast) return;
+        if (msgEl) msgEl.textContent = message;
+        toast.classList.add('active');
+        clearTimeout(window.__cartToastTimeout);
+        window.__cartToastTimeout = setTimeout(() => {
+            toast.classList.remove('active');
+        }, 2600);
+    };
+
     const updateCartBadge = () => {
         const cart = getCart();
         const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -302,6 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         saveCart(cart);
+        showToast(`✨ Añadido: ${product.name}`);
         openCartDrawer();
     };
 
@@ -393,12 +406,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('cart-shipping-val').textContent = shipping === 0 ? 'GRATIS (Discreto)' : `$${shipping} MXN`;
         document.getElementById('cart-grand-total').textContent = `$${grandTotal.toLocaleString()} MXN`;
+
+        // Barra de progreso de envío gratis interactiva
+        const freeShippingText = document.getElementById('cart-free-shipping-text');
+        const freeShippingFill = document.getElementById('cart-progress-bar-fill');
+        if (freeShippingText && freeShippingFill) {
+            const percent = Math.min(100, Math.round((subtotal / 1500) * 100));
+            freeShippingFill.style.width = `${percent}%`;
+            if (subtotal >= 1500) {
+                freeShippingText.innerHTML = `✨ <strong>¡Envío Blindado GRATIS!</strong> Calificas para entrega confidencial sin costo.`;
+            } else {
+                const missing = 1500 - subtotal;
+                freeShippingText.innerHTML = `Agrega <strong>$${missing.toLocaleString()} MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>`;
+            }
+        }
     };
 
     // Funciones en window para handlers inline seguros
     window.updateCartQty = (id, delta) => updateCartQuantity(id, delta);
     window.removeCartItem = (id) => removeCartItem(id);
-    window.addToCartDirect = (id) => addToCart(id, 1);
+    window.addToCartDirect = (id, evt) => {
+        addToCart(id, 1);
+        if (evt && evt.currentTarget) {
+            const btn = evt.currentTarget;
+            const prev = btn.innerHTML;
+            btn.classList.add('added-success');
+            btn.innerHTML = '✓ Añadido a la Bolsa';
+            setTimeout(() => {
+                btn.classList.remove('added-success');
+                btn.innerHTML = prev;
+            }, 1200);
+        }
+    };
 
     // Controles de Apertura/Cierre del Carrito
     const cartDrawer = document.getElementById('cart-drawer');
@@ -632,7 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${hasDiscount ? `<span class="product-compare-price">$${Number(product.compare_price).toLocaleString()} MXN</span>` : ''}
                         </div>
                         <div class="product-card-actions">
-                            <button type="button" class="btn-add-to-bag" onclick="window.addToCartDirect('${product.id}')">
+                            <button type="button" class="btn-add-to-bag" onclick="window.addToCartDirect('${product.id}', event)">
                                 🛍️ Añadir a la Bolsa
                             </button>
                         </div>
@@ -664,6 +703,11 @@ document.addEventListener('DOMContentLoaded', () => {
             filtered.sort((a, b) => b.price - a.price);
         } else if (currentSort === 'newest') {
             filtered.sort((a, b) => (b.sort_order || 0) - (a.sort_order || 0));
+        }
+
+        const countPill = document.getElementById('catalog-count-pill');
+        if (countPill) {
+            countPill.textContent = `Mostrando ${filtered.length} piezas exclusivas`;
         }
 
         renderProductsGrid(filtered);
@@ -736,7 +780,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const product = allProducts.find(p => p.id === productId) || fallbackProducts.find(p => p.id === productId);
         if (!product || !detailBody) return;
 
-        const specs = product.specs || {};
+        let specs = product.specs || {};
+        if (typeof specs === 'string') {
+            try { specs = JSON.parse(specs); } catch (e) { specs = {}; }
+        }
+        if ((!specs || Object.keys(specs).length === 0) && product.specs_json) {
+            try { specs = JSON.parse(product.specs_json); } catch (e) { specs = {}; }
+        }
         const specKeys = Object.keys(specs);
 
         detailBody.innerHTML = `

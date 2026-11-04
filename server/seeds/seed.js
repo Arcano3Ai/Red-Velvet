@@ -567,6 +567,9 @@ const seedData = async () => {
         }
     ];
 
+    // Limpiar productos residuales o temporales de pruebas pasadas
+    await query.run('DELETE FROM products WHERE id NOT IN (' + luxuryProducts.map(() => '?').join(',') + ')', luxuryProducts.map(p => p.id));
+
     for (const p of luxuryProducts) {
         await query.run(`
             INSERT OR REPLACE INTO products (

@@ -3150,3 +3150,352 @@ img {
     color: #FFF;
     font-weight: 500;
 }
+
+/* ==========================================================================
+   ULTRA-LUXURY UI/UX ENHANCEMENTS — RED VELVET
+   ========================================================================== */
+
+/* Barra de Progreso de Envío Gratis en Carrito */
+.cart-free-shipping-wrap {
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart-free-shipping-text {
+    font-size: 0.82rem;
+    color: #F5E6BE;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cart-free-shipping-text strong {
+    color: #D4AF37;
+}
+
+.cart-progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cart-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #D4AF37 0%, #FFDF73 100%);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+/* Barra de Estado Dinámica del Catálogo */
+.catalog-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.2rem 1.4rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.catalog-count-pill {
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: #F5E6BE;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.catalog-shipping-hint {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+/* Input de Búsqueda Elegante */
+.filter-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 260px;
+}
+
+.filter-search-box .search-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: 0.9rem;
+    color: var(--gold);
+    pointer-events: none;
+}
+
+.filter-search-box .filter-search-input {
+    width: 100%;
+    padding-left: 2.5rem;
+    background: rgba(18, 14, 16, 0.75);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 0.85rem;
+    height: 42px;
+    transition: all 0.3s ease;
+}
+
+.filter-search-box .filter-search-input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background: rgba(25, 18, 20, 0.95);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+/* Category Pills Refinadas */
+.category-pills {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.cat-pill {
+    background: rgba(18, 14, 16, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #C0C0C0;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    backdrop-filter: blur(8px);
+}
+
+.cat-pill:hover {
+    color: #FFF;
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(35, 22, 26, 0.9);
+    transform: translateY(-2px);
+}
+
+.cat-pill.active {
+    background: linear-gradient(135deg, rgba(74, 14, 23, 0.8) 0%, rgba(20, 10, 14, 0.95) 100%);
+    border: 1px solid #D4AF37;
+    color: #FFDF73;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+    font-weight: 600;
+}
+
+/* Tarjetas de Producto Rediseñadas */
+.product-shop-card {
+    background: #0E0B0C;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+
+.product-shop-card:hover {
+    border-color: rgba(212, 175, 55, 0.45);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+.product-img-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.05;
+    background: #060405;
+    overflow: hidden;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-shop-card:hover .product-img-box img {
+    transform: scale(1.06);
+}
+
+.product-badge-corner {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(14, 11, 12, 0.88);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #F5E6BE;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.product-quick-view-btn {
+    position: absolute;
+    bottom: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(14, 11, 12, 0.92);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #FFF;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.78rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.product-shop-card:hover .product-quick-view-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.product-quick-view-btn:hover {
+    background: #D4AF37;
+    color: #000;
+    border-color: #D4AF37;
+}
+
+.product-info-box {
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-cat-name {
+    font-size: 0.7rem;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.product-title {
+    font-family: var(--font-serif);
+    font-size: 1.22rem;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+
+.product-shop-card:hover .product-title {
+    color: #FFDF73;
+}
+
+.product-subtitle-short {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin-bottom: 1.1rem;
+}
+
+.product-current-price {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.product-compare-price {
+    font-size: 0.9rem;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.btn-add-to-bag {
+    width: 100%;
+    background: linear-gradient(135deg, #4A0E17 0%, #2E080E 100%);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #FFFFFF;
+    padding: 0.8rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-add-to-bag:hover {
+    background: linear-gradient(135deg, #6B1321 0%, #3B0A12 100%);
+    border-color: #D4AF37;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-add-to-bag.added-success {
+    background: #1B4D2E !important;
+    border-color: #4CAF50 !important;
+    color: #FFF !important;
+}
+
+/* Toast Flotante */
+.cart-toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(14, 11, 12, 0.95);
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.85rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #FFF;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.2);
+    backdrop-filter: blur(12px);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cart-toast.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.cart-toast .toast-icon {
+    color: #D4AF37;
+    font-size: 1.1rem;
+}
+

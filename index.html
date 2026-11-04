@@ -220,23 +220,32 @@
                 <!-- Barra de Filtros y Búsqueda -->
                 <div class="catalog-filter-bar">
                     <div class="category-pills">
-                        <button class="cat-pill active" data-category="all">Todos</button>
-                        <button class="cat-pill" data-category="Pleasure Tech">Pleasure Tech</button>
-                        <button class="cat-pill" data-category="Sensory Care">Cosmética Sensorial</button>
-                        <button class="cat-pill" data-category="Fine Lingerie">Lencería Fina</button>
-                        <button class="cat-pill" data-category="Soft Fetish">Soft Fetish</button>
-                        <button class="cat-pill" data-category="Couples">Juegos en Pareja</button>
+                        <button class="cat-pill active" data-category="all">✨ Todos</button>
+                        <button class="cat-pill" data-category="Pleasure Tech">💎 Pleasure Tech</button>
+                        <button class="cat-pill" data-category="Sensory Care">🌿 Cosmética Sensorial</button>
+                        <button class="cat-pill" data-category="Fine Lingerie">👑 Lencería Fina</button>
+                        <button class="cat-pill" data-category="Soft Fetish">🖤 Soft Fetish</button>
+                        <button class="cat-pill" data-category="Couples">🌹 Juegos en Pareja</button>
                     </div>
 
                     <div class="filter-controls">
-                        <input type="text" id="catalog-search" class="filter-search-input" placeholder="🔍 Buscar por nombre...">
+                        <div class="filter-search-box">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="catalog-search" class="filter-search-input" placeholder="Buscar por pieza, material o sensación...">
+                        </div>
                         <select id="catalog-sort" class="filter-sort-select">
-                            <option value="featured">Destacados</option>
+                            <option value="featured">✨ Destacados de Autor</option>
                             <option value="price_asc">Menor Precio</option>
-                            <option value="price_desc">Mayor Precio</option>
-                            <option value="newest">Más Recientes</option>
+                            <option value="price_desc">Mayor Exclusividad</option>
+                            <option value="newest">Lanzamientos Recientes</option>
                         </select>
                     </div>
+                </div>
+
+                <!-- Barra de Estado Dinámica -->
+                <div class="catalog-status-bar">
+                    <span class="catalog-count-pill" id="catalog-count-pill">Mostrando 21 piezas exclusivas</span>
+                    <span class="catalog-shipping-hint">🔒 Empaque Ciego &amp; Envíos 100% Confidenciales</span>
                 </div>
 
                 <!-- Rejilla Dinámica de Productos -->
@@ -377,9 +386,13 @@
             <button id="cart-drawer-close" class="cart-close-btn" aria-label="Cerrar bolsa">&times;</button>
         </div>
 
-        <div class="discreet-shipping-badge">
-            <span>🔒</span>
-            <span>Empaque 100% Ciego & Envíos Gratuitos desde $1,500 MXN</span>
+        <div class="cart-free-shipping-wrap" id="cart-free-shipping-wrap">
+            <div class="cart-free-shipping-text" id="cart-free-shipping-text">
+                Agrega <strong>$1,500 MXN</strong> para tu <strong>Envío Blindado GRATIS</strong>
+            </div>
+            <div class="cart-progress-bar-bg">
+                <div class="cart-progress-bar-fill" id="cart-progress-bar-fill" style="width: 0%;"></div>
+            </div>
         </div>
 
         <div id="cart-items-container" class="cart-items-container">
@@ -492,6 +505,12 @@
             </form>
             <div id="checkout-feedback" style="display:none; padding:1.5rem; text-align:center;"></div>
         </div>
+    </div>
+
+    <!-- Toast Flotante de Notificación -->
+    <div id="cart-toast" class="cart-toast">
+        <span class="toast-icon">✨</span>
+        <span id="toast-message">Pieza añadida a tu bolsa de compras</span>
     </div>
 
     <!-- Back to top -->
