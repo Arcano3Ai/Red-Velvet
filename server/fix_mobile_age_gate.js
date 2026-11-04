@@ -128,3 +128,4 @@ if (oldListenerRegex.test(appJs)) {
 }
 fs.writeFileSync(appJsPath, appJs, 'utf8');
 console.log('✔ js/app.js actualizado con eventos click, touchend y pointerup');
+
