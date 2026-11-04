@@ -16,6 +16,8 @@ window.dismissAgeGate = function(e) {
         gate.style.setProperty('opacity', '0', 'important');
     }
     document.body.style.overflow = 'auto';
+    const heroVid = document.querySelector('.hero-bg-video');
+    if (heroVid && heroVid.paused) heroVid.play().catch(() => {});
     if (typeof playMusic === 'function') {
         try { playMusic(); } catch(m) {}
     }

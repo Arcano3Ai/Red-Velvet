@@ -31,12 +31,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- CSS -->
+        <!-- Preload Hero Video & Frame 0 Poster for 0ms Startup -->
+    <link rel="preload" href="assets/video/hero-poster.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/video/videointro.mp4" as="video" type="video/mp4">
     <link rel="stylesheet" href="css/style.css?v=2.2">
 </head>
 <body>
 
-    <!-- Age Gate Modal (+18 Obligatorio) -->
+        <!-- Age Gate Modal (+18 Obligatorio) -->
     <div id="age-gate" class="age-gate active">
+        <script>
+        try {
+            if (localStorage.getItem('redVelvetAgeVerified') === 'true') {
+                var g = document.getElementById('age-gate');
+                if (g) { g.className = 'age-gate'; g.style.display = 'none'; }
+                document.body.style.overflow = 'auto';
+            }
+        } catch(e) {}
+        </script>
         <div class="age-gate-content glass">
             <img src="assets/logo/logooficial.jpeg" alt="RED VELVET Logo" class="modal-logo" width="160" height="87" loading="lazy" decoding="async">
             <h2 style="font-family: var(--font-serif); font-size: 1.5rem; color: #D4AF37; margin-bottom: 0.8rem;" data-i18n="ageGate.title">RED VELVET BOUTIQUE</h2>
@@ -108,9 +120,21 @@
     <main>
         <!-- Hero Section -->
         <section id="inicio" class="hero">
-            <video autoplay loop muted playsinline class="hero-bg-video" preload="metadata">
+            <video autoplay loop muted playsinline preload="auto" poster="assets/video/hero-poster.webp" class="hero-bg-video">
                 <source src="assets/video/videointro.mp4" type="video/mp4">
             </video>
+            <script>
+            (function(){
+                try {
+                    var v = document.querySelector('.hero-bg-video');
+                    if (v) {
+                        v.muted = true;
+                        var p = v.play();
+                        if (p && typeof p.catch === 'function') p.catch(function(){});
+                    }
+                } catch(e) {}
+            })();
+            </script>
             <div class="hero-bg"></div>
             <div class="container hero-content">
                 <span class="age-indicator" data-i18n="hero.ageBadge">18+ | Boutique de Lujo & Bienestar Íntimo</span>
@@ -458,7 +482,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <video autoplay loop muted playsinline class="footer-bg-video" preload="metadata">
+        <video autoplay loop muted playsinline preload="none" poster="assets/video/footer-poster.webp" class="footer-bg-video">
             <source src="assets/video/footervideo.mp4?v=2" type="video/mp4">
         </video>
         <audio id="bg-music" loop preload="none">
