@@ -1524,8 +1524,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // 5. CARGA Y RENDERIZADO DEL CATÁLOGO DE PRODUCTOS
+    // 5. CARGA Y RENDERIZADO DEL CATÁLOGO DE PRODUCTOS (CON PAGINACIÓN PROGRESIVA)
     // ==========================================================================
+    let catalogPageSize = 36;
+    let catalogVisibleLimit = 36;
+
     const renderProductsGrid = (products) => {
         const grid = document.getElementById('products-grid');
         if (!grid) return;
@@ -1545,7 +1548,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const quickViewTxt = window.t ? window.t('catalog.card.quickView', '🔍 Vista Rápida & Specs') : '🔍 Vista Rápida & Specs';
         const addToBagTxt = window.t ? window.t('catalog.card.addToBag', '🛍️ Añadir a la Bolsa') : '🛍️ Añadir a la Bolsa';
 
-        grid.innerHTML = products.map(product => {
+        const visibleItems = products.slice(0, catalogVisibleLimit);
+        const hasMore = products.length > catalogVisibleLimit;
+
+        const cardsHtml = visibleItems.map(product => {
             const hasDiscount = product.compare_price && product.compare_price > product.price;
             const discountPercent = hasDiscount ? Math.round(((product.compare_price - product.price) / product.compare_price) * 100) : 0;
             return `
@@ -1575,9 +1581,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
         }).join('');
+
+        const loadMoreHtml = hasMore ? `
+            <div id="catalog-load-more-wrap" style="grid-column: 1 / -1; text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+                <button type="button" id="btn-load-more-products" class="btn btn-outline pulse-gold" style="border-color: #D4AF37; color: #FFD700; padding: 1rem 2.5rem; font-size: 0.95rem; border-radius: 50px; background: rgba(18, 12, 14, 0.85); backdrop-filter: blur(10px); cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.6);">
+                    ✨ Explorar Más Piezas (+${Math.min(catalogPageSize, products.length - catalogVisibleLimit)}) · Mostrando ${visibleItems.length} de ${products.length}
+                </button>
+            </div>
+        ` : '';
+
+        grid.innerHTML = cardsHtml + loadMoreHtml;
+
+        const loadMoreBtn = document.getElementById('btn-load-more-products');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                catalogVisibleLimit += catalogPageSize;
+                renderProductsGrid(products);
+            });
+        }
     };
 
-    const filterAndRenderCatalog = () => {
+    const filterAndRenderCatalog = (resetLimit = false) => {
+        if (resetLimit) {
+            catalogVisibleLimit = catalogPageSize;
+        }
         let filtered = [...allProducts];
 
         if (currentCategory !== 'all') {
@@ -1615,7 +1642,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.cat-pill').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.category === cat);
         });
-        filterAndRenderCatalog();
+        filterAndRenderCatalog(true);
         const catSec = document.getElementById('catalogo');
         if (catSec) catSec.scrollIntoView({ behavior: 'smooth' });
     };
@@ -1635,7 +1662,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn('Conectando catálogo local de reserva RED VELVET:', err);
             allProducts = fallbackProducts;
         }
-        filterAndRenderCatalog();
+        filterAndRenderCatalog(true);
         updateCartBadge();
     };
 
@@ -1645,7 +1672,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentCategory = btn.dataset.category;
-            filterAndRenderCatalog();
+            filterAndRenderCatalog(true);
         });
     });
 
@@ -1653,7 +1680,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             currentSearchTerm = e.target.value.trim();
-            filterAndRenderCatalog();
+            filterAndRenderCatalog(true);
         });
     }
 
@@ -1661,7 +1688,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {
             currentSort = e.target.value;
-            filterAndRenderCatalog();
+            filterAndRenderCatalog(true);
         });
     }
 

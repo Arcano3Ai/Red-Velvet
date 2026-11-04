@@ -1,6 +1,7 @@
 node_modules/
 data/*
 !data/.gitkeep
+!data/erectus_catalog_full.json
 uploads/*
 !uploads/.gitkeep
 .env

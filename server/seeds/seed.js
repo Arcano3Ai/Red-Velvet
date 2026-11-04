@@ -1156,6 +1156,20 @@ const seedData = async () => {
 
     luxuryProducts.push(...additionalProducts);
 
+    // Integrar catálogo completo sincronizado de Erectus si existe
+    const fs = require('fs');
+    const path = require('path');
+    const erectusPath = path.join(__dirname, '../../data/erectus_catalog_full.json');
+    if (fs.existsSync(erectusPath)) {
+        try {
+            const erectusItems = JSON.parse(fs.readFileSync(erectusPath, 'utf8'));
+            luxuryProducts.push(...erectusItems);
+            console.log(`📦 Añadidos ${erectusItems.length} productos sincronizados de Erectus.`);
+        } catch(e) {
+            console.warn('No se pudo cargar erectus_catalog_full.json en seed:', e.message);
+        }
+    }
+
     // Limpiar productos residuales o temporales de pruebas pasadas
     await query.run('DELETE FROM products WHERE id NOT IN (' + luxuryProducts.map(() => '?').join(',') + ')', luxuryProducts.map(p => p.id));
 
