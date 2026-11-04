@@ -8,6 +8,7 @@ const seedData = async () => {
     // 1. Cupones de descuento y bienvenida
     const initialCoupons = [
         { code: 'VELVET10', discount_percent: 10, discount_amount: 0, min_purchase: 500, max_uses: 1000, note: '10% de bienvenida para nuevos clientes' },
+        { code: 'VELVET15', discount_percent: 15, discount_amount: 0, min_purchase: 500, max_uses: 5000, note: '15% de cortesía The Velvet Circle' },
         { code: 'VIP20', discount_percent: 20, discount_amount: 0, min_purchase: 2500, max_uses: 500, note: '20% de descuento en pedidos mayores a $2,500 MXN' },
         { code: 'SECRET50', discount_percent: 15, discount_amount: 0, min_purchase: 1000, max_uses: 200, note: 'Código exclusivo membresía secreta' },
         { code: 'GOLD30', discount_percent: 30, discount_amount: 0, min_purchase: 4000, max_uses: 100, note: '30% descuento en pedidos Gold Suite' }
@@ -564,6 +565,179 @@ const seedData = async () => {
             badge: 'Cuarzo Natural',
             is_featured: 1,
             sort_order: 21
+        },
+        {
+            id: 'PROD-023',
+            name: 'Varita Tántrica Sónica "Solstice"',
+            slug: 'varita-tantrica-sonica-solstice',
+            category: 'Pleasure Tech',
+            subtitle: 'Masajeador sónico de cuerpo entero con cuello flexible y cabezal de silicona aterciopelada',
+            price: 3200,
+            compare_price: 3750,
+            stock: 18,
+            description: 'Una pieza escultórica de bienestar sensorial. Su potente motor de resonancia baja relaja fascias musculares profundas y desata ondas orgásmicas intensas sin vibraciones molestas en la mano. 100% sumergible con 8 patrones intuitivos.',
+            sensory_notes: 'Cabezal amortiguado ultra-suave, agarre contorneado con balance de peso perfecto, emisión sonora reducida (<39 dB).',
+            specs_json: JSON.stringify({
+                material: 'Silicona médica líquida y núcleo de aluminio cepillado',
+                impermeabilidad: 'IPX7 sumergible',
+                ruido: '< 39 dB (Whisper-Quiet)',
+                autonomia: '2.5 horas de uso continuo con carga rápida',
+                garantia: '2 años de reposición directa'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=80&w=900',
+            badge: 'Edición Especial',
+            is_featured: 1,
+            sort_order: 22
+        },
+        {
+            id: 'PROD-024',
+            name: 'Estimulador de Pareja "Nexus Sync"',
+            slug: 'estimulador-pareja-nexus-sync',
+            category: 'Pleasure Tech',
+            subtitle: 'Dispositivo ergonómico manos libres con vibración sincrónica dual durante la penetración',
+            price: 3850,
+            compare_price: 4400,
+            stock: 15,
+            description: 'Diseñado para compartirse. Su perfil en forma de U se adapta anatómicamente para estimular el punto G y el clítoris simultáneamente durante el coito, amplificando el placer de ambos amantes. Control inalámbrico discreto y compatible con app privada a larga distancia.',
+            sensory_notes: 'Silicona flexible con memoria de forma, calor corporal receptivo, conexión íntima compartida.',
+            specs_json: JSON.stringify({
+                material: 'Silicona biocompatible satinada grado quirúrgico',
+                conectividad: 'Bluetooth 5.2 cifrado & Control remoto discreto',
+                impermeabilidad: 'IPX7 100% resistente al agua',
+                bateria: 'Carga magnética USB hermética',
+                ruido: '< 40 dB'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&q=80&w=900',
+            badge: 'Juego en Pareja',
+            is_featured: 1,
+            sort_order: 23
+        },
+        {
+            id: 'PROD-025',
+            name: 'Aceite Íntimo Botánico "Botanical Aphrodisia"',
+            slug: 'aceite-intimo-botanico-aphrodisia',
+            category: 'Sensory Care',
+            subtitle: 'Infusión artesanal de Jojoba dorada, Rosa Damascena y Sándalo australiano',
+            price: 890,
+            compare_price: 1100,
+            stock: 40,
+            description: 'Un néctar nutritivo prensado en frío para masajes sensoriales y estimulación corporal integral. Se absorbe con una lentitud voluptuosa, hidratando la piel y dejando un halo aromático embriagador que agudiza el deseo.',
+            sensory_notes: 'Aroma amaderado floral misterioso, absorción sedosa no grasa, calor reconfortante al contacto prolongado.',
+            specs_json: JSON.stringify({
+                volumen: '120 ml con dispensador de cristal ámbar',
+                ingredientes: 'Aceite de Jojoba dorado orgánico, Rosa Damascena, Aceite de Sándalo, Vitamina E',
+                origen: '100% natural, vegano y libre de químicos sintéticos'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=900',
+            badge: '100% Orgánico',
+            is_featured: 0,
+            sort_order: 24
+        },
+        {
+            id: 'PROD-026',
+            name: 'Mantequilla de Masaje Besable "Dark Chocolate & Truffle"',
+            slug: 'mantequilla-masaje-chocolate-truffle',
+            category: 'Sensory Care',
+            subtitle: 'Bálsamo corporal comestible formulado con cacao orgánico de Tabasco y manteca de karité pura',
+            price: 680,
+            compare_price: 820,
+            stock: 35,
+            description: 'Una delicia para los sentidos táctiles y gustativos. Se funde al instante con el calor de los dedos o de los labios, invitando a explorar cada rincón de la anatomía de tu amante con besos cálidos y caricias lentas.',
+            sensory_notes: 'Textura rica aterciopelada, sabor a chocolate amargo gourmet sin azúcares refinados, no deja residuo pegajoso.',
+            specs_json: JSON.stringify({
+                peso_neto: '90 g en tarro de cristal violeta protector Miron',
+                comestible: '100% grado alimentario de cultivo ecológico',
+                seguridad: 'Libre de gluten, lácteos, parabenos y conservadores artificiales'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=900',
+            badge: 'Besable',
+            is_featured: 0,
+            sort_order: 25
+        },
+        {
+            id: 'PROD-027',
+            name: 'Corset Estructurado en Satén Noir "Étoile"',
+            slug: 'corset-saten-noir-etoile',
+            category: 'Fine Lingerie',
+            subtitle: 'Corsetería de alta costura con varillas de acero flexibles y copas en encaje chantilly',
+            price: 2950,
+            compare_price: 3600,
+            stock: 14,
+            description: 'Esculpe una silueta reloj de arena irresistible. Confeccionado con satén de seda pesada y forro interior de algodón transpirable. Su espalda con ojalillos dorados y cinta de satén permite regular el ajuste con precisión milimétrica.',
+            sensory_notes: 'Sujeción firme y sensual, tacto exterior frío y resbaladizo, realce natural del busto y cintura.',
+            specs_json: JSON.stringify({
+                materiales: 'Satén de seda duquesa, encaje francés Chantilly, ballenas metálicas espirales',
+                cierre: 'Apertura frontal de broches planos de acero y lazada trasera de satén',
+                tallas: 'Ajustable de S a L mediante cordón posterior'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=900',
+            badge: 'Alta Costura',
+            is_featured: 1,
+            sort_order: 26
+        },
+        {
+            id: 'PROD-028',
+            name: 'Arnés de Cuero Suave & Cadena de Oro "Sovereign"',
+            slug: 'arnes-cuero-oro-sovereign',
+            category: 'Soft Fetish',
+            subtitle: 'Arnés de pecho y hombros en piel de napa con herrajes bañados en oro champagne',
+            price: 2200,
+            compare_price: 2650,
+            stock: 18,
+            description: 'Una declaración de sensualidad y empoderamiento. Sus correas regulables de cuero suave se amoldan a las curvas del cuerpo sin marcar, complementadas por cadenas doradas extraíbles que caen con elegancia sobre el escote o la espalda.',
+            sensory_notes: 'Aroma embriagador a cuero legítimo, suavidad interior de ante, brillo sutil de los herrajes pulidos.',
+            specs_json: JSON.stringify({
+                material: 'Cuero de napa curtido vegetal y forro afelpado',
+                herrajes: 'Aleación pulida bañada en oro champagne antioxidante',
+                regulable: 'Ajuste milimétrico para tallas XS a XL'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&q=80&w=900',
+            badge: 'Diseño Exclusivo',
+            is_featured: 1,
+            sort_order: 27
+        },
+        {
+            id: 'PROD-029',
+            name: 'Vela de Cera a Baja Temperatura "Sensual Pour"',
+            slug: 'vela-cera-baja-temperatura-sensual-pour',
+            category: 'Couples',
+            subtitle: 'Vela de masaje y juego sensorial que se derrite a 40°C para verter directamente sobre la piel',
+            price: 850,
+            compare_price: 1050,
+            stock: 30,
+            description: 'Creada especialmente para el juego de goteo sensual y privación visual. Su mezcla de cera de soja refinada, cera de abejas y aceites botánicos se licúa a una temperatura tibia similar a un baño caliente, ofreciendo una sensación estimulante sin riesgo de quemaduras.',
+            sensory_notes: 'Gotas tibias de calor instantáneo, fragancia a flor de vainilla bourbon y ámbar negro, hidratación profunda.',
+            specs_json: JSON.stringify({
+                temperatura_fusion: '40°C - 42°C (100% segura e inofensiva para la piel)',
+                ingredientes: 'Cera de soja no transgénica, manteca de karité, aceites esenciales puros',
+                mecha: 'Algodón orgánico sin plomo',
+                duracion: 'Hasta 40 horas de encendido'
+            }),
+            images_json: JSON.stringify([
+                'https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=900'
+            ]),
+            photo_main: 'https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=900',
+            badge: 'Juego Térmico',
+            is_featured: 0,
+            sort_order: 28
         }
     ];
 

@@ -48,14 +48,23 @@ const runBrowserTest = async () => {
         console.log('📸 Captura 2: Hero y Pilares de Confidencialidad...');
         await page.screenshot({ path: path.join(SCREENSHOTS_DIR, '02_storefront_hero.png') });
 
+        // Screenshot 2B: El Ritual Velvet
+        console.log('📸 Captura 2B: El Ritual Velvet...');
+        await page.evaluate(() => {
+            const ritual = document.getElementById('ritual');
+            if (ritual) ritual.scrollIntoView();
+        });
+        await new Promise(r => setTimeout(r, 600));
+        await page.screenshot({ path: path.join(SCREENSHOTS_DIR, '02b_ritual_velvet.png') });
+
         // 3️⃣ Scroll a Catálogo y verificar productos cargados
-        console.log('3️⃣ Verificando carga dinámica del catálogo de 21 productos...');
+        console.log('3️⃣ Verificando carga dinámica del catálogo de 28 productos...');
         await page.evaluate(() => document.getElementById('catalogo').scrollIntoView());
         await page.waitForSelector('.product-shop-card', { timeout: 5000 });
 
         const productCardsCount = await page.evaluate(() => document.querySelectorAll('.product-shop-card').length);
         console.log(`✔ Tarjetas de producto renderizadas en DOM: ${productCardsCount}`);
-        console.assert(productCardsCount >= 21, 'No se cargaron las 21 tarjetas de producto');
+        console.assert(productCardsCount >= 28, `Esperadas >= 28 tarjetas, encontradas: ${productCardsCount}`);
 
         // Screenshot 3: Catálogo General
         console.log('📸 Captura 3: Catálogo Maestro...');
