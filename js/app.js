@@ -4386,12 +4386,16 @@ document.addEventListener('DOMContentLoaded', () => {
 ];
 
     // ==========================================================================
-    // 2. AUDIO & VERIFICACIÓN DE EDAD (+18) - AUTO-PLAY AL HACER SCROLL
+    // 2. AUDIO & VERIFICACIÓN DE EDAD (+18) - OPTIMIZADO PARA iOS / SAFARI / MÓVIL
     // ==========================================================================
     const bgMusic = document.getElementById('bg-music');
     const musicBtn = document.getElementById('ambient-music-btn');
     let hasStartedMusic = false;
     let isMusicMutedByUser = false;
+
+    // Detección precisa de iOS (iPhone, iPad, iPod y Safari en iPadOS)
+    const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
     const updateMusicUI = (isPlaying) => {
         if (!musicBtn) return;
@@ -4412,69 +4416,115 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const playMusicWithFadeIn = (targetVolume = 0.35) => {
+    // Desbloqueo universal de CoreAudio en iOS WebKit mediante Web Audio API
+    let iosAudioUnlocked = false;
+    const unlockIOSAudioSession = () => {
+        if (iosAudioUnlocked) return;
+        try {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            if (AudioCtx) {
+                if (!window._rvAudioCtx) {
+                    window._rvAudioCtx = new AudioCtx();
+                }
+                if (window._rvAudioCtx.state === 'suspended') {
+                    window._rvAudioCtx.resume();
+                }
+                const osc = window._rvAudioCtx.createOscillator();
+                const gain = window._rvAudioCtx.createGain();
+                gain.gain.value = 0.001;
+                osc.connect(gain);
+                gain.connect(window._rvAudioCtx.destination);
+                osc.start(0);
+                osc.stop(window._rvAudioCtx.currentTime + 0.05);
+                iosAudioUnlocked = true;
+            }
+        } catch (e) {}
+    };
+
+    const startAudioEngine = (targetVolume = 0.40) => {
         if (!bgMusic || isMusicMutedByUser || hasStartedMusic) return;
 
-        bgMusic.volume = 0;
+        // Desbloqueo inmediato de sesión de audio en iOS
+        unlockIOSAudioSession();
+
+        // En iOS Safari NO manipular bgMusic.volume = 0 (iOS bloquea o silencia por hardware)
+        if (!isIOSDevice) {
+            try { bgMusic.volume = 0.05; } catch (e) {}
+        } else {
+            try { bgMusic.volume = 1.0; } catch (e) {}
+        }
+
         const playPromise = bgMusic.play();
         if (playPromise !== undefined) {
             playPromise.then(() => {
                 hasStartedMusic = true;
                 updateMusicUI(true);
 
-                // Fade in sutil de volumen ambiental boutique
-                let currentVol = 0;
-                const fadeInterval = setInterval(() => {
-                    currentVol = Math.min(targetVolume, currentVol + 0.05);
-                    if (bgMusic) bgMusic.volume = currentVol;
-                    if (currentVol >= targetVolume) clearInterval(fadeInterval);
-                }, 120);
+                // Fade-in de volumen suave sólo en plataformas que lo admiten (no-iOS)
+                if (!isIOSDevice) {
+                    let currentVol = 0.05;
+                    const fadeInterval = setInterval(() => {
+                        currentVol = Math.min(targetVolume, currentVol + 0.05);
+                        try {
+                            if (bgMusic) bgMusic.volume = currentVol;
+                        } catch (e) {}
+                        if (currentVol >= targetVolume) clearInterval(fadeInterval);
+                    }, 120);
+                }
 
-                removeScrollAudioListeners();
+                removeGestureAudioListeners();
             }).catch(err => {
-                // Navegador requiere gesto físico de scroll/touch; se mantiene el listener activo
+                // En iOS el navegador esperará al primer toque táctil directo
             });
         }
     };
 
-    window.triggerLuxuryMusic = playMusicWithFadeIn;
+    window.triggerLuxuryMusic = startAudioEngine;
 
-    const onUserScrollAudioTrigger = () => {
+    const onUserInteractionAudio = () => {
         if (!hasStartedMusic && !isMusicMutedByUser) {
-            playMusicWithFadeIn();
+            startAudioEngine();
         }
     };
 
-    const scrollAudioEvents = ['scroll', 'wheel', 'touchmove', 'touchstart', 'pointerdown'];
-    const addScrollAudioListeners = () => {
-        scrollAudioEvents.forEach(evt => {
-            window.addEventListener(evt, onUserScrollAudioTrigger, { passive: true, capture: true });
+    // Eventos de interacción física (en iOS el scroll empieza siempre con touchstart/touchmove)
+    const gestureAudioEvents = ['touchstart', 'touchend', 'touchmove', 'click', 'scroll', 'wheel', 'pointerdown'];
+    const addGestureAudioListeners = () => {
+        gestureAudioEvents.forEach(evt => {
+            window.addEventListener(evt, onUserInteractionAudio, { passive: true, capture: true });
+            document.addEventListener(evt, onUserInteractionAudio, { passive: true, capture: true });
         });
     };
 
-    const removeScrollAudioListeners = () => {
-        scrollAudioEvents.forEach(evt => {
-            window.removeEventListener(evt, onUserScrollAudioTrigger, { capture: true });
+    const removeGestureAudioListeners = () => {
+        gestureAudioEvents.forEach(evt => {
+            window.removeEventListener(evt, onUserInteractionAudio, { capture: true });
+            document.removeEventListener(evt, onUserInteractionAudio, { capture: true });
         });
     };
 
-    addScrollAudioListeners();
+    addGestureAudioListeners();
 
     if (musicBtn) {
-        musicBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (!bgMusic) return;
+        ['click', 'touchend'].forEach(evt => {
+            musicBtn.addEventListener(evt, (e) => {
+                e.stopPropagation();
+                if (evt === 'touchend') e.preventDefault();
+                if (!bgMusic) return;
 
-            if (!bgMusic.paused) {
-                bgMusic.pause();
-                isMusicMutedByUser = true;
-                hasStartedMusic = false;
-                updateMusicUI(false);
-            } else {
-                isMusicMutedByUser = false;
-                hasStartedMusic = false;
-                playMusicWithFadeIn();
-            }
+                unlockIOSAudioSession();
+
+                if (!bgMusic.paused) {
+                    bgMusic.pause();
+                    isMusicMutedByUser = true;
+                    hasStartedMusic = false;
+                    updateMusicUI(false);
+                } else {
+                    isMusicMutedByUser = false;
+                    hasStartedMusic = false;
+                    startAudioEngine();
+                }
+            }, { passive: false });
         });
     }
 
@@ -4490,14 +4540,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ageGate) ageGate.classList.remove('active');
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
-        // Si ya está verificado, intentar reproducir (o esperar primer scroll)
-        playMusicWithFadeIn();
+        // Si ya está verificado, iniciar o escuchar primer touch/scroll
+        startAudioEngine();
     }
 
     if (btnAdult) {
-        ['click', 'touchend', 'pointerup'].forEach(evt => {
+        ['click', 'touchend', 'pointerup', 'touchstart'].forEach(evt => {
             btnAdult.addEventListener(evt, (e) => {
                 if (evt === 'touchend') e.preventDefault();
+                unlockIOSAudioSession();
                 window.dismissAgeGate(e);
             }, { passive: false });
         });
@@ -5380,8 +5431,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(updateScrollMetrics, 400);
 
     window.addEventListener('scroll', () => {
-        if (typeof onUserScrollAudioTrigger === 'function') {
-            onUserScrollAudioTrigger();
+        if (typeof onUserInteractionAudio === 'function') {
+            onUserInteractionAudio();
         }
         if (!scrollTicking) {
             window.requestAnimationFrame(() => {

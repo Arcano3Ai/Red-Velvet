@@ -75,7 +75,7 @@ const runAdminSuite = async () => {
         console.log(`✔ Producto ${createdId} desactivado correctamente`);
 
         // 6. Crear y verificar cupón nuevo
-        const couponCode = `TESTPROMO${Date.now().toString().slice(-4)}`;
+        const couponCode = `TESTPROMO_${Date.now()}_${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
         const createCouponRes = await fetch(`${baseUrl}/api/codes/coupon`, {
             method: 'POST',
             headers,
