@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const { query } = require('../db/database');
 
-// Base de conocimiento del servidor para Yessi Concierge
+// Base de conocimiento del servidor para Ruby Concierge
 const SERVER_KNOWLEDGE = [
     {
-        keywords: ['hola', 'buenas', 'saludos', 'yessi'],
-        reply: '¡Hola! Soy Yessi, tu Concierge privada en RED VELVET. ¿En qué puedo orientarte hoy sobre nuestras piezas, envíos discretos o promociones?'
+        keywords: ['hola', 'buenas', 'saludos', 'ruby', 'yessi'],
+        reply: '¡Hola! Soy Ruby, tu Concierge privada en RED VELVET. ¿En qué puedo orientarte hoy sobre nuestras piezas, envíos discretos o promociones?'
     },
     {
         keywords: ['empaque', 'discrecion', 'discreto', 'ciego', 'caja'],
@@ -60,7 +60,7 @@ router.post('/chat', async (req, res) => {
 
         res.json({
             success: true,
-            concierge: 'Yessi Concierge',
+            concierge: 'Ruby Concierge',
             reply: matchedReply,
             products: relatedProducts || []
         });

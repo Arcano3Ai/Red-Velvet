@@ -4585,12 +4585,33 @@ button, a, input, select, textarea {
 }
 
 .yessi-launcher-avatar {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% !important;
     position: relative;
     flex-shrink: 0;
-    overflow: visible;
+    overflow: hidden !important;
+    clip-path: circle(50% at 50% 50%) !important;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.45);
+    background: #12090C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+.yessi-launcher-avatar-video,
+.yessi-launcher-avatar video,
+.yessi-launcher-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    pointer-events: none;
+    transform: scale(1.04);
 }
 
 .yessi-launcher-text {
@@ -5547,81 +5568,94 @@ button, a, input, select, textarea {
 
 
 /* ==========================================================================
-   YESSI CONCIERGE — AVATAR REAL CON EFECTO ZOOM AL PASAR EL MOUSE (HOVER)
+   RUBY CONCIERGE — AVATAR CIRCULAR EN VIDEO DE ALTA DEFINICIÓN
    ========================================================================== */
-/* Desktop: Avatar al doble de tamaño (76px vs 38px original) */
 .yessi-launcher-avatar {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% !important;
     position: relative;
     flex-shrink: 0;
-    overflow: visible;
-    background: transparent !important;
-    border: none !important;
-}
-
-.yessi-launcher-avatar-img {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2.5px solid #D4AF37;
-    display: block;
-    box-shadow: 0 0 16px rgba(212, 175, 55, 0.45);
+    overflow: hidden !important;
+    clip-path: circle(50% at 50% 50%) !important;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.5), inset 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #12090C !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
     transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.35s ease, border-color 0.3s ease;
 }
 
-.yessi-launcher:hover .yessi-launcher-avatar-img,
-.yessi-launcher-avatar-img:hover {
-    transform: scale(1.35);
-    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.7), 0 0 25px #FFD700;
-    border-color: #FFD700;
-    z-index: 9999;
+.yessi-launcher:hover .yessi-launcher-avatar {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.75), inset 0 0 10px rgba(0, 0, 0, 0.8);
+    border-color: #FFD700 !important;
+}
+
+.yessi-launcher-avatar-video,
+.yessi-launcher-avatar video {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    pointer-events: none;
+    transform: scale(1.04);
 }
 
 .yessi-avatar-ring {
     position: relative;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    clip-path: circle(50% at 50% 50%) !important;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 12px rgba(212, 175, 55, 0.4);
+    background: #12090C !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent !important;
-    border: none !important;
-    overflow: visible;
+    aspect-ratio: 1 / 1;
 }
 
 .yessi-header-avatar {
     position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% !important;
+    overflow: hidden !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: zoom-in;
-    overflow: visible;
 }
 
-.yessi-header-avatar-img {
-    width: 48px;
-    height: 48px;
+.yessi-header-avatar-video,
+.yessi-header-avatar video {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    pointer-events: none;
+    transform: scale(1.04);
+}
+
+.yessi-status-dot {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #D4AF37;
-    display: block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.35s ease, border-color 0.3s ease;
-    cursor: zoom-in;
-}
-
-/* Efecto: la imagen se hace grande al pasar el mouse por encima */
-.yessi-header-avatar:hover .yessi-header-avatar-img,
-.yessi-header-avatar-img:hover {
-    transform: scale(2.6);
-    z-index: 999999;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(212, 175, 55, 0.7);
-    border-color: #FFD700;
-    border-width: 2.5px;
+    background: #25D366;
+    border: 2px solid #1A0D10;
+    box-shadow: 0 0 6px #25D366;
+    z-index: 10;
 }
 
 
@@ -6041,11 +6075,15 @@ button, a, input, select, textarea {
         gap: 0.6rem !important;
     }
 
-    .yessi-launcher-avatar,
-    .yessi-launcher-avatar-img {
-        width: 34px !important;
-        height: 34px !important;
+    .yessi-launcher-avatar {
+        width: 44px !important;
+        height: 44px !important;
         border-width: 1.5px !important;
+    }
+
+    .yessi-launcher-avatar-video {
+        width: 100% !important;
+        height: 100% !important;
     }
 
     .yessi-launcher-text strong {

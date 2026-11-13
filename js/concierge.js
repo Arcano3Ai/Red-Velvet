@@ -1,5 +1,5 @@
 /**
- * RED VELVET — YESSI CONCIERGE (Asistente Virtual & Concierge de Ultra-Lujo)
+ * RED VELVET — RUBY CONCIERGE (Asistente Virtual & Concierge de Ultra-Lujo)
  * Atiende dudas sobre discreción, envíos, recomendaciones del catálogo, materiales y cupones.
  */
 
@@ -10,7 +10,7 @@
     const YESSI_KNOWLEDGE = [
         {
             keywords: ['hola', 'buenas', 'buen dia', 'buenas tardes', 'buenas noches', 'saludos', 'oye', 'hey'],
-            reply: '¡Hola! Es un placer saludarte. Soy **Yessi**, tu Concierge privada de **RED VELVET**. Estoy aquí para orientarte con total confidencialidad sobre nuestras piezas de bienestar íntimo, empaques discretos o códigos de cortesía. ¿En qué puedo consentirte hoy?',
+            reply: '¡Hola! Es un placer saludarte. Soy **Ruby**, tu Concierge privada de **RED VELVET**. Estoy aquí para orientarte con total confidencialidad sobre nuestras piezas de bienestar íntimo, empaques discretos o códigos de cortesía. ¿En qué puedo consentirte hoy?',
             chips: ['📦 ¿Cómo es el empaque?', '🌹 Recomendación para parejas', '💎 Succionadores más vendidos', '🏷️ Cupones disponibles']
         },
         {
@@ -75,8 +75,8 @@
         },
         {
             keywords: ['whatsapp', 'humano', 'persona', 'hablar', 'asesora', 'contacto', 'telefono', 'call', 'human'],
-            reply: '💬 Con mucho gusto. Si deseas atención humana 1 a 1 de forma completamente privada, puedes chatear directamente con nuestro equipo de Concierge en WhatsApp:\n\n👉 [**Abrir WhatsApp de Concierge (+52 1 273 112 3888)**](https://wa.me/5212731123888?text=Hola%20RED%20VELVET,%20deseo%20asesor%C3%ADa%20personalizada%20con%20Yessi)',
-            chips: ['Seguir aquí con Yessi', '📦 Preguntar por empaque']
+            reply: '💬 Con mucho gusto. Si deseas atención humana 1 a 1 de forma completamente privada, puedes chatear directamente con nuestro equipo de Concierge en WhatsApp:\n\n👉 [**Abrir WhatsApp de Concierge (+52 1 273 112 3888)**](https://wa.me/5212731123888?text=Hola%20RED%20VELVET,%20deseo%20asesor%C3%ADa%20personalizada%20con%20Ruby)',
+            chips: ['Seguir aquí con Ruby', '📦 Preguntar por empaque']
         }
     ];
 
@@ -117,13 +117,13 @@
             wrap.id = 'yessi-widget-container';
             wrap.innerHTML = `
                 <!-- Botón Disparador Flotante -->
-                <button type="button" id="yessi-launcher-btn" class="yessi-launcher" aria-label="Abrir asistente Yessi Concierge">
+                <button type="button" id="yessi-launcher-btn" class="yessi-launcher" aria-label="Abrir asistente Ruby Concierge">
                     <span class="yessi-launcher-pulse"></span>
                     <span class="yessi-launcher-avatar">
-                        <img src="assets/avatars/yessi-avatar.jpg" alt="Yessi" class="yessi-launcher-avatar-img">
+                        <video src="assets/video/ruby-avatar.mp4" autoplay loop muted playsinline webkit-playsinline class="yessi-launcher-avatar-video"></video>
                     </span>
                     <span class="yessi-launcher-text">
-                        <strong>Yessi Concierge</strong>
+                        <strong>Ruby Concierge</strong>
                         <small>${isEn ? '● Online · Confidential' : '● En línea · Confidencial'}</small>
                     </span>
                     <span class="yessi-unread-badge" id="yessi-unread-badge" style="display:none;">1</span>
@@ -134,14 +134,16 @@
                     <!-- Cabecera -->
                     <div class="yessi-chat-header">
                         <div class="yessi-header-info">
-                            <div class="yessi-avatar-ring">
-                                <span class="yessi-header-avatar">
-                                    <img src="assets/avatars/yessi-avatar.jpg" alt="Yessi Concierge" class="yessi-header-avatar-img" title="Yessi Concierge — Pasa el cursor para ver de cerca">
-                                </span>
+                            <div class="yessi-avatar-wrap" style="position:relative; display:inline-flex; align-items:center; justify-content:center;">
+                                <div class="yessi-avatar-ring">
+                                    <span class="yessi-header-avatar">
+                                        <video src="assets/video/ruby-avatar.mp4" autoplay loop muted playsinline webkit-playsinline class="yessi-header-avatar-video" title="Ruby Concierge"></video>
+                                    </span>
+                                </div>
                                 <span class="yessi-status-dot"></span>
                             </div>
                             <div class="yessi-header-titles">
-                                <h4 class="yessi-header-name">Yessi Concierge</h4>
+                                <h4 class="yessi-header-name">Ruby Concierge</h4>
                                 <span class="yessi-header-role">${isEn ? 'Private Advisor · RED VELVET' : 'Asesora Privada · RED VELVET'}</span>
                             </div>
                         </div>
@@ -165,7 +167,7 @@
 
                     <!-- Input / Footer -->
                     <form id="yessi-chat-form" class="yessi-chat-form" onsubmit="event.preventDefault(); window.yessiSendUserMessage();">
-                        <input type="text" id="yessi-user-input" class="yessi-user-input" placeholder="${isEn ? 'Ask me about shipping, pieces, or courtesy codes...' : 'Pregúntame sobre envíos, piezas o cupones...'}" autocomplete="off">
+                        <input type="text" id="yessi-user-input" class="yessi-user-input" placeholder="${isEn ? 'Ask Ruby about shipping, pieces, or courtesy codes...' : 'Pregúntale a Ruby sobre envíos, piezas o cupones...'}" autocomplete="off">
                         <button type="submit" id="yessi-btn-send" class="yessi-btn-send" aria-label="Enviar mensaje">
                             ➤
                         </button>
@@ -173,6 +175,12 @@
                 </div>
             `;
             document.body.appendChild(wrap);
+
+            // Asegurar reproducción fluida de los avatares en video
+            wrap.querySelectorAll('video').forEach(vid => {
+                vid.muted = true;
+                vid.play().catch(() => {});
+            });
 
             // Cargar bienvenida inicial
             this.renderWelcome();
@@ -228,7 +236,7 @@
                 body.innerHTML = `
                     <div class="yessi-msg-row yessi-bot-row">
                         <div class="yessi-msg-bubble">
-                            <p>Hello! Welcome to <strong>RED VELVET</strong>. I am <strong>Yessi</strong>, your personal concierge and intimate wellness advisor.</p>
+                            <p>Hello! Welcome to <strong>RED VELVET</strong>. I am <strong>Ruby</strong>, your personal concierge and intimate wellness advisor.</p>
                             <p style="margin-top:0.4rem;">I am here to guide you with complete confidentiality on our luxury pieces, blind discreet packaging, or exclusive courtesy codes.</p>
                             <span class="yessi-msg-time">Now</span>
                         </div>
@@ -246,7 +254,7 @@
                 body.innerHTML = `
                     <div class="yessi-msg-row yessi-bot-row">
                         <div class="yessi-msg-bubble">
-                            <p>¡Hola! Te doy la bienvenida a <strong>RED VELVET</strong>. Soy <strong>Yessi</strong>, tu concierge personal y asesora de bienestar íntimo.</p>
+                            <p>¡Hola! Te doy la bienvenida a <strong>RED VELVET</strong>. Soy <strong>Ruby</strong>, tu concierge personal y asesora de bienestar íntimo.</p>
                             <p style="margin-top:0.4rem;">Estoy aquí para ayudarte a elegir la pieza perfecta, resolver dudas de discreción de tu empaque o brindarte códigos de cortesía exclusivos.</p>
                             <span class="yessi-msg-time">Ahora</span>
                         </div>
