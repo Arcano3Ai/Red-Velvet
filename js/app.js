@@ -19,8 +19,8 @@ window.dismissAgeGate = function(e) {
     document.documentElement.style.overflow = '';
     const heroVid = document.querySelector('.hero-bg-video');
     if (heroVid && heroVid.paused) heroVid.play().catch(() => {});
-    if (typeof playMusic === 'function') {
-        try { playMusic(); } catch(m) {}
+    if (typeof window.triggerLuxuryMusic === 'function') {
+        try { window.triggerLuxuryMusic(); } catch(m) {}
     }
 };
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Catálogo maestro de reserva (Fallback de ultra-lujo por si la API tarda o está offline)
     const fallbackProducts = [
     {
-        "id": "PROD-MK-1737",
+        "id": "PROD-RV-1737",
         "name": "Anal Sex New Sensations 60ml CREMA",
         "slug": "anal-sex-new-sensations-60ml-crema-1737",
         "category": "Sensory Care",
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema relajante para antes de la actividad sexual. Con Wintergreen y Damiana, Textura agradable, Desensibilizante, con Hamamelis y Árnica, Protector del…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema relajante para antes de la actividad sexual. Con Wintergreen y Damiana, Textura agradable, Desensibilizante, con Hamamelis y Árnica, Protector del…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00077",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900092",
+        "id": "PROD-RV-900092",
         "name": "3 Anillos de Pene Trasparentes",
         "slug": "3-anillos-de-pene-trasparentes-900092",
         "category": "Pleasure Tech",
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 239,
         "compare_price": null,
         "stock": 24,
-        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00415",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487397/ddurazno/900092-url-df3fa2e262a9e7a5.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 199
     },
     {
-        "id": "PROD-MK-900064",
+        "id": "PROD-RV-900064",
         "name": "7 Plug Morados Diferentes Tamaños",
         "slug": "7-plug-morados-diferentes-tamanos-900064",
         "category": "Pleasure Tech",
@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nSet de 7 plugs anales de silicona en color morado, con distintos tamaños para progresar gradualmente. Ideales para principiantes y usuarios con más…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nSet de 7 plugs anales de silicona en color morado, con distintos tamaños para progresar gradualmente. Ideales para principiantes y usuarios con más…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00387",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900090",
+        "id": "PROD-RV-900090",
         "name": "Anillos de Pene Negros",
         "slug": "anillos-de-pene-negros-900090",
         "category": "Pleasure Tech",
@@ -164,10 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 239,
         "compare_price": null,
         "stock": 24,
-        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00413",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -189,13 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487386/ddurazno/900090-url-940606936a13d248.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 199
     },
     {
-        "id": "PROD-MK-900094",
+        "id": "PROD-RV-900094",
         "name": "Anillos de Pene Transparentes",
         "slug": "anillos-de-pene-transparentes-900094",
         "category": "Pleasure Tech",
@@ -203,10 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 239,
         "compare_price": null,
         "stock": 24,
-        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00417",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -228,13 +228,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487410/ddurazno/900094-url-197f636e87791d59.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 199
     },
     {
-        "id": "PROD-MK-900098",
+        "id": "PROD-RV-900098",
         "name": "Arnés Sencillo",
         "slug": "arnes-sencillo-900098",
         "category": "Soft Fetish",
@@ -242,10 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00421",
             "categoria_original": "Accesorios y Despedidas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -273,13 +273,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487431/ddurazno/900098-url-be3223049268b214.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-1776",
+        "id": "PROD-RV-1776",
         "name": "Aceite Térmico Feel Love Fresa 60ml",
         "slug": "aceite-termico-feel-love-fresa-60ml-1776",
         "category": "Sensory Care",
@@ -287,10 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Fresa 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Fresa 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00111",
             "categoria_original": "Aceites Térmicos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-1725",
+        "id": "PROD-RV-1725",
         "name": "Blue Boss 1000 72 horas - 1 toma",
         "slug": "blue-boss-1000-72-horas-1-toma-1725",
         "category": "Sensory Care",
@@ -320,10 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 155,
         "compare_price": null,
         "stock": 24,
-        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00067",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 129
     },
     {
-        "id": "PROD-MK-900070",
+        "id": "PROD-RV-900070",
         "name": "Bomba de Vacío",
         "slug": "bomba-de-vacio-900070",
         "category": "Sensory Care",
@@ -357,10 +357,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 779,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBomba de vacío para estimulación masculina, con sistema manual.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBomba de vacío para estimulación masculina, con sistema manual.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00393",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 649
     },
     {
-        "id": "PROD-MK-1727",
+        "id": "PROD-RV-1727",
         "name": "Blue Boss 2000 Plus 72 Hrs - 1 Toma",
         "slug": "blue-boss-2000-plus-72-hrs-1-toma-1727",
         "category": "Sensory Care",
@@ -396,10 +396,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00068",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900055",
+        "id": "PROD-RV-900055",
         "name": "Capa de pene",
         "slug": "capa-de-pene-900055",
         "category": "Pleasure Tech",
@@ -436,10 +436,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00378",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -459,13 +459,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652096/ddurazno/prov2_KKE1022.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900010",
+        "id": "PROD-RV-900010",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900010",
         "category": "Pleasure Tech",
@@ -473,10 +473,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00333",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -484,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -496,13 +496,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652038/ddurazno/prov2_DE1018.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900015",
+        "id": "PROD-RV-900015",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900015",
         "category": "Pleasure Tech",
@@ -510,10 +510,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00338",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -533,13 +533,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652049/ddurazno/prov2_XQ1027.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900013",
+        "id": "PROD-RV-900013",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900013",
         "category": "Pleasure Tech",
@@ -547,10 +547,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00336",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -558,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -570,13 +570,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900016",
+        "id": "PROD-RV-900016",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900016",
         "category": "Pleasure Tech",
@@ -584,10 +584,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00339",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -595,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -607,13 +607,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652050/ddurazno/prov2_XQ1028.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900011",
+        "id": "PROD-RV-900011",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900011",
         "category": "Pleasure Tech",
@@ -621,10 +621,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00334",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -644,13 +644,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900021",
+        "id": "PROD-RV-900021",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900021",
         "category": "Pleasure Tech",
@@ -658,10 +658,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00344",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -669,7 +669,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -681,13 +681,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652058/ddurazno/prov2_AK1037.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-1775",
+        "id": "PROD-RV-1775",
         "name": "Aceite Térmico Feel Love Menta 60ml",
         "slug": "aceite-termico-feel-love-menta-60ml-1775",
         "category": "Sensory Care",
@@ -695,10 +695,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Menta 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Menta 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00110",
             "categoria_original": "Aceites Térmicos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900017",
+        "id": "PROD-RV-900017",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900017",
         "category": "Pleasure Tech",
@@ -728,10 +728,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00340",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -739,7 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -751,13 +751,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652051/ddurazno/prov2_AX1005.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900018",
+        "id": "PROD-RV-900018",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900018",
         "category": "Pleasure Tech",
@@ -765,10 +765,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00341",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -788,13 +788,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652052/ddurazno/prov2_AX1004.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900020",
+        "id": "PROD-RV-900020",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900020",
         "category": "Pleasure Tech",
@@ -802,10 +802,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00343",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -813,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -825,13 +825,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652057/ddurazno/prov2_AK1036.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900022",
+        "id": "PROD-RV-900022",
         "name": "Capa del pene",
         "slug": "capa-del-pene-900022",
         "category": "Pleasure Tech",
@@ -839,10 +839,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00345",
             "categoria_original": "Anillos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -850,7 +850,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -862,13 +862,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652060/ddurazno/prov2_AAS1004.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1646",
+        "id": "PROD-RV-1646",
         "name": "Concentrado de Feromonas 5ml MUJER",
         "slug": "concentrado-de-feromonas-5ml-mujer-1646",
         "category": "Sensory Care",
@@ -876,10 +876,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00001",
             "categoria_original": "Feromonas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -887,7 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -901,7 +901,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1647",
+        "id": "PROD-RV-1647",
         "name": "Concentrado de Feromonas 5ml HOMBRE",
         "slug": "concentrado-de-feromonas-5ml-hombre-1647",
         "category": "Sensory Care",
@@ -909,10 +909,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00002",
             "categoria_original": "Feromonas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -920,7 +920,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -935,7 +935,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900082",
+        "id": "PROD-RV-900082",
         "name": "Cápsula y Bala Rosa",
         "slug": "capsula-y-bala-rosa-900082",
         "category": "Pleasure Tech",
@@ -943,10 +943,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00405",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -954,7 +954,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -969,13 +969,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652074/ddurazno/prov2_MMC1003.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487198/ddurazno/900082-url-fb635ab02dffefc4.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900080",
+        "id": "PROD-RV-900080",
         "name": "Cápsula y Bala Rosa App y Control",
         "slug": "capsula-y-bala-rosa-app-y-control-900080",
         "category": "Pleasure Tech",
@@ -983,10 +983,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 839,
         "compare_price": null,
         "stock": 24,
-        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nCápsula vibradora tipo bala en color rosa, recargable, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nCápsula vibradora tipo bala en color rosa, recargable, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00403",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -994,7 +994,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1018,7 +1018,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 699
     },
     {
-        "id": "PROD-MK-900061",
+        "id": "PROD-RV-900061",
         "name": "Cápsula y bala",
         "slug": "capsula-y-bala-900061",
         "category": "Pleasure Tech",
@@ -1026,10 +1026,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00384",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1037,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1049,13 +1049,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652074/ddurazno/prov2_MMC1003.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788107622/ddurazno/900061-manual-1788107622863.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900075",
+        "id": "PROD-RV-900075",
         "name": "Dados Rosa y Negro",
         "slug": "dados-rosa-y-negro-900075",
         "category": "Couples",
@@ -1063,10 +1063,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nPar de dados eróticos en color rosa y negro, ideales para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nPar de dados eróticos en color rosa y negro, ideales para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00398",
             "categoria_original": "Accesorios y Despedidas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1074,7 +1074,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1088,13 +1088,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129376/ddurazno/900075-url-01c9d75c87c4b783.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900077",
+        "id": "PROD-RV-900077",
         "name": "Dado Verde",
         "slug": "dado-verde-900077",
         "category": "Soft Fetish",
@@ -1102,10 +1102,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color verde, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color verde, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00400",
             "categoria_original": "Accesorios y Despedidas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1113,7 +1113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1127,13 +1127,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129396/ddurazno/900077-url-e7b82da6445e5e77.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900097",
+        "id": "PROD-RV-900097",
         "name": "Dildo Dragón",
         "slug": "dildo-dragon-900097",
         "category": "Pleasure Tech",
@@ -1141,10 +1141,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00420",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1152,7 +1152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1166,13 +1166,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487427/ddurazno/900097-url-712a8e9c41c92a0e.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900083",
+        "id": "PROD-RV-900083",
         "name": "Dildo Negro sin Vibración",
         "slug": "dildo-negro-sin-vibracion-900083",
         "category": "Pleasure Tech",
@@ -1180,10 +1180,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Negro sin Vibración .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Negro sin Vibración .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00406",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1191,7 +1191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1211,13 +1211,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487314/ddurazno/900083-url-fcbc77ad2e842941.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900076",
+        "id": "PROD-RV-900076",
         "name": "Dado Blanco",
         "slug": "dado-blanco-900076",
         "category": "Soft Fetish",
@@ -1225,10 +1225,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color blanco, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color blanco, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00399",
             "categoria_original": "Accesorios y Despedidas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1236,7 +1236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1250,13 +1250,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129385/ddurazno/900076-url-8c0b9cbcb521f2f6.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900084",
+        "id": "PROD-RV-900084",
         "name": "Dildo Transparente Rosa",
         "slug": "dildo-transparente-rosa-900084",
         "category": "Pleasure Tech",
@@ -1264,10 +1264,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00407",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1275,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1293,13 +1293,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487330/ddurazno/900084-url-96473b995502dc45.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900093",
+        "id": "PROD-RV-900093",
         "name": "Dildo Verde",
         "slug": "dildo-verde-900093",
         "category": "Pleasure Tech",
@@ -1307,10 +1307,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00416",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1318,7 +1318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1336,13 +1336,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487401/ddurazno/900093-url-5c31e7f6d00bd8fa.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900046",
+        "id": "PROD-RV-900046",
         "name": "Dildo con arnés Cod. S1610-AX1018",
         "slug": "dildo-con-arnes-cod-s1610-ax1018-900046",
         "category": "Soft Fetish",
@@ -1350,10 +1350,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 779,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00369",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1361,7 +1361,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1373,13 +1373,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 649
     },
     {
-        "id": "PROD-MK-900044",
+        "id": "PROD-RV-900044",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900044",
         "category": "Pleasure Tech",
@@ -1387,10 +1387,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 659,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00367",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1398,7 +1398,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1410,13 +1410,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652084/ddurazno/prov2_AK1029.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 549
     },
     {
-        "id": "PROD-MK-900042",
+        "id": "PROD-RV-900042",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900042",
         "category": "Pleasure Tech",
@@ -1424,10 +1424,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00365",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1435,7 +1435,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1447,13 +1447,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652082/ddurazno/prov2_AAR1007.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900038",
+        "id": "PROD-RV-900038",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900038",
         "category": "Pleasure Tech",
@@ -1461,10 +1461,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00361",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1472,7 +1472,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1484,13 +1484,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_AAR1011.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900037",
+        "id": "PROD-RV-900037",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900037",
         "category": "Pleasure Tech",
@@ -1498,10 +1498,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00360",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1509,7 +1509,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1521,13 +1521,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_AAR1005.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900036",
+        "id": "PROD-RV-900036",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900036",
         "category": "Pleasure Tech",
@@ -1535,10 +1535,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00359",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1546,7 +1546,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1558,13 +1558,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652076/ddurazno/prov2_AAR1004.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900034",
+        "id": "PROD-RV-900034",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900034",
         "category": "Pleasure Tech",
@@ -1572,10 +1572,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00357",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1583,7 +1583,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1595,13 +1595,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652074/ddurazno/prov2_MMC1003.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900033",
+        "id": "PROD-RV-900033",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900033",
         "category": "Pleasure Tech",
@@ -1609,10 +1609,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00356",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1620,7 +1620,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1632,13 +1632,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900035",
+        "id": "PROD-RV-900035",
         "name": "Dildo con vibración",
         "slug": "dildo-con-vibracion-900035",
         "category": "Pleasure Tech",
@@ -1646,10 +1646,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00358",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1657,7 +1657,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1669,13 +1669,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-1729",
+        "id": "PROD-RV-1729",
         "name": "ENSANCHADOR -Enhancing Cream 60ml",
         "slug": "ensanchador-enhancing-cream-60ml-1729",
         "category": "Sensory Care",
@@ -1683,10 +1683,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nFeel Love Enhancing Crema. Tratamiento de uso diario. Con Extractos Herbales y Damiana. Fortalece el musculo y tejido del pene. Resultados garantizados…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nFeel Love Enhancing Crema. Tratamiento de uso diario. Con Extractos Herbales y Damiana. Fortalece el musculo y tejido del pene. Resultados garantizados…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00069",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1694,7 +1694,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1715,7 +1715,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1730",
+        "id": "PROD-RV-1730",
         "name": "Enlarge Gel 60ml",
         "slug": "enlarge-gel-60ml-1730",
         "category": "Sensory Care",
@@ -1723,10 +1723,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPropiedades que lo incrementan. Incluye Manual de Ejercicios. Fórmula Exclusiva que garantiza mejores resultados. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPropiedades que lo incrementan. Incluye Manual de Ejercicios. Fórmula Exclusiva que garantiza mejores resultados. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00070",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1734,7 +1734,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1753,7 +1753,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1822",
+        "id": "PROD-RV-1822",
         "name": "FEEL LOVE DILDO CUBANO",
         "slug": "feel-love-dildo-cubano-1822",
         "category": "Pleasure Tech",
@@ -1761,10 +1761,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 485,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4.5 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4.5 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00150",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1772,7 +1772,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1788,13 +1788,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788144176/ddurazno/1822-main.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 404
     },
     {
-        "id": "PROD-MK-1821",
+        "id": "PROD-RV-1821",
         "name": "FEEL LOVE DILDO LATINO",
         "slug": "feel-love-dildo-latino-1821",
         "category": "Pleasure Tech",
@@ -1802,10 +1802,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 23 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 23 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00149",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1813,7 +1813,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1825,13 +1825,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://www.ddurazno.com/api/gimg?id=524",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1823",
+        "id": "PROD-RV-1823",
         "name": "FEEL LOVE DILDO SUPREMO",
         "slug": "feel-love-dildo-supremo-1823",
         "category": "Pleasure Tech",
@@ -1839,10 +1839,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00151",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1850,7 +1850,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1862,13 +1862,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://www.ddurazno.com/api/gimg?id=531",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1742",
+        "id": "PROD-RV-1742",
         "name": "Intensificador C/L-Arginina y Damiana 15ml",
         "slug": "intensificador-c-l-arginina-y-damiana-15ml-1742",
         "category": "Sensory Care",
@@ -1876,10 +1876,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nIntensificador Femenino: gel estimulante intensifica el placer en el clítoris. Ayuda a conseguir orgasmos más fácilmente. Ayuda a alcanzar orgasmos…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nIntensificador Femenino: gel estimulante intensifica el placer en el clítoris. Ayuda a conseguir orgasmos más fácilmente. Ayuda a alcanzar orgasmos…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00082",
             "categoria_original": "Intensificadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1887,7 +1887,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1901,7 +1901,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-1820",
+        "id": "PROD-RV-1820",
         "name": "FEEL LOVE DILDO BOOSTER",
         "slug": "feel-love-dildo-booster-1820",
         "category": "Pleasure Tech",
@@ -1909,10 +1909,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 485,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 20 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 20 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00148",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1920,7 +1920,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1935,13 +1935,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785058186/ddurazno/1820-main.webp",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 404
     },
     {
-        "id": "PROD-MK-1917",
+        "id": "PROD-RV-1917",
         "name": "Kangaroo Para Mujer 36 Horas De Potencia Sexual",
         "slug": "kangaroo-para-mujer-36-horas-de-potencia-sexual-1917",
         "category": "Sensory Care",
@@ -1949,10 +1949,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nHecho para las mujeres de todas las edades. Para aliviar la pérdida de la libido y sentirse sexy. 100% natural. No tiene efectos secundarios después de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nHecho para las mujeres de todas las edades. Para aliviar la pérdida de la libido y sentirse sexy. 100% natural. No tiene efectos secundarios después de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00166",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1960,7 +1960,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -1979,7 +1979,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-3023",
+        "id": "PROD-RV-3023",
         "name": "LUBRICANTE SEMEN 120ML",
         "slug": "lubricante-semen-120ml-3023",
         "category": "Sensory Care",
@@ -1987,10 +1987,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nFeel Love CUM Lubricante Comestible con apariencia a semen a base de agua que no daña el condón. Aumenta el placer en los momentos íntimos. No ocasiona…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nFeel Love CUM Lubricante Comestible con apariencia a semen a base de agua que no daña el condón. Aumenta el placer en los momentos íntimos. No ocasiona…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00268",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -1998,7 +1998,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2018,7 +2018,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900003",
+        "id": "PROD-RV-900003",
         "name": "Lencería",
         "slug": "lenceria-900003",
         "category": "Fine Lingerie",
@@ -2026,10 +2026,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00326",
             "categoria_original": "Lencería",
             "materiales": "Encaje elástico floral & microfibra de seda biocompatible",
@@ -2037,7 +2037,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2054,7 +2054,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900024",
+        "id": "PROD-RV-900024",
         "name": "Lencería",
         "slug": "lenceria-900024",
         "category": "Fine Lingerie",
@@ -2062,10 +2062,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00347",
             "categoria_original": "Lencería",
             "materiales": "Encaje elástico floral & microfibra de seda biocompatible",
@@ -2073,7 +2073,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2090,7 +2090,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900023",
+        "id": "PROD-RV-900023",
         "name": "Lencería",
         "slug": "lenceria-900023",
         "category": "Fine Lingerie",
@@ -2098,10 +2098,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00346",
             "categoria_original": "Lencería",
             "materiales": "Encaje elástico floral & microfibra de seda biocompatible",
@@ -2109,7 +2109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2126,7 +2126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900001",
+        "id": "PROD-RV-900001",
         "name": "Lencería",
         "slug": "lenceria-900001",
         "category": "Fine Lingerie",
@@ -2134,10 +2134,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00324",
             "categoria_original": "Lencería",
             "materiales": "Encaje elástico floral & microfibra de seda biocompatible",
@@ -2145,7 +2145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2162,7 +2162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-1731",
+        "id": "PROD-RV-1731",
         "name": "Like a Virgin 40ml",
         "slug": "like-a-virgin-40ml-1731",
         "category": "Sensory Care",
@@ -2170,10 +2170,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nGel Estrechador. Mayor fricción durante la actividad. Efecto temporal de elasticidad. Mucha más sensación en ambos. Cont. Neto 40 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nGel Estrechador. Mayor fricción durante la actividad. Efecto temporal de elasticidad. Mucha más sensación en ambos. Cont. Neto 40 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00071",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2181,7 +2181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2199,7 +2199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900002",
+        "id": "PROD-RV-900002",
         "name": "Lencería",
         "slug": "lenceria-900002",
         "category": "Fine Lingerie",
@@ -2207,10 +2207,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00325",
             "categoria_original": "Lencería",
             "materiales": "Encaje elástico floral & microfibra de seda biocompatible",
@@ -2218,7 +2218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2235,7 +2235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900078",
+        "id": "PROD-RV-900078",
         "name": "Lubricante Caliente 50ml",
         "slug": "lubricante-caliente-50ml-900078",
         "category": "Sensory Care",
@@ -2243,10 +2243,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente 50ml .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente 50ml .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00401",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2254,7 +2254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2276,7 +2276,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-1751",
+        "id": "PROD-RV-1751",
         "name": "Lubricante Feel Love 60ml MULTIORGASMICO",
         "slug": "lubricante-feel-love-60ml-multiorgasmico-1751",
         "category": "Sensory Care",
@@ -2284,10 +2284,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Fresa. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Fresa. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00090",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2295,7 +2295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2313,7 +2313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900088",
+        "id": "PROD-RV-900088",
         "name": "Lubricante Caliente Imitación Semen",
         "slug": "lubricante-caliente-imitacion-semen-900088",
         "category": "Sensory Care",
@@ -2321,10 +2321,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00411",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2332,7 +2332,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2354,7 +2354,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-2345",
+        "id": "PROD-RV-2345",
         "name": "Lubricante Feel Love 60ml MULTIORGASMICO FRUTAS PROHIBIDAS",
         "slug": "lubricante-feel-love-60ml-multiorgasmico-frutas-prohibidas-2345",
         "category": "Sensory Care",
@@ -2362,10 +2362,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Frutas Prohibidas. Compatible con Látex y…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Frutas Prohibidas. Compatible con Látex y…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00197",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2373,7 +2373,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2391,7 +2391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900079",
+        "id": "PROD-RV-900079",
         "name": "Lubricante Fresa 300ml",
         "slug": "lubricante-fresa-300ml-900079",
         "category": "Sensory Care",
@@ -2399,10 +2399,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante íntimo saborizado sabor fresa, presentación de 300ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante íntimo saborizado sabor fresa, presentación de 300ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00402",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2410,7 +2410,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2432,7 +2432,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-1724",
+        "id": "PROD-RV-1724",
         "name": "Mamba Negra Vigorizante para Hombre 60caps",
         "slug": "mamba-negra-vigorizante-para-hombre-60caps-1724",
         "category": "Sensory Care",
@@ -2440,10 +2440,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nMejora tu rendimiento Físico y Sexual a base de ingredientes naturales. Mayor vigor y energía en las actividades diarias. Así como favorecen la capacidad…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nMejora tu rendimiento Físico y Sexual a base de ingredientes naturales. Mayor vigor y energía en las actividades diarias. Así como favorecen la capacidad…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00066",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2451,7 +2451,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2469,7 +2469,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-2686",
+        "id": "PROD-RV-2686",
         "name": "Mamba ROSA Vigorizante para MUJER 60caps",
         "slug": "mamba-rosa-vigorizante-para-mujer-60caps-2686",
         "category": "Sensory Care",
@@ -2477,10 +2477,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBeneficios para las mujeres como la Rhodiola que aumenta la energía tras falta de deseo sexual por menopausia o cambios hormonales. Con L-Arginina para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBeneficios para las mujeres como la Rhodiola que aumenta la energía tras falta de deseo sexual por menopausia o cambios hormonales. Con L-Arginina para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00242",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2488,7 +2488,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2506,7 +2506,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900043",
+        "id": "PROD-RV-900043",
         "name": "Masajeador de varita mágica",
         "slug": "masajeador-de-varita-magica-900043",
         "category": "Pleasure Tech",
@@ -2514,10 +2514,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 659,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nMasajeador de varita mágica .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nMasajeador de varita mágica .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00366",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2525,7 +2525,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2537,13 +2537,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652083/ddurazno/prov2_AAD1014.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 549
     },
     {
-        "id": "PROD-MK-900087",
+        "id": "PROD-RV-900087",
         "name": "Lubricante Frío Imitación Semen",
         "slug": "lubricante-frio-imitacion-semen-900087",
         "category": "Sensory Care",
@@ -2551,10 +2551,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Frío Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Frío Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00410",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2562,7 +2562,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2584,7 +2584,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900066",
+        "id": "PROD-RV-900066",
         "name": "Masturbador Realista Caja Azul",
         "slug": "masturbador-realista-caja-azul-900066",
         "category": "Pleasure Tech",
@@ -2592,10 +2592,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja azul. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja azul. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00389",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2603,7 +2603,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2617,13 +2617,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129275/ddurazno/900066-url-041d87c0ee825c4d.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900067",
+        "id": "PROD-RV-900067",
         "name": "Masturbador Realista Caja Naranja",
         "slug": "masturbador-realista-caja-naranja-900067",
         "category": "Pleasure Tech",
@@ -2631,10 +2631,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja naranja. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja naranja. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00390",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2642,7 +2642,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2656,13 +2656,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129283/ddurazno/900067-url-c379f369fa5c9eef.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900068",
+        "id": "PROD-RV-900068",
         "name": "Masturbador Realista Caja Rosa",
         "slug": "masturbador-realista-caja-rosa-900068",
         "category": "Pleasure Tech",
@@ -2670,10 +2670,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja rosa. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja rosa. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00391",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2681,7 +2681,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2695,13 +2695,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129291/ddurazno/900068-url-df1dbefefa3fb808.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-1753",
+        "id": "PROD-RV-1753",
         "name": "Lubricante Feel Love 60ml RETARDADOR",
         "slug": "lubricante-feel-love-60ml-retardador-1753",
         "category": "Sensory Care",
@@ -2709,10 +2709,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 335,
         "compare_price": null,
         "stock": 24,
-        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Retardador. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Chocolate. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Retardador. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Chocolate. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00092",
             "categoria_original": "Lubricantes",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2720,7 +2720,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2738,7 +2738,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 279
     },
     {
-        "id": "PROD-MK-900072",
+        "id": "PROD-RV-900072",
         "name": "Masturbador Vagina Beige",
         "slug": "masturbador-vagina-beige-900072",
         "category": "Pleasure Tech",
@@ -2746,10 +2746,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 899,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador Vagina Beige .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador Vagina Beige .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00395",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2757,7 +2757,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2778,13 +2778,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 749
     },
     {
-        "id": "PROD-MK-900071",
+        "id": "PROD-RV-900071",
         "name": "Masturbador Beige Cuerpo",
         "slug": "masturbador-beige-cuerpo-900071",
         "category": "Pleasure Tech",
@@ -2792,10 +2792,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 1199,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en tono beige, con forma de cuerpo. Diseño de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en tono beige, con forma de cuerpo. Diseño de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00394",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2803,7 +2803,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2826,7 +2826,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 999
     },
     {
-        "id": "PROD-MK-900025",
+        "id": "PROD-RV-900025",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900025",
         "category": "Pleasure Tech",
@@ -2834,10 +2834,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00348",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2845,7 +2845,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2857,13 +2857,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900052",
+        "id": "PROD-RV-900052",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900052",
         "category": "Pleasure Tech",
@@ -2871,10 +2871,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 1019,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00375",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2882,7 +2882,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2900,7 +2900,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 849
     },
     {
-        "id": "PROD-MK-900027",
+        "id": "PROD-RV-900027",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900027",
         "category": "Pleasure Tech",
@@ -2908,10 +2908,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 659,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00350",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2919,7 +2919,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2931,13 +2931,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652066/ddurazno/prov2_AJ1045.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 549
     },
     {
-        "id": "PROD-MK-900026",
+        "id": "PROD-RV-900026",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900026",
         "category": "Pleasure Tech",
@@ -2945,10 +2945,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00349",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2956,7 +2956,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -2968,13 +2968,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652065/ddurazno/prov2_AJ1068.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900054",
+        "id": "PROD-RV-900054",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900054",
         "category": "Pleasure Tech",
@@ -2982,10 +2982,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00377",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -2993,7 +2993,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3005,13 +3005,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652094/ddurazno/prov2_BBR1001.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900008",
+        "id": "PROD-RV-900008",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900008",
         "category": "Pleasure Tech",
@@ -3019,10 +3019,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00331",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3030,7 +3030,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3042,13 +3042,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652035/ddurazno/prov2_AJ1105.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900028",
+        "id": "PROD-RV-900028",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900028",
         "category": "Pleasure Tech",
@@ -3056,10 +3056,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 899,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00351",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3067,7 +3067,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3079,13 +3079,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652067/ddurazno/prov2_AJ1076.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 749
     },
     {
-        "id": "PROD-MK-900029",
+        "id": "PROD-RV-900029",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900029",
         "category": "Pleasure Tech",
@@ -3093,10 +3093,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00352",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3104,7 +3104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3116,13 +3116,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652068/ddurazno/prov2_AJ1088.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900032",
+        "id": "PROD-RV-900032",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900032",
         "category": "Pleasure Tech",
@@ -3130,10 +3130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00355",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3141,7 +3141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3153,13 +3153,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652071/ddurazno/prov2_MMG1001.webp",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900031",
+        "id": "PROD-RV-900031",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900031",
         "category": "Pleasure Tech",
@@ -3167,10 +3167,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00354",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3178,7 +3178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3190,13 +3190,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652070/ddurazno/prov2_AE1086.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900006",
+        "id": "PROD-RV-900006",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900006",
         "category": "Pleasure Tech",
@@ -3204,10 +3204,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00329",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3215,7 +3215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3227,13 +3227,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652032/ddurazno/prov2_AK1044.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900051",
+        "id": "PROD-RV-900051",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900051",
         "category": "Pleasure Tech",
@@ -3241,10 +3241,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 1019,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00374",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3252,7 +3252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3270,7 +3270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 849
     },
     {
-        "id": "PROD-MK-900007",
+        "id": "PROD-RV-900007",
         "name": "Masturbador realista",
         "slug": "masturbador-realista-900007",
         "category": "Pleasure Tech",
@@ -3278,10 +3278,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 899,
         "compare_price": null,
         "stock": 24,
-        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00330",
             "categoria_original": "Masturbadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3289,7 +3289,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3301,13 +3301,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652034/ddurazno/prov2_AD1008.webp",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 749
     },
     {
-        "id": "PROD-MK-900063",
+        "id": "PROD-RV-900063",
         "name": "Muñeco Inflable Hombre",
         "slug": "muneco-inflable-hombre-900063",
         "category": "Soft Fetish",
@@ -3315,10 +3315,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 839,
         "compare_price": null,
         "stock": 24,
-        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nMuñeco inflable masculino para fiestas de adultos y despedidas de soltera. Tamaño realista, fácil de inflar y guardar; ideal como regalo de broma o…\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nMuñeco inflable masculino para fiestas de adultos y despedidas de soltera. Tamaño realista, fácil de inflar y guardar; ideal como regalo de broma o…\n\nCurado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00386",
             "categoria_original": "Accesorios y Despedidas",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3326,7 +3326,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3339,13 +3339,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129376/ddurazno/900075-url-01c9d75c87c4b783.png"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 699
     },
     {
-        "id": "PROD-MK-900111",
+        "id": "PROD-RV-900111",
         "name": "Paquete Ella Total",
         "slug": "paquete-ella-total-900111",
         "category": "Sensory Care",
@@ -3353,10 +3353,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 9899,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nLo más pedido por ellas: vibradores, dildos, lubricantes de 60ml, intensificadores y limpiador. Paquete prearmado con 17 productos de alta rotación para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nLo más pedido por ellas: vibradores, dildos, lubricantes de 60ml, intensificadores y limpiador. Paquete prearmado con 17 productos de alta rotación para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00434",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3364,7 +3364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3393,13 +3393,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785047285/ddurazno/3023-img-1198.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791996678/ddurazno/900111-url-26d0fde0d0fc286b.jpg",
-        "badge": "Mokka Chai Selección Oro",
+        "badge": "RED VELVET Selección Oro",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 8249
     },
     {
-        "id": "PROD-MK-900108",
+        "id": "PROD-RV-900108",
         "name": "Paquete Pareja Placer",
         "slug": "paquete-pareja-placer-900108",
         "category": "Couples",
@@ -3407,10 +3407,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 9882,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, 6 dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 16 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, 6 dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 16 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00431",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3418,7 +3418,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3446,13 +3446,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785047285/ddurazno/3023-img-1198.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791993008/ddurazno/900108-url-054b2bf2e34ec5f9.jpg",
-        "badge": "Mokka Chai Selección Oro",
+        "badge": "RED VELVET Selección Oro",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 8235
     },
     {
-        "id": "PROD-MK-900107",
+        "id": "PROD-RV-900107",
         "name": "Paquete Pareja Fuego",
         "slug": "paquete-pareja-fuego-900107",
         "category": "Couples",
@@ -3460,10 +3460,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 9697,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 15 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 15 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00430",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3471,7 +3471,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3498,13 +3498,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785047285/ddurazno/3023-img-1198.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791992991/ddurazno/900107-url-15946f8bf536ff00.jpg",
-        "badge": "Mokka Chai Selección Oro",
+        "badge": "RED VELVET Selección Oro",
         "is_featured": 1,
         "is_active": 1,
         "wholesale_cost": 8081
     },
     {
-        "id": "PROD-MK-900073",
+        "id": "PROD-RV-900073",
         "name": "Plug Negro App, USB",
         "slug": "plug-negro-app-usb-900073",
         "category": "Pleasure Tech",
@@ -3512,10 +3512,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal negro, recargable por USB, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal negro, recargable por USB, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00396",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3523,7 +3523,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3547,7 +3547,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900074",
+        "id": "PROD-RV-900074",
         "name": "Plug Rojo Pompón",
         "slug": "plug-rojo-pompon-900074",
         "category": "Pleasure Tech",
@@ -3555,10 +3555,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal metálico color rojo con pompón decorativo en la base.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal metálico color rojo con pompón decorativo en la base.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00397",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3566,7 +3566,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3585,7 +3585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-1735",
+        "id": "PROD-RV-1735",
         "name": "Prolongador Masculino 60ml CREMA",
         "slug": "prolongador-masculino-60ml-crema-1735",
         "category": "Sensory Care",
@@ -3593,10 +3593,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 539,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema para Potenciar en los hombres la erección y duración durante su actividad sexual dejando a sus parejas satisfechas. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema para Potenciar en los hombres la erección y duración durante su actividad sexual dejando a sus parejas satisfechas. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00075",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3604,7 +3604,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3622,7 +3622,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 449
     },
     {
-        "id": "PROD-MK-900095",
+        "id": "PROD-RV-900095",
         "name": "Pompoarismo",
         "slug": "pompoarismo-900095",
         "category": "Sensory Care",
@@ -3630,10 +3630,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00418",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3641,7 +3641,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3661,7 +3661,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-2670",
+        "id": "PROD-RV-2670",
         "name": "Shampoo para Juguete 60ml",
         "slug": "shampoo-para-juguete-60ml-2670",
         "category": "Sensory Care",
@@ -3669,10 +3669,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 126,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nShampoo para Juguetes (Toy cleaner protection) para antes y después de jugar. Antibacterial. Protección para todos tus juguetes y accesorios sexuales…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nShampoo para Juguetes (Toy cleaner protection) para antes y después de jugar. Antibacterial. Protección para todos tus juguetes y accesorios sexuales…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00239",
             "categoria_original": "Especiales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3680,7 +3680,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3698,7 +3698,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 105
     },
     {
-        "id": "PROD-MK-900045",
+        "id": "PROD-RV-900045",
         "name": "Prótesis con vibración Cod. S1195-MMK1004",
         "slug": "protesis-con-vibracion-cod-s1195-mmk1004-900045",
         "category": "Pleasure Tech",
@@ -3706,10 +3706,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 839,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00368",
             "categoria_original": "Dildos",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3717,7 +3717,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3729,13 +3729,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652084/ddurazno/prov2_MMK1004.webp",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 699
     },
     {
-        "id": "PROD-MK-900085",
+        "id": "PROD-RV-900085",
         "name": "Spray Retardante Frío",
         "slug": "spray-retardante-frio-900085",
         "category": "Sensory Care",
@@ -3743,10 +3743,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00408",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3754,7 +3754,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3776,7 +3776,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900048",
+        "id": "PROD-RV-900048",
         "name": "Tapón anal metálico (M) Cod. S1327-AS1036",
         "slug": "tapon-anal-metalico-m-cod-s1327-as1036-900048",
         "category": "Pleasure Tech",
@@ -3784,10 +3784,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Acabado en aleación metálica pulida espejo, retención térmica para juego de temperaturas y peso balanceado.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00371",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3795,7 +3795,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3813,7 +3813,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900047",
+        "id": "PROD-RV-900047",
         "name": "Tapón anal de silicona (M) Cod. S1640-KKR1005",
         "slug": "tapon-anal-de-silicona-m-cod-s1640-kkr1005-900047",
         "category": "Pleasure Tech",
@@ -3821,10 +3821,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 359,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal de silicona (M) .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal de silicona (M) .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00370",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3832,7 +3832,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3850,7 +3850,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 299
     },
     {
-        "id": "PROD-MK-900081",
+        "id": "PROD-RV-900081",
         "name": "Tapón anal metálico (P)",
         "slug": "tapon-anal-metalico-p-900081",
         "category": "Pleasure Tech",
@@ -3858,10 +3858,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 419,
         "compare_price": null,
         "stock": 24,
-        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal metálico con base decorada de piedra brillante y doble campana. Fabricado en aleación de aluminio de alta calidad, con acabado liso y sin…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal metálico con base decorada de piedra brillante y doble campana. Fabricado en aleación de aluminio de alta calidad, con acabado liso y sin…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Acabado en aleación metálica pulida espejo, retención térmica para juego de temperaturas y peso balanceado.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00404",
             "categoria_original": "Anales",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3869,7 +3869,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3892,7 +3892,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 349
     },
     {
-        "id": "PROD-MK-900086",
+        "id": "PROD-RV-900086",
         "name": "Spray Retardante Caliente",
         "slug": "spray-retardante-caliente-900086",
         "category": "Sensory Care",
@@ -3900,10 +3900,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nSpray Retardante Caliente .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nSpray Retardante Caliente .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00409",
             "categoria_original": "Potencia Sexual",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3911,7 +3911,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3933,7 +3933,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900091",
+        "id": "PROD-RV-900091",
         "name": "Varita Mágica Morada",
         "slug": "varita-magica-morada-900091",
         "category": "Pleasure Tech",
@@ -3941,10 +3941,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00414",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3952,7 +3952,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -3966,13 +3966,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487391/ddurazno/900091-url-b439a24ed523b227.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900089",
+        "id": "PROD-RV-900089",
         "name": "Varita Mágica Rosa",
         "slug": "varita-magica-rosa-900089",
         "category": "Pleasure Tech",
@@ -3980,10 +3980,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00412",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -3991,7 +3991,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4006,13 +4006,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487378/ddurazno/900089-url-d765843543dbe2a2.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 399
     },
     {
-        "id": "PROD-MK-900065",
+        "id": "PROD-RV-900065",
         "name": "Vibrador Personal Punto G Rosa",
         "slug": "vibrador-personal-punto-g-rosa-900065",
         "category": "Pleasure Tech",
@@ -4020,10 +4020,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador personal para estimulación del punto G, en color rosa. Diseño ergonómico de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador personal para estimulación del punto G, en color rosa. Diseño ergonómico de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00388",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4031,7 +4031,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4045,13 +4045,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129267/ddurazno/900065-url-561741261886637e.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900056",
+        "id": "PROD-RV-900056",
         "name": "Vibrador con aplicación",
         "slug": "vibrador-con-aplicacion-900056",
         "category": "Pleasure Tech",
@@ -4059,10 +4059,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 659,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00379",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4070,7 +4070,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4082,13 +4082,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652097/ddurazno/prov2_AR1024.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 549
     },
     {
-        "id": "PROD-MK-2436",
+        "id": "PROD-RV-2436",
         "name": "Vibrador Liquido SEXY VIBE 25ml",
         "slug": "vibrador-liquido-sexy-vibe-25ml-2436",
         "category": "Sensory Care",
@@ -4096,10 +4096,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 659,
         "compare_price": null,
         "stock": 24,
-        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nEstimulante Femenino. Gel con Efecto Vibrador para estimular el placer a través de las sensaciones durante el juego en pareja o sola. Cont. Neto 25 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nEstimulante Femenino. Gel con Efecto Vibrador para estimular el placer a través de las sensaciones durante el juego en pareja o sola. Cont. Neto 25 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00212",
             "categoria_original": "Intensificadores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4107,7 +4107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4122,7 +4122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 549
     },
     {
-        "id": "PROD-MK-900050",
+        "id": "PROD-RV-900050",
         "name": "Vibrador con aplicación",
         "slug": "vibrador-con-aplicacion-900050",
         "category": "Pleasure Tech",
@@ -4130,10 +4130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 779,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00373",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4141,7 +4141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4153,13 +4153,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652089/ddurazno/prov2_CCM1001.png",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 649
     },
     {
-        "id": "PROD-MK-900057",
+        "id": "PROD-RV-900057",
         "name": "Vibrador con estimulador",
         "slug": "vibrador-con-estimulador-900057",
         "category": "Pleasure Tech",
@@ -4167,10 +4167,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 899,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador con estimulador .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador con estimulador .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00380",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4178,7 +4178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4190,13 +4190,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652098/ddurazno/prov2_CCN1013.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 749
     },
     {
-        "id": "PROD-MK-900099",
+        "id": "PROD-RV-900099",
         "name": "Vibrador de App Rojo",
         "slug": "vibrador-de-app-rojo-900099",
         "category": "Pleasure Tech",
@@ -4204,10 +4204,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00422",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4215,7 +4215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4235,7 +4235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900059",
+        "id": "PROD-RV-900059",
         "name": "Vibrador con aplicación",
         "slug": "vibrador-con-aplicacion-900059",
         "category": "Pleasure Tech",
@@ -4243,10 +4243,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 839,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00382",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4254,7 +4254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4266,13 +4266,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652104/ddurazno/prov2_AAM1004.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 699
     },
     {
-        "id": "PROD-MK-900100",
+        "id": "PROD-RV-900100",
         "name": "Vibrador de App Rosa",
         "slug": "vibrador-de-app-rosa-900100",
         "category": "Pleasure Tech",
@@ -4280,10 +4280,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 719,
         "compare_price": null,
         "stock": 24,
-        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00423",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4291,7 +4291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4310,7 +4310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "wholesale_cost": 599
     },
     {
-        "id": "PROD-MK-900049",
+        "id": "PROD-RV-900049",
         "name": "Vibrador de clítoris con succión y pulsación",
         "slug": "vibrador-de-clitoris-con-succion-y-pulsacion-900049",
         "category": "Pleasure Tech",
@@ -4318,10 +4318,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 599,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador de clítoris con succión y pulsación .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador de clítoris con succión y pulsación .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00372",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4329,7 +4329,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4341,13 +4341,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652088/ddurazno/prov2_AAD1037.webp",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 499
     },
     {
-        "id": "PROD-MK-900039",
+        "id": "PROD-RV-900039",
         "name": "Vibrador personal",
         "slug": "vibrador-personal-900039",
         "category": "Pleasure Tech",
@@ -4355,10 +4355,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "price": 479,
         "compare_price": null,
         "stock": 24,
-        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
+        "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
         "specs": {
-            "marca": "Mokka Chai Intimate Boutique",
+            "marca": "RED VELVET Intimate Boutique",
             "sku": "DD-00362",
             "categoria_original": "Vibradores",
             "materiales": "Silicona líquida médica grado quirúrgico & ABS",
@@ -4366,7 +4366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "empaque": "100% Ciego & Confidencial (Sin logos ni referencias externas)",
             "envio": "Discreto con guía privada a todo México",
             "bioseguridad": "Material 100% seguro para el cuerpo, libre de ftalatos y látex",
-            "garantia": "Garantía de Satisfacción & Bioseguridad Mokka Chai",
+            "garantia": "Garantía de Satisfacción & Bioseguridad RED VELVET",
             "concierge": "Asesoría Confidencial WhatsApp (+52 81 2191 2778)"
         },
         "images": [
@@ -4378,7 +4378,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg"
         ],
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_XQ1001.jpg",
-        "badge": "Colección Mokka Chai",
+        "badge": "Colección RED VELVET",
         "is_featured": 0,
         "is_active": 1,
         "wholesale_cost": 399
@@ -4386,15 +4386,97 @@ document.addEventListener('DOMContentLoaded', () => {
 ];
 
     // ==========================================================================
-    // 2. AUDIO & VERIFICACIÓN DE EDAD (+18)
+    // 2. AUDIO & VERIFICACIÓN DE EDAD (+18) - AUTO-PLAY AL HACER SCROLL
     // ==========================================================================
     const bgMusic = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('ambient-music-btn');
     let hasStartedMusic = false;
-    const playMusic = () => {
-        if (bgMusic && !hasStartedMusic) {
-            bgMusic.play().then(() => { hasStartedMusic = true; }).catch(() => {});
+    let isMusicMutedByUser = false;
+
+    const updateMusicUI = (isPlaying) => {
+        if (!musicBtn) return;
+        if (isPlaying) {
+            musicBtn.classList.add('playing');
+            musicBtn.classList.remove('muted');
+            const icon = musicBtn.querySelector('.music-icon-sound');
+            if (icon) icon.textContent = '🎵';
+            const label = musicBtn.querySelector('.music-btn-text');
+            if (label) label.textContent = 'Música Velvet';
+        } else {
+            musicBtn.classList.remove('playing');
+            musicBtn.classList.add('muted');
+            const icon = musicBtn.querySelector('.music-icon-sound');
+            if (icon) icon.textContent = '🔇';
+            const label = musicBtn.querySelector('.music-btn-text');
+            if (label) label.textContent = 'Silenciado';
         }
     };
+
+    const playMusicWithFadeIn = (targetVolume = 0.35) => {
+        if (!bgMusic || isMusicMutedByUser || hasStartedMusic) return;
+
+        bgMusic.volume = 0;
+        const playPromise = bgMusic.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                hasStartedMusic = true;
+                updateMusicUI(true);
+
+                // Fade in sutil de volumen ambiental boutique
+                let currentVol = 0;
+                const fadeInterval = setInterval(() => {
+                    currentVol = Math.min(targetVolume, currentVol + 0.05);
+                    if (bgMusic) bgMusic.volume = currentVol;
+                    if (currentVol >= targetVolume) clearInterval(fadeInterval);
+                }, 120);
+
+                removeScrollAudioListeners();
+            }).catch(err => {
+                // Navegador requiere gesto físico de scroll/touch; se mantiene el listener activo
+            });
+        }
+    };
+
+    window.triggerLuxuryMusic = playMusicWithFadeIn;
+
+    const onUserScrollAudioTrigger = () => {
+        if (!hasStartedMusic && !isMusicMutedByUser) {
+            playMusicWithFadeIn();
+        }
+    };
+
+    const scrollAudioEvents = ['scroll', 'wheel', 'touchmove', 'touchstart', 'pointerdown'];
+    const addScrollAudioListeners = () => {
+        scrollAudioEvents.forEach(evt => {
+            window.addEventListener(evt, onUserScrollAudioTrigger, { passive: true, capture: true });
+        });
+    };
+
+    const removeScrollAudioListeners = () => {
+        scrollAudioEvents.forEach(evt => {
+            window.removeEventListener(evt, onUserScrollAudioTrigger, { capture: true });
+        });
+    };
+
+    addScrollAudioListeners();
+
+    if (musicBtn) {
+        musicBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (!bgMusic) return;
+
+            if (!bgMusic.paused) {
+                bgMusic.pause();
+                isMusicMutedByUser = true;
+                hasStartedMusic = false;
+                updateMusicUI(false);
+            } else {
+                isMusicMutedByUser = false;
+                hasStartedMusic = false;
+                playMusicWithFadeIn();
+            }
+        });
+    }
 
     const ageGate = document.getElementById('age-gate');
     const btnAdult = document.getElementById('btn-adult');
@@ -4407,8 +4489,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         if (ageGate) ageGate.classList.remove('active');
         document.body.style.overflow = '';
-    document.documentElement.style.overflow = '';
-        playMusic();
+        document.documentElement.style.overflow = '';
+        // Si ya está verificado, intentar reproducir (o esperar primer scroll)
+        playMusicWithFadeIn();
     }
 
     if (btnAdult) {
@@ -5297,6 +5380,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(updateScrollMetrics, 400);
 
     window.addEventListener('scroll', () => {
+        if (typeof onUserScrollAudioTrigger === 'function') {
+            onUserScrollAudioTrigger();
+        }
         if (!scrollTicking) {
             window.requestAnimationFrame(() => {
                 const sy = window.scrollY;

@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const raw = JSON.parse(fs.readFileSync('data/mokkachai_catalog_full.json', 'utf8'));
+const raw = JSON.parse(fs.readFileSync('data/redvelvet_catalog_full.json', 'utf8'));
 
 const formatted = raw.map(p => {
     let specs = {};

@@ -5,7 +5,7 @@ const { query, initDatabase } = require('../db/database');
 const seedData = async () => {
     await initDatabase();
 
-    console.log('🔄 Sembrando catálogo maestro del nuevo mayorista Mokka Chai (+20% precio público)...');
+    console.log('🔄 Sembrando catálogo maestro del nuevo mayorista RED VELVET (+20% precio público)...');
 
     // 1. Cupones de descuento y bienvenida
     const initialCoupons = [
@@ -36,8 +36,8 @@ const seedData = async () => {
         `, [c.code, c.role, c.max_uses, c.note]);
     }
 
-    // 2. Cargar Únicamente el Nuevo Catálogo de Mayorista Mokka Chai
-    const catalogPath = path.join(__dirname, '../../data/mokkachai_catalog_full.json');
+    // 2. Cargar Únicamente el Nuevo Catálogo de Mayorista RED VELVET
+    const catalogPath = path.join(__dirname, '../../data/redvelvet_catalog_full.json');
     if (!fs.existsSync(catalogPath)) {
         console.error('❌ Archivo de catálogo no encontrado en:', catalogPath);
         return;
@@ -46,7 +46,7 @@ const seedData = async () => {
     const products = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 
     // Desactivar o purgar productos anteriores
-    await query.run("UPDATE products SET is_active = 0 WHERE id NOT LIKE 'PROD-MK-%'");
+    await query.run("UPDATE products SET is_active = 0 WHERE id NOT LIKE 'PROD-RV-%'");
 
     for (const p of products) {
         const specsJson = typeof p.specs_json === 'string' ? p.specs_json : JSON.stringify(p.specs_json || p.specs || {});

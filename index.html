@@ -516,7 +516,7 @@
         <video autoplay loop muted playsinline preload="none" poster="assets/video/footer-poster.webp" class="footer-bg-video">
             <source src="assets/video/footervideo.mp4?v=2" type="video/mp4">
         </video>
-        <audio id="bg-music" loop preload="none">
+        <audio id="bg-music" loop preload="auto">
             <source src="assets/musica/Red Velvet.mp3" type="audio/mpeg">
         </audio>
         <div class="container footer-content-wrap">
@@ -826,6 +826,17 @@
         <span class="toast-icon">✨</span>
         <span id="toast-message" data-i18n="cart.toastAdded">Pieza añadida a tu bolsa de compras</span>
     </div>
+
+    <!-- Control Flotante de Música Velvet (Auto-play con Scroll) -->
+    <button id="ambient-music-btn" class="ambient-music-btn" aria-label="Música Velvet de Fondo" title="Música Velvet (Activa / Silenciar)">
+        <span class="music-icon-sound">🎵</span>
+        <span class="music-soundwaves">
+            <span class="sw-bar sw-bar-1"></span>
+            <span class="sw-bar sw-bar-2"></span>
+            <span class="sw-bar sw-bar-3"></span>
+        </span>
+        <span class="music-btn-text">Música Velvet</span>
+    </button>
 
     <!-- Back to top con Corazón Red Velvet -->
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Subir al inicio">

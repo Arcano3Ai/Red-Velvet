@@ -2,7 +2,6 @@ node_modules/
 data/*
 !data/.gitkeep
 !data/erectus_catalog_full.json
-!data/mokkachai_catalog_full.json
 !data/products.json
 uploads/*
 !uploads/.gitkeep

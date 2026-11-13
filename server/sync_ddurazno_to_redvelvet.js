@@ -84,7 +84,7 @@ function generateElegantDescription(p, category, subtitle) {
     // Strip supplier texts
     raw = raw
         .replace(/Envío discreto a todo México; entrega el mismo día en Monterrey y Torreón\.?/gi, '')
-        .replace(/Ddurazno/gi, 'Mokka Chai')
+        .replace(/Ddurazno/gi, 'RED VELVET')
         .replace(/Cod\.\s*[A-Z0-9-]+/gi, '')
         .replace(/—\s*(?:Vibradores|Anillos|Anales|Lencería|Especiales|Dildos|Masturbadores|Lubricantes|Feromonas|Potencia Sexual|Accesorios y Despedidas)/gi, '')
         .replace(/\s{2,}/g, ' ')
@@ -92,18 +92,18 @@ function generateElegantDescription(p, category, subtitle) {
 
     let elegantIntro = '';
     if (category === 'Pleasure Tech') {
-        elegantIntro = `Diseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.`;
+        elegantIntro = `Diseñado bajo la filosofía de placer consciente y bienestar íntimo de RED VELVET, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.`;
     } else if (category === 'Sensory Care') {
-        elegantIntro = `Creado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.`;
+        elegantIntro = `Creado como parte del ritual de autocuidado y conexión sensorial de RED VELVET, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.`;
     } else if (category === 'Fine Lingerie') {
         elegantIntro = `Una pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.`;
     } else if (category === 'Couples') {
         elegantIntro = `Un ritual curado para parejas que buscan profundizar su intimidad y explorar nuevas dimensiones de placer compartido. Cada elemento ha sido seleccionado para despertar la complicidad y el disfrute mutuo.`;
     } else {
-        elegantIntro = `Curado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.`;
+        elegantIntro = `Curado cuidadosamente para la colección íntima de RED VELVET, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.`;
     }
 
-    const privacyParagraph = `🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.`;
+    const privacyParagraph = `🔒 Compromiso de Privacidad Absoluta RED VELVET: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.`;
 
     const cleanRaw = raw.length > 25 && !raw.toLowerCase().includes('anillos de pene') ? `\n\n${raw}` : '';
     return `${subtitle}${cleanRaw}\n\n${elegantIntro}\n\n${privacyParagraph}`;
@@ -135,14 +135,14 @@ function determineSensoryNotes(p, category) {
 
 function determineBadge(price, category, name) {
     const n = name.toLowerCase();
-    if (price >= 2000) return 'Mokka Chai Selección Oro';
+    if (price >= 2000) return 'RED VELVET Selección Oro';
     if (price >= 1000) return 'Boutique Preferente';
     if (n.includes('app') || n.includes('smart')) return 'Smart Tech App';
     if (n.includes('caliente') || n.includes('fuego')) return 'Efecto Térmico';
     if (category === 'Sensory Care') return 'Elixir Sensorial';
     if (category === 'Fine Lingerie') return 'Alta Costura';
     if (n.includes('plug') || n.includes('anal')) return 'Anatomía Ergonómica';
-    return 'Colección Mokka Chai';
+    return 'Colección RED VELVET';
 }
 
 function getBestImages(p) {
@@ -164,9 +164,9 @@ function getBestImages(p) {
     };
 }
 
-async function syncDduraznoToMokkaChai() {
+async function syncDduraznoToRedVelvet() {
     await initDatabase();
-    console.log('✨ Iniciando sincronización de catálogo mayorista Ddurazno a Mokka Chai (+20% precio público)...');
+    console.log('✨ Iniciando sincronización de catálogo mayorista Ddurazno a RED VELVET (+20% precio público)...');
 
     const rawPath = path.join(__dirname, 'ddurazno_scraped_raw.json');
     if (!fs.existsSync(rawPath)) {
@@ -193,7 +193,7 @@ async function syncDduraznoToMokkaChai() {
         const comparePrice = Math.round(retailPrice * 1.25);
 
         const category = mapToLuxuryCategory(item.category, item.name);
-        const id = `PROD-MK-${item.dduraznoId}`;
+        const id = `PROD-RV-${item.dduraznoId}`;
         const slug = cleanSlug(item.name, item.dduraznoId);
         const subtitle = generateElegantSubtitle(item, category);
         const description = generateElegantDescription(item, category, subtitle);
@@ -202,8 +202,8 @@ async function syncDduraznoToMokkaChai() {
         const imgs = getBestImages(item);
 
         const specs = {
-            marca: 'Mokka Chai Intimate Boutique',
-            sku: item.sku || `MK-${item.dduraznoId}`,
+            marca: 'RED VELVET Intimate Boutique',
+            sku: item.sku || `RV-${item.dduraznoId}`,
             categoria_original: item.category,
             materiales: category === 'Fine Lingerie' 
                 ? 'Encaje elástico floral & microfibra de seda biocompatible'
@@ -212,7 +212,7 @@ async function syncDduraznoToMokkaChai() {
             empaque: '100% Ciego & Confidencial (Sin logos ni referencias externas)',
             envio: 'Discreto con guía privada a todo México',
             bioseguridad: 'Material 100% seguro para el cuerpo, libre de ftalatos y látex',
-            garantia: 'Garantía de Satisfacción & Bioseguridad Mokka Chai',
+            garantia: 'Garantía de Satisfacción & Bioseguridad RED VELVET',
             concierge: 'Asesoría Confidencial WhatsApp (+52 81 2191 2778)'
         };
 
@@ -257,8 +257,8 @@ async function syncDduraznoToMokkaChai() {
         });
     }
 
-    console.log(`\n🎉 Sincronización exitosa: ${inserted} productos de Ddurazno importados a Mokka Chai con +20% sobre precio marcado.`);
-    fs.writeFileSync('server/mokkachai_catalog_summary.json', JSON.stringify(processed, null, 2));
+    console.log(`\n🎉 Sincronización exitosa: ${inserted} productos de Ddurazno importados a RED VELVET con +20% sobre precio marcado.`);
+    fs.writeFileSync('server/redvelvet_catalog_summary.json', JSON.stringify(processed, null, 2));
 
     // Verificar conteo activo en DB
     const activeRows = await query.all(`SELECT category, COUNT(*) as cnt FROM products WHERE is_active = 1 GROUP BY category`);
@@ -269,4 +269,4 @@ async function syncDduraznoToMokkaChai() {
     console.log(`\n🏆 Total de productos activos en la boutique: ${totalActive.total}`);
 }
 
-syncDduraznoToMokkaChai().catch(console.error);
+syncDduraznoToRedVelvet().catch(console.error);
