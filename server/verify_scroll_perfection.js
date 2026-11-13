@@ -143,3 +143,4 @@ runScrollVerification().catch(err => {
     console.error('❌ Error en suite de verificación:', err);
     process.exit(1);
 });
+
