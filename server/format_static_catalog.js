@@ -43,3 +43,4 @@ console.log(`Saved formatted data/products.json with ${formatted.length} product
 // Generate a JS snippet to update fallbackProducts in js/app.js
 fs.writeFileSync('server/new_fallback_products.json', JSON.stringify(formatted));
 console.log('Saved server/new_fallback_products.json for app.js insertion.');
+

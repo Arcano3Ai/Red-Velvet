@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema relajante para antes de la actividad sexual. Con Wintergreen y Damiana, Textura agradable, Desensibilizante, con Hamamelis y Árnica, Protector del…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785083781/ddurazno/1737-ai-1785083780196.png",
         "badge": "Elixir Sensorial",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900092",
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.",
         "price": 239,
-        "compare_price": 299,
+        "compare_price": null,
         "stock": 24,
         "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -110,7 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487397/ddurazno/900092-url-df3fa2e262a9e7a5.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 199
     },
     {
         "id": "PROD-MK-900064",
@@ -119,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nSet de 7 plugs anales de silicona en color morado, con distintos tamaños para progresar gradualmente. Ideales para principiantes y usuarios con más…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -150,7 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129258/ddurazno/900064-url-54e66d327c723b7a.jpg",
         "badge": "Anatomía Ergonómica",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900090",
@@ -159,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.",
         "price": 239,
-        "compare_price": 299,
+        "compare_price": null,
         "stock": 24,
         "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -188,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487386/ddurazno/900090-url-940606936a13d248.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 199
     },
     {
         "id": "PROD-MK-900094",
@@ -197,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.",
         "price": 239,
-        "compare_price": 299,
+        "compare_price": null,
         "stock": 24,
         "description": "Anillo ergonómico de soporte continuo para intensificar sensaciones y prolongar el clímax.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -226,7 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487410/ddurazno/900094-url-197f636e87791d59.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 199
     },
     {
         "id": "PROD-MK-900098",
@@ -235,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Soft Fetish",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -270,7 +275,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487431/ddurazno/900098-url-be3223049268b214.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-1776",
@@ -279,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Fresa 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -302,7 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=454",
         "badge": "Elixir Sensorial",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-1725",
@@ -311,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.",
         "price": 155,
-        "compare_price": 194,
+        "compare_price": null,
         "stock": 24,
         "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
@@ -338,7 +345,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=375",
         "badge": "Elixir Sensorial",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 129
     },
     {
         "id": "PROD-MK-900070",
@@ -347,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 779,
-        "compare_price": 974,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBomba de vacío para estimulación masculina, con sistema manual.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -376,7 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129305/ddurazno/900070-url-b81f451629c11b76.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 649
     },
     {
         "id": "PROD-MK-1727",
@@ -385,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nCon Damiana, L Arginina y Maca. Control de la Eyaculación Erecciones Duraderas. Resistencia Sexual Ilimitada. Orgasmos Poderosos. MÁS GRANDE, MÁS PODER…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
@@ -415,7 +424,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785095020/ddurazno/1727-ai-1785095019206.png",
         "badge": "Elixir Sensorial",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900055",
@@ -424,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -451,7 +461,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652096/ddurazno/prov2_KKE1022.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900010",
@@ -460,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -487,7 +498,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652038/ddurazno/prov2_DE1018.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900015",
@@ -496,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -523,7 +535,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652049/ddurazno/prov2_XQ1027.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900013",
@@ -532,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -559,7 +572,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652044/ddurazno/prov2_DE1024.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900016",
@@ -568,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -595,7 +609,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652050/ddurazno/prov2_XQ1028.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900011",
@@ -604,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -631,7 +646,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652042/ddurazno/prov2_DE1022.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900021",
@@ -640,7 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -667,7 +683,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652058/ddurazno/prov2_AK1037.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-1775",
@@ -676,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Fórmula botánica de textura sedosa y calidez progresiva para despertar cada poro.\n\nAceite Térmico Feel Love Menta 60ml — Aceites Térmicos.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -699,7 +716,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=453",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900017",
@@ -708,7 +726,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -735,7 +753,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652051/ddurazno/prov2_AX1005.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900018",
@@ -744,7 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -771,7 +790,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652052/ddurazno/prov2_AX1004.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900020",
@@ -780,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -807,7 +827,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652057/ddurazno/prov2_AK1036.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900022",
@@ -816,7 +837,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -843,7 +864,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652060/ddurazno/prov2_AAS1004.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1646",
@@ -852,7 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -875,7 +897,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=181",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1647",
@@ -884,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Esencia cautivadora con acordes magnéticos para intensificar la atracción y la presencia.\n\nConcentrado. Incrementa la atracción física y Sexual. Cont. Neto: 5ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -908,7 +931,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785083490/ddurazno/1647-main.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900082",
@@ -917,7 +941,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -947,7 +971,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487198/ddurazno/900082-url-fb635ab02dffefc4.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900080",
@@ -956,7 +981,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.",
         "price": 839,
-        "compare_price": 1049,
+        "compare_price": null,
         "stock": 24,
         "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nCápsula vibradora tipo bala en color rosa, recargable, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -989,7 +1014,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129438/ddurazno/900080-url-9a8696c77f49af9e.webp",
         "badge": "Smart Tech App",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 699
     },
     {
         "id": "PROD-MK-900061",
@@ -998,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1025,7 +1051,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788107622/ddurazno/900061-manual-1788107622863.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900075",
@@ -1034,7 +1061,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Couples",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nPar de dados eróticos en color rosa y negro, ideales para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -1063,7 +1090,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129376/ddurazno/900075-url-01c9d75c87c4b783.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900077",
@@ -1072,7 +1100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Soft Fetish",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color verde, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -1101,7 +1129,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129396/ddurazno/900077-url-e7b82da6445e5e77.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900097",
@@ -1110,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1139,7 +1168,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487427/ddurazno/900097-url-712a8e9c41c92a0e.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900083",
@@ -1148,7 +1178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Negro sin Vibración .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1183,7 +1213,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487314/ddurazno/900083-url-fcbc77ad2e842941.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900076",
@@ -1192,7 +1223,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Soft Fetish",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nDado erótico individual en color blanco, ideal para juegos de pareja o despedidas de soltera.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -1221,7 +1252,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129385/ddurazno/900076-url-8c0b9cbcb521f2f6.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900084",
@@ -1230,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1263,7 +1295,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487330/ddurazno/900084-url-96473b995502dc45.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900093",
@@ -1272,7 +1305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1305,7 +1338,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487401/ddurazno/900093-url-5c31e7f6d00bd8fa.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900046",
@@ -1314,7 +1348,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Soft Fetish",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 779,
-        "compare_price": 974,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -1341,7 +1375,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652086/ddurazno/prov2_AX1018.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 649
     },
     {
         "id": "PROD-MK-900044",
@@ -1350,7 +1385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 659,
-        "compare_price": 824,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1377,7 +1412,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652084/ddurazno/prov2_AK1029.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 549
     },
     {
         "id": "PROD-MK-900042",
@@ -1386,7 +1422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1413,7 +1449,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652082/ddurazno/prov2_AAR1007.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900038",
@@ -1422,7 +1459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1449,7 +1486,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_AAR1011.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900037",
@@ -1458,7 +1496,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1485,7 +1523,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_AAR1005.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900036",
@@ -1494,7 +1533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1521,7 +1560,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652076/ddurazno/prov2_AAR1004.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900034",
@@ -1530,7 +1570,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1557,7 +1597,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652074/ddurazno/prov2_MMC1003.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900033",
@@ -1566,7 +1607,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1593,7 +1634,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652072/ddurazno/prov2_MMC1006.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900035",
@@ -1602,7 +1644,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1629,7 +1671,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652075/ddurazno/prov2_MMC1010.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-1729",
@@ -1638,7 +1681,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nFeel Love Enhancing Crema. Tratamiento de uso diario. Con Extractos Herbales y Damiana. Fortalece el musculo y tejido del pene. Resultados garantizados…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -1668,7 +1711,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785058328/ddurazno/1729-ai-1785058328081.png",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1730",
@@ -1677,7 +1721,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPropiedades que lo incrementan. Incluye Manual de Ejercicios. Fórmula Exclusiva que garantiza mejores resultados. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -1705,7 +1749,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785058424/ddurazno/1730-ai-1785058423503.png",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1822",
@@ -1714,7 +1759,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 485,
-        "compare_price": 606,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4.5 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1745,7 +1790,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788144176/ddurazno/1822-main.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 404
     },
     {
         "id": "PROD-MK-1821",
@@ -1754,7 +1800,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 23 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1781,7 +1827,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=524",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1823",
@@ -1790,7 +1837,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo Medida 22 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1817,7 +1864,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=531",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1742",
@@ -1826,7 +1874,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nIntensificador Femenino: gel estimulante intensifica el placer en el clítoris. Ayuda a conseguir orgasmos más fácilmente. Ayuda a alcanzar orgasmos…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -1849,7 +1897,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=404",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-1820",
@@ -1858,7 +1907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 485,
-        "compare_price": 606,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDildo / Medida 20 X 4 CM. Color Natural Real. Compatible con Arnés. Apariencia y sensación realista. Libre de Ftalato de PVC. Libre de Fragancias. Utiliza…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -1888,7 +1937,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785058186/ddurazno/1820-main.webp",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 404
     },
     {
         "id": "PROD-MK-1917",
@@ -1897,7 +1947,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Formulación vigorizante de extractos naturales para maximizar energía, resistencia y firmeza.\n\nHecho para las mujeres de todas las edades. Para aliviar la pérdida de la libido y sentirse sexy. 100% natural. No tiene efectos secundarios después de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Extractos botánicos bioactivos (Damiana, L-Arginina, Maca), vigorización sostenida y alta biodisponibilidad.",
@@ -1925,7 +1975,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785057688/ddurazno/1917-main.webp",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-3023",
@@ -1934,7 +1985,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nFeel Love CUM Lubricante Comestible con apariencia a semen a base de agua que no daña el condón. Aumenta el placer en los momentos íntimos. No ocasiona…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -1963,7 +2014,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785047285/ddurazno/3023-img-1198.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900003",
@@ -1972,7 +2024,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Fine Lingerie",
         "subtitle": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
@@ -1998,7 +2050,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652027/ddurazno/prov2_QNY1119.jpg",
         "badge": "Alta Costura",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900024",
@@ -2007,7 +2060,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Fine Lingerie",
         "subtitle": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
@@ -2033,7 +2086,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652062/ddurazno/prov2_QNY1071.jpg",
         "badge": "Alta Costura",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900023",
@@ -2042,7 +2096,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Fine Lingerie",
         "subtitle": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
@@ -2068,7 +2122,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652061/ddurazno/prov2_QNY1058.jpg",
         "badge": "Alta Costura",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900001",
@@ -2077,7 +2132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Fine Lingerie",
         "subtitle": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
@@ -2103,7 +2158,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652023/ddurazno/prov2_QNY1113.jpg",
         "badge": "Alta Costura",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-1731",
@@ -2112,7 +2168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nGel Estrechador. Mayor fricción durante la actividad. Efecto temporal de elasticidad. Mucha más sensación en ambos. Cont. Neto 40 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2139,7 +2195,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=382",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900002",
@@ -2148,7 +2205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Fine Lingerie",
         "subtitle": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Prenda íntima de alta costura, diseño sensual y caricia envolvente.\n\nUna pieza de lencería íntima que celebra las curvas, la belleza y la sofisticación. Confeccionada con telas de tacto sedoso, encajes elásticos y cortes ergonómicos que acarician la piel con delicadeza absoluta en momentos de intimidad especial.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Satén líquido sedoso, encaje floral hipoalergénico y ajuste adaptable que no marca ni oprime.",
@@ -2174,7 +2231,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652025/ddurazno/prov2_QNY1053.jpg",
         "badge": "Alta Costura",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900078",
@@ -2183,7 +2241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente 50ml .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
@@ -2214,7 +2272,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129413/ddurazno/900078-url-a443a379cdc2cab5.jpg",
         "badge": "Efecto Térmico",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-1751",
@@ -2223,7 +2282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Fresa. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2250,7 +2309,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=420",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900088",
@@ -2259,7 +2319,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Caliente Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
@@ -2290,7 +2350,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487366/ddurazno/900088-url-cea89c446eea15fd.jpg",
         "badge": "Efecto Térmico",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-2345",
@@ -2299,7 +2360,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Multiorgásmico. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Frutas Prohibidas. Compatible con Látex y…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2326,7 +2387,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785052874/ddurazno/2345-manual-1785052874077.webp",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900079",
@@ -2335,7 +2397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante íntimo saborizado sabor fresa, presentación de 300ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2366,7 +2428,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129425/ddurazno/900079-url-73e7c12557413684.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-1724",
@@ -2375,7 +2438,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nMejora tu rendimiento Físico y Sexual a base de ingredientes naturales. Mayor vigor y energía en las actividades diarias. Así como favorecen la capacidad…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2402,7 +2465,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=373",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-2686",
@@ -2411,7 +2475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nBeneficios para las mujeres como la Rhodiola que aumenta la energía tras falta de deseo sexual por menopausia o cambios hormonales. Con L-Arginina para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2438,7 +2502,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785048465/ddurazno/2686-manual-1785048465449.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900043",
@@ -2447,7 +2512,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 659,
-        "compare_price": 824,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nMasajeador de varita mágica .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2474,7 +2539,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652083/ddurazno/prov2_AAD1014.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 549
     },
     {
         "id": "PROD-MK-900087",
@@ -2483,7 +2549,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nLubricante Frío Imitación Semen .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2514,7 +2580,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487359/ddurazno/900087-url-e80cc7de1221eb23.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900066",
@@ -2523,7 +2590,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja azul. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2552,7 +2619,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129275/ddurazno/900066-url-041d87c0ee825c4d.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900067",
@@ -2561,7 +2629,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja naranja. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2590,7 +2658,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129283/ddurazno/900067-url-c379f369fa5c9eef.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900068",
@@ -2599,7 +2668,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en caja rosa. Diseño discreto para uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2628,7 +2697,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129291/ddurazno/900068-url-df1dbefefa3fb808.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-1753",
@@ -2637,7 +2707,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.",
         "price": 335,
-        "compare_price": 419,
+        "compare_price": null,
         "stock": 24,
         "description": "Hidratación pura y biocompatible para un deslizamiento sublime de larga duración.\n\nEfecto Retardador. Gel Lubricante a base de Agua, Transparente No Graso y no mancha. Comestible sabor: Chocolate. Compatible con Látex y cualquier tipo de…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -2664,7 +2734,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=423",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 279
     },
     {
         "id": "PROD-MK-900072",
@@ -2673,7 +2744,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 899,
-        "compare_price": 1124,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador Vagina Beige .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2709,7 +2780,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129333/ddurazno/900072-url-14233fb9580ddf56.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 749
     },
     {
         "id": "PROD-MK-900071",
@@ -2718,7 +2790,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 1199,
-        "compare_price": 1499,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nMasturbador realista en tono beige, con forma de cuerpo. Diseño de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2750,7 +2822,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129314/ddurazno/900071-url-0544fd873e9548f2.webp",
         "badge": "Boutique Preferente",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 999
     },
     {
         "id": "PROD-MK-900025",
@@ -2759,7 +2832,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2786,7 +2859,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652063/ddurazno/prov2_AJ1050.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900052",
@@ -2795,7 +2869,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 1019,
-        "compare_price": 1274,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2822,7 +2896,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652093/ddurazno/prov2_AJ1064.jpg",
         "badge": "Boutique Preferente",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 849
     },
     {
         "id": "PROD-MK-900027",
@@ -2831,7 +2906,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 659,
-        "compare_price": 824,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2858,7 +2933,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652066/ddurazno/prov2_AJ1045.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 549
     },
     {
         "id": "PROD-MK-900026",
@@ -2867,7 +2943,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2894,7 +2970,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652065/ddurazno/prov2_AJ1068.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900054",
@@ -2903,7 +2980,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2930,7 +3007,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652094/ddurazno/prov2_BBR1001.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900008",
@@ -2939,7 +3017,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -2966,7 +3044,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652035/ddurazno/prov2_AJ1105.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900028",
@@ -2975,7 +3054,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 899,
-        "compare_price": 1124,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3002,7 +3081,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652067/ddurazno/prov2_AJ1076.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 749
     },
     {
         "id": "PROD-MK-900029",
@@ -3011,7 +3091,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3038,7 +3118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652068/ddurazno/prov2_AJ1088.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900032",
@@ -3047,7 +3128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3074,7 +3155,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652071/ddurazno/prov2_MMG1001.webp",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900031",
@@ -3083,7 +3165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3110,7 +3192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652070/ddurazno/prov2_AE1086.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900006",
@@ -3119,7 +3202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3146,7 +3229,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652032/ddurazno/prov2_AK1044.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900051",
@@ -3155,7 +3239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 1019,
-        "compare_price": 1274,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3182,7 +3266,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652091/ddurazno/prov2_AJ1098.jpg",
         "badge": "Boutique Preferente",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 849
     },
     {
         "id": "PROD-MK-900007",
@@ -3191,7 +3276,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.",
         "price": 899,
-        "compare_price": 1124,
+        "compare_price": null,
         "stock": 24,
         "description": "Cámara sensorial de textura biomimética ultrarrealista y adaptación térmica natural.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3218,7 +3303,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652034/ddurazno/prov2_AD1008.webp",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 749
     },
     {
         "id": "PROD-MK-900063",
@@ -3227,7 +3313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Soft Fetish",
         "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
         "price": 839,
-        "compare_price": 1049,
+        "compare_price": null,
         "stock": 24,
         "description": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.\n\nMuñeco inflable masculino para fiestas de adultos y despedidas de soltera. Tamaño realista, fácil de inflar y guardar; ideal como regalo de broma o…\n\nCurado cuidadosamente para la colección íntima de Mokka Chai, esta pieza invita a la complicidad, la exploración de límites y la entrega a los sentidos con total seguridad, confort y elegancia.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Tacto suave con forro afelpado, herrajes pulidos de tono dorado y bordes con costura de seguridad.",
@@ -3255,7 +3341,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129249/ddurazno/900063-url-73db590516905544.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 699
     },
     {
         "id": "PROD-MK-900111",
@@ -3264,7 +3351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 9899,
-        "compare_price": 12374,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nLo más pedido por ellas: vibradores, dildos, lubricantes de 60ml, intensificadores y limpiador. Paquete prearmado con 17 productos de alta rotación para…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3308,7 +3395,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791996678/ddurazno/900111-url-26d0fde0d0fc286b.jpg",
         "badge": "Mokka Chai Selección Oro",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 8249
     },
     {
         "id": "PROD-MK-900108",
@@ -3317,7 +3405,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Couples",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 9882,
-        "compare_price": 12353,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, 6 dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 16 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3360,7 +3448,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791993008/ddurazno/900108-url-054b2bf2e34ec5f9.jpg",
         "badge": "Mokka Chai Selección Oro",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 8235
     },
     {
         "id": "PROD-MK-900107",
@@ -3369,7 +3458,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Couples",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 9697,
-        "compare_price": 12121,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nPara él y para ella: torso, masturbadores, dildos, vibradores y lubricantes de 60ml. Paquete prearmado con 15 productos, recomendación de la casa. Listo…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
@@ -3411,7 +3500,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791992991/ddurazno/900107-url-15946f8bf536ff00.jpg",
         "badge": "Mokka Chai Selección Oro",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 8081
     },
     {
         "id": "PROD-MK-900073",
@@ -3420,7 +3510,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal negro, recargable por USB, con control mediante aplicación móvil.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3453,7 +3543,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129355/ddurazno/900073-url-cb455cd670536f46.jpg",
         "badge": "Smart Tech App",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900074",
@@ -3462,7 +3553,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nPlug anal metálico color rojo con pompón decorativo en la base.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3490,7 +3581,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129370/ddurazno/900074-url-0e3bfe940ec30125.jpg",
         "badge": "Anatomía Ergonómica",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-1735",
@@ -3499,7 +3591,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 539,
-        "compare_price": 674,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCrema para Potenciar en los hombres la erección y duración durante su actividad sexual dejando a sus parejas satisfechas. Cont. Neto 60 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3526,7 +3618,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://www.ddurazno.com/api/gimg?id=390",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 449
     },
     {
         "id": "PROD-MK-900095",
@@ -3535,7 +3628,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3564,7 +3657,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487418/ddurazno/900095-url-21df7ea3d42a1a7d.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-2670",
@@ -3573,7 +3667,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 126,
-        "compare_price": 158,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nShampoo para Juguetes (Toy cleaner protection) para antes y después de jugar. Antibacterial. Protección para todos tus juguetes y accesorios sexuales…\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3600,7 +3694,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785048490/ddurazno/2670-manual-1785048490927.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 105
     },
     {
         "id": "PROD-MK-900045",
@@ -3609,7 +3704,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 839,
-        "compare_price": 1049,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3636,7 +3731,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652084/ddurazno/prov2_MMK1004.webp",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 699
     },
     {
         "id": "PROD-MK-900085",
@@ -3645,7 +3741,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -3676,7 +3772,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487343/ddurazno/900085-url-701e6cdf42c943f5.jpg",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900048",
@@ -3685,7 +3782,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Acabado en aleación metálica pulida espejo, retención térmica para juego de temperaturas y peso balanceado.",
@@ -3712,7 +3809,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652088/ddurazno/prov2_AS1036.jpg",
         "badge": "Anatomía Ergonómica",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900047",
@@ -3721,7 +3819,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 359,
-        "compare_price": 449,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal de silicona (M) .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3748,7 +3846,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652087/ddurazno/prov2_KKR1005.jpg",
         "badge": "Anatomía Ergonómica",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 299
     },
     {
         "id": "PROD-MK-900081",
@@ -3757,7 +3856,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Silueta suave y anatómica concebida para una exploración gradual y placentera.",
         "price": 419,
-        "compare_price": 524,
+        "compare_price": null,
         "stock": 24,
         "description": "Silueta suave y anatómica concebida para una exploración gradual y placentera.\n\nTapón anal metálico con base decorada de piedra brillante y doble campana. Fabricado en aleación de aluminio de alta calidad, con acabado liso y sin…\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Acabado en aleación metálica pulida espejo, retención térmica para juego de temperaturas y peso balanceado.",
@@ -3789,7 +3888,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788144688/ddurazno/900081-url-a49d7f0cb68d78e3.jpg",
         "badge": "Anatomía Ergonómica",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 349
     },
     {
         "id": "PROD-MK-900086",
@@ -3798,7 +3898,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nSpray Retardante Caliente .\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Calidez termodinámica progresiva, aroma sutil afrodisíaco y deslizamiento sedoso sin sensación pegajosa.",
@@ -3829,7 +3929,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487351/ddurazno/900086-url-7c0cf1f9e32507e4.jpg",
         "badge": "Efecto Térmico",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900091",
@@ -3838,7 +3939,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3867,7 +3968,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487391/ddurazno/900091-url-b439a24ed523b227.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900089",
@@ -3876,7 +3978,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Dispositivo íntimo de ingeniería sensorial y tacto aterciopelado grado médico.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3906,7 +4008,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487378/ddurazno/900089-url-d765843543dbe2a2.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     },
     {
         "id": "PROD-MK-900065",
@@ -3915,7 +4018,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador personal para estimulación del punto G, en color rosa. Diseño ergonómico de uso personal.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3944,7 +4047,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1788129267/ddurazno/900065-url-561741261886637e.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900056",
@@ -3953,7 +4057,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 659,
-        "compare_price": 824,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -3980,7 +4084,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652097/ddurazno/prov2_AR1024.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 549
     },
     {
         "id": "PROD-MK-2436",
@@ -3989,7 +4094,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Sensory Care",
         "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
         "price": 659,
-        "compare_price": 824,
+        "compare_price": null,
         "stock": 24,
         "description": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.\n\nEstimulante Femenino. Gel con Efecto Vibrador para estimular el placer a través de las sensaciones durante el juego en pareja o sola. Cont. Neto 25 ml.\n\nCreado como parte del ritual de autocuidado y conexión sensorial de Mokka Chai, esta fórmula dermocosmética equilibra pureza botánica y sedosidad absoluta. Su textura respeta el pH y manto hidrolipídico íntimo, potenciando la receptividad al tacto con una experiencia cálida, envolvente y placentera.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Textura fluida ultradeslizante, hidratación celular prolongada y pH balanceado biocompatible.",
@@ -4013,7 +4118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785050349/ddurazno/2436-manual-1785050349898.webp",
         "badge": "Elixir Sensorial",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 549
     },
     {
         "id": "PROD-MK-900050",
@@ -4022,7 +4128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 779,
-        "compare_price": 974,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4049,7 +4155,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652089/ddurazno/prov2_CCM1001.png",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 649
     },
     {
         "id": "PROD-MK-900057",
@@ -4058,7 +4165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 899,
-        "compare_price": 1124,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador con estimulador .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4085,7 +4192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652098/ddurazno/prov2_CCN1013.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 749
     },
     {
         "id": "PROD-MK-900099",
@@ -4094,7 +4202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4123,7 +4231,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487446/ddurazno/900099-url-73dbd689adcc6576.jpg",
         "badge": "Smart Tech App",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900059",
@@ -4132,7 +4241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 839,
-        "compare_price": 1049,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4159,7 +4268,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652104/ddurazno/prov2_AAM1004.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 699
     },
     {
         "id": "PROD-MK-900100",
@@ -4168,7 +4278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.",
         "price": 719,
-        "compare_price": 899,
+        "compare_price": null,
         "stock": 24,
         "description": "Tecnología inteligente con control inalámbrico a distancia para conexión sin fronteras.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4196,7 +4306,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1791487452/ddurazno/900100-url-57e9aa8337e706de.jpg",
         "badge": "Smart Tech App",
         "is_featured": 1,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 599
     },
     {
         "id": "PROD-MK-900049",
@@ -4205,7 +4316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 599,
-        "compare_price": 749,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nVibrador de clítoris con succión y pulsación .\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4232,7 +4343,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652088/ddurazno/prov2_AAD1037.webp",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 499
     },
     {
         "id": "PROD-MK-900039",
@@ -4241,7 +4353,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "Pleasure Tech",
         "subtitle": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.",
         "price": 479,
-        "compare_price": 599,
+        "compare_price": null,
         "stock": 24,
         "description": "Estimulación precisa de frecuencias silenciosas y tacto aterciopelado para placer sublime.\n\nDiseñado bajo la filosofía de placer consciente y bienestar íntimo de Mokka Chai, este dispositivo conjuga ingeniería de precisión con materiales de la más alta pureza médica biocompatible. Su silueta anatómica y acabado soft-touch aterciopelado garantizan una respuesta táctil inmediata y segura, mientras sus patrones de estimulación operan bajo ingeniería de absorción acústica Whisper-Quiet.\n\n🔒 Compromiso de Privacidad Absoluta Mokka Chai: Cada pedido se envía en empaque 100% ciego, neutro y confidencial, sin logotipos, marcas externas ni descripciones del contenido. Máxima discreción garantizada en toda la República Mexicana.",
         "sensory_notes": "Silicona médica ultrasuave de tacto aterciopelado (Silky Touch), motor Whisper-Quiet <38dB y biocompatibilidad certificada.",
@@ -4268,7 +4380,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo_main": "https://res.cloudinary.com/dgzea9m7q/image/upload/v1785652078/ddurazno/prov2_XQ1001.jpg",
         "badge": "Colección Mokka Chai",
         "is_featured": 0,
-        "is_active": 1
+        "is_active": 1,
+        "wholesale_cost": 399
     }
 ];
 
