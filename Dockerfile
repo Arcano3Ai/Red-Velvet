@@ -1,23 +1,21 @@
 # RED VELVET — Producción Container
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 
 WORKDIR /app
 
-# Dependencias para compilar módulos nativos si son necesarios
-RUN apk add --no-cache python3 make g++ vips-dev
+ENV NODE_ENV=production
+ENV PORT=8080
 
+# Instalar dependencias usando binarios precompilados de sharp y sqlite3
 COPY package*.json ./
 RUN npm ci --only=production
 
+# Copiar código fuente
 COPY . .
 
-# Crear directorios para persistencia de datos y fotos
+# Directorios de datos y uploads
 RUN mkdir -p data uploads/products
 
-EXPOSE 8080 8000
-
-ENV NODE_ENV=production
-
-VOLUME ["/app/data", "/app/uploads"]
+EXPOSE 8080
 
 CMD ["node", "server/server.js"]
