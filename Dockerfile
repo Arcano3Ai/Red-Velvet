@@ -14,9 +14,8 @@ COPY . .
 # Crear directorios para persistencia de datos y fotos
 RUN mkdir -p data uploads/products
 
-EXPOSE 8000
+EXPOSE 8080 8000
 
-ENV PORT=8000
 ENV NODE_ENV=production
 
 VOLUME ["/app/data", "/app/uploads"]
