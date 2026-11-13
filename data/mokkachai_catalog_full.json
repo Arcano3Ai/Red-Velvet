@@ -17,8 +17,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 1,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900092",
@@ -38,8 +38,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 2,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900064",
@@ -59,8 +59,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 3,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900090",
@@ -80,8 +80,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 4,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900094",
@@ -101,8 +101,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 5,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900098",
@@ -122,8 +122,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 6,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1776",
@@ -143,8 +143,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 7,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1725",
@@ -164,8 +164,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 8,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900070",
@@ -185,8 +185,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 9,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1727",
@@ -206,8 +206,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 10,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900055",
@@ -227,8 +227,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 11,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900010",
@@ -248,8 +248,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 12,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900015",
@@ -269,8 +269,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 13,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900013",
@@ -290,8 +290,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 14,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900016",
@@ -311,8 +311,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 15,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900011",
@@ -332,8 +332,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 16,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900021",
@@ -353,8 +353,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 17,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1775",
@@ -374,8 +374,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 18,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900017",
@@ -395,8 +395,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 19,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900018",
@@ -416,8 +416,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 20,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900020",
@@ -437,8 +437,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 21,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900022",
@@ -458,8 +458,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 22,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1646",
@@ -479,8 +479,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 23,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1647",
@@ -500,8 +500,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 24,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900082",
@@ -521,8 +521,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 25,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900080",
@@ -542,8 +542,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 26,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900061",
@@ -563,14 +563,14 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 27,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900075",
     "name": "Dados Rosa y Negro",
     "slug": "dados-rosa-y-negro-900075",
-    "category": "Soft Fetish",
+    "category": "Couples",
     "subtitle": "Herramienta de complicidad y exploración sensorial con acabados suaves al contacto.",
     "price": 335,
     "compare_price": 419,
@@ -584,8 +584,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 28,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900077",
@@ -605,8 +605,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 29,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900097",
@@ -626,8 +626,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 30,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900083",
@@ -647,8 +647,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 31,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900076",
@@ -668,8 +668,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 32,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900084",
@@ -689,8 +689,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 33,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900093",
@@ -710,8 +710,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 34,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900046",
@@ -731,8 +731,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 35,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900044",
@@ -752,8 +752,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 36,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900042",
@@ -773,8 +773,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 37,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900038",
@@ -794,8 +794,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 38,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900037",
@@ -815,8 +815,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 39,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900036",
@@ -836,8 +836,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 40,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900034",
@@ -857,8 +857,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 41,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900033",
@@ -878,8 +878,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 42,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900035",
@@ -899,8 +899,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 43,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1729",
@@ -920,8 +920,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 44,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1730",
@@ -941,8 +941,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 45,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1822",
@@ -962,8 +962,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 46,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1821",
@@ -983,8 +983,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 47,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1823",
@@ -1004,8 +1004,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 48,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1742",
@@ -1025,8 +1025,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 49,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1820",
@@ -1046,8 +1046,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 50,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1917",
@@ -1067,8 +1067,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 51,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-3023",
@@ -1088,8 +1088,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 52,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900003",
@@ -1109,8 +1109,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 53,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900024",
@@ -1130,8 +1130,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 54,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900023",
@@ -1151,8 +1151,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 55,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900001",
@@ -1172,8 +1172,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 56,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1731",
@@ -1193,8 +1193,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 57,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900002",
@@ -1214,8 +1214,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 58,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900078",
@@ -1235,8 +1235,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 59,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1751",
@@ -1256,8 +1256,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 60,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900088",
@@ -1277,8 +1277,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 61,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-2345",
@@ -1298,8 +1298,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 62,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900079",
@@ -1319,8 +1319,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 63,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1724",
@@ -1340,8 +1340,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 64,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-2686",
@@ -1361,8 +1361,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 65,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900043",
@@ -1382,8 +1382,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 66,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900087",
@@ -1403,8 +1403,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 67,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900066",
@@ -1424,8 +1424,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 68,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900067",
@@ -1445,8 +1445,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 69,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900068",
@@ -1466,8 +1466,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 70,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1753",
@@ -1487,8 +1487,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 71,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900072",
@@ -1508,8 +1508,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 72,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900071",
@@ -1529,8 +1529,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 73,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900025",
@@ -1550,8 +1550,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 74,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900052",
@@ -1571,8 +1571,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 75,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900027",
@@ -1592,8 +1592,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 76,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900026",
@@ -1613,8 +1613,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 77,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900054",
@@ -1634,8 +1634,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 78,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900008",
@@ -1655,8 +1655,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 79,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900028",
@@ -1676,8 +1676,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 80,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900029",
@@ -1697,8 +1697,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 81,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900032",
@@ -1718,8 +1718,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 82,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900031",
@@ -1739,8 +1739,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 83,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900006",
@@ -1760,8 +1760,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 84,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900051",
@@ -1781,8 +1781,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 85,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900007",
@@ -1802,8 +1802,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 86,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900063",
@@ -1823,8 +1823,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 87,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900111",
@@ -1844,14 +1844,14 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 88,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900108",
     "name": "Paquete Pareja Placer",
     "slug": "paquete-pareja-placer-900108",
-    "category": "Sensory Care",
+    "category": "Couples",
     "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
     "price": 9882,
     "compare_price": 12353,
@@ -1865,14 +1865,14 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 89,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900107",
     "name": "Paquete Pareja Fuego",
     "slug": "paquete-pareja-fuego-900107",
-    "category": "Sensory Care",
+    "category": "Couples",
     "subtitle": "Elixir de cuidado íntimo formulado para intensificar la sensibilidad táctil.",
     "price": 9697,
     "compare_price": 12121,
@@ -1886,8 +1886,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 90,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900073",
@@ -1907,8 +1907,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 91,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900074",
@@ -1928,8 +1928,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 92,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-1735",
@@ -1949,8 +1949,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 93,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900095",
@@ -1970,8 +1970,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 94,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-2670",
@@ -1991,8 +1991,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 95,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900045",
@@ -2012,8 +2012,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 96,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900085",
@@ -2033,8 +2033,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 97,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900048",
@@ -2054,8 +2054,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 98,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900047",
@@ -2075,8 +2075,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 99,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900081",
@@ -2096,8 +2096,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 100,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900086",
@@ -2117,8 +2117,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 101,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900091",
@@ -2138,8 +2138,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 102,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900089",
@@ -2159,8 +2159,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 103,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900065",
@@ -2180,8 +2180,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 104,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900056",
@@ -2201,8 +2201,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 105,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-2436",
@@ -2222,8 +2222,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 106,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900050",
@@ -2243,8 +2243,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 107,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900057",
@@ -2264,8 +2264,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 108,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900099",
@@ -2285,8 +2285,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 109,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900059",
@@ -2306,8 +2306,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 110,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900100",
@@ -2327,8 +2327,8 @@
     "is_featured": 1,
     "is_active": 1,
     "sort_order": 111,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900049",
@@ -2348,8 +2348,8 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 112,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   },
   {
     "id": "PROD-MK-900039",
@@ -2369,7 +2369,7 @@
     "is_featured": 0,
     "is_active": 1,
     "sort_order": 113,
-    "created_at": "2026-11-13 02:22:49",
-    "updated_at": "2026-11-13 02:22:49"
+    "created_at": "2026-11-13 02:34:55",
+    "updated_at": "2026-11-13 02:34:55"
   }
 ]

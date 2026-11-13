@@ -47,13 +47,13 @@ const runTests = async () => {
         }
         console.log('✔ Ordenamiento por precio (price_asc) verificado');
 
-        // 6. Detalle de producto nuevo de alta joyería: PROD-010 (Vesper Royale)
-        const detailRes = await fetch(`${baseUrl}/api/products/PROD-010`);
+        // 6. Detalle de producto del nuevo catálogo mayorista: PROD-MK-900092
+        const detailRes = await fetch(`${baseUrl}/api/products/PROD-MK-900092`);
         const detailData = await detailRes.json();
-        console.assert(detailData.success === true, 'Detalle de PROD-010 falló');
-        console.assert(detailData.product.name.includes('Vesper'), 'Nombre incorrecto en PROD-010');
-        console.assert(detailData.product.specs.material.includes('Oro Rosa'), 'Specs de PROD-010 incorrectas');
-        console.log('✔ Producto PROD-010 (Collar Joya Vesper Royale) verificado con especificaciones de oro 24K');
+        console.assert(detailData.success === true, 'Detalle de PROD-MK-900092 falló');
+        console.assert(detailData.product.name.includes('Anillos'), 'Nombre incorrecto en PROD-MK-900092');
+        console.assert(detailData.product.price === 239, 'Precio con margen incorrecto en PROD-MK-900092');
+        console.log('✔ Producto PROD-MK-900092 verificado con especificaciones y precio exacto (+20%)');
 
         // 7. Cupón VIP GOLD30
         const couponRes = await fetch(`${baseUrl}/api/codes/verify`, {
@@ -80,8 +80,8 @@ const runTests = async () => {
                 notes: 'Empaque neutro sin distintivos, timbre en torre A',
                 coupon_code: 'GOLD30',
                 items: [
-                    { id: 'PROD-010', quantity: 1 }, // Vesper Royale ($4,100)
-                    { id: 'PROD-016', quantity: 1 }  // Elixir Sensuel ($1,150)
+                    { id: 'PROD-MK-900092', quantity: 1 }, // 3 Anillos ($239)
+                    { id: 'PROD-MK-1737', quantity: 1 }    // Anal Sex Crema ($479)
                 ]
             })
         });
