@@ -1156,17 +1156,17 @@ const seedData = async () => {
 
     luxuryProducts.push(...additionalProducts);
 
-    // Integrar catálogo completo sincronizado de Erectus si existe
+    // Integrar catálogo completo sincronizado de mayorista Mokka Chai (Ddurazno +20%) si existe
     const fs = require('fs');
     const path = require('path');
-    const erectusPath = path.join(__dirname, '../../data/erectus_catalog_full.json');
-    if (fs.existsSync(erectusPath)) {
+    const mokkaPath = path.join(__dirname, '../../data/mokkachai_catalog_full.json');
+    if (fs.existsSync(mokkaPath)) {
         try {
-            const erectusItems = JSON.parse(fs.readFileSync(erectusPath, 'utf8'));
-            luxuryProducts.push(...erectusItems);
-            console.log(`📦 Añadidos ${erectusItems.length} productos sincronizados de Erectus.`);
+            const mokkaItems = JSON.parse(fs.readFileSync(mokkaPath, 'utf8'));
+            luxuryProducts.push(...mokkaItems);
+            console.log(`📦 Añadidos ${mokkaItems.length} productos sincronizados del mayorista Mokka Chai.`);
         } catch(e) {
-            console.warn('No se pudo cargar erectus_catalog_full.json en seed:', e.message);
+            console.warn('No se pudo cargar mokkachai_catalog_full.json en seed:', e.message);
         }
     }
 
