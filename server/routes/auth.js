@@ -11,19 +11,20 @@ router.post('/login', async (req, res) => {
 
         const cleanToken = (token || username || '').trim().toUpperCase();
         const cleanPin = (pin || password || '').trim();
+        const configuredPin = (process.env.ADMIN_MASTER_PIN || '9999').trim();
 
-        // Verificación de credenciales maestras predeterminadas
+        // Verificación de credenciales maestras predeterminadas y PIN configurado
         const isValidMaster = 
             (cleanToken === 'ADMIN-999' || cleanToken === 'MASTER' || cleanToken === 'ADMIN') &&
-            (cleanPin === '9999' || cleanPin === 'admin' || cleanPin === 'velvet2026');
+            (cleanPin === configuredPin || cleanPin === '9999' || cleanPin === 'admin' || cleanPin === 'velvet2026');
 
         if (!isValidMaster) {
             // Verificar también contra códigos VIP activos de rol 'Administrador'
             const dbCode = await query.get(
-                'SELECT * FROM invitation_codes WHERE code = ? AND role = "Administrador" AND is_active = 1',
+                "SELECT * FROM invitation_codes WHERE code = ? AND role = 'Administrador' AND is_active = 1",
                 [cleanToken]
             );
-            if (!dbCode || (cleanPin !== '9999' && cleanPin !== 'admin')) {
+            if (!dbCode || (cleanPin !== configuredPin && cleanPin !== '9999' && cleanPin !== 'admin')) {
                 return res.status(401).json({
                     success: false,
                     error: 'Credenciales administrativas no autorizadas o PIN inválido.'

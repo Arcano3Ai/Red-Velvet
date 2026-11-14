@@ -36,8 +36,12 @@ const seedData = async () => {
         `, [c.code, c.role, c.max_uses, c.note]);
     }
 
-    // 2. Cargar Únicamente el Nuevo Catálogo de Mayorista RED VELVET
-    const catalogPath = path.join(__dirname, '../../data/redvelvet_catalog_full.json');
+    // 2. Cargar Catálogo Maestro RED VELVET
+    let catalogPath = path.join(__dirname, '../../data/redvelvet_catalog_full.json');
+    if (!fs.existsSync(catalogPath)) {
+        catalogPath = path.join(__dirname, '../../data/products.json');
+    }
+
     if (!fs.existsSync(catalogPath)) {
         console.error('❌ Archivo de catálogo no encontrado en:', catalogPath);
         return;

@@ -3,6 +3,7 @@ data/*
 !data/.gitkeep
 !data/erectus_catalog_full.json
 !data/products.json
+!data/redvelvet_catalog_full.json
 uploads/*
 !uploads/.gitkeep
 .env
