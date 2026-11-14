@@ -1,4 +1,3 @@
-const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
 
@@ -8,35 +7,75 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 const DB_PATH = path.join(DATA_DIR, 'redvelvet.db');
-const db = new sqlite3.Database(DB_PATH);
 
-// Helper methods promisificados
-const query = {
-    run: (sql, params = []) => {
-        return new Promise((resolve, reject) => {
-            db.run(sql, params, function (err) {
-                if (err) reject(err);
-                else resolve({ id: this.lastID, changes: this.changes });
-            });
-        });
-    },
-    get: (sql, params = []) => {
-        return new Promise((resolve, reject) => {
-            db.get(sql, params, (err, row) => {
-                if (err) reject(err);
-                else resolve(row);
-            });
-        });
-    },
-    all: (sql, params = []) => {
-        return new Promise((resolve, reject) => {
-            db.all(sql, params, (err, rows) => {
-                if (err) reject(err);
-                else resolve(rows);
-            });
-        });
+let query = null;
+let db = null;
+
+// 1. Prioridad: Driver nativo node:sqlite (Node 22+, 100% inmune a errores GLIBC o dependencias externas)
+try {
+    const { DatabaseSync } = require('node:sqlite');
+    const syncDb = new DatabaseSync(DB_PATH);
+    db = syncDb;
+
+    query = {
+        run: async (sql, params = []) => {
+            const trimmed = sql.trim();
+            // Si son sentencias PRAGMA o creación de esquemas DDL
+            if (trimmed.startsWith('PRAGMA') || trimmed.startsWith('CREATE TABLE')) {
+                syncDb.exec(sql);
+                return { id: null, changes: 0 };
+            }
+            const stmt = syncDb.prepare(sql);
+            const res = stmt.run(...params);
+            return { id: res.lastInsertRowid, changes: res.changes };
+        },
+        get: async (sql, params = []) => {
+            const stmt = syncDb.prepare(sql);
+            return stmt.get(...params);
+        },
+        all: async (sql, params = []) => {
+            const stmt = syncDb.prepare(sql);
+            return stmt.all(...params);
+        }
+    };
+} catch (nativeErr) {
+    // 2. Fallback: Driver sqlite3 npm clásico
+    try {
+        const sqlite3 = require('sqlite3').verbose();
+        const fallbackDb = new sqlite3.Database(DB_PATH);
+        db = fallbackDb;
+
+        query = {
+            run: (sql, params = []) => {
+                return new Promise((resolve, reject) => {
+                    fallbackDb.run(sql, params, function (err) {
+                        if (err) reject(err);
+                        else resolve({ id: this.lastID, changes: this.changes });
+                    });
+                });
+            },
+            get: (sql, params = []) => {
+                return new Promise((resolve, reject) => {
+                    fallbackDb.get(sql, params, (err, row) => {
+                        if (err) reject(err);
+                        else resolve(row);
+                    });
+                });
+            },
+            all: (sql, params = []) => {
+                return new Promise((resolve, reject) => {
+                    fallbackDb.all(sql, params, (err, rows) => {
+                        if (err) reject(err);
+                        else resolve(rows);
+                    });
+                });
+            }
+        };
+    } catch (e) {
+        console.error('Error al inicializar SQLite:', e);
+        throw e;
     }
-};
+}
 
 // Inicialización de esquemas y tablas
 const initDatabase = async () => {
