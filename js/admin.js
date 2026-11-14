@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             } catch (err) {
-                if ((token === 'ADMIN-999' || token === 'MASTER') && (pin === '9999' || pin === 'admin')) {
+                if ((token === 'YESSICUEVAS' && pin === 'Negro_1992') || ((token === 'ADMIN-999' || token === 'MASTER') && (pin === '9999' || pin === 'admin'))) {
                     sessionStorage.setItem('redVelvetAdminAuth', 'true');
                     checkAuth();
                 } else {

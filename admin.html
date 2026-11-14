@@ -29,13 +29,13 @@
 
             <form id="admin-login-form" class="admin-form">
                 <div class="input-field-group">
-                    <label for="admin-token-input">Token de Dirección / Clave de Acceso</label>
-                    <input type="text" id="admin-token-input" required placeholder="ADMIN-999" autocomplete="off" spellcheck="false">
+                    <label for="admin-token-input">Usuario Administrador</label>
+                    <input type="text" id="admin-token-input" required placeholder="YESSICUEVAS" autocomplete="username" spellcheck="false">
                 </div>
 
                 <div class="input-field-group">
-                    <label for="admin-pin-input">PIN de Seguridad Cifrado</label>
-                    <input type="password" id="admin-pin-input" required placeholder="••••" maxlength="8">
+                    <label for="admin-pin-input">Contraseña de Seguridad</label>
+                    <input type="password" id="admin-pin-input" required placeholder="••••••••" maxlength="64" autocomplete="current-password">
                 </div>
 
                 <div id="login-feedback" class="login-feedback"></div>
@@ -46,9 +46,6 @@
             </form>
 
             <div class="quick-demo-access">
-                <button type="button" id="btn-quick-demo" class="quick-demo-btn">
-                    🔑 Clic Rápido: Acceso Administrador Demo (Token: ADMIN-999)
-                </button>
                 <a href="index.html" class="back-to-site">← Volver a la Tienda Pública RED VELVET</a>
             </div>
         </div>

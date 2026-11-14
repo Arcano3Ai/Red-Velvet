@@ -10,18 +10,19 @@ const runAdminSuite = async () => {
     console.log(`🧪 Ejecutando suite de pruebas de administración en ${baseUrl}...`);
 
     try {
-        // 1. Login Admin
-        const loginRes = await fetch(`${baseUrl}/api/auth/login`, {
+        // 1. Login Admin (Credenciales maestras Dirección General Yessi Cuevas)
+        const yessiLoginRes = await fetch(`${baseUrl}/api/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: 'ADMIN-999', pin: '9999' })
+            body: JSON.stringify({ token: 'YESSICUEVAS', pin: 'Negro_1992' })
         });
-        const loginData = await loginRes.json();
-        console.assert(loginData.success === true, 'Login falló');
-        console.assert(Boolean(loginData.token), 'Token JWT ausente');
-        console.log('✔ Login de Suite Ejecutiva OK (JWT generado)');
+        const yessiLoginData = await yessiLoginRes.json();
+        console.assert(yessiLoginData.success === true, 'Login de Yessi Cuevas falló');
+        console.assert(Boolean(yessiLoginData.token), 'Token JWT ausente para Yessi Cuevas');
+        console.assert(yessiLoginData.user.username === 'Yessi Cuevas', 'Username no coincide');
+        console.log('✔ Login Dirección General (YESSICUEVAS / Negro_1992) OK (JWT generado)');
 
-        const adminToken = loginData.token;
+        const adminToken = yessiLoginData.token;
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${adminToken}`
