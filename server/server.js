@@ -92,8 +92,8 @@ const serveIndexWithDynamicOg = (req, res) => {
 app.get('/', serveIndexWithDynamicOg);
 app.get('/index.html', serveIndexWithDynamicOg);
 
-// Iniciar servidor tras verificar base de datos
-const startServer = async () => {
+// Iniciar base de datos e inicializar catálogo
+const initializeApp = async () => {
     try {
         await initDatabase();
 
@@ -103,26 +103,25 @@ const startServer = async () => {
             console.log('🌱 Inicializando catálogo maestro de RED VELVET Sex Shop...');
             await seedData();
         }
-
-        const server = app.listen(PORT, '0.0.0.0', () => {
-            console.log(`\n======================================================`);
-            console.log(`💎 RED VELVET — LUXURY SEX SHOP & INTIMATE WELLNESS`);
-            console.log(`🌐 Tienda Pública:    http://localhost:${PORT}`);
-            console.log(`⚙️ Suite de Control:  http://localhost:${PORT}/admin.html`);
-            console.log(`🛡️ Base de Datos:     data/redvelvet.db`);
-            console.log(`📸 Almacenamiento:    uploads/products/`);
-            console.log(`======================================================\n`);
-        });
-
-        return server;
     } catch (err) {
-        console.error('❌ Error crítico al iniciar servidor RED VELVET:', err);
-        process.exit(1);
+        console.error('❌ Error al inicializar base de datos:', err);
     }
 };
 
-if (require.main === module) {
-    startServer();
+const initPromise = initializeApp();
+
+// Iniciar servidor (Hostinger requiere llamada directa a listen sin if require.main === module)
+let server = null;
+if (process.env.NODE_ENV !== 'test') {
+    server = app.listen(PORT, '0.0.0.0', () => {
+        console.log(`\n======================================================`);
+        console.log(`💎 RED VELVET — LUXURY SEX SHOP & INTIMATE WELLNESS`);
+        console.log(`🌐 Tienda Pública:    http://localhost:${PORT}`);
+        console.log(`⚙️ Suite de Control:  http://localhost:${PORT}/admin.html`);
+        console.log(`🛡️ Base de Datos:     data/redvelvet.db`);
+        console.log(`📸 Almacenamiento:    uploads/products/`);
+        console.log(`======================================================\n`);
+    });
 }
 
-module.exports = { app, startServer };
+module.exports = { app, server, initPromise };

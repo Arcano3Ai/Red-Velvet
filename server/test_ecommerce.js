@@ -1,6 +1,8 @@
-const { app } = require('./server');
+process.env.NODE_ENV = 'test';
+const { app, initPromise } = require('./server');
 
 const runTests = async () => {
+    await initPromise;
     const server = app.listen(0);
     const port = server.address().port;
     const baseUrl = `http://localhost:${port}`;
